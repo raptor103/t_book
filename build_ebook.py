@@ -1,28 +1,27 @@
 #!/usr/bin/env python3
 """
-Build EPUB (and, if Calibre is present, MOBI) for "How a Tesla Works".
+Build the EPUB for "How a Tesla Works".
 
     pip install markdown
     python build_ebook.py
 
 Output: out/how-a-tesla-works.epub
-        out/how-a-tesla-works.mobi   (needs Calibre's ebook-convert)
 
 The EPUB is written by hand rather than via a library so that both
 navigation documents are guaranteed present and correct:
 
   * nav.xhtml  - the EPUB 3 navigation document (clickable TOC)
-  * toc.ncx    - the EPUB 2 fallback, which older readers use and which
-                 Calibre carries across into the MOBI's TOC
+  * toc.ncx    - the EPUB 2 fallback, used by readers that predate it
 
-Both list every chapter and every subchapter, so the table of contents is
-clickable in every format the repo ships.
+Both list every part, chapter and subchapter, so the table of contents is
+clickable wherever the book is opened.
+
+No MOBI is produced: Amazon retired the format in 2022, and current Kindles
+take EPUB directly via Send-to-Kindle.
 """
 import glob
 import os
 import re
-import shutil
-import subprocess
 import sys
 import zipfile
 from xml.sax.saxutils import escape
@@ -31,7 +30,6 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 BOOK = os.path.join(ROOT, "book")
 OUT_DIR = os.path.join(ROOT, "out")
 OUT_EPUB = os.path.join(OUT_DIR, "how-a-tesla-works.epub")
-OUT_MOBI = os.path.join(OUT_DIR, "how-a-tesla-works.mobi")
 
 TITLE = "How a Tesla Works"
 AUTHOR = ""
@@ -154,7 +152,7 @@ def nav_xhtml(toc):
 
 
 def toc_ncx(toc):
-    """EPUB 2 fallback. Calibre reads this when building the MOBI TOC."""
+    """EPUB 2 fallback, for readers that predate the EPUB 3 nav doc."""
     counter = [0]
 
     def render(entries):
@@ -230,38 +228,6 @@ def write_epub(docs, toc):
             z.writestr(f"OEBPS/{name}", body, zipfile.ZIP_DEFLATED)
 
 
-def find_ebook_convert():
-    exe = shutil.which("ebook-convert")
-    if exe:
-        return exe
-    for base in (r"C:\Program Files\Calibre2", r"C:\Program Files (x86)\Calibre2",
-                 os.path.expandvars(r"%LOCALAPPDATA%\Programs\Calibre2")):
-        cand = os.path.join(base, "ebook-convert.exe")
-        if os.path.exists(cand):
-            return cand
-    return None
-
-
-def write_mobi():
-    exe = find_ebook_convert()
-    if not exe:
-        print("  MOBI skipped: Calibre's ebook-convert not found.")
-        print("  Install Calibre, then re-run: python build_ebook.py")
-        return False
-    # --mobi-file-type=both writes the old MOBI6 plus KF8, so the file opens
-    # on both older Kindles and current ones, TOC intact.
-    r = subprocess.run([exe, OUT_EPUB, OUT_MOBI,
-                        "--mobi-file-type=both",
-                        "--toc-title=Contents",
-                        "--no-inline-toc"],
-                       capture_output=True, text=True)
-    if r.returncode != 0:
-        print("  MOBI failed:\n" + (r.stderr or r.stdout)[-800:])
-        return False
-    print(f"  MOBI  -> {OUT_MOBI}")
-    return True
-
-
 def main():
     try:
         import markdown  # noqa: F401
@@ -277,7 +243,6 @@ def main():
     print(f"Built from {len(files)} markdown files")
     print(f"  EPUB  -> {OUT_EPUB}")
     print(f"  TOC   -> {len(toc)} parts, {subs} entries in total")
-    write_mobi()
 
 
 if __name__ == "__main__":

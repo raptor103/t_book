@@ -8,7 +8,7 @@ Knowledge cutoff for the text: **2026**. The book dates itself rather than prete
 to be timeless.
 
 - Free on GitHub. Optional donations: _[donation link TBD]_
-- Built from one markdown file per subchapter, concatenated into PDF, EPUB and MOBI.
+- Built from one markdown file per subchapter, concatenated into PDF and EPUB.
 
 ## Build
 
@@ -32,7 +32,7 @@ outline matches it), and it keeps every ASCII diagram whole — `markdown-pdf`
 ignores `page-break-inside`, so the build detects diagrams straddling a page
 boundary and pushes them onto the next page, repeating until none split.
 
-### EPUB and MOBI — `out/how-a-tesla-works.{epub,mobi}`
+### EPUB — `out/how-a-tesla-works.epub`
 
 ```bash
 pip install markdown
@@ -43,13 +43,8 @@ The EPUB is assembled directly, so it carries both navigation documents:
 `nav.xhtml` (EPUB 3) and `toc.ncx` (EPUB 2). Every reader therefore gets a
 clickable, nested table of contents — parts, chapters and subchapters.
 
-MOBI is converted from that EPUB with Calibre's `ebook-convert`, which
-carries the NCX across as the Kindle TOC. If Calibre is not installed the
-EPUB is still written and the MOBI step is skipped with a note. Install
-Calibre and re-run to produce it.
-
-> Note: Amazon retired MOBI in 2022; current Kindles take EPUB directly via
-> Send-to-Kindle. MOBI is built here for older devices.
+No MOBI is produced. Amazon retired the format in 2022, and current Kindles
+take EPUB directly via Send-to-Kindle, so the EPUB covers Kindle too.
 
 ## Status
 
