@@ -10,46 +10,6 @@ Here is the idea, and it is genuinely counterintuitive. Imagine you want to fill
 
 The inverter does exactly this with the battery's DC. Its switches chop the steady voltage into a rapid train of pulses, and by making the pulses wider when the wave should be high and narrower when it should be low, it sculpts the *average* into any shape it likes — including the gentle rise and fall of a sine wave. The motor never sees the smooth wave drawn on the engineer's whiteboard; it sees a blur of full-voltage pulses of varying width. But the motor's own coils, being electrically sluggish, smooth those pulses out, averaging the blur into precisely the surging current the whiteboard promised. The crudeness is hidden by speed.
 
-Chopping DC into the shape of a wave:
-
-```
-   A switch has only two settings: fully ON and fully OFF.
-   Vary how LONG it stays on, and the average traces a wave.
-
-   Each slot below is one switching period. The shaded part
-   is how much of that period the switch is held ON:
-
-   |####                  |   narrow pulse -> low average
-   |###########           |
-   |#################     |
-   |##################### |   widest -> the peak of the wave
-   |######################|
-   |##################### |
-   |#################     |
-   |###########           |
-   |####                  |   narrow again -> back to zero
-
-   The motor's coils are electrically sluggish, so they
-   smooth that blur of pulses into the average it feels --
-   one full AC cycle, built entirely out of on/off flicks:
-
-              #######
-           #############
-         #################
-       #####################
-      ########################
-    ###########################
-   ##########################################################
-                                 ###########################
-                                  ########################
-                                    #####################
-                                      #################
-                                        #############
-                                           #######
-
-   The motor never sees the smooth wave. It feels it.
-```
-
 To make the three staggered phases the motor needs, the inverter simply runs three of these switch pairs at once — one per phase — and starts each one's wave a third of a cycle after the last. Six switches in all, arranged in three pairs, each pair feeding one of the motor's three connections. That is the whole hardware: six fast switches, some large capacitors to steady the supply, and a controller clever enough to choreograph the pulse widths in real time.
 
 Everything else about the inverter — the speed of its switching, the material its switches are made from, the heat it must shed — is refinement of this single, slightly absurd, entirely successful idea: that the way to make a smooth wave, when all you have is an on/off switch, is to flick it faster than anyone can see and let physics do the smoothing. The next question is what happens when you change how fast, and how hard, you flick — because that, it turns out, is the same thing as changing the speed and the torque of the car.

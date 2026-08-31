@@ -621,46 +621,6 @@ Here is the idea, and it is genuinely counterintuitive. Imagine you want to fill
 
 The inverter does exactly this with the battery's DC. Its switches chop the steady voltage into a rapid train of pulses, and by making the pulses wider when the wave should be high and narrower when it should be low, it sculpts the *average* into any shape it likes — including the gentle rise and fall of a sine wave. The motor never sees the smooth wave drawn on the engineer's whiteboard; it sees a blur of full-voltage pulses of varying width. But the motor's own coils, being electrically sluggish, smooth those pulses out, averaging the blur into precisely the surging current the whiteboard promised. The crudeness is hidden by speed.
 
-Chopping DC into the shape of a wave:
-
-```
-   A switch has only two settings: fully ON and fully OFF.
-   Vary how LONG it stays on, and the average traces a wave.
-
-   Each slot below is one switching period. The shaded part
-   is how much of that period the switch is held ON:
-
-   |####                  |   narrow pulse -> low average
-   |###########           |
-   |#################     |
-   |##################### |   widest -> the peak of the wave
-   |######################|
-   |##################### |
-   |#################     |
-   |###########           |
-   |####                  |   narrow again -> back to zero
-
-   The motor's coils are electrically sluggish, so they
-   smooth that blur of pulses into the average it feels --
-   one full AC cycle, built entirely out of on/off flicks:
-
-              #######
-           #############
-         #################
-       #####################
-      ########################
-    ###########################
-   ##########################################################
-                                 ###########################
-                                  ########################
-                                    #####################
-                                      #################
-                                        #############
-                                           #######
-
-   The motor never sees the smooth wave. It feels it.
-```
-
 To make the three staggered phases the motor needs, the inverter simply runs three of these switch pairs at once — one per phase — and starts each one's wave a third of a cycle after the last. Six switches in all, arranged in three pairs, each pair feeding one of the motor's three connections. That is the whole hardware: six fast switches, some large capacitors to steady the supply, and a controller clever enough to choreograph the pulse widths in real time.
 
 Everything else about the inverter — the speed of its switching, the material its switches are made from, the heat it must shed — is refinement of this single, slightly absurd, entirely successful idea: that the way to make a smooth wave, when all you have is an on/off switch, is to flick it faster than anyone can see and let physics do the smoothing. The next question is what happens when you change how fast, and how hard, you flick — because that, it turns out, is the same thing as changing the speed and the torque of the car.
@@ -755,27 +715,6 @@ Take a bar magnet and hold it near a compass. The needle swings to point at it. 
 That trick is called the rotating magnetic field, and it is one of those ideas that seems impossible until you see it, and obvious forever after. The stationary outer part of the motor — the *stator* — is a ring of electromagnet coils. Recall from the last chapter that the inverter feeds the motor not one alternating current but three, each staggered a third of a cycle behind the last. Those three currents run to three sets of coils spaced evenly around the ring. And here is the magic: because the three currents peak at different moments, the coils reach their strongest at different moments too, one after another around the circle. The peak of magnetism is never in one place; it is always handing off to the next coil along, like a stadium crowd doing a Mexican wave. No coil moves. The wave of magnetism sweeps round the ring anyway, smoothly, continuously, as fast as the inverter cares to cycle the currents.
 
 That sweeping wave is your walking magnet, and it rotates with nothing mechanical driving it — only the timing of three electrical currents. Put something magnetic in the middle, the *rotor*, and it is dragged around in pursuit, exactly like the compass needle following your walk. That pursuit is the torque. That torque, through a gear and a driveshaft, is the car.
-
-The stator making a field spin without spinning:
-
-```
-   Three coil sets, spaced 120 degrees around the stator:
-
-                        [ A ]
-                          |
-                          |
-                      ( rotor )
-                     /         \
-                    /           \
-               [ C ]             [ B ]
-
-   time -->   A strongest    B strongest    C strongest   A ...
-
-   No coil moves. The strong spot simply hands off around
-   the ring, like a stadium wave, as fast as the inverter
-   cycles the currents. The rotor chases that sweeping
-   peak, and the chase is the torque.
-```
 
 Everything else about a motor is a variation on how you make the middle bit — the rotor — get dragged along, and that turns out to be where the two great families of motor part company, which is the next section. But the principle underneath both is this single, beautiful one. The speed of the car is the speed of the sweeping wave, which is the frequency of the currents, which is set by the inverter — so the inverter, by choosing how fast to cycle, chooses how fast the field sweeps and therefore how fast the motor turns. The force of the car is how hard the rotor is dragged, which depends on how strong the field is, which is the current, again set by the inverter. The two knobs from the last chapter — frequency for speed, current for torque — are revealed here as the same two knobs, now seen from the motor's side.
 
