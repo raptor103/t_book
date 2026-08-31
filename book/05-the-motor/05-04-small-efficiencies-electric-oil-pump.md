@@ -11,14 +11,20 @@ The oil's double life is itself a small elegance. The same fluid that keeps the 
 Where the invisible wins hide:
 
 ```
-   the drive unit's quiet efficiencies (each tiny; they add up):
+   The drive unit's quiet efficiencies. Each is tiny.
+   Added up, they are worth real kilometres.
 
-   electric oil pump ....... runs only as needed, not always-on
-   oil cools the rotor ..... one fluid lubricates AND cools
-   targeted oil feed ....... gravity onto bearings, not splashing
-   dragless idle motor ..... induction motor switches fully off
-   low-friction seals ...... less rubbing where shafts exit
-   hot-oil viscosity ....... warm oil flows easier, pumps cheaper
+   electric oil pump ..... runs only as needed, never always-on
+   one fluid, two jobs ... the same oil lubricates AND cools
+   targeted oil feed ..... gravity onto the bearings and teeth
+                           that need it, instead of letting the
+                           gears splash through a bath and drag
+   dragless idle ......... the induction motor switches fully off
+   low-friction seals .... less rubbing where the shafts come out
+   warm oil on purpose ... thinner oil is cheaper to pump, so a
+                           slightly hotter unit can be the
+                           efficient one -- held on a knife-edge
+                           by software, since too hot stops cooling
 ```
 
 And there are more of the same kind, scattered through the car. The induction motor from two sections ago, able to switch fully off and freewheel with almost no drag when it is not needed, is one of these wins wearing a bigger coat. The bearings and shaft seals are chosen and shaped to rub as little as possible, because a seal that grips a spinning shaft too tightly costs energy every second of every journey. Even the temperature of the oil is played as an efficiency card: warm oil is thinner and easier to pump, so the car will sometimes tolerate a slightly hotter drive unit precisely because the thinner oil wastes less energy in pumping and churning — a balance held on a knife-edge by software, since oil that gets *too* hot stops cooling properly.

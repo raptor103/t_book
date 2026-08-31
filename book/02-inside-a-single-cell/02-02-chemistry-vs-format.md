@@ -13,14 +13,18 @@ And here is the point the whole section is built to make: **the two axes are ind
 A simple grid makes the independence obvious:
 
 ```
-                    |   CHEMISTRY (the coffee)
-                    |   NMC / NCA        LFP
-  ------------------+------------------------------------
-   FORMAT   cyl.    |   2170, 4680       possible, less
-   (the cup) 18650  |   (Tesla cars)     common in cars
-  ------------------+------------------------------------
-            prism.  |   used by some     large prismatic
-            / pouch |   makers           (CATL / BYD packs)
+   FORMAT (the cup)   \  CHEMISTRY (the coffee)
+                       \  NMC / NCA        |  LFP
+   ---------------------+------------------+------------------
+    cylindrical         |  2170, 4680      |  possible, but
+    (18650, 2170, 4680) |  -- most Teslas  |  rare in cars
+   ---------------------+------------------+------------------
+    prismatic or pouch  |  used by some    |  large blocks
+                        |  other makers    |  (CATL, BYD)
+   ---------------------+------------------+------------------
+
+   "4680" names the cup. "LFP" names the coffee.
+   Neither one, on its own, tells you the other.
 ```
 
 Why labour the distinction? Because the two axes are chosen for different reasons and traded off against different things, and the rest of this chapter needs them kept separate. The next section, on trade-offs, is almost entirely a chemistry story — density, cost, cold, cobalt. The section after, on the 4680, is almost entirely a format story — how making the container bigger and smarter changes the economics of building millions of them. Confuse the two and neither story lands. Keep them apart and you have a mental filing system that will serve you through every battery announcement you ever read, including the ones that have not happened yet.

@@ -9,16 +9,21 @@ So the first inversion is scarcity: heat changes from something you frantically 
 Three tenants, three different demands:
 
 ```
-   what each part wants, thermally:
+   What each part wants, thermally:
 
-   BATTERY      narrow, mild band; needs WARMING when cold,
-                COOLING when hot or fast-charging  (fussiest tenant)
-   MOTOR + ELEX runs hot; almost always wants COOLING
-                -- and its waste heat is a RESOURCE to be stolen
-   CABIN        whatever the humans want; often WARMING in a
-                European winter, COOLING in summer
+   BATTERY ......... a narrow, mild band. WARMING when cold,
+                     COOLING when hot or fast-charging. The
+                     fussiest tenant -- and it changes its mind
+                     within a single journey.
 
-   one small pool of heat to satisfy all three, cheaply
+   MOTOR + POWER ... runs hot; almost always wants COOLING.
+   ELECTRONICS       Its waste heat is a RESOURCE to be stolen.
+
+   CABIN ........... whatever the humans want. WARMING through
+                     a European winter, COOLING in summer.
+
+   Three conflicting demands -- and only a tenth as much waste
+   heat as an engine had, to satisfy all of them.
 ```
 
 Put those together and the shape of the new problem appears. You have three consumers — battery, drivetrain, cabin — with conflicting and shifting needs, and only a meagre supply of waste heat to draw on. The old fixed, one-way flow is useless here. What you need instead is a system that can *reconfigure* itself: that can take the modest warmth coming off the motor and power electronics and, instead of dumping it out of a radiator, redirect it to warm a cold battery, or pipe it into the cabin. That can, on a hot day at a fast charger, do the reverse and pull heat *out* of the battery as fast as possible. That can connect and disconnect its various loops on demand, sending heat wherever the shortage is worst, moment by moment.

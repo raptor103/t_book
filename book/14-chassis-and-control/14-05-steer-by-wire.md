@@ -9,15 +9,25 @@ Which means the entire viability of steer-by-wire rests on one thing: it must no
 Redundancy, so no single failure disconnects you:
 
 ```
-   STEER-BY-WIRE (no mechanical column)
+   STEER-BY-WIRE -- no mechanical column at all
 
-   steering wheel --> 3 position sensors (2 outvote a bad one)
-                         |
-                  dual-redundant 48V Ethernet loop (two paths)
-                         |
-   steering rack <-- 2 motors (one fails, the other steers)
+   the steering wheel
+        |
+        v
+   THREE position sensors ...... if one disagrees, the other
+        |                        two outvote it
+        v
+   DUAL-redundant 48 V ......... two independent paths, so one
+   Ethernet loop                 severed wire changes nothing
+        |
+        v
+   TWO rack motors ............. if one dies, the other still
+        |                        steers the car
+        v
+   the front wheels
 
-   sacred mechanical link REPLACED by wires + built-in backups
+   Everything critical exists at least twice. The sacred
+   mechanical link is replaced by wires and built-in backups.
 ```
 
 Notice how many threads of the book converge here. Steer-by-wire leans on the forty-eight-volt architecture of Chapter 8, because turning a steering rack takes real power, and doing it at forty-eight volts rather than twelve means thinner wires to the steering motors — one of the specific features that pushed Tesla toward the higher voltage in the first place. It leans on the resilient Ethernet loop of Chapter 10 for its fail-operational communication. And it is the ultimate expression of the substitution we have traced from the very first chapter: the last mechanical linkage, the one everyone thought untouchable, finally converted into a signal.

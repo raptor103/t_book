@@ -9,14 +9,21 @@ That sweeping wave is your walking magnet, and it rotates with nothing mechanica
 The stator making a field spin without spinning:
 
 ```
-        coil A                three staggered currents make the
-          |                   "strong spot" hand off around the ring:
-    coil  ( )  coil            A peaks -> B peaks -> C peaks -> A ...
-     C   (rotor)  B
-          ( )                  the peak of magnetism sweeps round
-          |                    like a stadium wave; the ROTOR in the
-        (three coil sets       middle chases it = rotation = torque
-         120 degrees apart)
+   Three coil sets, spaced 120 degrees around the stator.
+   Each set is a pair, facing each other across the rotor:
+
+                        [ A ]
+                          |
+               [ C ] --( rotor )-- [ B ]
+                          |
+                        [ A ]
+
+   time -->   A strongest    B strongest    C strongest   A ...
+
+   No coil moves. The strong spot simply hands off around
+   the ring, like a stadium wave, as fast as the inverter
+   cycles the currents. The rotor chases that sweeping
+   peak, and the chase is the torque.
 ```
 
 Everything else about a motor is a variation on how you make the middle bit — the rotor — get dragged along, and that turns out to be where the two great families of motor part company, which is the next section. But the principle underneath both is this single, beautiful one. The speed of the car is the speed of the sweeping wave, which is the frequency of the currents, which is set by the inverter — so the inverter, by choosing how fast to cycle, chooses how fast the field sweeps and therefore how fast the motor turns. The force of the car is how hard the rotor is dragged, which depends on how strong the field is, which is the current, again set by the inverter. The two knobs from the last chapter — frequency for speed, current for torque — are revealed here as the same two knobs, now seen from the motor's side.

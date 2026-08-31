@@ -11,12 +11,23 @@ The second fact is the one that really matters for range, and it is worse. The *
 The cube law, made concrete:
 
 ```
-   speed        drag FORCE      power to overcome drag
-   x1  (base)      x1                  x1
-   x2  (double)    x4                  x8
-   x3  (triple)    x9                 x27
+   Double the speed. What happens to the fight against air?
 
-   -> going faster costs power far out of proportion to the speed
+   speed          drag FORCE      power needed to overcome it
+   ------------------------------------------------------------
+    x1  base         x1                     x1
+    x2  double       x4                     x8
+    x3  triple       x9                    x27
+   ------------------------------------------------------------
+
+   that power, drawn to scale:
+
+     x1   #
+     x2   ########
+     x3   ###########################
+
+   Going faster costs power wildly out of proportion to the
+   speed -- which is also why easing off buys back so much.
 ```
 
 Abstract numbers do not persuade, so here is what the cube law does to a real electric vehicle. Take a van cruising at 80 km/h with a certain range. Speed up to roughly 95 km/h and the range noticeably shrinks. Push on to 110, and it shrinks again. By the time you are travelling at around 130 km/h instead of 80, the range can have collapsed by something approaching *forty per cent* — the same battery, the same road, the same weather, carrying you barely more than half as far, purely because you chose to hurry. That is not a gentle penalty for speed; it is a cliff, and every electric-car driver who has watched their predicted range evaporate on a fast autobahn has felt it directly.

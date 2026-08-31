@@ -9,20 +9,27 @@ The zonal layout attacks this at the root. Because there is a controller in each
 Where the wire goes — and stops going:
 
 ```
-   FUNCTIONAL: long point-to-point runs everywhere
+   FUNCTIONAL: every device gets its own long wire
 
-     [central modules]====================long wires==========
-        \\        \\         \\        \\         \\
-       device    device    device    device     device
-       (each device gets its own long wire back to a module)
+     [ central modules ]
+        |   |   |   |
+        |   |   |   +------------------------ device (rear)
+        |   |   +------------------- device (right)
+        |   +---------------- device (left)
+        +--------- device (front)
 
-   ZONAL: short local drops + one shared data backbone
+     long, overlapping runs criss-crossing the whole car
 
-     [computer]==thin shared data backbone==[VCLEFT][VCRIGHT][VCFRONT]
-                                               |       |        |
-                                            nearby   nearby   nearby
-                                            devices  devices  devices
-                                            (short local wires only)
+   ZONAL: short local drops, one shared backbone
+
+     [ computer ]==============================================
+                         |            |            |
+                     [VCFRONT]    [VCLEFT]    [VCRIGHT]
+                         |            |            |
+                      nearby       nearby       nearby
+                      devices      devices      devices
+
+     only DATA travels far; power stays local
 ```
 
 The numbers make the case. Industry analysis of zonal architectures credits them with cutting wiring by as much as **fifty per cent**, and Tesla's own progression across its cars has been a steady war on harness length and mass. That saved copper is not a trivial prize. Copper is heavy and expensive, and every kilogram of wire is a kilogram the battery must haul around for the life of the car, quietly costing range — so shortening the harness feeds straight back into the efficiency obsession of Chapter 1. Less wire is more range, cheaper materials, and less mass, all at once.

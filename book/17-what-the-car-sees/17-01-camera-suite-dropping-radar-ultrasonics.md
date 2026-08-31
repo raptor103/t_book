@@ -7,13 +7,19 @@ What is striking about this suite is not what it contains but what it *no longer
 The subtraction, step by step:
 
 ```
-   what Tesla progressively REMOVED to reach cameras-only:
+   What Tesla progressively REMOVED on the way to
+   cameras-only:
 
-   ~2021  radar (forward-looking) ....... gone from 3/Y, then S/X
-   ~2022  ultrasonic parking sensors .... gone from mainstream cars
-   remaining:  8 CAMERAS + neural networks = "Tesla Vision"
+   around 2021   forward-looking RADAR
+                 dropped from Model 3/Y, then S/X
+   around 2022   ULTRASONIC parking sensors
+                 dropped from the mainstream cars
 
-   the recurring instinct -- do more with less -- applied to SENSES
+   what remains:  8 CAMERAS + neural networks
+                  -- branded "Tesla Vision"
+
+   The book's recurring instinct -- do more with less --
+   applied, boldly, to the car's senses themselves.
 ```
 
 Why remove senses from a safety system? Tesla's reasons are a mix of the practical and the philosophical, and they are worth setting out plainly because they are the foundation of the whole bet. The practical ones are cost and simplicity: the sensors are not free — the ultrasonic set alone was reported to cost around a hundred euros' worth per car — and removing them saves money across millions of vehicles and simplifies the wiring and the software. The philosophical ones are more interesting and more contested. Tesla's argument, articulated by its engineers, is that combining fundamentally different senses is not the free lunch it appears to be. When a camera says one thing and a radar says another — and they sometimes disagree, because they sense the world in different ways — the car must decide which to believe, and that arbitration is itself a source of error and confusion. Tesla claimed that as its camera-based system improved, the radar started *subtracting* from its performance rather than adding to it, injecting conflicting signals that the vision system was better off without. Better, they argued, to have one excellent sense than several that quarrel.

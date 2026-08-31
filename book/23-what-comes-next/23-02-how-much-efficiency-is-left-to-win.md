@@ -7,17 +7,25 @@ This is the mark of a mature technology, and it should be said plainly. The hero
 Where the efficiency frontier moves:
 
 ```
-   INSIDE the drivetrain          nearly maxed out (~85-90%);
-   (battery -> wheels)            only a few % left, each one harder
+   INSIDE the drivetrain, battery to wheels:
 
-   the frontier moves OUTWARD:
-     the BATTERY .......... denser/lighter -> less weight to haul,
-                            less energy needed for the same range
-     WEIGHT ............... lighter car -> less energy, everywhere
-     the GRID ............. cleaner electricity -> the car is only
-                            as clean as the power that charges it
-     UTILISATION ......... using cars well: right-sized, shared,
-                            charged smartly -> system-level efficiency
+     [################################################--]  85-90%
+     nearly maxed out. Only a few per cent left, and each
+     one is harder to win than the last.
+
+   So the frontier moves OUTWARD:
+
+     the BATTERY ...... denser and lighter, so there is less
+                        weight to haul for the same range
+     WEIGHT ........... a lighter car needs less energy,
+                        everywhere, on every trip, forever
+     the GRID ......... a car is only as clean as the
+                        electricity that charges it
+     UTILISATION ...... right-sized, shared, charged when
+                        power is cheap and clean
+
+   The battle inside the machine is close to won. The ones
+   that remain are upstream and outward -- a different book.
 ```
 
 So where do the meaningful gains now come from? Increasingly, from *outside* the drivetrain. From the battery, as the last section described — not to make the drivetrain more efficient, but to make it lighter, so the car has less mass to haul and needs less energy for the same journey; a denser battery is an efficiency gain in disguise, paid in weight. From reducing the mass of everything else, since every kilogram removed is energy saved on every trip forever. And from the largest levers of all, which lie beyond the car entirely: the *grid* that makes the electricity, because a car is only as clean as the power that charges it, and the great environmental prize is not a slightly better inverter but a decarbonised supply; and the *way the cars are used* — charged when energy is cheap and clean, right-sized to actual needs, perhaps shared rather than parked twenty-three hours a day — which is efficiency at the level of the whole system rather than the single vehicle.

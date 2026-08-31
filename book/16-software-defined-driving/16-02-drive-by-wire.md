@@ -7,13 +7,21 @@ Let us collect the examples the book has already met, because seeing them togeth
 The vanishing linkages:
 
 ```
-   CONTROL        OLD (mechanical)        NEW (by-wire signal)
-   accelerator    cable to throttle       signal to the inverter
-   gear select    linkage to gearbox      software picks motor direction
-   brake          hydraulic push          request; regen+friction blended
-   steering       shaft to the rack       (steer-by-wire) pure signal
+   CONTROL       OLD (mechanical)      NEW (a signal)
+   ---------------------------------------------------------
+   accelerator   cable to a throttle   a request to the
+                                       inverter
+   gear select   linkage into the      software picks which
+                 gearbox               way the motor spins
+   brake         your foot pushes      a request; regen and
+                 the fluid             friction blended
+   steering      a shaft to the rack   pure signal, on the
+                                       cars that have gone
+                                       to steer-by-wire
+   ---------------------------------------------------------
 
-   every control: a physical connection -> a request to a computer
+   Every primary control: a physical connection becomes a
+   request to a computer.
 ```
 
 Why does this matter beyond tidiness? Because the moment a control is a signal rather than a mechanical connection, *software can sit in the middle of it* — and that changes what the control can do. When your foot is mechanically linked to the throttle, your foot is the only thing deciding the throttle. When your foot merely *requests* acceleration from a computer, the computer can shape that request: smoothing it, limiting it for traction, blending it with regeneration, overriding it in an emergency, or — the ultimate step — supplying it *itself* when no foot is on the pedal at all. Every by-wire control is a control that software can mediate, improve, customise, and, crucially, operate autonomously. The vanishing of the mechanical linkage is precisely what makes a self-driving car possible: you cannot have a computer drive a car whose controls can only be moved by human muscle, but you can the moment every control is a signal the computer can generate.

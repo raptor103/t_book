@@ -13,18 +13,26 @@ And underneath all of it sits the BMS's final, absolute power: the ability to sa
 A sketch of the supervisor and what it watches:
 
 ```
-                    +---------------------------+
-   96 brick   --->  |         B M S             |
-   voltages         |  reads V, T, current      |
-   temps      --->  |  several times a second   |
-   current    --->  |                           |
-                    |  computes: charge %, health
-                    |  acts:    balance the bricks
-                    |           control heating/cooling
-                    |           open the CONTACTORS if unsafe
-                    +------------+--------------+
+   +---------------------------------------------------------------+
+   |                      B M S                                    |
+   |                                                               |
+   |     reads, several times a second, for the life of the car:   |
+   |       - the voltage of every one of the 96 bricks             |
+   |       - temperatures, from thermistors through the pack       |
+   |       - the current flowing in or out of the whole pack       |
+   |                                                               |
+   |     computes:  state of charge   (the % on your screen)       |
+   |                state of health   (capacity remaining)         |
+   |                                                               |
+   |     acts:      balances the bricks                            |
+   |                commands heating and cooling                   |
+   |                opens the contactors if anything strays        |
+   +-------------------------------+-------------------------------+
                                  |
-                    [ CONTACTORS ] --- the master switch to the car
+                                 v
+                     [ C O N T A C T O R S ]
+            the master switch between the pack's 350 V
+            and everything else in the car
 ```
 
 None of this makes the car go. The BMS produces not a single newton of thrust. What it produces is *trust* — the quiet, unglamorous assurance that four thousand volatile cells will behave like one dependable machine for fifteen years and a few hundred thousand kilometres. It is the difference between a battery and a hazard, and it never sleeps. The next question is what all this careful supervision is actually protecting, and the answer, increasingly, is not just a battery but the structure of the car itself.

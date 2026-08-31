@@ -9,14 +9,24 @@ You walk up to the car, and it knows you: your phone speaks to it over short-ran
 The drive, as the systems wake:
 
 ```
-   overnight  -> scheduled preheat: heat pump + octovalve, from the wall
-   you arrive -> phone-as-key unlocks; 12V wakes the car; contactors close
-   you press  -> inverter turns DC into three staggered AC waves
-   you go     -> rotating field drags the rotor; instant torque
-   you corner -> torque vectoring + low battery keep it planted
-   you slow   -> motor runs backward: regen refills the pack
-   you charge -> preconditioned pack takes a fast DC charge
-   you park   -> Sentry Mode watches; the car sleeps; 12V stands guard
+   overnight    scheduled preheat: heat pump and octovalve
+                warm the cabin and pack, using the WALL
+   you arrive   phone-as-key unlocks; the 12 V battery wakes
+                the car; the contactors close
+   you press    the inverter chops DC into three staggered
+                AC waves
+   you go       the rotating field drags the rotor round --
+                full torque, instantly
+   you corner   torque vectoring trims the line; the low
+                battery keeps the car flat
+   you slow     the motor runs backwards; regeneration pours
+                the energy back into the pack
+   you charge   a preconditioned pack accepts a fast DC
+                charge from the first minute
+   you park     Sentry Mode watches; the car sleeps; the
+                12 V battery stands guard over the giant
+
+   Not one of those systems worked alone.
 ```
 
 You press the accelerator, and there is no cable, no throttle, no delay — only a signal to the inverter, which begins chopping the battery's steady direct current into three staggered waves of alternating current, twenty thousand switching operations a second, never once getting it wrong (Chapter 4). Those waves make a magnetic field sweep around the motor's stator, and the rotor is dragged after it, delivering full torque from the instant you ask (Chapter 5). The single reduction gear steps the motor's fast spin down and its torque up, the differential splits the drive between the wheels (Chapter 6), and the car surges forward in near silence.

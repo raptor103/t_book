@@ -13,17 +13,22 @@ The induction motor is the mirror image. It is a little less efficient in gentle
 Now the punchline, for a dual-motor car with a motor on each axle:
 
 ```
-   REAR motor: permanent-magnet (synchronous)
-     - efficient at low/medium speed = your daily commute
-     - does the everyday work, most of the time
+                     FRONT axle             REAR axle
+   ----------------------------------------------------------
+    motor            induction              permanent-magnet
+                     (asynchronous)         (synchronous)
+    rotor            squirrel cage,         rare-earth magnets
+                     no magnets             on the rotor
+    efficiency       ~94%                   ~96%
+    when idle        switches fully off,    magnets never stop;
+                     almost no drag         drag to be cancelled
+    its job          wakes for hard         does the everyday
+                     acceleration and       driving, most of
+                     high speed             the time
+   ----------------------------------------------------------
 
-   FRONT motor: induction (asynchronous)
-     - can idle with near-zero drag when not needed
-     - wakes up for hard acceleration and high speed
-     - no rare-earth magnets
-
-   Result: the efficient one runs constantly; the muscular one
-   only joins in when it earns its keep -- best of both.
+   Each motor covers the other's weakness, and the car pays
+   the full price of neither.
 ```
 
 This is why Tesla builds cars with two different kinds of motor rather than two of the same. The permanent-magnet motor on one axle handles the ordinary business of driving efficiently. The induction motor on the other axle sits idle and dragless for most of a journey, then springs to life when you ask for real acceleration or reach high speed, contributing muscle exactly when the permanent-magnet motor's efficiency advantage matters least. Each motor covers the other's weakness. The car gets the everyday economy of the magnet motor and the on-demand power and dragless coasting of the induction motor, and pays the full cost of neither.

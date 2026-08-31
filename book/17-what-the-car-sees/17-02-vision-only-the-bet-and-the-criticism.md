@@ -9,15 +9,25 @@ Now the case *against*, which is equally serious and comes from equally informed
 The argument, fairly stated:
 
 ```
-   THE BET (vision-only)            THE CRITICISM (need more senses)
-   humans drive on eyes+brain       cameras INFER depth; lidar/radar
-   -> cameras+AI should suffice        MEASURE it directly
-   cameras cheap -> every car        cameras fail in fog/rain/snow/glare/
-   -> more data -> better AI            dark; radar/lidar don't
-   one sensor -> no conflicting      one sensor -> no redundancy; a
-   signals to arbitrate                fooled camera has no backup
-   rich detail: colour, text,        many experts: safe unsupervised
-   lights, gestures                     autonomy NEEDS diverse sensors
+   THE BET (vision only)         THE CRITICISM (not enough)
+   ------------------------------------------------------------
+   humans drive on eyes and      cameras INFER depth; radar
+   a brain, so cameras and AI    and lidar MEASURE it
+   ought to be sufficient        directly, which is safer
+
+   cameras are cheap, so every   cameras fail in fog, rain,
+   car carries them -- more      snow, glare and darkness.
+   data, and a better AI         Radar and lidar do not.
+
+   one sense means no            one sense means no
+   conflicting signals to        redundancy: a fooled camera
+   arbitrate between             has nothing to check it
+
+   rich detail: colour, text,    many experts hold that safe
+   brake lights, gestures        autonomy REQUIRES diverse
+                                 sensors, and lidar is now
+                                 far cheaper than it was
+   ------------------------------------------------------------
 ```
 
 The evidence, as of 2026, is genuinely mixed and does not hand victory to either side. Tesla's vision system has improved markedly and, by some measures of active safety, its cars perform well. At the same time, camera-only driving has shown persistent weaknesses — including the unnerving phenomenon of "phantom braking," where the car brakes hard for a hazard that is not there, a classic symptom of a vision system misreading a shadow or a reflection — and independent assessments of how often a human must take over still fall well short of what unsupervised autonomy would demand. Meanwhile the economic ground has been shifting under the debate: one of Tesla's strongest original arguments, that lidar was hopelessly expensive, has weakened as lidar prices have fallen, softening the cost case for going without it.

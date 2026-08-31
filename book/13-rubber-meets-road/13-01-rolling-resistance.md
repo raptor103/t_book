@@ -7,14 +7,30 @@ Most drivers have never heard of it, because in a petrol car it was buried in th
 Two forces, two regimes:
 
 ```
-   force fighting the car vs. speed:
+   Which force is the car actually fighting?
 
-   AERODYNAMIC DRAG  low at town speed --> EXPLODES on the motorway
-   ROLLING RESISTANCE roughly constant, dominant at LOW speeds
+   force
+        |                                              ##
+        |                                            ##
+        |                                          ##
+        |                                       ###
+        |                                     ##
+        |                                  ###
+        |                               ###
+        |                           ####
+        |================================================
+        |                  #####
+        |           #######
+        |###########
+        +------------------------------------------------
+         0      40     80     120    160 km/h
 
-   city driving  -> rolling resistance rules
-   motorway      -> air rules
-   (an EV must win BOTH battles to have good range everywhere)
+   #  aerodynamic drag -- tiny in town, EXPLODES on the motorway
+   =  rolling resistance -- roughly constant at any speed
+
+   They cross at around 80 km/h. Below it the tyres are the
+   main enemy; above it, the air. An electric car has to win
+   both battles to have good range everywhere.
 ```
 
 Now, why does an electric car care about this more than a petrol car did? Three reasons, and they are the same three that run through the whole chapter. The first is the one from Chapter 1: an electric drivetrain is so efficient that there are very few *other* losses left, so the losses that remain — chiefly rolling resistance and air — loom proportionally much larger. In a petrol car, where the engine was throwing away three-quarters of the fuel anyway, the drag of the tyres was a rounding error lost among far bigger wastages. In an electric car, where almost nothing else is wasted, the tyres' flexing becomes one of the biggest remaining leaks, and plugging it matters.

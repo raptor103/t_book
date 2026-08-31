@@ -9,19 +9,21 @@ The octovalve collapses that nest into a single object. It is, at heart, one rot
 One valve, several plumbing diagrams:
 
 ```
-   the octovalve turns to reconnect the same components
-   into different loops, on demand:
+   One rotating valve, eight ports. Turn it, and the same
+   components are replumbed into a different set of loops:
 
-   position A:  [battery + drive unit] --- [radiator + chiller]
-                 (two separate parallel loops)
+   position A   [ battery + drive unit ]  [ radiator + chiller ]
+                two separate loops, running in parallel
 
-   position B:  [battery]---[drive unit]---[radiator]---[chiller]
-                 (one long series loop -- share heat around)
+   position B   [ battery ]-[ drive unit ]-[ radiator ]-[ chiller ]
+                one long series loop, sharing heat all round
 
-   position C:  [drive unit -> battery]   (steal motor's waste
-                 heat to warm a cold pack)   heat, route it uphill
+   position C   [ drive unit ] -------> [ battery ]
+                steal the motor's waste heat to warm a cold pack
 
-   one rotating part, many configurations -- no tangle of valves
+   The heat pump MAKES the cheap heat.
+   The octovalve DECIDES WHERE IT GOES.
+   Neither is much use without the other.
 ```
 
 Tesla folds this valve, together with the pumps, the coolant reservoir, and the sensors, into an integrated block the company nicknames a super-manifold — and here the numbers become almost comic. Where a conventional thermal system might contain hundreds of separate pieces, Tesla's simplified manifold reduces the heart of it to a small handful of main components. Fewer parts to make, fewer to assemble, fewer joints to leak, less mass to carry. It is the same instinct we keep meeting — the deletion of complexity — applied now to the plumbing, and it is why a hardened teardown engineer found it moving: not because a valve is glamorous, but because doing a sprawling job with one elegant part is the essence of good engineering.

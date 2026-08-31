@@ -7,14 +7,19 @@ Start with what "a bigger wheel" actually means, because there is a subtlety peo
 The consequences, and they compound:
 
 ```
-   SMALL wheel (e.g. 18")           LARGE wheel (e.g. 21")
-   tall, deep tyre                  thin, low-profile tyre
-   lighter                          heavier (more metal)
-   more sidewall cushion            less cushion -> harsher ride
-   lower rolling resistance         higher rolling resistance
-   smaller, less draggy             bigger face -> more aero drag
-   MORE RANGE, comfier              LESS RANGE, firmer -- but "looks"
-   looks modest                     fills the arches, sporty stance
+   SMALL wheel (say 18 inch)     LARGE wheel (say 21 inch)
+   ------------------------------------------------------------
+   tall, deep tyre               thin, low-profile tyre
+   lighter                       heavier -- more metal
+   more sidewall cushion         less cushion, harsher ride
+   lower rolling resistance      higher rolling resistance
+   smaller, less draggy face     bigger face, more aero drag
+   ------------------------------------------------------------
+   MORE RANGE, and comfier       LESS RANGE, and firmer
+   looks modest                  fills the arches, sporty
+
+   The engineering answer and the showroom answer disagree,
+   and the buyer gets to settle it.
 ```
 
 First, weight. A bigger rim is more metal, so it weighs more — and not just any weight, but the worst kind. Wheel weight is *unsprung* and *rotating*: unsprung because it sits below the suspension springs, where extra mass hurts ride and handling most, and rotating because a wheel must be spun up and slowed down constantly, which takes more energy the heavier and larger it is. Heavier wheels blunt both efficiency and the crispness of the ride.

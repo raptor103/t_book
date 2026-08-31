@@ -9,11 +9,21 @@ The elegance is total. The very same device that spent battery energy to speed t
 Waste versus recovery, side by side:
 
 ```
-   FRICTION BRAKE (petrol car)      REGEN (electric car)
-   motion --> pads clamp disc        motion --> motor spun backwards
-          --> HEAT --> gone                 --> ELECTRICITY
-                                            --> back into battery
-   the car's speed is thrown away    the car's speed is banked
+   FRICTION BRAKE (any car)      REGENERATION (electric car)
+
+   the car's motion              the car's motion
+        |                             |
+        v                             v
+   pads clamp the disc           the wheels spin the motor
+        |                             |
+        v                             v
+   HEAT on the disc              ELECTRICITY
+        |                             |
+        v                             v
+   blown away into the air       back into the battery
+
+   the speed is thrown away      the speed is banked -- worth
+                                 around 10% of range
 ```
 
 But this book prefers the honest version, and regeneration has real limits that shape how the car behaves. The first is the battery's willingness to accept charge. If the pack is completely full — say you have just charged to 100 per cent and set off downhill — there is nowhere for the recovered energy to go, and regeneration has to be dialled back or switched off, handing the job to the friction brakes after all. The same is true when the battery is very cold, because, as Chapter 2 explained, a cold battery cannot accept a fast charge without risking damage; on a freezing morning a Tesla will often show reduced regeneration until the pack has warmed, and the car warns you that braking will feel different. This is not a fault. It is the BMS from Chapter 3 protecting the cells, and it is one of the reasons the car works so hard to keep the battery in its comfortable temperature range — a theme Part IV takes up in full.

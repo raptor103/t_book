@@ -7,14 +7,20 @@ The machine that does it is called a Giga Press, and it is genuinely enormous �
 Seventy parts, one shot:
 
 ```
-   TRADITIONAL REAR UNDERBODY        GIGACASTING
-   ~70 stamped steel parts           1 aluminium casting
-   hundreds of welds                 poured in one shot
-   many robots, long sequence        ~300 fewer robots (per Tesla)
-   variable fit, much inspection     consistent, little to inspect
-      |                                 |
-   heavy, slow, costly               ~30% lighter, ~40% cheaper
-                                     (by Tesla's own estimates)
+   TRADITIONAL REAR UNDERBODY    GIGACASTING
+   ------------------------------------------------------------
+   about 70 stamped steel parts  1 aluminium casting
+   hundreds of welds             poured in a single shot
+   many robots, a long           about 300 fewer robots,
+   sequence of operations        by Tesla's own account
+   variable fit, much            consistent, with little
+   inspection needed             left to inspect
+   ------------------------------------------------------------
+   heavy, slow, costly           around 30% lighter and 40%
+                                 cheaper, by Tesla's estimates
+
+   And the same consolidation that makes it cheap to build
+   is what makes it expensive to repair. One see-saw.
 ```
 
 The benefits, when it works, are exactly the design-for-manufacturing wins of the last section, delivered at spectacular scale. Consolidating seventy parts into one eliminates all the welding between them, and with it the hundreds of robots that did the welding — Tesla has claimed the change removed something like three hundred robots from the line. It eliminates the variability of lining up many parts, so the finished structure is more consistent and dimensionally accurate. It removes a small mountain of logistics — seventy part numbers, their suppliers, their storage, their sequencing — replaced by one casting. And by Tesla's own estimates the approach can cut the underbody's weight by around thirty per cent and its cost by up to forty. Fewer parts, less labour, less weight, lower cost, better consistency: it is the manufacturing dream made metal, and it is why much of the rest of the industry scrambled to copy it.

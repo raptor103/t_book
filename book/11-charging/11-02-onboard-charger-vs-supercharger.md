@@ -9,14 +9,21 @@ So the engineering does the obvious economical thing: it splits the job by how o
 The division of labour:
 
 ```
-   ONBOARD CHARGER (you carry it)    SUPERCHARGER (you visit it)
-   small, light, cheap               huge, heavy, expensive, cooled
-   converts AC->DC in the car        converts AC->DC in the cabinet
-   ~7-11 kW                          up to 250 kW+ (V3), more on V4
-   for the COMMON case:              for the RARE case:
-   slow, overnight, plentiful time   fast, on a journey, in a hurry
-   anywhere there's a socket         only at dedicated stations
-   idle cost: you carry it always    cost SHARED across many cars
+   ONBOARD CHARGER               SUPERCHARGER
+   (you carry it everywhere)     (you visit it)
+   -------------------------------------------------------------
+   small, light, cheap           huge, heavy, expensive, cooled
+   converts AC->DC in the car    converts AC->DC in the cabinet
+   ~7-11 kW                      up to 250 kW and beyond
+   for the COMMON case:          for the RARE case:
+   slow, overnight, time to      fast, mid-journey, in a hurry
+   spare
+   anywhere there is a socket    only at dedicated stations
+   you carry its weight even     its cost is SHARED across
+   when it is idle               every car that visits
+   -------------------------------------------------------------
+
+   Not rivals: one car, two doors into the same battery.
 ```
 
 This is why the Supercharger network matters as much as the car itself, and why it deserves a word here even in a book about engineering rather than business. A fast charger is useless in isolation; what makes it valuable is that there are many of them, reliably working, spaced along the routes people actually drive. Tesla's decision to build that network itself — rather than wait for others to — is one of the reasons its cars became practical for long journeys years before many rivals, and it is the network, as much as the plug, that every other carmaker wanted access to when they adopted Tesla's connector in the story of Chapter 10. The car and the network are two halves of one system; neither is much use without the other.

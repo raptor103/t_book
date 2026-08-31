@@ -7,17 +7,24 @@ That other job is standing still. The reason a fading pack is a problem in a car
 The battery's two lives, and its afterlife:
 
 ```
-   FIRST LIFE (in the car)     ~100% -> retired around 70-80%
-        |                       (brutal: deep cycles, fast charge,
-        |                        weight, temperature swings)
+   FIRST LIFE -- in the car
+     100%  ------------------------->  retired at 70-80%
+     a brutal job: deep cycles, fast charging, heavy,
+     and swinging through every temperature
+        |
         v
-   SECOND LIFE (stationary)    70-80% -> down to maybe ~50%+
-        |                       (gentle: steady, predictable, no
-        |                        weight limit -- grid/home storage)
+   SECOND LIFE -- stationary storage
+     70-80%  ----------------------->  down to perhaps 50%
+     a gentle job: steady, predictable, and nobody cares
+     what it weighs -- grid and home storage
+        |
         v
-   RECYCLING (raw material)    reclaim >95% of lithium, nickel,
-                               cobalt, copper -> new batteries
-                               (the loop closes; less mining)
+   RECYCLING -- raw material
+     more than 95% of the lithium, nickel, cobalt and copper
+     reclaimed, and sent back into new cells
+
+   The most expensive and most criticised component in the
+   car is the one that most stubbornly refuses to be waste.
 ```
 
 And when even the second life is over — when the pack is too tired for stationary storage too — it still does not become mere rubbish, because of what it is made of. A dead battery is, in effect, a rich and concentrated *ore*, packed with exactly the expensive metals that are so costly and so environmentally fraught to dig out of the ground: lithium, nickel, cobalt, copper. Recycling reclaims them. Modern battery-recycling processes can recover the great majority of these materials — one leading recycler reports reclaiming **over ninety-five per cent** of the critical metals — and feed them straight back into making new cells. The metal that was mined once can be used again and again, so that a battery at the true end of its life becomes the raw material for the next generation of batteries, closing the loop and cutting the need for fresh mining.

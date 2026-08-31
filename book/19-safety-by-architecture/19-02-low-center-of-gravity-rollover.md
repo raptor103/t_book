@@ -7,14 +7,21 @@ The reason is a single number that governs how easily anything tips over: the he
 High mass versus low mass:
 
 ```
-   TALL PETROL SUV                 ELECTRIC CAR
-   engine + mass sit HIGH          battery mass sits LOW (in floor)
+   TALL PETROL SUV                ELECTRIC CAR
+   mass sits HIGH                 mass sits LOW, in the floor
 
-        [  mass  ]                       [ cabin ]
-        [        ]                       [       ]
-     ___[________]___              ______[_______]______
-        (high CoG)                 [##### battery #####]  (low CoG)
-     tips more easily              extremely hard to roll over
+        [  engine  ]                    [  cabin  ]
+        [   mass   ]                    [         ]
+        [          ]                    [         ]
+     ___[__________]___           ______[_________]______
+                                  [#####  battery  #####]
+
+     centre of gravity HIGH        centre of gravity LOW
+     -> tips more easily           -> extremely hard to roll
+
+   The same slab of battery that costs the car range, wears
+   its tyres and complicates its plumbing is what makes it
+   nearly impossible to turn over.
 ```
 
 The consequence is a car that strongly resists rolling over even when provoked. When electric cars with floor-mounted batteries have been subjected to the standard rollover tests, some have posted the best rollover-resistance scores on record — better than not just other cars but the very SUVs that the rollover problem was invented for. In some cases the testing machinery struggled to tip them at all through the normal procedures, because the low, heavy battery simply refused to let the car go over. A crash mode that engineers had fought for decades was, for the electric car, largely solved by where the battery happened to need to go.

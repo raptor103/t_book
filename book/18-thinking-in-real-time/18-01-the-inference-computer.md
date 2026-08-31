@@ -9,15 +9,22 @@ Tesla's answer has evolved through generations, each a response to wanting more 
 The inference computer's brief:
 
 ```
-   INFERENCE = running an already-trained network (not learning)
+   INFERENCE = running an already-trained network.
+   The car applies what was learned elsewhere. It does not
+   learn anything here.
 
-   the car's brain must be:
-     FAST ........ decide many times a second, before it's too late
-     COMPACT ..... small, low-power (HW3 ~80W; HW4 ~160W)
-     REDUNDANT ... TWO chips that cross-check each other
-                   -> if one is wrong or fails, the other catches it
+   The brain in the car must be:
 
-   it APPLIES what was learned elsewhere; it does not learn here
+     FAST ......... decide many times a second, before the
+                    moment to decide has passed
+     COMPACT ...... small and low-power, because it rides
+                    in a car (HW3 ~80 W, HW4 ~160 W)
+     REDUNDANT .... TWO chips, cross-checking each other, so
+                    that if one is wrong or fails outright,
+                    the other catches it
+
+   A single chip deciding whether to brake for a child would
+   be a single point of failure, in the most literal sense.
 ```
 
 One design feature deserves special note because it embodies a principle from earlier in the book: redundancy. The Hardware 4 computer contains not one but *two* self-driving chips, and this doubling is deliberate. The two can work on the same problem and cross-check each other, so that if one produces a wrong answer or fails outright, the other is there — the same "make everything at least twice" logic we met in the steer-by-wire system of Chapter 14, applied now to the brain rather than the steering. A single chip deciding whether to brake for a child would be a single point of failure in the most literal and unacceptable sense; two chips checking each other is how you make a safety-critical decision trustworthy. The car's perception, like its steering, is built to survive the failure of any one part.

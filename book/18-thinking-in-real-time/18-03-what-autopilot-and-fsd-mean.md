@@ -9,14 +9,22 @@ Then the grander claim. **Full Self-Driving** — which Tesla, under regulatory 
 Name versus reality:
 
 ```
-   NAME says ...              REALITY (2026) is ...
-   "Autopilot"                adaptive cruise + lane-keeping (assist)
-   "Full Self-Driving"        supervised assist: can attempt city
-                              driving BUT the human must watch
-                              constantly and take over instantly
+   THE NAME SAYS ...        THE REALITY IN 2026 IS ...
+   ------------------------------------------------------------
+   "Autopilot"              adaptive cruise control and
+                            lane-keeping. Assistance.
 
-   BOTH are SAE "Level 2": the HUMAN is driving and responsible,
-   with the car assisting -- NOT the car driving itself
+   "Full Self-Driving"      supervised assistance. It can
+                            attempt city driving, BUT the
+                            human must watch constantly and
+                            be ready to take over instantly.
+   ------------------------------------------------------------
+
+   Both are SAE Level 2. That means the HUMAN is driving and
+   the human is responsible, with the car assisting -- not
+   the car driving itself.
+
+   Trust the assistance. Do not trust the name.
 ```
 
 The engineers' own framework makes the point precisely. There is a widely-used scale of driving automation, running from Level 0 (no automation) to Level 5 (goes anywhere, no human needed). Crucially, there is a bright line between Level 2 and Level 3: at Level 2 and below, *the human is driving* and the system merely assists, so the human is responsible for everything; at Level 3 and above, the *system* is doing the driving under defined conditions, and may allow the human to disengage. Both Autopilot and Full Self-Driving (Supervised), as of 2026, sit at **Level 2**. Despite the names, the human is legally and practically the driver, responsible for the car's every move. The system is a very sophisticated assistant, not a chauffeur.

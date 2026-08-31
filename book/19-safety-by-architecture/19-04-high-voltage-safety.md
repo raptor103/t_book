@@ -9,16 +9,29 @@ Backing this up is the constant *isolation monitoring* also introduced in Chapte
 Automatic protection, and signals for rescuers:
 
 ```
-   IN THE CRASH (automatic, milliseconds):
-     impact sensed -> CONTACTORS OPEN -> HV pack disconnected
-     isolation monitoring -> shut down if voltage leaks to the body
-     low-voltage world survives -> hazards, door releases, e-call
+   IN THE CRASH -- automatic, within milliseconds
 
-   FOR THE RESCUERS (making the danger legible):
-     orange = high-voltage cables (never cut)
-     a "first responder loop" to cut, to guarantee de-energising
-     standardised rescue sheets: where to cut, where NOT to
-     awareness: a damaged pack can REIGNITE hours later
+     impact sensed
+          |
+          v
+     CONTACTORS OPEN -- the HV pack is disconnected and its
+     energy sealed inside its own armoured box
+          |
+          v
+     the LOW-voltage world survives, and keeps the hazard
+     lights, door releases and emergency call alive
+
+     running throughout: isolation monitoring, which shuts
+     the system down if any voltage leaks to the bodywork
+
+   FOR THE RESCUERS -- making the danger legible
+
+     ORANGE ............ the colour of every HV cable. Never cut.
+     first-responder ... a designated loop to cut, which
+     loop                guarantees the system is de-energised
+     rescue sheets ..... standardised diagrams: where to cut,
+                         and where absolutely not to
+     and a warning ..... a damaged pack can reignite hours later
 ```
 
 But automatic isolation is not enough on its own, because a rescuer must be able to *trust* that the car is safe before cutting into it, and to make the danger visible. So electric cars are built to communicate their hazards to the people who deal with wrecks. High-voltage cabling is coloured a distinctive orange, an industry convention that tells any trained responder: never cut this. Cars are provided with a designated *first-responder loop* or cut point — a specific place a firefighter can sever to guarantee the high-voltage system is de-energised, a manual backstop to the automatic contactors. And manufacturers publish standardised rescue sheets showing exactly where the battery, the cables, and the safe cutting points are, so that a crew can cut a roof off to reach a trapped occupant without slicing into a live cable or the pack itself. Making the invisible danger legible — colour-coded, documented, with a clear "cut here to make safe" — is as much a part of the car's safety design as any armour.

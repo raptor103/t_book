@@ -12,16 +12,21 @@ The whole "transmission," end to end:
 
 ```
    ENGINE CAR                        ELECTRIC CAR
-   engine: narrow usable band        motor: 0 to ~18,000 rpm, strong
-      |                                 throughout
-   clutch (disconnect to shift)        |
-      |                              (no clutch -- never disconnects)
-   gearbox: 5-7 ratios, always         |
-   swapping to stay in the band     reduction gear: ONE fixed ratio
-      |                              ~9:1, divides speed x9,
-   driveshafts -> wheels             multiplies torque x9
-                                        |
-                                     driveshafts -> wheels
+
+   engine                            motor
+   narrow usable rev band            0 to ~18,000 rpm, strong
+     |                               torque the whole way
+     v                                 |
+   clutch                              |    no clutch -- the motor
+   disconnects to shift                |    never disconnects
+     |                                 v
+     v                               reduction gear
+   gearbox                           ONE fixed ratio, ~9:1
+   5-7 ratios, forever               speed / 9, torque x 9
+   swapping to stay in band            |
+     |                                 v
+     v                               driveshafts --> wheels
+   driveshafts --> wheels
 ```
 
 The consequences ripple outward. There is no clutch, so the drive is never interrupted — the motor stays connected to the wheels at all times, which is part of why regenerative braking (next chapter) is even possible. There is no gear-change, so there is no shift shock, no pause, no hunting for the right ratio on a hill; acceleration is one seamless surge from zero to top speed, uninterrupted, the way a single long note differs from a scale. There is no gear lever and, increasingly, no obvious "transmission" at all — just a compact housing bolting the motor to the wheels. And there are far fewer parts to build, lubricate and break: a handful of gears instead of a dozen synchronised ratios, a clutch, and their hydraulics.

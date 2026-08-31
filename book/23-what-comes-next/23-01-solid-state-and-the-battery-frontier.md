@@ -7,15 +7,21 @@ The advantages read like a wish-list answering every complaint this book has rai
 The frontier, honestly drawn:
 
 ```
-   TODAY (liquid electrolyte)     SOLID-STATE (the prize)
-   flammable liquid               non-flammable solid
-   ~150-300 Wh/kg                 potentially ~300-900 Wh/kg
-   graphite anode                 lithium-metal anode (far more energy)
-      |                              |
-   mature, cheap, shipping now    huge promise -- BUT very hard to
-                                  manufacture; solids don't conform,
-                                  need defect-free thin sheets, new
-                                  factories -> realistic scale: 2030s
+   TODAY (liquid electrolyte)    SOLID-STATE (the prize)
+   ------------------------------------------------------------
+   a flammable liquid            a non-flammable solid
+   about 150-300 Wh/kg           potentially 300-900 Wh/kg
+   graphite anode                lithium-metal anode, holding
+                                 far more energy
+   ------------------------------------------------------------
+   mature, cheap, shipping       enormous promise -- but very
+   in millions of cars today     hard to manufacture: solids
+                                 will not conform, the sheets
+                                 must be thin and defect-free,
+                                 and it needs new factories
+
+   Realistic scale: the 2030s. Watch the frontier closely,
+   and believe the timelines cautiously.
 ```
 
 So why is it not here already? Because — and this should sound familiar from the 4680 story of Chapter 2 — the physics is promising and the *manufacturing* is brutal. A liquid electrolyte has one wonderful property: it flows into every crevice, wetting the electrodes perfectly, keeping contact as the cell swells and shrinks with each charge. A solid cannot do this. Getting a solid electrolyte to maintain intimate, stable contact with solid electrodes, across millions of cycles, without gaps forming, requires high pressure or exquisitely engineered surfaces. Producing the solid electrolyte as an ultra-thin, dense, defect-free sheet, at enormous scale and low cost, demands manufacturing processes that barely exist yet. This is why, despite a steady drumbeat of announcements and the occasional genuinely-shipping small cell, most sober assessments in 2026 put mass-market solid-state cars firmly in the 2030s. The laboratory result is real; the road-ready, affordable, mass-produced version is the hard part, and the hard part is where the years go — exactly the lesson of 22.3, now pointed at the future.

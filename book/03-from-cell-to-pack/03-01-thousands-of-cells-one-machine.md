@@ -13,16 +13,21 @@ Notice what stays fixed and what changes. Both packs are ninety-six cells "tall,
 The structure, drawn as a ladder:
 
 ```
-   96 bricks in SERIES  (this builds the ~350 V, top to bottom)
-   +-----------------------------------------------+
-   | brick 96 : 46 cells in PARALLEL  === capacity |
-   | brick 95 : 46 cells in PARALLEL  === capacity |
-   |   ...          ...                            |
-   | brick  2 : 46 cells in PARALLEL  === capacity |
-   | brick  1 : 46 cells in PARALLEL  === capacity |
-   +-----------------------------------------------+
-     ^ height sets VOLTAGE      ^ width sets ENERGY
-     (fixed at 96 = ~350 V)     (46p long-range, 31p standard)
+   Each BRICK = 46 cells side by side in PARALLEL  -> capacity
+   96 BRICKS stacked in SERIES                     -> voltage
+
+        +---------------------------------------------+   ^
+   96   | [o][o][o][o] .... 46 cells .... [o][o][o][o] |   |
+   95   | [o][o][o][o] .... 46 cells .... [o][o][o][o] |   |
+    :   |                     :                       |   | 96 x 3.6 V
+    2   | [o][o][o][o] .... 46 cells .... [o][o][o][o] |   | = ~350 V
+    1   | [o][o][o][o] .... 46 cells .... [o][o][o][o] |   v
+        +---------------------------------------------+
+         <----------- width sets ENERGY ------------->
+
+   96s46p = 96 x 46 = 4,416 cells   (long range)
+   96s31p = 96 x 31 = 2,976 cells   (standard range)
+   The height never changes: every pack needs the same voltage.
 ```
 
 These bricks are then grouped into a handful of larger blocks — historically four *modules* in a Model 3 — for ease of building and wiring, though the newest structural packs, which the chapter comes to shortly, blur the modules away entirely. However they are grouped, the principle is unchanged: height for pressure, width for quantity.

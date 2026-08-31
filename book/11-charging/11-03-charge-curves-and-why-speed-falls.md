@@ -11,18 +11,27 @@ Two other effects from the same family pile on near the top. Heat: fast charging
 The shape of a fast charge:
 
 ```
-   charging power (kW)
-    high |####
-         |########
-         |############
-         |################          <- fast: plenty of empty
-         |####################         parking spaces, push hard
-         |########################
-         |##############################
-         |####################################  <- tapering as
-    low  |__________________________________########  it fills
-         0%    20%    40%    60%    80%    100%
-              (peak)          |----- slow crawl -----|
+   Charging power, against how full the battery already is:
+
+   250 kW |    #######
+          |   ###############
+          |  ####################
+      190 | #########################
+          | ############################
+          |#################################
+      125 |####################################
+          |#######################################
+          |##########################################
+       60 |#############################################
+          |################################################
+          |##################################################
+          +--------------------------------------------------
+           0%      20%      40%      60%      80%    100%
+           |------- the fast stretch -------|--the crawl--|
+
+   Fast while there are empty parking spaces to fill, slower
+   and slower as they run out. Which is why 10-80% is the
+   number that matters on a journey, and 0-100% is not.
 ```
 
 Out of this comes the single most valuable piece of practical charging advice, and it is delightfully simple: on a road trip, **charge to about eighty per cent and drive on.** The stretch from eighty to a hundred is the slowest, least rewarding part of the curve — you spend a long time gaining relatively little range — so you almost always cover more distance in less total time by charging to eighty, driving, and stopping again briefly, than by waiting at each stop for a full battery. The "0 to 100 per cent" time that people quote is nearly meaningless for journey planning; the number that matters is something like "10 to 80 per cent," the fast part of the curve, where fast charging earns its name.

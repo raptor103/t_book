@@ -10,20 +10,30 @@ The journey of one joule:
 
 ```
    grid AC
-     |  AC -> DC conversion (onboard charger OR roadside cabinet)
-   DC into the pack -> stored as ION POSITION in a cell
-     |  (waits; balanced and kept at the right temperature)
-   you accelerate:
-   cell -> BMS/contactors -> INVERTER (DC -> 3-phase AC)
+     |   AC to DC -- in the onboard charger, or in the
+     |   roadside cabinet
+     v
+   DC into the pack, stored as ION POSITION inside a cell
+     |   (it waits there, balanced and held at the right
+     |    temperature, until you ask for it)
+     v
+   BMS and contactors let it out
      |
-   MOTOR: AC makes a rotating field; the rotor is dragged round
+     v
+   INVERTER  --  DC becomes three-phase AC
      |
-   reduction gear (speed down, torque up) -> differential
+     v
+   MOTOR  --  the AC makes a rotating field; the rotor chases it
      |
-   driveshaft -> wheel -> the contact patch -> the ROAD
+     v
+   REDUCTION GEAR  --  speed down, torque up  --  DIFFERENTIAL
+     |
+     v
+   driveshaft  ->  wheel  ->  the contact patch  ->  the ROAD
 
-   ~85% of what left the battery reaches the road; a petrol
-   car delivers ~20% of its fuel. same journey, opposite result.
+   About 85% of what leaves the battery reaches the road.
+   A petrol car delivers about 20% of its fuel.
+   Same journey. Opposite result.
 ```
 
 Now you press the accelerator, and our joule is called. The ion is released and rushes home to the metal-oxide cathode, and its abandoned electron, forbidden to follow through the electrolyte, is forced out through the wires — that forced detour *is* the current (Chapter 2). It flows to the inverter, which chops the steady DC into three staggered waves of AC, sculpting them with switches flicking twenty thousand times a second (Chapter 4). Our joule, now riding an alternating current, reaches the motor's stator coils and helps make the magnetic field sweep round; the rotor, dragged after the field, turns (Chapter 5). The energy has become rotation.

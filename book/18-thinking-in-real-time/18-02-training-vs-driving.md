@@ -9,14 +9,20 @@ Think of it as the difference between an education and a job. *Training* a neura
 Two kinds of thinking, two very different places:
 
 ```
-   TRAINING (building the intelligence)   DRIVING (using it)
-   in giant data centres                  in the car
-   MEGAWATTS of power                     ~80-160 watts
-   weeks / months, offline                real-time, right now
-   grinds through millions of examples    runs the finished network
-   done ONCE, then copied to all cars     done constantly, per car
+   TRAINING                      DRIVING
+   building the intelligence     using it
+   ------------------------------------------------------------
+   in giant data centres         in the car
+   MEGAWATTS of power            80 to 160 watts
+   weeks or months, offline      real time, right now
+   grinds through millions       runs the finished network
+   of examples                   once, per frame
+   done ONCE, then copied        done constantly, in every
+   to every car                  car, forever
+   ------------------------------------------------------------
 
-   the HEAVY compute is NOT in the car -- it's in the data centre
+   The heavy thinking is NOT in the car. It happens in a
+   building the car will never visit.
 ```
 
 Tesla built specialised machinery for this training side, most famously a supercomputer project called Dojo, designed specifically to chew through the fleet's video data and train the driving networks. The story of Dojo is itself a lesson in how fast this field moves and how provisional even big bets can be: after years of development, Tesla wound the Dojo project down around 2025, judging it an evolutionary dead-end, and shifted its focus to new-generation chips (called AI5 and AI6) intended to handle both the training in the data centre and the inference in the car. This book flags that as very much a moving story — the specific hardware names will date quickly — but the underlying division does not change: whatever machine does it, *training* is a colossal offline effort, and *driving* is a small real-time one.

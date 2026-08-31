@@ -10,10 +10,15 @@ The trade, laid bare:
 
 ```
    AERO WHEEL COVER              OPEN ALLOY SPOKES
-   smooth face, calm airflow     sculpted, "looks like a wheel"
-   ~4% more real-world range     ~4% less range
-   often called ugly             often preferred on looks
-   -> the buyer chooses: kilometres, or kerb appeal
+   ------------------------------------------------------------
+   smooth face, calm airflow     sculpted, and it looks like
+                                 a wheel is supposed to look
+   about 4% MORE real range      about 4% LESS
+   widely called ugly            widely preferred
+   ------------------------------------------------------------
+
+   The buyer chooses: kilometres, or kerb appeal. Both are
+   legitimate answers, and the car politely admits it.
 ```
 
 It is worth dwelling on why this tension is sharper for an electric car than it ever was for a petrol one, because it reveals something about the whole project. On a petrol car, the aerodynamic penalty of pretty open wheels was real but invisible — it cost a trickle of extra fuel that nobody noticed or costed. The energy was cheap and the tank refilled in two minutes, so the drag of a handsome wheel simply vanished into the general noise of running a car. On an electric car, the same drag is *legible*. It shows up as a smaller number on the range display, a slightly earlier charging stop, a visible consequence you can watch. The electric car, by making energy scarce and range precious, drags an old, hidden trade-off into the daylight and forces the owner to have an opinion about it. The physics did not change; the *stakes* did, and with them the visibility.

@@ -17,13 +17,14 @@ The payoff is a number that would have been science fiction to an engine designe
 The contrast, drawn crudely:
 
 ```
-Where the energy goes (battery / tank  ->  wheels)
+   Where the energy goes  (tank or battery  ->  wheels)
+   Both bars are the same 100 units.  # = reaches the wheels.
 
-  PETROL CAR   [######--------------------------]  ~1 part in 5 reaches
-                wheels ~20%   lost as heat ~80%      the road
+   PETROL    [########--------------------------------]  ~20%
+   ELECTRIC  [##################################------]  ~85%
 
-  ELECTRIC CAR [##########################------]  ~4-5 parts in 5 reach
-                wheels ~85%          losses ~15%     the road
+   Same bar, same scale: about one part in five, against
+   four to four and a half.
 ```
 
 This is why "efficiency as an obsession" is the right frame for the whole machine, and why it belongs at the end of the first chapter. Deleting the engine was only the opening move. Everything that follows — the chemistry of the cells, the switching of the inverter, the cleverness of the thermal system, the shortening of every wire — is the same obsession, followed relentlessly into every corner of the car. An electric car is not merely a vehicle that happens to be efficient. It is a machine in which efficiency has become the organising principle, the thread you can pull to unravel every other decision.

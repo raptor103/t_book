@@ -13,17 +13,41 @@ The inverter does exactly this with the battery's DC. Its switches chop the stea
 Chopping DC into the shape of a wave:
 
 ```
-   what the switches actually do (on/off pulses):
-     _   __   ___   __   _        _   __   ___   __   _
-    | | |  | |   | |  | | |      | | |  | |   | |  | | |
-   _| |_|  |_|   |_|  |_| |______| |_|  |_|   |_|  |_| |___
+   A switch has only two settings: fully ON and fully OFF.
+   Vary how LONG it stays on, and the average traces a wave.
 
-   what the motor "feels" (the smooth average):
-        .-''-.                        .-''-.
-      .'      '.                    .'      '.
-   __'          '.________________.'          '.____   ...
-                  '.            .'
-                    '-.______.-'          (one AC cycle)
+   Each slot below is one switching period. The shaded part
+   is how much of that period the switch is held ON:
+
+   |####                  |   narrow pulse -> low average
+   |###########           |
+   |#################     |
+   |##################### |   widest -> the peak of the wave
+   |######################|
+   |##################### |
+   |#################     |
+   |###########           |
+   |####                  |   narrow again -> back to zero
+
+   The motor's coils are electrically sluggish, so they
+   smooth that blur of pulses into the average it feels --
+   one full AC cycle, built entirely out of on/off flicks:
+
+              #######
+           #############
+         #################
+       #####################
+      ########################
+    ###########################
+   ##########################################################
+                                 ###########################
+                                  ########################
+                                    #####################
+                                      #################
+                                        #############
+                                           #######
+
+   The motor never sees the smooth wave. It feels it.
 ```
 
 To make the three staggered phases the motor needs, the inverter simply runs three of these switch pairs at once — one per phase — and starts each one's wave a third of a cycle after the last. Six switches in all, arranged in three pairs, each pair feeding one of the motor's three connections. That is the whole hardware: six fast switches, some large capacitors to steady the supply, and a controller clever enough to choreograph the pulse widths in real time.

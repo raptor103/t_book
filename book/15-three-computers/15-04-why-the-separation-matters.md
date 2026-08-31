@@ -9,14 +9,20 @@ That is the whole logic of the car's divided mind. Put the entertainment on one 
 Why the walls exist:
 
 ```
-   the principle: complex software WILL fail -- so CONTAIN failure
+   The principle: complex software WILL fail.
+   So build the car to CONTAIN the failure.
 
-   infotainment crashes  --> stays on the MCU; driving unaffected
-   an app hangs          --> the safety computer never even notices
-   a bad media update    --> can't reach the systems that keep you safe
-   the AI brain troubled --> simple zone controllers keep basics running
+   infotainment crashes ...... stays on the MCU; the driving
+                               is completely unaffected
+   an app hangs .............. the safety computer never even
+                               notices
+   a bad media update ........ cannot reach the systems that
+                               keep you alive
+   the AI brain is troubled .. the simple zone controllers
+                               keep the basics running
 
-   many isolated computers > one all-powerful brain that fails as one
+   Many isolated computers beat one all-powerful brain that
+   fails all at once.
 ```
 
 The separation buys three distinct things, each valuable on its own. The first is *safety*, as above: a failure in a non-critical system cannot cascade into a critical one, so the car's ability to perceive, steer and stop is protected from the chaos of everything else. The second is *independent development*: because the systems are walled off, the infotainment can be a fast-moving consumer platform, updated weekly with new toys, while the driving software is developed slowly and validated to a far higher standard — each free to move at its right pace without the other holding it back or dragging it into recklessness. The third is *security*. A car connected to the internet is a target, and if an attacker were ever to compromise the infotainment system — the most exposed, most feature-rich, most internet-facing part — the isolation means they would find themselves trapped in the entertainment computer, walled off from the systems that actually drive the car. The barriers that contain a crash also contain an intruder.

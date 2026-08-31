@@ -9,12 +9,18 @@ This is why so much of the comfort strategy is really an efficiency strategy in 
 Where the energy goes to keep you comfortable:
 
 ```
-   heating the whole cabin air ....... kilowatts  (expensive)
-      softened by the HEAT PUMP ....... 2-3x cheaper than a heater
-   heated seat / steering wheel ...... tens of watts (cheap;
-      warms the body directly, not the air)   the car prefers this
-   preheat while plugged in .......... free of range (uses the wall)
-   air filtration (the fan) .......... small, steady draw
+   What comfort costs, by order of magnitude:
+
+   heating the whole cabin ....... KILOWATTS       expensive
+      via the heat pump .......... 2-3x cheaper    still the
+                                                   biggest load
+   heated seat / steering wheel .. TENS OF WATTS   cheap: warms
+                                                   the body, not
+                                                   the air
+   preheating while plugged in ... no range at all paid by the wall
+   the filtration fan ............ tens of watts   a rounding error
+
+   Clean air is cheap. Warm air is expensive.
 ```
 
 Which brings us to the other half of cabin climate: the air itself, and Tesla's most theatrically-named feature. Many Teslas carry a genuine HEPA filter — the high-efficiency particulate filter used in hospitals and clean rooms — far larger and finer than the paper element in an ordinary car, capable of trapping the great majority of fine particulates, pollen, spores and the like. Tesla pairs it with a mode it calls, with a straight face, Bioweapon Defense Mode, which runs the fan hard enough to raise the cabin to a slight positive pressure, so that filtered air is pushed *out* through every gap and unfiltered air cannot leak *in*. The car becomes a mild pressure vessel of clean air. It is a real capability — independent tests have shown it scrubbing a smoky or polluted cabin impressively — dressed in a name that belongs on a film poster.

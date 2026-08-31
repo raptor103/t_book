@@ -15,12 +15,18 @@ The second is **cobalt**, and this one is as much ethics as engineering. Cobalt 
 The whole negotiation, on one card:
 
 ```
-              density   cost     cycle    cold     cobalt
-              (range)   (cheap)  life     tolerance  free?
-  NMC / NCA    HIGH      low      medium    better     no
-  LFP          lower     HIGH     HIGH      worse      YES
+                        NMC / NCA           LFP
+   ------------------------------------------------------------
+    energy density       150-250 Wh/kg      90-160 Wh/kg
+    pack cost            EUR 130-150/kWh    EUR ~95/kWh
+    cycle life           1,000-2,000        2,000-5,000
+    cold tolerance       better             weaker
+    cobalt-free          no                 yes
+    charge to 100%       not for daily use  routinely fine
+   ------------------------------------------------------------
 
-  (HIGH = strong on that axis; there is no column that wins them all)
+   No column wins every row. That is why one carmaker
+   ships both, in different cars.
 ```
 
 Read that grid and the market makes itself. The affordable, high-mileage, charge-it-to-full commuter car wants LFP and its cheapness and endurance. The long-range and performance car wants nickel and its density, and pays for it in money, in cobalt, and in a shorter cycle life it manages with careful charging. Neither is the "better" battery. They are answers to different questions — which is exactly why a single manufacturer builds cars with both, and why the next thing to understand is not a chemistry at all, but a container: the 4680.

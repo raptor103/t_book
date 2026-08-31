@@ -7,13 +7,19 @@ Recall the problem. A traditional wiring harness is a sprawling, floppy, three-d
 Why the harness resists robots:
 
 ```
-   what robots are GREAT at:        what the harness IS:
-   rigid, repeatable, precise       floppy, 3D, variable
-   grip-place-weld solid parts      thread limp wire through holes,
-                                    plug hidden connectors by feel
-      |                                |
-   almost everything else in         => the last big job left to
-   the factory is automated             HUMAN HANDS
+   WHAT ROBOTS ARE GREAT AT      WHAT A WIRING HARNESS IS
+   ------------------------------------------------------------
+   rigid, repeatable, precise    floppy, three-dimensional,
+                                 different every time
+   grip, place and weld solid    thread limp wire through
+   parts                         holes, and plug hidden
+                                 connectors by feel
+   ------------------------------------------------------------
+
+   Almost everything else in the factory is automated. This
+   is the last big job still left to human hands -- which is
+   why every wire deleted, shortened or standardised is a
+   step toward a car a robot can build end to end.
 ```
 
 Now every wiring decision in Part V reads differently. When Chapter 9 introduced zonal architecture with its short local wiring drops, one of the deepest motives was that short, simple, modular wiring is far easier for a machine to handle than long runs threading across the whole car. When Chapter 10 described the shrinking harness and the standardised connectors, the goal was explicitly to make the wiring something a robot might finally install. When Chapter 8 moved to forty-eight volts and thinner wires, and Chapter 10 folded data and power into a single resilient loop, part of the payoff was a physically simpler nervous system — fewer, thinner, shorter wires with fewer, standardised plugs. All of these were presented as electrical engineering. All of them are also a sustained campaign to defeat the one thing keeping humans on the assembly line: the un-automatable harness.

@@ -9,13 +9,17 @@ Tesla's Model 3 does something that, once you hear it, seems obvious — though 
 Function versus geography:
 
 ```
-   BY FUNCTION (traditional)         BY GEOGRAPHY (zonal)
-   door module ---> all 4 doors      VCFRONT --> everything up front
-   light module --> all lamps        VCLEFT  --> everything on the left
-   climate mod. --> all vents        VCRIGHT --> everything on the right
-   (each reaches across whole car)   (each handles only what's NEARBY)
+   BY FUNCTION (the old way)      BY GEOGRAPHY (zonal)
 
-   long wires crossing everywhere    short local wires to each zone
+   door module --> all 4 doors    VCFRONT --> all things up front
+   light module -> every lamp     VCLEFT  --> all things on the left
+   climate mod. -> every vent     VCRIGHT --> all things on the right
+
+   each module reaches right      each controller handles only
+   across the whole car           what is physically NEAR it
+
+   long wires crossing and        short local drops, plus one
+   overlapping everywhere         thin shared data backbone
 ```
 
 The liberating part is that a zone controller does not care what a device *is*. To VCLEFT, a driver's-door window motor, a driver's-side puddle lamp, a left-side temperature sensor and a nearby pump are all just "things near me that need power and control." It provides them power, switches them on and off, reads their sensors, and reports up to the car's central brain over a shared network. The controller is a general-purpose local agent — domain-agnostic, in the jargon — rather than a specialist. And because it is general-purpose, the same basic controller design can be dropped anywhere, which simplifies the parts list too.

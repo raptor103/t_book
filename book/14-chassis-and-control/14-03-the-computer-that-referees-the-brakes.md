@@ -16,20 +16,25 @@ Two boxes, one pedal:
    your foot
       |
       v
-   PEDAL SENSOR  (travel + force -- no fluid connection)
+   PEDAL SENSOR      travel and force. No fluid connection.
       |
       v
-   iBOOSTER  ......... decides regen-vs-friction split
-      |                electric motor pushes master cylinder
-      |                (no vacuum, no engine needed)
+   iBOOSTER          an electric motor pushes the master
+      |              cylinder -- no vacuum, no engine needed.
+      |              It decides the regen-vs-friction split.
       v
-   HYDRAULIC CONTROL UNIT ...... one valve per wheel
-      |                          ABS / traction / stability
-      +----> FL      FR      RL      RR
-                (each modulated independently)
+   HYDRAULIC         one valve per wheel, so each can be
+   CONTROL UNIT      braked independently. This is what runs
+      |              ABS, traction control and stability.
+      |
+      +------+-------+-------+
+      |      |       |       |
+      v      v       v       v
+     FL     FR      RL      RR
 
-   inputs: 4 wheel-speed sensors, steering angle,
-           yaw rate, and the motor's regen capability
+   watching all the while: four wheel-speed sensors, the
+   steering angle, the yaw rate, and how much regenerative
+   braking the motor can supply at this moment
 ```
 
 This makes the brake system the quietest safety-critical computer in the car: it arbitrates between two utterly different mechanisms, holds the pedal feeling constant across every temperature and state of charge, runs the three stability systems — and its entire measure of success is that you notice none of it. One further consequence matters, and Chapter 18 leans on it. Because the booster can build pressure *without the pedal being touched at all*, it is the actuator that automatic emergency braking uses: when the camera decides the car must stop and there is no foot on the pedal, this is the thing that stops it. Bosch claims it builds pressure roughly **three times faster** than the older hydraulic unit alone — and in an emergency stop, that difference is measured in metres.

@@ -7,15 +7,22 @@ Here is the quiet scandal of the electric car: its real marvels are almost entir
 Marvels versus marketing:
 
 ```
-   THE REAL MARVELS (barely marketed)   THE LOUDEST CLAIMS (over-sold)
-   heat pump + octovalve                "Full Self-Driving"
-   silicon-carbide inverter, 97%        robotaxi "next year"
-   structural pack (floor+crash+battery) some Battery Day 4680 promises
-   zonal wiring, 48V, harness deleted   autonomy timelines
-   the whole efficiency chain           "revolutionary", "it drives itself"
+   THE REAL MARVELS              THE LOUDEST CLAIMS
+   (barely marketed)             (over-sold)
+   ------------------------------------------------------------
+   the heat pump and octovalve   "Full Self-Driving"
+   the silicon-carbide           a robotaxi "next year"
+   inverter, at 97%              -- for several years running
+   the structural pack: floor,   some of the Battery Day
+   crash structure and battery   promises for the 4680
+   in one
+   zonal wiring, 48 volts, and   autonomy timelines,
+   kilometres of harness gone    generally
+   the whole efficiency chain    "revolutionary"
+   ------------------------------------------------------------
 
-   the brilliance is quiet; the hype is loud; they are
-   mostly NOT the same things.
+   The brilliance is quiet. The hype is loud. They are
+   mostly not the same things.
 ```
 
 Now the other column, told with the same honesty. Where did marketing outrun engineering? Overwhelmingly in one place: autonomy. "Full Self-Driving" is a name that describes a destination as though it were the current address; as Chapter 18 set out plainly, the system as of 2026 is sophisticated driver-*assistance* that legally and practically requires an attentive human, and regulators have compelled Tesla to soften the very name because it misled. The robotaxi that was perpetually a year or two away has been a year or two away for a long time. The vision-only bet (Chapter 17) may yet pay off, but it is a bet, not a settled triumph, and it has been sold with more certainty than the evidence supports. And the pattern is older than autonomy: even the celebrated 4680 cell (Chapter 2) arrived more slowly and less completely than the keynote promised. Again and again, the gap opens in the same place — not in the mundane engineering, which tends to be excellent and undersold, but in the futuristic promises, which tend to be oversold and late.

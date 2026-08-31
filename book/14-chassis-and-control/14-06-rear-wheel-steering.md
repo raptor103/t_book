@@ -9,13 +9,24 @@ At high speed the logic flips. Now the rear wheels turn in the *same* direction 
 Opposite at low speed, together at high speed:
 
 ```
-   LOW SPEED (parking, U-turns)     HIGH SPEED (lane changes)
-   front wheels: turn left          front wheels: turn left
-   rear wheels:  turn RIGHT         rear wheels:  turn LEFT (less)
-        \        /                       \        \
-         \      /                         \        \
-   -> shortens the car, TIGHT turn   -> stable, planted, smooth
-      (nimble in tight spaces)          (steady at speed)
+   LOW SPEED -- parking, U-turns
+
+     front wheels   turn LEFT
+     rear wheels    turn RIGHT -- the opposite way
+
+     the car pivots about its middle and takes a much
+     tighter circle, as though it were a shorter car
+
+   HIGH SPEED -- lane changes, motorway curves
+
+     front wheels   turn LEFT
+     rear wheels    turn LEFT too, but only slightly
+
+     the whole car slides across as one: stable and planted,
+     with none of the tail-swing of a sharp turn-in
+
+   Same hardware, opposite behaviour -- chosen by software,
+   according to how fast you are going.
 ```
 
 On the Cybertruck the rear wheels move only a few degrees — around three, with the potential for more via a software update, since the angle is set in software rather than fixed in metal — but even that small movement transforms how a large vehicle behaves, because turning circle is exquisitely sensitive to rear-wheel angle. A handful of degrees at the back is worth an enormous improvement in manoeuvrability at the front.

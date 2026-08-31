@@ -9,11 +9,19 @@ Now force — torque, the twist that actually pushes the car. Torque comes not f
 Two knobs on the same box of switches:
 
 ```
-   FREQUENCY of the waves   -->  how fast the field spins  -->  SPEED
-   (cycles per second)
+   Three different rates, doing three different jobs:
 
-   PULSE WIDTH / current    -->  how strong the field is   -->  TORQUE
-   (how long switches stay open)
+   1  OUTPUT FREQUENCY ..... how fast the three waves cycle
+      (a few hundred Hz)      -> how fast the field spins
+                              -> the car's SPEED
+
+   2  PULSE WIDTH ........... how long each switch stays open
+      (the duty cycle)        -> how much current in the coils
+                              -> the car's TORQUE
+
+   3  SWITCHING FREQUENCY ... how fast the switches chop
+      (10,000-20,000 Hz)      -> smoothness against wasted heat
+                              -> the designer's balancing act
 ```
 
 This is the deep reason electric cars have that famous instant shove. In a petrol car, asking for more torque means air and fuel and spark and rising revs — a physical process with its own unavoidable delays. In an electric car, asking for more torque means telling the inverter to widen its pulses, and it can do that between one blink of its internal clock and the next. There is essentially no lag between your foot and the force at the wheels. The throttle response people rave about is really inverter response.

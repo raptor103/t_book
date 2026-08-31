@@ -13,13 +13,18 @@ And now the chemistry from Chapter 2 pays off, because this is exactly where LFP
 The two rules of thumb, and why:
 
 ```
-   NICKEL (NMC / NCA)          LFP (lithium iron phosphate)
-   daily: charge to ~80%       daily: charge to 100% is fine
-   full only when needed       full also recalibrates the gauge
-   reason: top 20% causes       reason: stable phosphate cathode
-   disproportionate ageing      shrugs off a full charge
+                       NICKEL (NMC / NCA)    LFP
+   ---------------------------------------------------------------
+    daily charge to     about 80%             100%, routinely
+    charge to 100%      before a long trip    any time you like
+    why                 the top 20% causes    the phosphate cathode
+                        most of the ageing    shrugs a full charge off
+    bonus               --                    a full charge recalibrates
+                                              the BMS gauge
+   ---------------------------------------------------------------
 
-   BOTH chemistries dislike: heat, and sitting full for weeks
+   Both chemistries dislike the same two things:
+   heat, and being left sitting at 100% for weeks.
 ```
 
 Two caveats keep this honest. First, even LFP would rather not be *parked* at 100 per cent for weeks on end in the heat; charging to full is fine, marinating at full is not. Second, all of this is guidance about the margins. The difference between careful and careless charging is real, but it is measured in a few extra per cent of capacity over many years, not in the survival of the battery. You will not destroy a modern EV battery by charging it wrong. You will, at most, slightly hasten a decline that is already slow.

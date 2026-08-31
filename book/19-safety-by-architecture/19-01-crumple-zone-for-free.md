@@ -9,13 +9,23 @@ Delete the engine, and the problem vanishes — and in its place you get one of 
 The front end, engine versus empty:
 
 ```
-   PETROL CAR (engine in the way)     ELECTRIC CAR (empty frunk)
-   [bumper][ ENGINE BLOCK ][cabin]    [bumper][  empty space  ][cabin]
-              (rigid)                          (crushes freely)
-   in a crash the block can be        the whole nose folds and
-   shoved toward the cabin            absorbs energy -- no rigid
-   -> limits the crumple, risks       mass to intrude on occupants
-      intrusion into occupant space
+   Side view of the nose, in a frontal impact:
+
+   PETROL CAR
+     [bumper][==== ENGINE BLOCK ====][ cabin ]
+                    rigid, heavy
+     the block cannot crush, so the crumple zone is short --
+     and in a hard enough hit the block is shoved backwards,
+     toward the people
+
+   ELECTRIC CAR
+     [bumper][      empty  frunk      ][ cabin ]
+                 designed to fold
+     the whole nose collapses progressively, soaking up energy
+     over a long distance, with no rigid mass to intrude
+
+   Nobody designed this as a safety feature. It is simply
+   what is left when the engine goes.
 ```
 
 The results show up plainly in crash tests. When electric cars with this layout have been through the standard government crash programmes, they have tended to perform exceptionally in frontal impacts, and the generous, unobstructed front crumple zone is a large part of why. There are documented real-world crashes in which the long crush of an electric car's engine-less nose absorbed an enormous impact and the occupants walked away — outcomes that the presence of a rigid engine block might well have changed. This is not marketing; it is a straightforward consequence of geometry. Give a crash more room and more material to spend its energy on before it reaches people, and people come out better.

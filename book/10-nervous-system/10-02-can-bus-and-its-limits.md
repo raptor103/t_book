@@ -7,15 +7,19 @@ The problem it solved was wiring, the very problem of the last section. Before C
 The two-wire party line:
 
 ```
-   CAN BUS: one shared pair of wires, many controllers tap in
+   CAN BUS: one shared pair of wires; every controller taps in
 
-     ==+==========+==========+==========+==========+==  (2 wires)
+     ==+==========+==========+==========+==========+==
        |          |          |          |          |
-     engine     brakes     doors      lights     sensor
-     (messages broadcast to all; urgent ones get priority)
+     motor      brakes     doors      lights     sensor
 
-   robust, cheap, simple -- but SHARED, and slow by modern
-   standards (~1 Mbit/s; a few Mbit/s for newer CAN variants)
+   Every message is broadcast to all of them, and the more
+   urgent message wins if two talk at once.
+
+   Robust, cheap, and forty years proven -- but SHARED, and
+   slow by modern standards: about 1 Mbit/s, a few Mbit/s on
+   newer variants. Fine for a hundred short conversations.
+   Hopeless for one enormous one, such as camera video.
 ```
 
 But CAN was designed for a world of small messages. Its whole job was to carry short, urgent control signals: *this switch is on; that sensor reads forty degrees; apply the brakes.* For that, its modest speed — around one megabit per second, a few megabits in newer versions — is not merely enough but ideal, because control signals are tiny and what matters is that they arrive reliably and on time, not that they arrive in bulk. For its intended purpose, CAN remains excellent, and even the newest cars still use it for exactly this kind of low-level, must-not-fail control traffic.

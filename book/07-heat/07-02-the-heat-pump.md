@@ -11,13 +11,24 @@ The trick uses a working fluid, a refrigerant, and its willingness to change bet
 The heat pump versus the toaster:
 
 ```
-   RESISTIVE HEATER (old way)     HEAT PUMP (moving, not making)
-   1 unit electricity             1 unit electricity to run the pump
-        |                              |
-     1 unit heat  (that's all)    gathers 2-3+ units of heat from
-                                  the cold outside air (and waste
-                                  heat from the motor) and delivers
-                                  it to the cabin -- a multiplier
+   RESISTIVE HEATER -- the old way
+
+     1 unit of electricity  -->  1 unit of heat
+     and that is the ceiling, always.
+
+   HEAT PUMP -- moves heat instead of making it
+
+     1 unit of electricity  -->  runs the compressor
+                                      |
+     it gathers 2-3+ units of heat from:
+        - the cold outside air (even freezing air holds heat)
+        - waste heat from the motor and power electronics
+                                      |
+                                      v
+                           delivered into the cabin
+
+   Not free energy: a conveyor belt, not a furnace. And the
+   multiplier shrinks as the outside air gets truly cold.
 ```
 
 For an electric car the payoff is measured directly in winter range, the sorest point in the whole ownership experience. When Tesla brought a proper heat pump to the Model Y, paired with the octovalve of the next section, the gains were large: reports credited the redesigned thermal system with efficiency improvements of around ten per cent overall, and in genuinely extreme cold — where a resistive heater would be draining the battery hardest — range benefits climbed toward thirty per cent. That is not a rounding error. It is the difference between an electric car being merely tolerable in a Scandinavian February and being genuinely usable.

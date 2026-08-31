@@ -9,12 +9,19 @@ Electric power steering throws the hydraulics away. In its place sits an electri
 Hydraulic versus electric assistance:
 
 ```
-   HYDRAULIC POWER STEERING       ELECTRIC POWER STEERING (EPS)
-   engine-driven pump, always on  electric motor assists on demand
-   pressurised fluid, valves      sensor reads your input, motor helps
-   wastes energy running dry      draws power only when you steer
-   purely mechanical assist       SOFTWARE controls the assistance
-                                  -> and the motor can steer ITSELF
+   HYDRAULIC POWER STEERING      ELECTRIC POWER STEERING
+   ------------------------------------------------------------
+   a pump driven by the engine   an electric motor assists
+   runs constantly, always on    only when you actually steer
+   pressurised fluid and valves  a sensor reads your input,
+                                 and the motor helps
+   wastes energy going straight  draws nothing going straight
+   the assist is mechanical      SOFTWARE sets the assistance
+   ------------------------------------------------------------
+
+   And the consequence that matters most: a motor that can
+   turn the rack is a motor that can steer the car ITSELF.
+   Every self-driving feature rests on this one fact.
 ```
 
 But the efficiency is almost the smaller point. The larger one is that an electric motor is a thing a computer can command, and this quietly transforms what steering can be. Because software now sits between your hands and the assistance, the car can vary how much help it gives according to the situation — lots of assistance at parking speed, so the wheel turns with a fingertip, and less at motorway speed, so the steering feels firm, planted and precise. It can add a gentle self-centring, nudging the wheel back to straight. And — this is the profound part — because the motor can push the steering rack on its own, the car can *steer itself*. Every self-parking manoeuvre, every gentle correction that keeps the car in its lane, every wheel movement made by Autopilot or Full Self-Driving, is the electric power steering motor turning the wheels in response to a computer rather than a pair of hands.

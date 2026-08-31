@@ -11,13 +11,23 @@ The tabless design does away with the single tab and instead folds the entire ed
 The difference, drawn crudely:
 
 ```
-   CONVENTIONAL (single tab)          TABLESS (whole edge conducts)
+   The electrode foil, unrolled -- a ribbon about a metre long.
 
-   [=====long foil=====]--tab         [=====long foil=====]
-     electron travels the               | | | | | | | | |  <- entire
-     full length to one tab             edge is the contact; electron
-     = long path, more heat             crosses only the short width
-                                        = short path, runs cooler
+   CONVENTIONAL: one tab, welded at a single point
+                                                     [tab]
+     +---------------------------------------------------+
+     |  . . . . . . . . . . . . . . . . . . . . . . . >  |
+     +---------------------------------------------------+
+       every electron runs the FULL LENGTH to reach it
+       = long path, more resistance, more heat
+
+   TABLESS: the whole edge is folded into the contact
+      | | | | | | | | | | | | | | | | | | | | | | | | |
+     +---------------------------------------------------+
+     |  ^   ^   ^   ^   ^   ^   ^   ^   ^   ^   ^   ^    |
+     +---------------------------------------------------+
+       each electron crosses only the SHORT WIDTH
+       = short path, less resistance, runs cooler
 ```
 
 Shorten the path and you lower the cell's internal resistance, and a lower-resistance cell runs cooler, which in principle lets it accept and deliver current harder without cooking itself. That was the pitch: a bigger cell, cheaper to make, that could also charge nearly as fast as the small ones despite holding far more energy. Add to it Tesla's parallel bet on a "dry" electrode process — coating the foils without the toxic solvents and long drying ovens the industry has always needed, saving energy, space and money — and Battery Day painted the 4680 as the cell that would make electric cars decisively cheaper.

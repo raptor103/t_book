@@ -9,17 +9,24 @@ In a dual-motor Tesla, the two axles are independent — recall from earlier in 
 Nudging the car with torque:
 
 ```
-   top-down view, car turning left:
+   Top-down view, car turning left:
 
-        front                    more torque to the REAR axle
-      [FL]  [FR]                 -> helps rotate nose INTO the turn
-        |    |
-        |    |                   more torque to the FRONT axle
-      [RL]  [RR]                 -> arrests rotation, pulls STRAIGHT
-        rear
-                                 (Plaid: RL and RR driven
-   the car is "steered" partly    independently for finest control)
-   by WHERE the torque goes
+            front
+         [FL]   [FR]
+           |     |
+           |     |
+         [RL]   [RR]
+            rear
+
+   more torque to the REAR axle ..... rotates the nose INTO
+                                      the turn, sharpening it
+   more torque to the FRONT axle .... arrests that rotation and
+                                      pulls the car STRAIGHT
+
+   On the fastest cars the two rear wheels have a motor each,
+   so torque can be biased across the axle, left against right
+   -- the finest form of the trick, and one no mechanical
+   differential could match.
 ```
 
 It is worth being clear about why doing this with motors is so much better than the older ways. Traditional stability control works only by braking — it can slow a wheel to arrest a slide, but it cannot speed one up, so its only tool is to take grip away, which also scrubs off speed and momentum. Torque vectoring by motor can *give* as well as take: it can add drive to the wheel that needs it, correcting the car's line without necessarily slowing it. And it is faster, because there is no hydraulic brake to pressurise, no mechanical clutch to engage — only a change in the inverter's command, which happens at the speed of electronics. The car can begin correcting a slide before the driver's inner ear has even registered that one is starting.
