@@ -11,22 +11,31 @@ So instead of a gearbox, an electric car has a *reduction gear* — a single, fi
 The whole "transmission," end to end:
 
 ```
-   ENGINE CAR                        ELECTRIC CAR
+   ENGINE CAR
+     engine, usable over a narrow band of revs
+       -> clutch, to disconnect for every shift
+       -> gearbox, 5 to 7 ratios, forever swapping
+       -> driveshafts -> wheels
 
-   engine                            motor
-   narrow usable rev band            0 to ~18,000 rpm, strong
-     |                               torque the whole way
-     v                                 |
-   clutch                              |    no clutch -- the motor
-   disconnects to shift                |    never disconnects
-     |                                 v
-     v                               reduction gear
-   gearbox                           ONE fixed ratio, ~9:1
-   5-7 ratios, forever               speed / 9, torque x 9
-   swapping to stay in band            |
-     |                                 v
-     v                               driveshafts --> wheels
-   driveshafts --> wheels
+   ELECTRIC CAR
+     motor, 0 to ~18,000 rpm, strong torque throughout
+       -> ONE fixed reduction. No clutch, nothing to select.
+       -> driveshafts -> wheels
+
+   And this is all that one reduction does:
+
+     MOTOR --> [ gear pair 1 ] --> [ gear pair 2 ] --> WHEELS
+                          about 9 : 1 in total
+
+                      at the motor          at the wheels
+     ------------------------------------------------------
+     speed            up to 18,000 rpm      divided by 9
+     torque           modest                multiplied by 9
+     ------------------------------------------------------
+
+   Two pairs of cogs, a shade over nine to one, and that is
+   the entire transmission: no clutch, no gear lever, and one
+   uninterrupted pull from standstill to beyond 250 km/h.
 ```
 
 The consequences ripple outward. There is no clutch, so the drive is never interrupted — the motor stays connected to the wheels at all times, which is part of why regenerative braking (next chapter) is even possible. There is no gear-change, so there is no shift shock, no pause, no hunting for the right ratio on a hill; acceleration is one seamless surge from zero to top speed, uninterrupted, the way a single long note differs from a scale. There is no gear lever and, increasingly, no obvious "transmission" at all — just a compact housing bolting the motor to the wheels. And there are far fewer parts to build, lubricate and break: a handful of gears instead of a dozen synchronised ratios, a clutch, and their hydraulics.

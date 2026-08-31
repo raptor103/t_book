@@ -55,6 +55,137 @@ SKIP_PAGES = 1  # title page carries no number
 MAX_BREAK_PASSES = 12
 
 
+def source_headings(combined):
+    """Heading levels and text, straight from the markdown, in book order."""
+    out, inside = [], False
+    for ln in combined.split("\n"):
+        if ln.startswith("```"):
+            inside = not inside
+            continue
+        if inside:
+            continue
+        m = re.match(r"^(#{1,2}) +(\S.*)$", ln)
+        if m:
+            out.append((len(m.group(1)), m.group(2).strip()))
+    return out
+
+
+# The base-14 fonts PyMuPDF draws with cannot encode these, and silently
+# substitute a middle dot. The contents page is the only place we draw text
+# ourselves, so fold them down to ASCII here.
+_TR = {"—": "-", "–": "-", "‘": "'", "’": "'",
+       "“": '"', "”": '"', "…": "..."}
+
+
+def _ascii(s):
+    for k, v in _TR.items():
+        s = s.replace(k, v)
+    return s
+
+
+def prepend_toc(path, headings=None):
+    """Insert a printed, clickable Contents section after the title page.
+
+    markdown-pdf emits a bookmark outline but no visible contents, so this
+    reads that outline, lays it out as pages, inserts them, and adds a GoTo
+    link over every line. Line count does not depend on the page numbers
+    printed, so one pass is enough -- but the targets must be shifted by the
+    number of pages inserted, and the outline shifted with them.
+
+    The outline's *pages* are reliable; its *titles* are not (a heading that
+    wrapped when rendered comes back with the space at the wrap point lost).
+    So when the source headings line up one-for-one, their text is used.
+    """
+    import pymupdf
+
+    doc = pymupdf.open(path)
+    outline = doc.get_toc()                       # [level, title, page]
+    if not outline:
+        doc.close()
+        return 0
+
+    if headings and len(headings) == len(outline):
+        outline = [[lvl, title, pg]
+                   for (lvl, title), (_, _, pg) in zip(headings, outline)]
+
+    X0, X1, TOP, BOT = 54, 541, 92, 800
+    ROW = {0: 15.5, 1: 13.5, 2: 11.5}             # part / chapter / subchapter
+    SIZE = {0: 10.5, 1: 9.5, 2: 8.5}
+    INDENT = {0: 0, 1: 14, 2: 30}
+    FONT = {0: "hebo", 1: "helv", 2: "helv"}
+
+    def rank(level, title):
+        if level >= 2:
+            return 2
+        return 0 if title.startswith("Part ") else 1
+
+    rows = [(rank(lvl, t), t, pg) for lvl, t, pg in outline]
+
+    # Paginate.
+    pages, cur, y = [], [], TOP
+    for r, title, pg in rows:
+        step = ROW[r] + (6 if r == 0 and cur else 0)
+        if y + step > BOT:
+            pages.append(cur)
+            cur, y = [], TOP
+            step = ROW[r]
+        y += step
+        cur.append((r, title, pg, y))
+    if cur:
+        pages.append(cur)
+    n = len(pages)
+
+    for i in range(n):
+        doc.new_page(1 + i, width=595, height=842)
+
+    # Pages are inserted *after* the title page, so anything already on
+    # page 1 stays put; everything from page 2 on moves down by n.
+    def shift(p):
+        return p if p <= 1 else p + n
+
+    for i, rowset in enumerate(pages):
+        page = doc[1 + i]
+        if i == 0:
+            page.insert_text((X0, 60), "Contents", fontname="hebo", fontsize=17)
+        for r, title, target, y in rowset:
+            size, font, x = SIZE[r], FONT[r], X0 + INDENT[r]
+            title = _ascii(title)
+            num = str(shift(target))
+            numw = pymupdf.get_text_length(num, fontname="helv", fontsize=size)
+            # Trim anything that would otherwise run into the page number.
+            room = X1 - x - numw - 14
+            width = lambda s: pymupdf.get_text_length(s, fontname=font,
+                                                      fontsize=size)
+            if width(title) > room:
+                while len(title) > 8 and width(title + "...") > room:
+                    title = title[:-1]
+                title = title.rstrip(" ,;:-") + "..."
+            titlew = width(title)
+            page.insert_text((x, y), title, fontname=font, fontsize=size)
+            page.insert_text((X1 - numw, y), num, fontname="helv", fontsize=size)
+            # dot leader between title and page number
+            gap0, gap1 = x + titlew + 5, X1 - numw - 5
+            if gap1 > gap0:
+                dotw = pymupdf.get_text_length(".", fontname="helv", fontsize=size)
+                dots = "." * max(0, int((gap1 - gap0) / dotw))
+                page.insert_text((gap0, y), dots, fontname="helv",
+                                 fontsize=size, color=(0.6, 0.6, 0.6))
+            page.insert_link({
+                "kind": pymupdf.LINK_GOTO,
+                "from": pymupdf.Rect(x, y - size - 1, X1, y + 3),
+                "page": shift(target) - 1,        # 0-based
+                "to": pymupdf.Point(0, 0),
+            })
+
+    # Shift every existing bookmark past the inserted pages, and put a
+    # Contents bookmark at the front so the outline matches the printed TOC.
+    doc.set_toc([[1, "Contents", 2]] +
+                [[lvl, t, shift(pg)] for lvl, t, pg in outline])
+    doc.saveIncr()
+    doc.close()
+    return n
+
+
 def stamp_page_numbers(path):
     """Draw a centred page number at the foot of every page but the title."""
     import pymupdf
@@ -212,8 +343,10 @@ def main():
         print(f"  pass {attempt}: {len(bad)} split diagram(s), "
               f"{len(break_lines)} page break(s) inserted")
 
+    toc_pages = prepend_toc(OUT_PDF, source_headings(combined))
     numbered = stamp_page_numbers(OUT_PDF)
     print(f"Rendered {len(files)} files -> {OUT_PDF}")
+    print(f"Contents: {toc_pages} page(s), every line a clickable link")
     print(f"Numbered {numbered} pages (title page left blank)")
     print(f"Page breaks inserted to keep diagrams whole: {len(break_lines)}")
 

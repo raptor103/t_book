@@ -11,28 +11,41 @@ The tabless design does away with the single tab and instead folds the entire ed
 The difference, drawn crudely:
 
 ```
-   The electrode foil, unrolled -- a ribbon about a metre long.
+   Inside the cell the electrodes are not stacked but rolled --
+   two long foil ribbons wound up like a Swiss roll. Unrolled,
+   one ribbon is about a metre long, but only as tall as the
+   cell is high. Where the current leaves is everything.
 
-   CONVENTIONAL: one tab, welded at a single point
-                                                     [tab]
-     +---------------------------------------------------+
-     |  . . . . . . . . . . . . . . . . . . . . . . . >  |
-     +---------------------------------------------------+
-       every electron runs the FULL LENGTH to reach it
-       = long path, more resistance, more heat
+   CONVENTIONAL -- all the current leaves by ONE small tab
 
-   TABLESS: the whole edge is folded into the contact
-      | | | | | | | | | | | | | | | | | | | | | | | | |
+                                                      [tab]
+                                                        ^
      +---------------------------------------------------+
-     |  ^   ^   ^   ^   ^   ^   ^   ^   ^   ^   ^   ^    |
+     |  e- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  |
+     |  e- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  |
      +---------------------------------------------------+
-       each electron crosses only the SHORT WIDTH
-       = short path, less resistance, runs cooler
+     <---------- up to a metre of travel ---------------->
+
+     Every electron runs nearly the FULL LENGTH of the foil
+     to reach that one tab: a long path, high resistance,
+     and resistance is what makes heat.
+
+   TABLESS -- the whole EDGE of the foil becomes the contact
+
+     =====================================================
+       ^     ^     ^     ^     ^     ^     ^     ^     ^
+     +-|-----|-----|-----|-----|-----|-----|-----|-----|+
+     | e-    e-    e-    e-    e-    e-    e-    e-    e-|
+     +---------------------------------------------------+
+
+     Every electron crosses only the SHORT way -- the height
+     of the cell, a couple of centimetres instead of a metre.
+     Shorter path, lower resistance, and the cell runs cooler.
 ```
 
 Shorten the path and you lower the cell's internal resistance, and a lower-resistance cell runs cooler, which in principle lets it accept and deliver current harder without cooking itself. That was the pitch: a bigger cell, cheaper to make, that could also charge nearly as fast as the small ones despite holding far more energy. Add to it Tesla's parallel bet on a "dry" electrode process — coating the foils without the toxic solvents and long drying ovens the industry has always needed, saving energy, space and money — and Battery Day painted the 4680 as the cell that would make electric cars decisively cheaper.
 
-Here honesty is required, because this is where the story gets interesting rather than triumphant. The 4680 shipped, first in the Cybertruck and in limited Model Y production, and independent teardowns and lab tests — the careful outside scrutiny this book leans on throughout — found a more mixed picture than the promises. Sandy Munro's teardown team measured a later revision with a respectable energy-density gain of around **12 per cent** over its predecessor, real but hardly revolutionary. And the headline claim — that tabless would let the big cell fast-charge almost like a small one — has not clearly borne out; real-world DC fast-charging data has been, if anything, underwhelming, and reporting through 2026 described Tesla still struggling to make its own 4680 cells as good as the cells it buys from suppliers. The dry-electrode process, the quietly more important bet, appears to be edging toward viability at scale but has been genuinely hard to master.
+Here honesty is required, because this is where the story gets interesting rather than triumphant. The 4680 shipped, first in the Cybertruck and in limited Model Y production, and independent teardowns and lab tests — the careful outside scrutiny this book leans on throughout — found a more mixed picture than the promises. Sandy Munro's teardown team measured a later revision with a respectable energy-density gain of around **12 percent** over its predecessor, real but hardly revolutionary. And the headline claim — that tabless would let the big cell fast-charge almost like a small one — has not clearly borne out; real-world DC fast-charging data has been, if anything, underwhelming, and reporting through 2026 described Tesla still struggling to make its own 4680 cells as good as the cells it buys from suppliers. The dry-electrode process, the quietly more important bet, appears to be edging toward viability at scale but has been genuinely hard to master.
 
 So what is the 4680, in the end? Not the miracle of the keynote, and not the flop of the sceptics. It is a sane, incremental format change — fewer cells, a smarter current path, a hard manufacturing bet attached — that is delivering some of what was promised, more slowly and less completely than advertised. Which is, if you have spent any time near real engineering, the most normal outcome imaginable. The lesson worth carrying out of this chapter is not about one cell. It is that the distance between a bold announcement and a shipped product is where nearly all the actual work lives, and that the trustworthy way to know how a technology is really doing is to wait for someone to saw one open and measure it.
 

@@ -1,8 +1,8 @@
 ## 23.2 How much efficiency is left to win
 
-We end where we began, with efficiency — the organising obsession of Chapter 1, the thread that ran through every system in the book. And we end with an honest and slightly deflating arithmetic, because it is the truest thing to say about where the electric car goes from here. The drivetrain is already so efficient that there is very little room left to improve it. From the battery to the wheels, the modern electric car delivers something like eighty-five to ninety per cent of its energy to the road. The ceiling is one hundred per cent, and you cannot pass it. Which means the entire remaining prize inside the drivetrain — everything left to win between here and physical perfection — is that last ten or fifteen per cent, and every point of it is harder to claim than the one before.
+We end where we began, with efficiency — the organising obsession of Chapter 1, the thread that ran through every system in the book. And we end with an honest and slightly deflating arithmetic, because it is the truest thing to say about where the electric car goes from here. The drivetrain is already so efficient that there is very little room left to improve it. From the battery to the wheels, the modern electric car delivers something like eighty-five to ninety percent of its energy to the road. The ceiling is one hundred percent, and you cannot pass it. Which means the entire remaining prize inside the drivetrain — everything left to win between here and physical perfection — is that last ten or fifteen percent, and every point of it is harder to claim than the one before.
 
-This is the mark of a mature technology, and it should be said plainly. The heroic era of drivetrain efficiency — the era this book has largely celebrated, of silicon-carbide inverters and ninety-seven-per-cent conversion and heat pumps and shortened wire — is, in a sense, nearly over, not because anyone failed but because it so nearly succeeded. When you have already captured eighty-five per cent, the remaining gains are polishing, not revolution: a fraction of a percent from a better seal, a better switch, a slightly slipperier shape. Worth having, worth chasing, but incremental. The big, dramatic efficiencies have mostly already been won, and won impressively. There is no second engine left to delete.
+This is the mark of a mature technology, and it should be said plainly. The heroic era of drivetrain efficiency — the era this book has largely celebrated, of silicon-carbide inverters and ninety-seven-percent conversion and heat pumps and shortened wire — is, in a sense, nearly over, not because anyone failed but because it so nearly succeeded. When you have already captured eighty-five percent, the remaining gains are polishing, not revolution: a fraction of a percent from a better seal, a better switch, a slightly slipperier shape. Worth having, worth chasing, but incremental. The big, dramatic efficiencies have mostly already been won, and won impressively. There is no second engine left to delete.
 
 Where the efficiency frontier moves:
 
@@ -10,7 +10,7 @@ Where the efficiency frontier moves:
    INSIDE the drivetrain, battery to wheels:
 
      [################################################--]  85-90%
-     nearly maxed out. Only a few per cent left, and each
+     nearly maxed out. Only a few percent left, and each
      one is harder to win than the last.
 
    So the frontier moves OUTWARD:
