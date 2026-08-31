@@ -1,0 +1,11 @@
+# Part XI — Building It
+
+# 20. Manufacturing as engineering
+
+There is a saying inside Tesla, repeated often enough to have become a slogan: the factory is the product. It sounds like a paradox — surely the *car* is the product, and the factory merely the place it is made? — but it captures something this book has been circling from the very first chapter without quite naming. How a car is built is not separate from how a car works. The two are the same problem, and many of the most distinctive features of an electric car exist not because they make the car better to drive but because they make it possible to *build* cheaply, quickly, and by machine.
+
+We have seen this again and again without always flagging it. The structural battery pack of Chapter 3 was, in part, a way to delete parts from the assembly line. The zonal wiring of Chapter 9 was, in large part, an attack on a harness that robots could not install. The standardised connectors of Chapter 10 were about simplifying manufacture as much as anything electrical. Time after time, a design decision we examined as engineering turns out to have been driven, underneath, by a manufacturing question: *how do we make millions of these, cheaply, with machines rather than hands?* This part brings that hidden driver into the open, because you cannot fully understand how a modern electric car works without understanding that it was shaped, profoundly, by the demand to be buildable.
+
+The chapter looks at the most dramatic expression of this idea — gigacasting, the replacement of dozens of welded parts with a single monstrous casting — and at the choices of material that go with it. It returns to the wiring harness, this time as a manufacturing problem, and to Tesla's campaign to make a car a robot can assemble. And it ends with the strategy that ties it all together: vertical integration, the decision to make in-house what other carmakers buy, and why controlling the whole stack — from the lithium to the software — turns out to be inseparable from the engineering itself.
+
+"The factory is the product" is not a slogan about factories. It is a claim that the way a thing is made is part of what the thing *is*. Here is how that claim reshapes a car.

@@ -1,0 +1,9 @@
+# 3. From cell to pack
+
+A single lithium-ion cell is a modest thing. It holds about as much energy as you would need to boil a mug or two of water, and it pushes electricity at a voltage — a little under four volts — too feeble to do anything a car would recognise as work. On its own it could not turn a wheel. It is the AA battery of the electric age: useful only in numbers.
+
+So the engineers use numbers. Thousands of them. The leap from the previous chapter to this one is the leap from one cell to the four-and-a-half thousand that might sit beneath the floor of a Model 3 — and that leap is not a matter of simply piling them up. Four thousand cells wired carelessly together would be, at best, useless and, at worst, a fire waiting for an excuse. Turning a heap of cells into a single, trustworthy, half-tonne machine that can be charged in minutes, drained hard for years, and trusted to sit under a family without incident is one of the least appreciated feats in the whole car.
+
+This chapter is about that feat. It is about how cells are ganged together to build up both the voltage and the capacity a car needs, and why the arithmetic of "in series" and "in parallel" quietly governs everything. It is about the battery management system — the watchful, slightly paranoid electronic brain that treats every group of cells as a patient to be monitored, and without which the pack would not survive a week. It is about the surprising structural turn of recent years, in which the battery stopped being a heavy object the car carries and became part of the car's very skeleton. And it is about the slow, inevitable fading that every battery suffers, why it happens, and why the advice for looking after one depends entirely on the chemistry inside it.
+
+A cell stores energy. A pack turns that storage into a machine you can rely on. Here is how the one becomes the other.

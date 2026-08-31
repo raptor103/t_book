@@ -1,0 +1,11 @@
+# Part X — Surviving the Crash
+
+# 19. Safety by architecture
+
+Most of what makes a car safe in a crash is invisible, expensive, and hard-won — the product of decades of engineers deliberately designing structures to fold, absorb, and protect. This is true of electric cars too, and they inherit all of that accumulated craft. But electric cars also get something rarer: safety that arrives almost as a *side effect* of their basic layout, safety they did not have to design so much as receive, for free, from the decision to delete the engine and put a great slab of battery in the floor. The phrase for this is "safety by architecture" — protection that comes not from a clever added part but from the fundamental shape of the machine.
+
+This is a genuinely happy chapter, because it is one of the few places where the electric car's defining burdens turn out to be gifts. The heavy battery that costs the car range, that wears its tyres and complicates its thermal system, is the same heavy battery that plants the car's mass low and makes it extraordinarily hard to roll over. The empty space where an engine used to sit, that lets the nose be so aerodynamically clean, is the same empty space that becomes a superb crumple zone. Again and again, a consequence of the electric layout that we met earlier as a cost reappears here as a safety advantage. The architecture that was chosen for efficiency turns out, by luck and by design, to be an architecture that protects.
+
+But it would be dishonest to make this chapter a simple celebration, because the same battery that lowers the centre of gravity also introduces a hazard no petrol car has: a large store of energy that, if damaged, can catch fire in ways that are hard to fight. So the chapter has two faces. It looks first at the safety the architecture gives away — the free crumple zone, the rollover resistance. Then it looks at the safety the architecture must work hard to *earn*: protecting the battery pack from damage, and managing the real dangers of high voltage and battery fire, both for the occupants and for the firefighters who may one day have to deal with the wreck.
+
+Safety given and safety earned, both flowing from the same architecture. Here is how an electric car is built to survive the worst day of its life.

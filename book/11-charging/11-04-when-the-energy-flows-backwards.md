@@ -1,0 +1,42 @@
+## 11.4 When the energy flows backwards
+
+Here is a number that ought to be more famous than it is. A typical house in Europe gets through something like ten kilowatt-hours of electricity a day. A Cybertruck carries a battery of roughly a hundred and twenty. Park one on your driveway and you have, sitting there doing nothing, about *twelve days* of household electricity — a domestic power station with wheels, spending twenty-three hours a day as an extremely expensive paperweight. Every electric car on every street is a similar store, and until very recently the entire industry treated the plug as a one-way valve. This chapter has so far described energy going in. It is time to admit that the wire works in both directions, and that this may turn out to be the most consequential thing about electric cars that has nothing to do with driving them.
+
+The idea goes by an ugly family of names, all of them variations on the same theme: *vehicle-to-load* (V2L) means running a tool or a kettle off the car; *vehicle-to-home* (V2H) means running your house off it; *vehicle-to-grid* (V2G) means selling power back to the utility. Tesla's implementation of the family is called **Powershare**, and it arrived with the Cybertruck. What matters for a book about how the machine works is that these are not software features. They are a hardware capability, and to understand why, we need to go back to the box from Chapter 8.
+
+Recall the PCS, the Power Conversion System bolted under the rear seat in its compartment nicknamed the penthouse. Section 8.3 introduced it as a combined onboard charger and DC-DC converter: it takes alternating current from the wall and rectifies it into direct current the pack can drink. Now look at that description again with the last few chapters in mind, and something ought to nag. Turning DC into AC by switching very fast is *exactly* what Chapter 4 spent its entire length describing, because that is what an inverter does. The onboard charger is a power-electronics bridge between an AC world and a DC one — and a bridge, in principle, does not care which way traffic crosses it. The switches that chop mains AC into pack DC can, if they are built and controlled for it, chop pack DC into mains AC.
+
+"If they are built for it" is doing real work in that sentence. Making a charger run backwards is not free: the switching devices must conduct and block in both directions, and the control software must synchronise its output with the grid's own fifty-hertz rhythm, matching frequency and phase, rather than simply following whatever the wall provides. Above all it must satisfy a safety rule called *anti-islanding* — the absolute obligation to shut down the instant the grid goes dead, so that a car on a suburban driveway cannot quietly electrify a length of cable that a lineman upstream believes is safely disconnected. Which is why vehicle-to-home is never just a cable. Powershare needs a **Powershare Gateway** at the house, a box whose job is to sense the outage, physically disconnect the home from the street, and only then let the car take over the household circuits.
+
+The energy, running the other way:
+
+```
+   CHARGING (Chapters 11.1-11.3)
+   grid AC ---> [ onboard charger ] ---> DC ---> pack
+
+   DISCHARGING (the same silicon, reversed)
+   pack ---> DC ---> [ same switches, inverting ] ---> AC
+                            |
+                            +--> V2L   a socket: tools, kettle
+                            +--> V2H   the house, via a gateway
+                            +--> V2G   the grid, sold back
+
+   the gateway's real job: disconnect the house from the
+   street FIRST, so the car cannot backfeed a dead line
+```
+
+With that plumbing in place the numbers become domestic rather than theoretical. Powershare Home Backup delivers up to **11.5 kilowatts** to a house — comfortably more than a home draws at its busiest — and Tesla's claim is that a Cybertruck can carry a household through a blackout for **more than three days**. The simpler modes need less apparatus: the truck's own sockets supply up to **9.6 kilowatts** for tools or a campsite, which is enough to run a building site, and the car can also charge another electric car, roadside, from its own pack. Somewhere in there the car stops being a consumer of the energy system and becomes a participant in it.
+
+The caveats matter, and this book's convention is to state them rather than let the excitement run. As of 2026 Powershare remains substantially a Cybertruck story: Tesla stated that bidirectional capability would come to its other vehicles, the newest Model Y Performance has been confirmed to support it, and the rollout to the wider Model 3 and Model Y fleet has been partial and gradual — some of it through adapters, some of it waiting on software, with owners of older cars discovering that hardware which is *capable* of running backwards is not the same as hardware that is *permitted* to. [INFERENCE — the exact hardware capability of past model years is not published by Tesla and is widely inferred from the fact that the charger topology is inherently bidirectional.] And there is a cost the brochures underplay, which readers of Chapter 3 will anticipate immediately: cycling the pack to power a house is still cycling the pack. Every kilowatt-hour sent to the fridge is a kilowatt-hour of the battery's finite life spent on something other than driving.
+
+Still, step back and look at what the architecture implies. A country that replaces its cars with electric ones does not merely acquire cleaner transport; it acquires, incidentally, an enormous distributed battery — tens of gigawatt-hours of storage, already paid for, already installed, sitting idle on driveways at exactly the hours when a grid full of solar and wind most needs somewhere to put its surplus or somewhere to draw its shortfall. That is a genuinely large idea, and it arrives almost as an accident of having put a very good inverter in every car. The last section of this chapter turns from what flows through the plug to the far more quarrelsome question of what the plug should look like.
+
+---
+
+**Sources**
+
+- Tesla (tesla.com/powershare and Powershare support pages), Electrek, Green Car Reports, Wikipedia (Tesla Powershare) — Powershare split into Home Backup (V2H), Outlets, and Mobile; up to 11.5 kW continuous to a home and backup for over three days; up to 9.6 kW across the vehicle's outlets; vehicle-to-vehicle charging; requires a Powershare Gateway plus a Universal/bidirectional Wall Connector.
+- Electrek (October 2025) — new Model Y Performance confirmed to support bidirectional charging; Tesla's stated intent to extend bidirectional capability beyond the Cybertruck, with a phased and partly adapter-based rollout. Tesla's own Powershare page lists Home Backup as unavailable on Model S/3/X/Y as of writing. [VERIFY — fleet availability is moving quickly and should be re-checked at publication.]
+- Anti-islanding as a mandatory grid-protection requirement, and the transfer-switch role of the gateway, are standard distributed-generation engineering (IEEE 1547 and equivalent European practice).
+- Household consumption figure (~10 kWh/day) is a rounded European average used here as a scale anchor, not a Tesla specification; Cybertruck pack capacity ~123 kWh. [INFERENCE — pack capacity is a teardown/EPA-derived estimate, not an official Tesla figure.]
+- The bidirectionality of the onboard charger's power-electronics topology follows from the inverter principles of Chapter 4 and the PCS description in 8.3; pack-cycling degradation cross-references 3.4.

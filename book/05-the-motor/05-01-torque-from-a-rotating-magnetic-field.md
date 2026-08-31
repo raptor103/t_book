@@ -1,0 +1,34 @@
+## 5.1 Torque from a rotating magnetic field
+
+Take a bar magnet and hold it near a compass. The needle swings to point at it. Now walk slowly in a circle around the compass, keeping the magnet pointed at the needle. The needle follows you round and round, chasing the magnet, never quite able to look away. You have just built, with your own legs, the essential idea of an electric motor — a magnetic field that moves, and something that is dragged along behind it. The entire cleverness of a real motor is doing the walking without any legs: making a magnetic field rotate when nothing you can see is rotating to produce it.
+
+That trick is called the rotating magnetic field, and it is one of those ideas that seems impossible until you see it, and obvious forever after. The stationary outer part of the motor — the *stator* — is a ring of electromagnet coils. Recall from the last chapter that the inverter feeds the motor not one alternating current but three, each staggered a third of a cycle behind the last. Those three currents run to three sets of coils spaced evenly around the ring. And here is the magic: because the three currents peak at different moments, the coils reach their strongest at different moments too, one after another around the circle. The peak of magnetism is never in one place; it is always handing off to the next coil along, like a stadium crowd doing a Mexican wave. No coil moves. The wave of magnetism sweeps round the ring anyway, smoothly, continuously, as fast as the inverter cares to cycle the currents.
+
+That sweeping wave is your walking magnet, and it rotates with nothing mechanical driving it — only the timing of three electrical currents. Put something magnetic in the middle, the *rotor*, and it is dragged around in pursuit, exactly like the compass needle following your walk. That pursuit is the torque. That torque, through a gear and a driveshaft, is the car.
+
+The stator making a field spin without spinning:
+
+```
+        coil A                three staggered currents make the
+          |                   "strong spot" hand off around the ring:
+    coil  ( )  coil            A peaks -> B peaks -> C peaks -> A ...
+     C   (rotor)  B
+          ( )                  the peak of magnetism sweeps round
+          |                    like a stadium wave; the ROTOR in the
+        (three coil sets       middle chases it = rotation = torque
+         120 degrees apart)
+```
+
+Everything else about a motor is a variation on how you make the middle bit — the rotor — get dragged along, and that turns out to be where the two great families of motor part company, which is the next section. But the principle underneath both is this single, beautiful one. The speed of the car is the speed of the sweeping wave, which is the frequency of the currents, which is set by the inverter — so the inverter, by choosing how fast to cycle, chooses how fast the field sweeps and therefore how fast the motor turns. The force of the car is how hard the rotor is dragged, which depends on how strong the field is, which is the current, again set by the inverter. The two knobs from the last chapter — frequency for speed, current for torque — are revealed here as the same two knobs, now seen from the motor's side.
+
+It is worth pausing on how different this is from an engine. An engine makes torque in violent, discrete events — bang, bang, bang, each a small explosion shoving a piston, the whole thing lurching from one combustion to the next and needing a heavy flywheel to smooth the lurches into something like steady rotation. A motor makes torque *continuously* and *smoothly*, because the magnetic field sweeps round without interruption. There is no bang, no pause, no roughness to smooth away. This is why an electric car is not merely quiet but eerily so — there is genuinely nothing happening that ought to make a noise. The field turns, the rotor follows, and the only sounds are the faint electrical whine of the switching and the tyres on the road.
+
+And because the field can be made to sweep the instant the inverter is told to make it sweep, the torque arrives the instant you ask — no revving, no building up, no lag. The rotating magnetic field is not just how the motor works; it is the physical root of nearly everything that makes an electric car feel the way it does: the silence, the smoothness, the instant response. A walking magnet, made of nothing but well-timed electricity, dragging a rotor eternally round behind it. That is the whole heart of the machine.
+
+---
+
+**Sources**
+
+- Electrical Engineering Portal and Electrical4U — rotating magnetic field from three-phase currents in 120°-spaced stator coils; rotor dragged by the field.
+- Tutorialspoint / IDC-Online, "Rotating Magnetic Field in Three-Phase Induction Motor" — stator/rotor structure, synchronous speed set by supply frequency.
+- Continuous vs discrete (combustion) torque contrast draws on Chapter 1; inverter speed/torque control from Chapter 4.
