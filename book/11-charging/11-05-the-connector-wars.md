@@ -9,11 +9,18 @@ Amid the chaos, one genuinely good idea deserves singling out, because it is a s
 The regional picture, roughly as it stands in 2026:
 
 ```
-   REGION          AC plug        DC fast plug
-   Europe          Type 2         CCS2 (Type 2 + 2 DC pins)  [mandated]
-   North America   J1772 -> NACS  CCS1 / CHAdeMO -> NACS (winning)
-   Japan           Type 1         CHAdeMO (fading)
-   China           GB/T AC        GB/T DC
+   REGION           AC plug          DC fast plug
+   ---------------------------------------------------------
+   Europe           Type 2           CCS2  (Type 2 + 2 DC
+                                     pins), mandated by law
+   North America    J1772 -> NACS    CCS1 and CHAdeMO,
+                                     now giving way to NACS
+   Japan            Type 1           CHAdeMO, fading
+   China            GB/T AC          GB/T DC
+   ---------------------------------------------------------
+
+   Europe arrived at one standard by decree; North America
+   fought for a decade and arrived at Tesla's.
 ```
 
 For a European reader, there is a happy simplicity worth stating plainly, because it is the context this book is written in. Europe largely avoided the worst of the war by regulating early: Type 2 for AC and CCS2 for DC were effectively mandated as the common standards, and — crucially — Tesla went along with it. European Teslas do not use a proprietary Tesla plug; they use the same Type 2 and CCS2 connectors as everyone else, and Tesla opened its European Supercharger network to other brands' CCS cars. So the continent where this book is set is the one where the connector wars barely happened: a European EV driver, whatever the badge, mostly plugs the same standard connector into mostly compatible chargers. The tidiness was bought by regulation acting before the fragmentation could set, a reminder that sometimes the way to win a standards war is to prevent it.

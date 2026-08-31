@@ -9,14 +9,18 @@ The second change is far bigger, and it is the one this section is really about:
 Why 48 volts saves so much wire:
 
 ```
-   same power delivered at different voltages:
+   The same power, delivered at two different voltages:
 
-   at 12 V:  large current  -> thick, heavy copper wiring
-   at 48 V:  1/4 the current -> much thinner, lighter wiring
-             (four times the voltage = one quarter the current
-              for the same power = a fraction of the copper)
+   at 12 V   current [############################]
+                     thick, heavy, expensive copper
 
-   and 48 V is still safely below the ~60 V shock threshold
+   at 48 V   current [#######]
+                     one quarter the current, and a small
+                     fraction of the copper
+
+   Four times the voltage = one quarter the current for the
+   same power. And 48 V is still safely below the ~60 V
+   threshold at which electricity becomes a shock hazard.
 ```
 
 That copper is not trivial. The low-voltage wiring harness of a modern car is one of its heaviest, most sprawling, most labour-intensive components — kilometres of wire threaded through the whole body, which the next chapter is devoted to. Cutting the current fourfold lets that harness slim down substantially, saving weight, cost, and the sheer effort of building it. And forty-eight volts sits at a sweet spot: high enough to bring these savings, but still comfortably below the roughly sixty-volt threshold at which electricity becomes a shock hazard to a human, so it remains part of the "safe" low-voltage world, needing none of the isolation and armour of the high-voltage side. It is the highest voltage you can use without inheriting the dangers of high voltage.

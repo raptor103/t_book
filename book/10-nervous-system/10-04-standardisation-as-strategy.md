@@ -11,16 +11,21 @@ The same logic reaches inside the car, to the humble low-voltage connectors — 
 Standardisation working in Tesla's favour:
 
 ```
-   the move: publish your own standard, invite rivals to use it
+   The move: publish your own standard, then invite rivals in.
 
    CHARGING PLUG (NACS)          LOW-VOLTAGE CONNECTORS (LVCS)
-   proprietary plug -> published  hundreds of connector types
-   -> industry adopts it          -> a small standard set
-      |                              |
-   Tesla's design becomes the    fewer parts, cheaper, and
-   default; its network gains    far friendlier to ROBOT
-   customers; costs fall for     assembly (the harness goal
-   everyone at scale             from earlier in this chapter)
+
+   a proprietary plug ...        hundreds of connector types ...
+        |                             |
+        v                             v
+   published, and adopted        cut down to one small
+   across the industry           standard set
+        |                             |
+        v                             v
+   Tesla's design becomes        fewer parts, cheaper, and far
+   the default; its network      friendlier to ROBOT assembly
+   gains customers; costs        -- the harness goal from the
+   fall for everyone at scale    start of this chapter
 ```
 
 The connective tissue between these two examples is the theme of the whole part: fewer, simpler, cheaper, more automatable. Reducing a car to a handful of standard connectors serves exactly the same end as zonal wiring and forty-eight-volt power and the Etherloop — it shortens the harness, simplifies the factory, and inches the car toward being something a machine can build. Standardisation is not separate from the engineering; it is the engineering, pursued at the level of the parts catalogue rather than the circuit.

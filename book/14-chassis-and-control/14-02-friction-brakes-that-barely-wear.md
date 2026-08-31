@@ -9,15 +9,22 @@ The consequence is wonderful and slightly absurd. Friction brakes wear out becau
 Brakes: the great reversal:
 
 ```
-   PETROL CAR                     ELECTRIC CAR
-   friction brakes do all         regen does most slowing
-   the slowing                    friction brakes held in reserve
-      |                              |
-   pads wear out every            pads barely wear -- may last
-   ~50-60k km, replaced often     the life of the car
-      |                              |
-   enemy = WEAR                   enemy = RUST from disuse
-                                  (occasional hard braking cleans them)
+   PETROL CAR                    ELECTRIC CAR
+
+   friction brakes do all        regeneration does most of
+   of the slowing                the slowing; friction is
+        |                        held in reserve
+        v                             |
+   pads wear out every                v
+   50-60,000 km, replaced        pads barely wear, and may
+   again and again               last the life of the car
+        |                             |
+        v                             v
+   the enemy is WEAR             the enemy is RUST, from
+                                 sheer disuse
+
+   Hence the strangest maintenance advice in motoring:
+   go and brake hard occasionally, to clean them off.
 ```
 
 But — the inevitable but — a brake that is never used develops a different problem, and it is the problem behind that odd warning. Steel discs left unused, especially in a damp European climate, begin to *corrode*. A film of rust forms on the disc surface and, worse, the moving parts of the caliper can grow stiff or seize from lack of exercise. A brake is a mechanical thing that expects to be used; leave it idle in the weather and it deteriorates not from wear but from neglect, like a hinge that rusts stiff because no one ever opens the door. So the car occasionally prompts the driver to apply the friction brakes firmly a few times, which scrubs the rust film off the discs and keeps the caliper parts moving freely. The maintenance task has inverted: not "replace the worn brakes" but "please wear the brakes down a little so they don't rust."

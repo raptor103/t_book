@@ -6,24 +6,29 @@ The first kind is the **induction motor**, and it is the one Tesla started with 
 
 The second kind is the **permanent-magnet motor**, and it does the obvious thing the induction motor pointedly avoids: it puts actual magnets on the rotor. Now the stator's field has something permanently magnetic to grab, and it drags the rotor round in perfect lockstep — no slip, no lag; the rotor turns exactly as fast as the field sweeps, which is why this type is called synchronous. Tesla's version, used in the Model 3 and Y, is a sophisticated variant that also exploits the shape of the rotor's iron to add extra pull, and goes by the mouthful of names IPM-SynRM. The details matter less than the headline: because the magnets are always there, providing their magnetism for free, this motor does not have to spend energy magnetising its own rotor the way the induction motor does.
 
-That single difference — free magnetism versus made-to-order magnetism — sets up the whole trade-off. The permanent-magnet motor is more efficient, especially at the low and medium speeds where a car actually spends most of its life, because it gets its rotor field gratis; independent figures put the Model 3's permanent-magnet motor around **96 per cent** efficient against roughly **94 per cent** for a comparable induction motor. But that free magnetism has to be bought elsewhere: the magnets are made of rare-earth metals, expensive and geopolitically awkward, and — more subtly — they never switch off. Even when you are coasting and want the motor to do nothing, the magnets keep sweeping past the stator coils, generating a drag you must actively cancel.
+That single difference — free magnetism versus made-to-order magnetism — sets up the whole trade-off. The permanent-magnet motor is more efficient, especially at the low and medium speeds where a car actually spends most of its life, because it gets its rotor field gratis; independent figures put the Model 3's permanent-magnet motor around **96 percent** efficient against roughly **94 percent** for a comparable induction motor. But that free magnetism has to be bought elsewhere: the magnets are made of rare-earth metals, expensive and geopolitically awkward, and — more subtly — they never switch off. Even when you are coasting and want the motor to do nothing, the magnets keep sweeping past the stator coils, generating a drag you must actively cancel.
 
 The induction motor is the mirror image. It is a little less efficient in gentle everyday driving because of the energy spent magnetising its rotor, and it uses no rare-earth magnets — just cheap, robust copper or aluminium and iron. Its special virtue is that when you do not need it, it can be switched fully off and left to freewheel with almost no drag at all, because with no current in the stator there is no magnetism anywhere and nothing to cancel. It is also happy being pushed hard at high speed.
 
 Now the punchline, for a dual-motor car with a motor on each axle:
 
 ```
-   REAR motor: permanent-magnet (synchronous)
-     - efficient at low/medium speed = your daily commute
-     - does the everyday work, most of the time
+                     FRONT axle             REAR axle
+   ----------------------------------------------------------
+    motor            induction              permanent-magnet
+                     (asynchronous)         (synchronous)
+    rotor            squirrel cage,         rare-earth magnets
+                     no magnets             on the rotor
+    efficiency       ~94%                   ~96%
+    when idle        switches fully off,    magnets never stop;
+                     almost no drag         drag to be cancelled
+    its job          wakes for hard         does the everyday
+                     acceleration and       driving, most of
+                     high speed             the time
+   ----------------------------------------------------------
 
-   FRONT motor: induction (asynchronous)
-     - can idle with near-zero drag when not needed
-     - wakes up for hard acceleration and high speed
-     - no rare-earth magnets
-
-   Result: the efficient one runs constantly; the muscular one
-   only joins in when it earns its keep -- best of both.
+   Each motor covers the other's weakness, and the car pays
+   the full price of neither.
 ```
 
 This is why Tesla builds cars with two different kinds of motor rather than two of the same. The permanent-magnet motor on one axle handles the ordinary business of driving efficiently. The induction motor on the other axle sits idle and dragless for most of a journey, then springs to life when you ask for real acceleration or reach high speed, contributing muscle exactly when the permanent-magnet motor's efficiency advantage matters least. Each motor covers the other's weakness. The car gets the everyday economy of the magnet motor and the on-demand power and dragless coasting of the induction motor, and pays the full cost of neither.

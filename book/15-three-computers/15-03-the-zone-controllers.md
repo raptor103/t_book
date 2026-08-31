@@ -7,13 +7,22 @@ The zone controllers are computers, but of a humbler and more numerous kind than
 A three-tier mind:
 
 ```
-   TIER 1  FSD / AI computer   -- the HEAD: perceives, decides
-              |  (high-level intentions: "slow down", "turn")
-   TIER 2  central control      -- coordination and the vehicle's
-              |                     master logic
-   TIER 3  ZONE CONTROLLERS     -- the HANDS: switch lights, run
-           VCFRONT/LEFT/RIGHT      pumps, drive motors, read sensors
+   TIER 1   FSD / AI COMPUTER      the HEAD
+            perceives and decides
+               |
+               |  high-level intentions: "slow down", "turn"
+               v
+   TIER 2   CENTRAL CONTROL        coordination and the
+            vehicle master logic   car's overall logic
+               |
+               |  specific commands: "raise that window"
+               v
+   TIER 3   ZONE CONTROLLERS       the HANDS
+            VCFRONT, VCLEFT,       switch lights, run pumps,
+            VCRIGHT                drive motors, read sensors
                                    simple, robust, real-time
+
+   Complexity at the top. Dependability at the bottom.
 ```
 
 The relationship between the tiers is one of *intentions flowing down and actions flowing up*. A high-level system forms an intention — the driving computer decides the car should slow for a corner, or the driver presses a window switch, or the thermal logic decides the battery needs cooling. That intention travels, over the data backbone of Chapter 10, to the relevant zone controller, which translates it into the actual electrical business of making it happen: pulling this much current through that pump, switching this circuit through its solid-state eFuse, driving that motor. And information flows the other way too — each zone controller constantly reports what its sensors see back up to the higher tiers, so the car's brain always knows the state of every region. The head thinks; the hands act and report; the backbone carries the traffic between them.

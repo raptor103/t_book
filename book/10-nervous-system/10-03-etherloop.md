@@ -11,21 +11,24 @@ And then the loop itself, which is the cleverest touch. The cable is not a line 
 One cable, three problems solved:
 
 ```
-   ETHERLOOP: a single gigabit cable in a RING around the car
+   ETHERLOOP: one gigabit cable, run as a RING around the car
 
-        +======================================+
-        ||  data (cameras, audio, mics, ANC)   ||
-        ||  + 48 V power  -- on the SAME cable  ||
-        +==+==============================+=====+
-           |          |          |        |
-        speaker    camera     zone      mic
-        (each device taps in for BOTH data and power)
+     +=======================================================+
+     |                                                       |
+     |   carries DATA (cameras, audio, microphones)          |
+     |   AND 48 V POWER, along the very same cable           |
+     |                                                       |
+     +==+==========+==========+==========+==========+========+
+        |          |          |          |          |
+      camera    speaker      zone       mic       camera
+                            controller
 
-   cut the loop anywhere -> signals route the OTHER way round
-   = high bandwidth + power + self-healing, in one wire
+   Each device taps the loop once, for both data and power.
+   Cut the loop anywhere and the signals simply travel the
+   other way round the ring -- it heals itself.
 ```
 
-The payoff, when you combine Etherloop with everything else in this part, is measured in the currency the whole part has cared about: copper deleted. Reports credit the Cybertruck's combination of forty-eight volts, zonal controllers and the Etherloop backbone with cutting the number of cross-car wires by around two-thirds and the copper used by something like seventy per cent. That is not an incremental trim; it is a wholesale reimagining of the nervous system, and it attacks the harness problem of the first section from every angle at once — fewer wires, thinner wires, wires that carry two things instead of one, arranged so the whole thing is shorter and simpler and, crucially, closer to something a robot could install.
+The payoff, when you combine Etherloop with everything else in this part, is measured in the currency the whole part has cared about: copper deleted. Reports credit the Cybertruck's combination of forty-eight volts, zonal controllers and the Etherloop backbone with cutting the number of cross-car wires by around two-thirds and the copper used by something like seventy percent. That is not an incremental trim; it is a wholesale reimagining of the nervous system, and it attacks the harness problem of the first section from every angle at once — fewer wires, thinner wires, wires that carry two things instead of one, arranged so the whole thing is shorter and simpler and, crucially, closer to something a robot could install.
 
 Honesty and this book's conventions both require the reminder that Etherloop, like the full forty-eight-volt architecture, is direction-of-travel rather than the state of every Tesla on the road. It debuted on the Cybertruck; the mainstream Model 3 and Y still rely on more conventional mixtures of CAN and Ethernet and twelve-volt-derived power. This chapter includes Etherloop not because it is in the reference car, but because it shows, more clearly than anything else, where the nervous system is heading — and because it is the natural endpoint of every trend in this part: shorten the wire, raise the voltage, merge the functions, distribute the intelligence, and tie it all together over a fast, resilient, shared backbone.
 

@@ -11,19 +11,30 @@ The second fact is the one that really matters for range, and it is worse. The *
 The cube law, made concrete:
 
 ```
-   speed        drag FORCE      power to overcome drag
-   x1  (base)      x1                  x1
-   x2  (double)    x4                  x8
-   x3  (triple)    x9                 x27
+   Double the speed. What happens to the fight against air?
 
-   -> going faster costs power far out of proportion to the speed
+   speed          drag FORCE      power needed to overcome it
+   ------------------------------------------------------------
+    x1  base         x1                     x1
+    x2  double       x4                     x8
+    x3  triple       x9                    x27
+   ------------------------------------------------------------
+
+   that power, drawn to scale:
+
+     x1   #
+     x2   ########
+     x3   ###########################
+
+   Going faster costs power wildly out of proportion to the
+   speed -- which is also why easing off buys back so much.
 ```
 
-Abstract numbers do not persuade, so here is what the cube law does to a real electric vehicle. Take a van cruising at 80 km/h with a certain range. Speed up to roughly 95 km/h and the range noticeably shrinks. Push on to 110, and it shrinks again. By the time you are travelling at around 130 km/h instead of 80, the range can have collapsed by something approaching *forty per cent* — the same battery, the same road, the same weather, carrying you barely more than half as far, purely because you chose to hurry. That is not a gentle penalty for speed; it is a cliff, and every electric-car driver who has watched their predicted range evaporate on a fast autobahn has felt it directly.
+Abstract numbers do not persuade, so here is what the cube law does to a real electric vehicle. Take a van cruising at 80 km/h with a certain range. Speed up to roughly 95 km/h and the range noticeably shrinks. Push on to 110, and it shrinks again. By the time you are travelling at around 130 km/h instead of 80, the range can have collapsed by something approaching *forty percent* — the same battery, the same road, the same weather, carrying you barely more than half as far, purely because you chose to hurry. That is not a gentle penalty for speed; it is a cliff, and every electric-car driver who has watched their predicted range evaporate on a fast autobahn has felt it directly.
 
 There is a threshold hidden in all this that explains why aerodynamics dominates the chapter. At low, around-town speeds, air resistance is minor — the car spends most of its energy on other things, chiefly the rolling resistance of the tyres, which is the next chapter's subject. But because air resistance grows so explosively with speed while those other losses grow only gently, there comes a point — somewhere in the range of ordinary main-road speeds — where the air overtakes everything else and becomes the single largest force the car is fighting. Above that point, on a motorway, well over half of all the energy the car uses can be going to push air aside. The faster you go, the more totally the air dominates, until at high speed almost nothing else matters.
 
-This is the physics that justifies the entire war described in the chapter opener. If range at motorway speed is mostly a battle against air, and if the cost of that battle rises with the *cube* of speed, then shaving even a small amount off a car's aerodynamic drag pays off enormously at exactly the speeds where range is scarcest and most anxiously watched. A car that is ten per cent slipperier is not ten per cent better only at the margins; it is meaningfully better on every long, fast journey, which is precisely where electric cars have most needed to prove themselves. The cube law is why a family saloon is sculpted with the obsessive care once reserved for aircraft, and why the drag coefficient figures from Chapter 1 — the 0.23, the 0.219 — are quoted with such pride.
+This is the physics that justifies the entire war described in the chapter opener. If range at motorway speed is mostly a battle against air, and if the cost of that battle rises with the *cube* of speed, then shaving even a small amount off a car's aerodynamic drag pays off enormously at exactly the speeds where range is scarcest and most anxiously watched. A car that is ten percent slipperier is not ten percent better only at the margins; it is meaningfully better on every long, fast journey, which is precisely where electric cars have most needed to prove themselves. The cube law is why a family saloon is sculpted with the obsessive care once reserved for aircraft, and why the drag coefficient figures from Chapter 1 — the 0.23, the 0.219 — are quoted with such pride.
 
 It also hands the driver a piece of free advice that no software update can beat: if you want more range on a long trip, slow down a little. Because the penalty is cubic, easing off from 130 to 115 km/h buys back a surprisingly large slice of range for a very small cost in journey time. The same physics that punishes haste so severely rewards a gentle lift of the foot just as generously. The air is an unforgiving opponent, but it is an honest one — and it fights hardest exactly where, and when, the car can least afford it. The next question is *where*, physically, on the car this fight is happening, and the answer is not where most people would guess.
 

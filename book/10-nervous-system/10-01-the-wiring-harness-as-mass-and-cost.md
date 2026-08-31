@@ -9,14 +9,17 @@ Why can a robot not simply install it? Because a wiring harness is floppy, three
 The harness as a physical and economic burden:
 
 ```
-   the wiring harness is:
-     LONG      several kilometres of wire in a premium car
-     HEAVY     tens of kg of copper -> range cost, forever
-     COSTLY    expensive mostly because of how it's ASSEMBLED
-     MANUAL    too floppy and variable for robots -> human hands
-     COMPLEX   the most part-number-heavy component in the car
+   The wiring harness is:
 
-   => a prime target for radical simplification
+     LONG ...... several kilometres of wire in a premium car
+     HEAVY ..... tens of kg of copper -- a range cost, forever
+     COSTLY .... expensive mostly because of how it is ASSEMBLED
+     MANUAL .... too floppy and variable for robots; human hands
+     COMPLEX ... the most part-number-heavy component in the car
+
+   which makes it a prime target for radical simplification --
+   and explains zonal wiring, 48 volts, and everything that
+   follows in this chapter.
 ```
 
 Every one of these burdens points the same way: toward making the harness *shorter and simpler*. A shorter harness is lighter, which the efficiency logic of Chapter 1 turns directly into range, because every kilogram of copper is dead weight the battery carries for the life of the car. A simpler harness is cheaper in materials. And — most importantly for the way Tesla thinks — a simpler harness is one a machine might finally be able to install, which unlocks savings in the factory that dwarf the cost of the copper itself. The harness is not just heavy; it is the bottleneck standing between the car and the fully automated assembly line that Part XI describes as the real prize.

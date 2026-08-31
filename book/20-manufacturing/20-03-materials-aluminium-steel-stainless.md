@@ -9,17 +9,23 @@ Take the three main players in turn. *Aluminium* is the lightweight champion: ro
 Right metal, right job:
 
 ```
-   ALUMINIUM      light, castable, corrosion-resistant
-                  -> big gigacastings, weight-critical panels
-                  (costs more, softer, harder to repair)
+   ALUMINIUM    light, castable, corrosion-resistant
+                used for: the big gigacastings, and panels
+                where weight matters most
+                the cost: dearer, softer, harder to repair
 
-   STEEL          strong, cheap, easy to form/join
-                  -> the safety cage around the occupants
-                  (heavier -- used where strength must win)
+   STEEL        strong, cheap, easy to form and to join
+                used for: the safety cage around the people
+                the cost: heavy -- so it is used where
+                strength simply has to win
 
-   STAINLESS      extremely durable, needs no paint
-                  -> Cybertruck exoskeleton (structural skin)
-                  (heavy, hard to form -- an unusual choice)
+   STAINLESS    extremely durable, and needs no paint at all
+                used for: the Cybertruck's structural skin
+                the cost: heavy and hard to form -- which is
+                why that car has flat panels and sharp folds
+
+   The silhouette is not a style choice. It is the material,
+   showing through.
 ```
 
 Then there is the outlier, *stainless steel*, and it deserves a mention precisely because it is so unusual — a piece of "direction of travel" rather than the norm. The Cybertruck is built with a stainless-steel *exoskeleton*: instead of a conventional body where an inner structure is covered by non-structural painted panels, the tough stainless outer skin is itself part of the structure. The appeal is real — stainless is exceptionally durable, resists dents and corrosion, and needs no paint at all, deleting the entire enormous, expensive, energy-hungry paint shop from the factory. But the price is equally real: stainless is heavy, and it is notoriously hard to form into the curved shapes cars usually have, which is a large part of why the Cybertruck is so aggressively flat-panelled and angular. Its shape is not only a style choice; it is what stainless steel is willing to be bent into. The material dictated the form.

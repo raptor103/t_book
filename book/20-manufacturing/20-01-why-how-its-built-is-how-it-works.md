@@ -7,13 +7,22 @@ Once you see this, a whole hidden layer of the car's design comes into focus, an
 Two ways to make the same thing:
 
 ```
-   MANY PARTS (traditional)         FEW PARTS (design for manufacture)
-   12 stampings + 30 welds          1 large casting
-   + fixtures + inspection          + far less to inspect
-   + suppliers + part numbers       + fewer suppliers, fewer errors
-      |                                |
-   more labour, more variables,     cheaper, faster, more consistent
-   more ways to go wrong            -- even if heavier or "cruder"
+   MANY PARTS (the traditional way)
+     12 stampings + 30 welds + fixtures + inspection
+     + more suppliers + more part numbers
+          |
+          v
+     more labour, more variables, more ways to go wrong
+
+   FEW PARTS (design for manufacture)
+     1 large casting
+     + far less to inspect + fewer suppliers
+          |
+          v
+     cheaper, faster and more consistent -- even where the
+     result is heavier, or looks cruder
+
+   The car and the factory are designed in the same breath.
 ```
 
 This reframes almost every earlier chapter. When Chapter 3 described the structural battery pack, it noted that bonding the battery into the body deleted a separate floor structure — that was a manufacturing win, fewer parts to assemble, before it was anything else. When Chapter 9 explained zonal wiring, the deepest benefit was that short, modular wiring is easier for a machine to install than a sprawling harness. When Chapter 10 praised standardised connectors, the point was to shrink the parts catalogue and simplify the factory. Each of these was presented, in its place, as electrical or structural engineering. Underneath, each was also a decision about how to *build* the car more cheaply and more automatically. The manufacturing logic was there all along, driving choices we examined for other reasons.

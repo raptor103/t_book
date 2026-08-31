@@ -7,17 +7,23 @@ The machine that does it is called a Giga Press, and it is genuinely enormous �
 Seventy parts, one shot:
 
 ```
-   TRADITIONAL REAR UNDERBODY        GIGACASTING
-   ~70 stamped steel parts           1 aluminium casting
-   hundreds of welds                 poured in one shot
-   many robots, long sequence        ~300 fewer robots (per Tesla)
-   variable fit, much inspection     consistent, little to inspect
-      |                                 |
-   heavy, slow, costly               ~30% lighter, ~40% cheaper
-                                     (by Tesla's own estimates)
+   TRADITIONAL REAR UNDERBODY    GIGACASTING
+   ------------------------------------------------------------
+   about 70 stamped steel parts  1 aluminium casting
+   hundreds of welds             poured in a single shot
+   many robots, a long           about 300 fewer robots,
+   sequence of operations        by Tesla's own account
+   variable fit, much            consistent, with little
+   inspection needed             left to inspect
+   ------------------------------------------------------------
+   heavy, slow, costly           around 30% lighter and 40%
+                                 cheaper, by Tesla's estimates
+
+   And the same consolidation that makes it cheap to build
+   is what makes it expensive to repair. One see-saw.
 ```
 
-The benefits, when it works, are exactly the design-for-manufacturing wins of the last section, delivered at spectacular scale. Consolidating seventy parts into one eliminates all the welding between them, and with it the hundreds of robots that did the welding — Tesla has claimed the change removed something like three hundred robots from the line. It eliminates the variability of lining up many parts, so the finished structure is more consistent and dimensionally accurate. It removes a small mountain of logistics — seventy part numbers, their suppliers, their storage, their sequencing — replaced by one casting. And by Tesla's own estimates the approach can cut the underbody's weight by around thirty per cent and its cost by up to forty. Fewer parts, less labour, less weight, lower cost, better consistency: it is the manufacturing dream made metal, and it is why much of the rest of the industry scrambled to copy it.
+The benefits, when it works, are exactly the design-for-manufacturing wins of the last section, delivered at spectacular scale. Consolidating seventy parts into one eliminates all the welding between them, and with it the hundreds of robots that did the welding — Tesla has claimed the change removed something like three hundred robots from the line. It eliminates the variability of lining up many parts, so the finished structure is more consistent and dimensionally accurate. It removes a small mountain of logistics — seventy part numbers, their suppliers, their storage, their sequencing — replaced by one casting. And by Tesla's own estimates the approach can cut the underbody's weight by around thirty percent and its cost by up to forty. Fewer parts, less labour, less weight, lower cost, better consistency: it is the manufacturing dream made metal, and it is why much of the rest of the industry scrambled to copy it.
 
 But this book always tells you the price, and gigacasting's price is steep and worth understanding, because it echoes a warning from earlier in the book. The first cost is capital: a Giga Press is a multi-million-euro machine, and the moulds ("dies") for it are hugely expensive too, which means the whole approach only makes economic sense at very high production volumes — you must build a great many identical cars to spread that colossal fixed cost. It also demanded a new aluminium alloy, developed specially, that could be cast into so large and complex a shape and still have the right strength — a metallurgical problem in its own right. And there is the drawback that connects directly to the next chapter: *repairability*. When a car's rear underbody is a single giant casting, a collision that would once have crumpled a few replaceable stamped parts can instead damage the one enormous casting — which cannot be unwelded and patched, only replaced whole, at great cost, if it can be replaced at all. A part designed to eliminate assembly is, almost by definition, a part designed to resist disassembly.
 

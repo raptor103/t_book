@@ -1,6 +1,6 @@
 ## 13.2 EV-specific tyres and faster wear
 
-New electric-car owners are often blindsided by a bill they did not expect. The car needs almost no servicing — no oil changes, no spark plugs, barely any brake wear, as the next chapter will explain — and then, sooner than they thought possible, it needs new tyres. Electric cars chew through tyres noticeably faster than petrol cars, commonly by something like **twenty to thirty per cent**, and the reasons are a neat summary of everything that makes an electric car what it is. The tyre wear is not a defect; it is the car's own character, written into the rubber.
+New electric-car owners are often blindsided by a bill they did not expect. The car needs almost no servicing — no oil changes, no spark plugs, barely any brake wear, as the next chapter will explain — and then, sooner than they thought possible, it needs new tyres. Electric cars chew through tyres noticeably faster than petrol cars, commonly by something like **twenty to thirty percent**, and the reasons are a neat summary of everything that makes an electric car what it is. The tyre wear is not a defect; it is the car's own character, written into the rubber.
 
 Three forces conspire to grind the tread down faster. The first is weight, again. An electric car carries several hundred extra kilograms of battery, and all of it presses down through the tyres, which now bear a heavier load with every rotation. Heavier load means more force scrubbing the rubber against the road, especially at the rear where much of the battery mass sits, and more force means faster wear. The very mass that makes the car feel planted and lowers its centre of gravity is slowly sanding its tyres away.
 
@@ -11,14 +11,21 @@ The third is regenerative braking, the mirror image of the same effect. Just as 
 Why EV tyres wear faster, and how they fight back:
 
 ```
-   what wears EV tyres:            how EV-specific tyres respond:
-   heavy battery (extra load) ---> reinforced sidewalls, XL load rating
-   instant torque (micro-slip) --> tougher tread compounds
-   regen braking (shear) -------->   (hold up under high torque)
-   + owners want RANGE ---------->  low rolling resistance compound
-   + cabin is silent -----------> foam lining inside to hush road noise
+   What wears an EV's tyres          how EV tyres answer
+   ------------------------------------------------------------
+   heavy battery, extra load  -->  reinforced sidewalls, and
+                                   an XL load rating
+   instant torque, micro-slip -->  tougher tread compounds
+   regenerative braking       -->  built to take high torque
+                                   through the contact patch
+   owners want RANGE          -->  low-rolling-resistance
+                                   compound
+   the cabin is SILENT        -->  foam lining bonded inside
+                                   to hush the road noise
+   ------------------------------------------------------------
 
-   -> a tyre asked to be strong, grippy, efficient AND quiet at once
+   One tyre asked to be strong, grippy, efficient and quiet
+   all at once -- and those demands pull against each other.
 ```
 
 This is why electric cars increasingly wear *EV-specific* tyres, which are not a marketing gimmick but genuinely different objects engineered for a genuinely harder brief. They have reinforced sidewalls and higher load ratings to carry the battery's weight without deforming. They use tougher tread compounds to survive the instant torque. They aim for low rolling resistance to protect range, per the last section. And — a lovely detail that shows how one design choice ripples into another — many of them contain a layer of sound-absorbing foam bonded inside the tyre, for a reason that has nothing to do with wear at all: because an electric car has no engine noise to mask the drone of the tyres on the road, that road noise becomes far more noticeable in the quiet cabin, so the tyre itself must be quietened from within. The silence the electric drivetrain creates forces the tyre to become a noise-control device.

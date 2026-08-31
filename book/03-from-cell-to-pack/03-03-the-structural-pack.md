@@ -11,13 +11,21 @@ That last trick is the clever heart of it. The cells are not merely stored in th
 The old way and the new, in section:
 
 ```
-   CONVENTIONAL (battery as passenger)   STRUCTURAL (battery as floor)
+   CONVENTIONAL -- the battery is a passenger
 
-   ==== car floor pan =============       ==== seats bolt here =======
-   ---- gap / mounting ------------       ##### cells, glued in #######
-   #### battery, own lid & case ###       ##### cells, glued in #######
-   ---- battery floor -------------       ==== pack base = car underside
-        (two structures)                       (one structure)
+     ============================   car floor pan
+     ----------------------------   gap + mounting
+     ############################   battery: own case, lid, cells
+     ----------------------------   battery floor
+                                    TWO structures, metal doubled up
+
+   STRUCTURAL -- the battery IS the floor
+
+     ============================   seats bolt straight onto this
+     ############################   4680 cells, glued in with
+     ############################   structural foam
+     ============================   pack base = the car's underside
+                                    ONE structure; the floor pan is gone
 ```
 
 But — and this book tries always to give you the *but* — nothing in engineering is free, and the structural pack pays for its virtues in a currency called repairability, in which it is close to bankrupt. The same teardown team that admired the rigidity was blunt about the cost: the pack has, in their words, essentially zero repairability. The top cover is bonded to the cells with a polyurethane adhesive so aggressive that getting into the pack without wrecking it ranges from extremely difficult to impossible. When the cells are foamed into a structure, you cannot easily lift out a bad module and slot in a good one, the way you could with the old bolt-together packs. A fault that once meant replacing a module can now mean replacing, or writing off, a component that is both the battery and part of the chassis.

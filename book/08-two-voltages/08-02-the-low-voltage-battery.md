@@ -9,14 +9,22 @@ That small independent source is the low-voltage battery — the humble twelve-v
 The wake-up sequence:
 
 ```
-   1. car asleep: big pack SEALED behind open contactors
-                  (no high voltage reachable anywhere)
-   2. you approach: the 12V battery powers handles, screens, computers
-   3. computers + BMS run checks, energise the contactor coils
-   4. CONTACTORS CLOSE -> the 400V pack is now connected
-   5. the DC-DC converter (next section) takes over:
-      runs the whole 12V world AND recharges the 12V battery
-   -- if step 2 has no power, the sequence never begins --
+   1  car asleep ......... the big pack is SEALED behind open
+                           contactors; no high voltage anywhere
+                                 |
+   2  you approach ....... the 12 V battery powers the handles,
+                           the screens and the computers
+                                 |
+   3  checks ............. computers and BMS run their checks,
+                           then energise the contactor coils
+                                 |
+   4  CONTACTORS CLOSE ... the ~400 V pack is connected at last
+                                 |
+   5  DC-DC takes over ... it now runs the whole 12 V world and
+                           recharges the 12 V battery
+
+   If step 2 has no power, the sequence never begins. That is
+   how a flat 12 V battery strands a car with a full pack.
 ```
 
 This is why a flat twelve-volt battery strands an electric car so completely, and why it is one of the commoner ways for a Tesla to leave its owner stuck at exactly the wrong moment. The failure is almost absurd: a battery costing a small fraction of the car, holding a rounding error of its total energy, can immobilise the whole machine — not because the car is out of energy, but because it cannot *reach* its energy without the small battery's help. Manufacturers mitigate this — the car watches the low-voltage battery's health, tops it up, and warns you when it weakens — but the fundamental dependency remains. A great deal of engineering rests on a component most owners forget exists.

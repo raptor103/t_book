@@ -9,13 +9,19 @@ The second job faces inward, toward the car's own low-voltage world. Once the ca
 Two conversions, one box:
 
 ```
-   PCS = two converters sharing a housing:
+   PCS -- two converters sharing one liquid-cooled housing:
 
-   ONBOARD CHARGER   wall AC  ---->  high-voltage DC  ->  big pack
-   (faces the plug)  (charging the car from a socket)
+   +----------------------------------------------------------------+
+   |   ONBOARD CHARGER    wall AC ----> HV DC ----> the pack        |
+   |   (faces the plug)   charging the car from a socket            |
+   |                                                                |
+   |   DC-DC CONVERTER    pack HV DC ----> ~14-16 V                 |
+   |   (faces the car)    runs the lights, screens and computers,   |
+   |                      and tops up the 12 V battery              |
+   +----------------------------------------------------------------+
 
-   DC-DC CONVERTER   big pack HV DC ---->  ~14-16 V DC
-   (faces the car)   (runs lights/computers, tops up 12V battery)
+   Both are the same craft -- fast switches and magnetics --
+   so one box does two jobs. And one box can fail two jobs.
 ```
 
 Now the interesting part, which is why these two devices live in a single box. On the face of it, an AC-to-DC charger and a DC-to-DC step-down converter are different machines for different purposes. But underneath, both are exercises in the same craft — power electronics, the art of the previous chapters' inverter: switching, transforming, and converting electrical power from one form to another using fast semiconductor switches and magnetic components. They share the same family of parts, the same cooling needs, the same design language. So rather than build two separate units, each with its own casing, connectors, cooling and control board, Tesla folds them into one liquid-cooled module — the PCS — that houses both converters together. It is the same integration instinct we met with the octovalve and the structural pack: notice that two things are secretly similar, and merge them to save parts, mass, cost and space. Fewer boxes, fewer connectors, fewer things to fail, less to carry.

@@ -11,15 +11,18 @@ Then there is what the car does while you are gone. Because a Tesla is festooned
 The connected car's new powers:
 
 ```
-   CELLULAR MODEM ... always online: updates, live traffic, streaming,
-                      remote control from the app
-   PHONE-AS-KEY ..... car recognises your phone; unlocks as you
-                      approach; no key or fob to carry
-   SENTRY MODE ...... parked cameras watch, record, alert your phone
-   REMOTE CONTROL ... precondition, check charge, locate, honk, all
-                      from the app, from anywhere
+   CELLULAR MODEM .... always online: updates, live traffic,
+                       streaming, and the phone app
+   PHONE-AS-KEY ...... the car recognises your phone and
+                       unlocks as you walk up. No fob.
+   SENTRY MODE ....... parked, the cameras keep watching,
+                       record, and alert your phone
+   REMOTE CONTROL .... precondition, check the charge, locate
+                       it, sound the horn -- from anywhere
 
-   the car is no longer a sealed island -- it is a connected device
+   The car stops being a sealed island and becomes a
+   connected device -- with everything that implies, in
+   convenience and in data leaving the vehicle.
 ```
 
 All of this is real and mostly wonderful, and it is why owners often describe the car as feeling less like a vehicle and more like a smartphone that happens to have wheels. But a device this connected and this observant raises questions a sealed island never did, and honesty requires stating them plainly rather than waving them away. A permanently-connected car is a car whose location, movements, and status are continuously known to its manufacturer. A car covered in cameras that watch while parked is a car that is, unavoidably, a mobile surveillance device — recording not just would-be thieves but bystanders, streets, and neighbours. The data that makes the features work — where you drive, how you drive, what your cameras see — is genuinely useful and genuinely personal, and it flows off the car to servers you do not control. None of this is hidden or sinister, and much of it is opt-in or adjustable, but it is a real change in what it means to own a car, and a thoughtful owner should understand it rather than simply enjoy the conveniences.

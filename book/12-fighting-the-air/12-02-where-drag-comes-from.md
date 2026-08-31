@@ -9,21 +9,23 @@ Then there is the underbody — the whole underside of the car, which on a tradi
 Where the drag hides:
 
 ```
-   sources of a car's aerodynamic drag (roughly):
+   Where a car's aerodynamic drag actually comes from:
 
-   the body shape + frontal area .... the part everyone expects
-   WHEELS + WHEEL WELLS ............. ~25% -- the big surprise
-   the UNDERBODY .................... churned, cluttered airflow
-   mirrors, gaps, aerials, trim ..... small but they add up
+   body shape + frontal area ..... the part everyone expects
+   WHEELS and WHEEL WELLS ........ about 25% -- the big surprise
+   the UNDERBODY ................. churned, cluttered airflow
+   mirrors, gaps, aerials, trim .. small, but they add up
 
-   => the biggest wins are often NOT at the sleek nose
+   The biggest wins are usually NOT at the glamorous nose.
+   They are down at the wheels and under the floor, where
+   nobody is looking.
 ```
 
 Once you know this, the design of an aerodynamic electric car suddenly reads like a checklist of counter-measures against each of these hidden sources, and the electric car has one enormous advantage that a petrol car never did. Recall that the whole underside of a Tesla is a flat slab — the structural battery pack from Chapter 3. Where a petrol car has a chaotic underbody of exhaust and driveshafts, an electric car has, essentially, a smooth floor: the pack forms a flat belly pan over most of the underside, and the car adds smooth covers over the rest, so that air flowing beneath slides across a clean surface rather than tumbling through clutter. The deletion of the engine and its plumbing pays an aerodynamic dividend the designers did not have to work for — the flat floor comes almost free with the architecture.
 
 The wheels get their own dedicated treatment, which is the subject of the next section, because they are both a huge source of drag and a battleground of taste. But the rest of the car is shaped, detail by detail, to deny the air the places it likes to make trouble. The near-absent grille means the front is a smooth face rather than a hole for air to fall into and thrash around behind — an electric car needs far less cooling air than an engine did, so it can seal up the opening that a petrol car had to leave gaping. The flush door handles retract so as not to interrupt the airflow sliding down the car's flanks. The mirrors are sculpted, the pillars angled, the tail shaped to let the air close back in cleanly behind the car rather than leaving a turbulent, dragging wake. Every one of these is a small answer to the question *where is the air making trouble here?*
 
-The lesson worth carrying forward is that aerodynamics is not about one heroic shape but about a hundred small refusals to waste air — and that the biggest opportunities are often invisible, down at the wheels and under the floor rather than up at the glamorous nose. It is the same pattern we saw with efficiency inside the drive unit: no single miracle, but an accumulation of unglamorous wins, each worth a fraction of a per cent, that together decide how far the car goes at speed. And nowhere is the accumulation more visible — or more contentious — than in the humble, much-argued-over wheel.
+The lesson worth carrying forward is that aerodynamics is not about one heroic shape but about a hundred small refusals to waste air — and that the biggest opportunities are often invisible, down at the wheels and under the floor rather than up at the glamorous nose. It is the same pattern we saw with efficiency inside the drive unit: no single miracle, but an accumulation of unglamorous wins, each worth a fraction of a percent, that together decide how far the car goes at speed. And nowhere is the accumulation more visible — or more contentious — than in the humble, much-argued-over wheel.
 
 ---
 

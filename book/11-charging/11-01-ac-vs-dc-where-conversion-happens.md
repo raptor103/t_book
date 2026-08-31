@@ -11,15 +11,22 @@ The second answer: the conversion happens *outside the car*, in the charging sta
 The whole distinction, in one picture:
 
 ```
-   AC CHARGING (home / destination)
-     grid AC --> [ car's onboard charger does AC->DC ] --> battery
-     conversion is INSIDE the car -> limited by what the car
-     can carry -> ~7-11 kW -> hours
+   AC CHARGING  (home, or a destination charger)
 
-   DC FAST CHARGING (Supercharger)
-     grid AC --> [ big roadside cabinet does AC->DC ] --> battery
-     conversion is OUTSIDE the car -> no size limit, well cooled
-     -> hundreds of kW -> minutes
+     grid AC --> [ the car's onboard charger: AC to DC ] --> pack
+
+     the conversion happens INSIDE the car, so it is limited
+     by what the car can afford to carry: ~7-11 kW, and hours
+
+   DC FAST CHARGING  (a Supercharger)
+
+     grid AC --> [ big roadside cabinet: AC to DC ] --------> pack
+
+     the conversion happens OUTSIDE the car, in a cabinet with
+     no weight limit and proper cooling: hundreds of kW, minutes
+
+   One question tells you which you are using:
+   where does the conversion happen -- in the car, or the box?
 ```
 
 That is the whole thing. Slow charging and fast charging are not two different technologies so much as two different *places* to put the same converter — in the car, where it must be small and light, or in a roadside cabinet, where it can be enormous. Every other difference follows from this one. The home charger is cheap and can be anywhere there is a socket, because the expensive converting hardware is the modest one you carry with you. The fast charger is costly and lives only at dedicated stations, because the expensive converting hardware is the giant one bolted to the ground — but you get to *share* that giant with every other car that visits, which is what makes it economic.

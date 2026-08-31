@@ -9,14 +9,21 @@ But most of what a car does is not moving. It is the thousand small jobs: lighti
 Two worlds, two jobs:
 
 ```
-   HIGH-VOLTAGE WORLD (~350-400 V)   LOW-VOLTAGE WORLD (~12-16 V)
-   the big traction battery          the small auxiliary battery
-   motor + inverter                  lights, wipers, windows, locks
-   fast charging                     screens, computers, sensors
-   cabin heater, A/C compressor      pumps, fans, door handles
-   = anything that MOVES the car     = everything else
-   powerful and DANGEROUS            low-power and SAFE to touch
-   -------- kept galvanically isolated from each other --------
+   HIGH-VOLTAGE WORLD           LOW-VOLTAGE WORLD
+   ~350-400 V                   ~12-16 V (48 V on newer designs)
+   -------------------------------------------------------------
+   the big traction battery     the small auxiliary battery
+   motor + inverter             lights, wipers, windows, locks
+   fast charging                screens, computers, sensors
+   cabin heater, A/C            pumps, fans, door handles
+   -------------------------------------------------------------
+   anything that MOVES the car  everything else
+   powerful and DANGEROUS       low-power, safe to touch
+
+   +--------------------------------------------------------------+
+   |   GALVANIC ISOLATION: no electrical path between the two,    |
+   |   monitored constantly, and shut down the instant it leaks   |
+   +--------------------------------------------------------------+
 ```
 
 The word to hold onto is that last one: **isolated**. The two worlds are not merely at different voltages; they are deliberately kept electrically separate, so that the dangerous high-voltage system has no direct electrical path to anything a human might touch. Engineers call this galvanic isolation, and it is a safety cornerstone. The metal body of the car, the door handles, the pedals, the twelve-volt world the passengers live in — all of it is kept insulated from the four hundred volts under the floor, with the car constantly monitoring that isolation and ready to shut the high-voltage system down the instant it detects a leak between the worlds. You can sit in an electric car, touch every surface, and never come within an insulator's breadth of the voltage that drives it. That separation is not an accident; it is engineered, monitored, and enforced.

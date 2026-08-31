@@ -9,17 +9,28 @@ Most of the time they agree, and nothing happens. But every so often the network
 The loop that compounds:
 
 ```
-   millions of cars driving  ---> each runs "shadow mode":
-   (cameras always watching)      predicts vs. what the human did
-            ^                                |
-            |                                v  divergences flagged
-   OTA push improved              interesting clips uploaded
-   software to the WHOLE fleet             |
-            ^                                v
-            |                        train BETTER neural networks
-   validate the new networks <----  on the new real-world data
+   +--> millions of cars driving, cameras always watching
+   |                     |
+   |                     v
+   |    each runs SHADOW MODE: it quietly predicts what it
+   |    would do, and compares that against what the human
+   |    actually did
+   |                     |
+   |                     v
+   |    where the two DIVERGE, the clip is flagged and
+   |    uploaded -- the interesting cases, not everything
+   |                     |
+   |                     v
+   |    better neural networks are trained on that new
+   |    real-world data, in the data centre
+   |                     |
+   |                     v
+   |    the improved software is validated, then pushed
+   |    over the air to the WHOLE fleet
+   |                     |
+   +---------------------+
 
-   each turn of the loop makes every car a little smarter
+   Each turn of the loop makes every car a little better.
 ```
 
 What happens next is the training. Tesla gathers these clips — the scale is staggering, with reports of hundreds of thousands of video snippets flowing in every second from the global fleet [INFERENCE — figures are company/analyst claims, hard to independently verify] — and uses them to train new, improved versions of the neural networks, teaching the AI to handle the very situations where it previously stumbled. The improved networks are tested, validated, and then pushed back out to the entire fleet as an over-the-air update, from the first section of this chapter. And now the loop closes and begins again: the smarter software drives (and shadow-drives) on millions of cars, which find the *next* set of situations it gets wrong, which feed the next round of training. Round and round, each turn feeding the next.

@@ -9,15 +9,21 @@ Here is how it changes the game. Instead of waiting for a strip of metal to heat
 Melting fuse versus electronic fuse:
 
 ```
-   TRADITIONAL FUSE            eFUSE (in the zone controller)
-   metal strip melts on        MOSFET + current sensor watches
-   overcurrent                 the current continuously
-      |                            |
-   circuit breaks (slow-ish)    switches off in microseconds
-      |                            |
-   fuse is DEAD -> replace it   RESETS in software when fault clears
-      |                            |
-   a glovebox of spares         diagnostics + remote control, no spares
+   TRADITIONAL FUSE              eFUSE (in the zone controller)
+
+   a metal strip melts when      a MOSFET and a current sensor,
+   the current is too high       watching continuously
+        |                             |
+        v                             v
+   the circuit breaks            switches off in MICROSECONDS
+        |                             |
+        v                             v
+   the fuse is DEAD; someone     RESETS itself in software once
+   must physically replace it    the fault clears
+        |                             |
+        v                             v
+   a glovebox full of spares     reports which circuit faulted,
+                                 and how. No spares at all.
 ```
 
 The consequences ripple outward in ways a melting fuse could never manage. Because an eFuse is really a smart switch, the car can turn any protected circuit on or off *deliberately*, in software, not just in response to a fault. It can shut down a misbehaving device remotely. It can shed non-essential loads to save power when the low-voltage battery is weak. It can report, precisely, which circuit faulted and how — turning a diagnostic mystery ("something blew a fuse") into a specific logged event a technician, or the car itself, can read. And it can do all of this without any moving or consumable parts, so there is nothing to wear out, nothing to stock, nothing to fumble for at the roadside in the dark.

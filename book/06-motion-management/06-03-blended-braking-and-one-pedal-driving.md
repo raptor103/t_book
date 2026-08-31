@@ -11,11 +11,20 @@ Now the other pedal, and the real revolution. In an electric car, lifting off th
 The two pedals, reimagined:
 
 ```
-   ACCELERATOR                     BRAKE PEDAL
-   press  -> motor drives          press -> "slow by THIS much"
-   lift   -> motor regenerates,       car chooses: regen first,
-             slowing the car          friction added only as needed
-   (does most everyday braking)    (for hard / emergency stops)
+   ACCELERATOR                   BRAKE PEDAL
+
+   press -> the motor drives     press -> "slow me by THIS much"
+
+   lift  -> the motor            the car then chooses:
+            regenerates, and       regeneration first,
+            the car slows          friction added only as needed
+
+   does most of the everyday     kept for hard stops and
+   braking on its own            emergencies
+
+   Hold mode: below about 6.5 km/h regeneration fades away, so
+   the friction brakes are blended in to bring the car to a
+   clean, held standstill -- no pedal at all.
 ```
 
 Two footnotes keep it honest. First, one-pedal driving is beloved but not automatically more *efficient*, a subtlety often missed. Its regeneration recovers energy handsomely, but the driving style it encourages — squeezing the accelerator harder to overcome the strong lift-off braking — can burn energy too, and a smooth driver coasting toward a stop can sometimes do as well or better. What one-pedal driving reliably delivers is not maximum efficiency but a calmer, more relaxed way of driving, and far less use of the friction brakes.

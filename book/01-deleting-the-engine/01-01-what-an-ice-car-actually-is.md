@@ -4,19 +4,22 @@ Set fire to a cup of petrol and it simply burns — a hot, useless, faintly alar
 
 Start with what it is. A petrol engine is a set of cylinders — usually four in an ordinary car — in each of which a piston slides up and down. Fuel and air are squeezed into the top of the cylinder, a spark lights them, and the resulting bang shoves the piston down. That downward shove is the entire point; everything else is plumbing. The pistons turn a crankshaft, the crankshaft spins, and that spin, eventually, reaches the wheels. To keep the bangs coming in the right order you need camshafts, valves, springs, a timing chain. To stop the whole thing seizing solid you need oil pumped everywhere under pressure. To stop it melting you need a cooling system — a radiator, a water pump, litres of coolant circulating constantly. To start it at all you need a separate electric motor, because an engine cannot begin turning itself. Count the moving parts and you arrive somewhere around two hundred in the powertrain alone [INFERENCE — commonly cited industry figure, not a single audited count], every one of them wearing, needing lubrication, and eventually failing.
 
-And here is the part that should genuinely astonish you: for all that machinery, most of the fuel is wasted. Not a little of it — most of it. The figures are not controversial; they come from the United States Department of Energy, which has measured them exhaustively. Of the energy in a tank of petrol, only somewhere between **18 and 25 per cent** actually reaches the wheels. The rest is lost, and the largest share by far — around **68 to 72 per cent** — is simply thrown away as heat: out of the exhaust pipe, into the radiator, off the engine block into the air. You have, in effect, a very expensive heater that produces motion as a side effect.
+And here is the part that should genuinely astonish you: for all that machinery, most of the fuel is wasted. Not a little of it — most of it. The figures are not controversial; they come from the United States Department of Energy, which has measured them exhaustively. Of the energy in a tank of petrol, only somewhere between **18 and 25 percent** actually reaches the wheels. The rest is lost, and the largest share by far — around **68 to 72 percent** — is simply thrown away as heat: out of the exhaust pipe, into the radiator, off the engine block into the air. You have, in effect, a very expensive heater that produces motion as a side effect.
 
 Concise diagram of where a tankful of petrol actually goes:
 
 ```
-100 units of fuel energy in the tank
-  |
-  +-- engine losses (mostly heat) ...........  ~70  [lost]
-  +-- idling at traffic lights .............    ~3  [lost]
-  +-- drivetrain friction ..................    ~4  [lost]
-  +-- pumps, alternator, accessories .......    ~5  [lost]
-  |
-  = reaches the wheels .....................  ~18-25  [useful]
+   100 units of energy in a tank of petrol
+   -------------------------------------------------------
+    -70   engine losses, mostly heat, out of the
+          exhaust pipe and the radiator
+    - 3   idling at traffic lights
+    - 4   drivetrain friction
+    - 5   pumps, alternator, accessories
+   -------------------------------------------------------
+     18   reaches the wheels
+          (18-25 in practice, and the only part you
+           actually wanted to buy)
 ```
 
 There is worse. The engine only works well within a narrow band of speeds — too slow and it stalls, too fast and it tears itself up — and that band does not match the range of speeds a car actually needs, from crawling in a car park to cruising at 130. So you bolt on a gearbox: a heavy, precise, oil-filled box of cogs whose entire job is to keep translating between the engine's fussy comfort zone and the road's demands. Every gear change is a small confession that the power source cannot do what is asked of it directly. Add the clutch, the driveshafts, the differential, and you have a second complicated machine that exists purely to manage the failings of the first.

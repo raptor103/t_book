@@ -11,14 +11,23 @@ The second is *speed of innovation*, and this is subtler. When you make the cell
 Why make it yourself:
 
 ```
-   ASSEMBLER (buy the parts)        VERTICAL INTEGRATION (make them)
-   design car, buy pieces,          make cells, motors, chips,
-   bolt together                    software, castings, even refine
-      |                             lithium -- in-house
-   cheaper per part, simpler           |
-   BUT: can't deeply co-design,     control cost of the biggest parts;
-   bound by suppliers' limits       CO-DESIGN everything together;
-   and priorities                   adapt fast when the world breaks
+   ASSEMBLER                     VERTICALLY INTEGRATED
+   (buy the parts)               (make the parts)
+   ------------------------------------------------------------
+   design the car, buy the       make the cells, motors,
+   pieces, bolt them together    chips, software, castings --
+                                 even refine the lithium
+
+   cheaper per part, and         controls the cost of the
+   far simpler to run            biggest components
+
+   BUT cannot deeply co-design,  CAN co-design everything
+   and is bound by suppliers'    together, and adapt fast
+   limits and priorities         when the world breaks
+   ------------------------------------------------------------
+
+   The integration described all through this book is only
+   available to a company that owns the pieces it is fusing.
 ```
 
 The third reason is *resilience*, and it was proven dramatically in the semiconductor shortage that paralysed the car industry in the early 2020s. When the chips that carmakers depended on suddenly became unavailable, most manufacturers simply stopped — they could not build cars without parts they did not control and could not substitute. Tesla, because it wrote its own software, could rewrite that software to work with *different*, available chips, and keep building. That is the deep payoff of owning your capabilities: when you control something, you can *adapt* it when the world changes; when you merely buy it, your ability to adapt is bounded by your supplier's capacity, priorities, and problems. Vertical integration trades some everyday efficiency for the ability to bend rather than break when things go wrong.

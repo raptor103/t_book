@@ -1,23 +1,31 @@
 ## 23.2 How much efficiency is left to win
 
-We end where we began, with efficiency — the organising obsession of Chapter 1, the thread that ran through every system in the book. And we end with an honest and slightly deflating arithmetic, because it is the truest thing to say about where the electric car goes from here. The drivetrain is already so efficient that there is very little room left to improve it. From the battery to the wheels, the modern electric car delivers something like eighty-five to ninety per cent of its energy to the road. The ceiling is one hundred per cent, and you cannot pass it. Which means the entire remaining prize inside the drivetrain — everything left to win between here and physical perfection — is that last ten or fifteen per cent, and every point of it is harder to claim than the one before.
+We end where we began, with efficiency — the organising obsession of Chapter 1, the thread that ran through every system in the book. And we end with an honest and slightly deflating arithmetic, because it is the truest thing to say about where the electric car goes from here. The drivetrain is already so efficient that there is very little room left to improve it. From the battery to the wheels, the modern electric car delivers something like eighty-five to ninety percent of its energy to the road. The ceiling is one hundred percent, and you cannot pass it. Which means the entire remaining prize inside the drivetrain — everything left to win between here and physical perfection — is that last ten or fifteen percent, and every point of it is harder to claim than the one before.
 
-This is the mark of a mature technology, and it should be said plainly. The heroic era of drivetrain efficiency — the era this book has largely celebrated, of silicon-carbide inverters and ninety-seven-per-cent conversion and heat pumps and shortened wire — is, in a sense, nearly over, not because anyone failed but because it so nearly succeeded. When you have already captured eighty-five per cent, the remaining gains are polishing, not revolution: a fraction of a percent from a better seal, a better switch, a slightly slipperier shape. Worth having, worth chasing, but incremental. The big, dramatic efficiencies have mostly already been won, and won impressively. There is no second engine left to delete.
+This is the mark of a mature technology, and it should be said plainly. The heroic era of drivetrain efficiency — the era this book has largely celebrated, of silicon-carbide inverters and ninety-seven-percent conversion and heat pumps and shortened wire — is, in a sense, nearly over, not because anyone failed but because it so nearly succeeded. When you have already captured eighty-five percent, the remaining gains are polishing, not revolution: a fraction of a percent from a better seal, a better switch, a slightly slipperier shape. Worth having, worth chasing, but incremental. The big, dramatic efficiencies have mostly already been won, and won impressively. There is no second engine left to delete.
 
 Where the efficiency frontier moves:
 
 ```
-   INSIDE the drivetrain          nearly maxed out (~85-90%);
-   (battery -> wheels)            only a few % left, each one harder
+   INSIDE the drivetrain, battery to wheels:
 
-   the frontier moves OUTWARD:
-     the BATTERY .......... denser/lighter -> less weight to haul,
-                            less energy needed for the same range
-     WEIGHT ............... lighter car -> less energy, everywhere
-     the GRID ............. cleaner electricity -> the car is only
-                            as clean as the power that charges it
-     UTILISATION ......... using cars well: right-sized, shared,
-                            charged smartly -> system-level efficiency
+     [################################################--]  85-90%
+     nearly maxed out. Only a few percent left, and each
+     one is harder to win than the last.
+
+   So the frontier moves OUTWARD:
+
+     the BATTERY ...... denser and lighter, so there is less
+                        weight to haul for the same range
+     WEIGHT ........... a lighter car needs less energy,
+                        everywhere, on every trip, forever
+     the GRID ......... a car is only as clean as the
+                        electricity that charges it
+     UTILISATION ...... right-sized, shared, charged when
+                        power is cheap and clean
+
+   The battle inside the machine is close to won. The ones
+   that remain are upstream and outward -- a different book.
 ```
 
 So where do the meaningful gains now come from? Increasingly, from *outside* the drivetrain. From the battery, as the last section described — not to make the drivetrain more efficient, but to make it lighter, so the car has less mass to haul and needs less energy for the same journey; a denser battery is an efficiency gain in disguise, paid in weight. From reducing the mass of everything else, since every kilogram removed is energy saved on every trip forever. And from the largest levers of all, which lie beyond the car entirely: the *grid* that makes the electricity, because a car is only as clean as the power that charges it, and the great environmental prize is not a slightly better inverter but a decarbonised supply; and the *way the cars are used* — charged when energy is cheap and clean, right-sized to actual needs, perhaps shared rather than parked twenty-three hours a day — which is efficiency at the level of the whole system rather than the single vehicle.

@@ -9,14 +9,18 @@ So Tesla, rather than buy a general-purpose chip, designed its own — a process
 The AI brain's peculiar job:
 
 ```
-   ORDINARY CAR COMPUTER          FSD / AI COMPUTER
-   runs step-by-step rules        runs neural networks
-   "if X then Y"                  learns patterns from millions
-                                    of examples
-   modest, general-purpose        specialised silicon for one kind
-                                    of maths, done at huge volume
-   handles switches, logic        turns camera VIDEO into an
-                                    understanding of the world
+   ORDINARY CAR COMPUTER         FSD / AI COMPUTER
+   ------------------------------------------------------------
+   runs step-by-step rules       runs neural networks
+   written by a programmer       learned from millions of
+   -- if X, then Y               examples, not written by hand
+
+   modest, general-purpose       silicon specialised for one
+   silicon                       kind of maths, at huge volume
+
+   handles switches and logic    turns camera VIDEO into an
+                                 understanding of the world
+   ------------------------------------------------------------
 ```
 
 It is worth pausing on the sheer relentlessness of what this computer does, because it is easy to say "it processes camera data" and miss how astonishing that is. Every fraction of a second, from a standstill to motorway speed, it is taking in the full view around the car, identifying every relevant object, tracking where each one is and predicting where each is going, working out the geometry of the road and the rules that apply, and deciding what the car should do — all fast enough to react before a hazard becomes a collision, and reliably enough to be trusted with human lives. It never blinks, never tires, never glances at its phone. Whatever one thinks of how *well* it does the driving — and Part IX takes an honest look at exactly that, because the claims and the reality do not always match — the raw feat of doing it at all, in real time, in a box the size of a paperback, is genuinely remarkable.

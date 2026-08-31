@@ -11,18 +11,21 @@ Recall the PCS, the Power Conversion System bolted under the rear seat in its co
 The energy, running the other way:
 
 ```
-   CHARGING (Chapters 11.1-11.3)
-   grid AC ---> [ onboard charger ] ---> DC ---> pack
+   CHARGING  (sections 11.1 to 11.3)
 
-   DISCHARGING (the same silicon, reversed)
-   pack ---> DC ---> [ same switches, inverting ] ---> AC
-                            |
-                            +--> V2L   a socket: tools, kettle
-                            +--> V2H   the house, via a gateway
-                            +--> V2G   the grid, sold back
+     grid AC ---> [ onboard charger ] ---> DC ---> the pack
 
-   the gateway's real job: disconnect the house from the
-   street FIRST, so the car cannot backfeed a dead line
+   DISCHARGING  (the same silicon, running backwards)
+
+     the pack ---> DC ---> [ the same switches, inverting ] ---> AC
+                                                          |
+                        V2L  a socket: tools, a kettle <--+
+                        V2H  the house, through a gateway <-+
+                        V2G  the grid, sold back <----------+
+
+   The gateway's real job is not conversion but disconnection:
+   it cuts the house off from the street FIRST, so the car can
+   never backfeed a line someone believes is dead.
 ```
 
 With that plumbing in place the numbers become domestic rather than theoretical. Powershare Home Backup delivers up to **11.5 kilowatts** to a house — comfortably more than a home draws at its busiest — and Tesla's claim is that a Cybertruck can carry a household through a blackout for **more than three days**. The simpler modes need less apparatus: the truck's own sockets supply up to **9.6 kilowatts** for tools or a campsite, which is enough to run a building site, and the car can also charge another electric car, roadside, from its own pack. Somewhere in there the car stops being a consumer of the energy system and becomes a participant in it.

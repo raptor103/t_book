@@ -10,27 +10,37 @@ The journey of one joule:
 
 ```
    grid AC
-     |  AC -> DC conversion (onboard charger OR roadside cabinet)
-   DC into the pack -> stored as ION POSITION in a cell
-     |  (waits; balanced and kept at the right temperature)
-   you accelerate:
-   cell -> BMS/contactors -> INVERTER (DC -> 3-phase AC)
+     |   AC to DC -- in the onboard charger, or in the
+     |   roadside cabinet
+     v
+   DC into the pack, stored as ION POSITION inside a cell
+     |   (it waits there, balanced and held at the right
+     |    temperature, until you ask for it)
+     v
+   BMS and contactors let it out
      |
-   MOTOR: AC makes a rotating field; the rotor is dragged round
+     v
+   INVERTER  --  DC becomes three-phase AC
      |
-   reduction gear (speed down, torque up) -> differential
+     v
+   MOTOR  --  the AC makes a rotating field; the rotor chases it
      |
-   driveshaft -> wheel -> the contact patch -> the ROAD
+     v
+   REDUCTION GEAR  --  speed down, torque up  --  DIFFERENTIAL
+     |
+     v
+   driveshaft  ->  wheel  ->  the contact patch  ->  the ROAD
 
-   ~85% of what left the battery reaches the road; a petrol
-   car delivers ~20% of its fuel. same journey, opposite result.
+   About 85% of what leaves the battery reaches the road.
+   A petrol car delivers about 20% of its fuel.
+   Same journey. Opposite result.
 ```
 
 Now you press the accelerator, and our joule is called. The ion is released and rushes home to the metal-oxide cathode, and its abandoned electron, forbidden to follow through the electrolyte, is forced out through the wires — that forced detour *is* the current (Chapter 2). It flows to the inverter, which chops the steady DC into three staggered waves of AC, sculpting them with switches flicking twenty thousand times a second (Chapter 4). Our joule, now riding an alternating current, reaches the motor's stator coils and helps make the magnetic field sweep round; the rotor, dragged after the field, turns (Chapter 5). The energy has become rotation.
 
 That rotation passes through the single reduction gear, which trades the motor's fast, gentle spin for the wheel's slower, stronger one, and through the differential, which splits it to the wheels and lets them turn at their own rates through a corner (Chapter 6). It reaches the wheel, and the wheel presses the tyre against the road, and at the contact patch — that hand-sized handshake between rubber and tarmac (Chapter 13) — our joule finally does the one thing the whole car exists to do: it pushes the road backward, and the car forward. From grid to pavement, the journey is complete.
 
-Here is the number that makes the whole book cohere. Of the energy that left the battery, something like *eighty-five per cent* actually reaches the road — the losses along the way, in the inverter, the motor, the gear, the tyres, adding up to only fifteen or so (Chapters 1, 4, 5). Compare that with the petrol car of Chapter 1, which delivered barely a fifth of its fuel's energy to the wheels and threw the rest away as heat. Same journey, from stored energy to moving car; opposite outcome. The electric car's supremacy is not a matter of one clever trick but of this: at every single stage of the journey, it loses less. The efficient storage, the efficient conversion, the efficient motor, the efficient gear, the slippery body, the low-resistance tyres — each contributes its few per cent, and the few per cent compound, all the way down the chain, into a car that spends the great majority of its energy on motion and only a sliver on waste.
+Here is the number that makes the whole book cohere. Of the energy that left the battery, something like *eighty-five percent* actually reaches the road — the losses along the way, in the inverter, the motor, the gear, the tyres, adding up to only fifteen or so (Chapters 1, 4, 5). Compare that with the petrol car of Chapter 1, which delivered barely a fifth of its fuel's energy to the wheels and threw the rest away as heat. Same journey, from stored energy to moving car; opposite outcome. The electric car's supremacy is not a matter of one clever trick but of this: at every single stage of the journey, it loses less. The efficient storage, the efficient conversion, the efficient motor, the efficient gear, the slippery body, the low-resistance tyres — each contributes its few percent, and the few percent compound, all the way down the chain, into a car that spends the great majority of its energy on motion and only a sliver on waste.
 
 That is the through-line of the entire book, made visible in a single joule's journey. Efficiency was never one feature; it was the organising obsession of Chapter 1, followed relentlessly into every system, and here at the end you can watch it pay off at every step from plug to pavement. The energy the petrol car squandered as heat, the electric car keeps, all the way to the road. Which is the perfect vantage point from which to ask the book's final honest question: with the whole machine before us, where are its true marvels — and where did the story get ahead of the reality?
 

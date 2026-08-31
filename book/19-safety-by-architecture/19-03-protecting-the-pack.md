@@ -9,14 +9,23 @@ Notice the elegant two-way relationship here, because it is the heart of the sec
 Protecting the store of energy in the floor:
 
 ```
-   layers of defence around the cells:
+   Layers of defence around the cells, outermost first:
 
-   side-sill / cross-member CAGE ... spreads side-impact loads
-   underbody SHIELDING ............. stops road-debris intrusion
-   the pack's own STRUCTURE ........ stiff enough to resist AND
-                                     to help protect the car
-   cell spacing + barriers ......... contain a single failed cell,
-                                     slow cell-to-cell spread
+   1  SIDE SILLS and CROSS-MEMBERS
+      a cage that spreads side-impact loads around the pack
+      rather than into it
+
+   2  UNDERBODY SHIELDING
+      armour against road debris thrown up from beneath
+
+   3  THE PACK'S OWN STRUCTURE
+      stiff enough both to resist intrusion and to help
+      hold the car together (the structural pack of 3.3)
+
+   4  CELL SPACING and BARRIERS
+      if one cell does fail, contain it and slow the spread
+      to its neighbours -- turning a sudden catastrophe into
+      a slower, more survivable event
 ```
 
 The second line of defence assumes the first has failed — that despite everything, a cell has been damaged and begins to overheat. Here the goal shifts from prevention to *containment*: stopping one bad cell from taking the whole pack with it. The pack is engineered so that a single cell in thermal runaway is, as far as possible, isolated from its neighbours — with spacing, heat-resistant barriers and flame-rated insulation between cells and modules, and venting paths to channel the hot gases safely away rather than letting them ignite the cell next door. The thermal system of Part IV plays its part too, able to pour cooling into a troubled region to slow the cascade. The design cannot promise that a severely damaged pack will never burn, but it can buy time — and time, in a crash, is what lets occupants get clear before a slow-developing battery fire takes hold.

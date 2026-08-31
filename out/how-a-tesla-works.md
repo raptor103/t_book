@@ -46,7 +46,7 @@ A few things worth knowing before you start.
 
 **Units are metric, in a European frame.** Kilometres, kilograms, degrees Celsius, kilowatts. Where a figure is more famous in another form, the book will occasionally translate.
 
-**There is no maths.** Not because the maths is unimportant — it is the whole hidden engine of the field — but because you do not need it to understand what is happening, any more than you need to read sheet music to be moved by a song. Where a relationship matters, it is described in words and pictures. If you ever find yourself reaching for a calculator, the book has failed and you should feel free to skip ahead.
+**There is no maths.** Not because the maths is unimportant — it is the whole hidden engine of the field — but because you do not need it to understand what is happening, any more than you need to read sheet music to be moved by a song. Where a relationship matters, it is described in words and pictures.
 
 Two small labels appear in the text from time to time. **[VERIFY]** marks a claim the author has not yet been able to pin to a source — you should not see these in the finished book, but if one survives, treat it as a raised eyebrow. **[INFERENCE]** marks something known only from teardowns or patents rather than from the manufacturer's own word; these are meant to survive, because knowing *how* we know something is half the fun.
 
@@ -70,19 +70,22 @@ Set fire to a cup of petrol and it simply burns — a hot, useless, faintly alar
 
 Start with what it is. A petrol engine is a set of cylinders — usually four in an ordinary car — in each of which a piston slides up and down. Fuel and air are squeezed into the top of the cylinder, a spark lights them, and the resulting bang shoves the piston down. That downward shove is the entire point; everything else is plumbing. The pistons turn a crankshaft, the crankshaft spins, and that spin, eventually, reaches the wheels. To keep the bangs coming in the right order you need camshafts, valves, springs, a timing chain. To stop the whole thing seizing solid you need oil pumped everywhere under pressure. To stop it melting you need a cooling system — a radiator, a water pump, litres of coolant circulating constantly. To start it at all you need a separate electric motor, because an engine cannot begin turning itself. Count the moving parts and you arrive somewhere around two hundred in the powertrain alone [INFERENCE — commonly cited industry figure, not a single audited count], every one of them wearing, needing lubrication, and eventually failing.
 
-And here is the part that should genuinely astonish you: for all that machinery, most of the fuel is wasted. Not a little of it — most of it. The figures are not controversial; they come from the United States Department of Energy, which has measured them exhaustively. Of the energy in a tank of petrol, only somewhere between **18 and 25 per cent** actually reaches the wheels. The rest is lost, and the largest share by far — around **68 to 72 per cent** — is simply thrown away as heat: out of the exhaust pipe, into the radiator, off the engine block into the air. You have, in effect, a very expensive heater that produces motion as a side effect.
+And here is the part that should genuinely astonish you: for all that machinery, most of the fuel is wasted. Not a little of it — most of it. The figures are not controversial; they come from the United States Department of Energy, which has measured them exhaustively. Of the energy in a tank of petrol, only somewhere between **18 and 25 percent** actually reaches the wheels. The rest is lost, and the largest share by far — around **68 to 72 percent** — is simply thrown away as heat: out of the exhaust pipe, into the radiator, off the engine block into the air. You have, in effect, a very expensive heater that produces motion as a side effect.
 
 Concise diagram of where a tankful of petrol actually goes:
 
 ```
-100 units of fuel energy in the tank
-  |
-  +-- engine losses (mostly heat) ...........  ~70  [lost]
-  +-- idling at traffic lights .............    ~3  [lost]
-  +-- drivetrain friction ..................    ~4  [lost]
-  +-- pumps, alternator, accessories .......    ~5  [lost]
-  |
-  = reaches the wheels .....................  ~18-25  [useful]
+   100 units of energy in a tank of petrol
+   -------------------------------------------------------
+    -70   engine losses, mostly heat, out of the
+          exhaust pipe and the radiator
+    - 3   idling at traffic lights
+    - 4   drivetrain friction
+    - 5   pumps, alternator, accessories
+   -------------------------------------------------------
+     18   reaches the wheels
+          (18-25 in practice, and the only part you
+           actually wanted to buy)
 ```
 
 There is worse. The engine only works well within a narrow band of speeds — too slow and it stalls, too fast and it tears itself up — and that band does not match the range of speeds a car actually needs, from crawling in a car park to cruising at 130. So you bolt on a gearbox: a heavy, precise, oil-filled box of cogs whose entire job is to keep translating between the engine's fussy comfort zone and the road's demands. Every gear change is a small confession that the power source cannot do what is asked of it directly. Add the clutch, the driveshafts, the differential, and you have a second complicated machine that exists purely to manage the failings of the first.
@@ -117,15 +120,18 @@ Here is the list.
 Diagram of the five jobs and where each lives in this book:
 
 ```
-   STORE  -->  CONVERT  -->  DELIVER  -->  [ MANAGE HEAT ]
-  energy       to spin      to wheels        throughout
-     |            |             |                 |
-  battery      motor +       reduction        heat pump,
-   pack        inverter       gear, axle       octovalve
-     |____________|_____________|_________________|
-                        |
-                   [ CONTROL ]  <-- computers, software,
-                                    the whole car talking
+   Three jobs sit in a line, one after the other:
+
+     1 STORE   -->   2 CONVERT   -->   3 DELIVER   --> wheels
+       energy          to spin           to wheels
+         |               |                   |
+      battery         motor +            reduction
+       pack           inverter           gear, axle
+
+   Two more wrap around all three, all of the time:
+
+     4 MANAGE HEAT ..... heat pump, octovalve
+     5 CONTROL ......... computers, software
 ```
 
 That is the entire job description of a motor car, and it has not changed in a hundred and forty years. What has changed — completely, radically, in the space of a single generation — is how a Tesla answers each line of it. It stores energy in a way a Victorian engineer would not recognise. It converts that energy with a device that has one moving part instead of two hundred. It delivers the motion with a single fixed gear and no clutch at all. It manages heat as a treasured resource rather than a nuisance. And it controls the lot with software that can be rewritten overnight while the car sleeps in your driveway.
@@ -141,9 +147,9 @@ Five jobs. One familiar list, five unfamiliar answers. The next section walks do
 
 The tempting way to think about an electric car is as a normal car with the fuel swapped out — as though an engineer had lifted the petrol engine, dropped a motor in its place, and gone home. If that were true, this would be a much shorter book. But it is not what happens. Change the way a car stores and converts energy and you do not change one line of the five-job list; you knock over all five, one into the next, like dominoes. Walk down the list again and watch it fall.
 
-**Store.** Petrol is an astonishing way to carry energy. Kilo for kilo it holds something like fifty times more than a lithium battery — a fact the battery can never win on and never will. And yet the electric car mostly wins the exchange anyway, because of what happens at the next step. A battery gives up its energy through wires almost losslessly, whereas a tank of petrol must first be set on fire. The catch is time: you can pour a tankful of petrol in two minutes, and putting the equivalent energy into a battery takes longer and requires an entire chapter (Part VI) to explain properly. Storage stops being a solved problem and becomes *the* problem around which the car is designed.
+**Store.** Petrol is an astonishing way to carry energy. Kilo for kilo it holds something like fifty times more than a lithium battery — a fact the battery can never win. And yet the electric car mostly wins the exchange anyway, because of what happens at the next step. A battery gives up its energy through wires almost losslessly, whereas a tank of petrol must first be set on fire. The catch is time: you can pour a tankful of petrol in two minutes, and putting the equivalent energy into a battery takes longer and requires an entire chapter (Part VI) to explain properly. Storage stops being a solved problem and becomes *the* problem around which the car is designed.
 
-**Convert.** This is where the ground truly shifts. The engine — two hundred moving parts, most of the fuel lost as heat — is replaced by an electric motor with essentially **one** moving part, which turns electricity into rotation at efficiencies of **around 90 per cent or more**. It is silent. It barely wears. And it does something no engine can: it produces its full twisting force, its maximum torque, from a dead standstill — from zero revolutions per minute. An engine has to spin up and be coaxed into its narrow happy band before it pulls hard. A motor just pulls, instantly, the moment you ask. That single fact is what makes an ordinary electric car feel quicker off the line than sports cars that cost ten times as much.
+**Convert.** This is where the ground truly shifts. The engine — two hundred moving parts, most of the fuel lost as heat — is replaced by an electric motor with essentially **one** moving part, which turns electricity into rotation at efficiencies of **around 90 percent or more**. It is silent. It barely wears. And it does something no engine can: it produces its full twisting force, its maximum torque, from a dead standstill — from zero revolutions per minute. An engine has to spin up and be coaxed into its narrow happy band before it pulls hard. A motor just pulls, instantly, the moment you ask. That single fact is what makes an ordinary electric car feel quicker off the line than sports cars that cost ten times as much.
 
 **Deliver.** And because the motor pulls hard from zero and keeps pulling across a huge range of speeds, the entire elaborate apparatus for *managing* an engine's fussiness — the multi-speed gearbox, the clutch, the gear stick, the shift shock — simply evaporates. In its place sits a single fixed reduction gear: one ratio, no changes, no clutch, ever. An engineering problem that consumed a century of refinement is not solved so much as deleted. Job three shrinks from a heavy oil-filled machine to a single set of cogs.
 
@@ -173,22 +179,23 @@ The reason is the battery, and it is worth being blunt about it. The battery is 
 
 This is the single idea that explains almost every strange design choice in the rest of this book. Once you see it, you cannot unsee it.
 
-Why does a Tesla have those flush door handles that pop out to greet you? To smooth the airflow. Why the near-total absence of a front grille? Because a hole in the front of a car is a hole that air falls into, and air is the enemy. Why the smooth belly pan under the floor, the small aerodynamic wheel covers that owners either love or quietly replace, the obsessive sculpting of every mirror and pillar? All of it is a war on drag — and drag matters ferociously because, as we will see in Part VII, the effort of pushing air aside rises with the *cube* of speed, so a car that is a little slippery at 120 km/h is a lot slippery where it counts. The result is a body with a drag coefficient of around **0.23** — and, in the latest version, **0.219** — numbers that put a family saloon into territory once reserved for the odd hand-built streamliner. Tesla's own engineers have said that this single aerodynamic improvement was the largest factor in an eight per cent efficiency gain on the updated car. Eight per cent, from shaping the air.
+Why does a Tesla have those flush door handles that pop out to greet you? To smooth the airflow. Why the near-total absence of a front grille? Because a hole in the front of a car is a hole that air falls into, and air is the enemy. Why the smooth belly pan under the floor, the small aerodynamic wheel covers that owners either love or quietly replace, the obsessive sculpting of every mirror and pillar? All of it is a war on drag — and drag matters ferociously because, as we will see in Part VII, the effort of pushing air aside rises with the *cube* of speed, so a car that is a little slippery at 120 km/h is a lot slippery where it counts. The result is a body with a drag coefficient of around **0.23** — and, in the latest version, **0.219** — numbers that put a family saloon into territory once reserved for the odd hand-built streamliner. Tesla's own engineers have said that this single aerodynamic improvement was the largest factor in an eight percent efficiency gain on the updated car. Eight percent, from shaping the air.
 
 The obsession does not stop at the skin. It reaches into the tyres, chosen and constructed to roll with less resistance. Into the heat pump, which we will meet later, whose entire reason for existing is to warm the cabin using a quarter of the electricity a simple heater would burn. Into the regenerative braking that scavenges back the energy of every slowing. Into the motor, tuned for efficiency across the speeds you actually drive, and into an oil pump for that motor that is itself electric, so it only runs when needed rather than being dragged along constantly. None of these is dramatic on its own. Each buys back a percent, or a fraction of a percent. Added together, across the whole car, they are the difference between a usable range and a disappointing one.
 
-The payoff is a number that would have been science fiction to an engine designer. Where a petrol car delivers perhaps a fifth of its fuel's energy to the road, an electric car delivers the great majority of it — commonly **80 to 90 per cent**, measured from the battery to the wheels. A Model 3 will carry a person and their shopping using somewhere around **130 to 160 watt-hours per kilometre**, which is to say it travels the length of a football pitch on roughly the energy an electric kettle uses to not-quite-boil.
+The payoff is a number that would have been science fiction to an engine designer. Where a petrol car delivers perhaps a fifth of its fuel's energy to the road, an electric car delivers the great majority of it — commonly **80 to 90 percent**, measured from the battery to the wheels. A Model 3 will carry a person and their shopping using somewhere around **130 to 160 watt-hours per kilometre**, which is to say it travels the length of a football pitch on roughly the energy an electric kettle uses to not-quite-boil.
 
 The contrast, drawn crudely:
 
 ```
-Where the energy goes (battery / tank  ->  wheels)
+   Where the energy goes  (tank or battery  ->  wheels)
+   Both bars are the same 100 units.  # = reaches the wheels.
 
-  PETROL CAR   [######--------------------------]  ~1 part in 5 reaches
-                wheels ~20%   lost as heat ~80%      the road
+   PETROL    [########--------------------------------]  ~20%
+   ELECTRIC  [##################################------]  ~85%
 
-  ELECTRIC CAR [##########################------]  ~4-5 parts in 5 reach
-                wheels ~85%          losses ~15%     the road
+   Same bar, same scale: about one part in five, against
+   four to four and a half.
 ```
 
 This is why "efficiency as an obsession" is the right frame for the whole machine, and why it belongs at the end of the first chapter. Deleting the engine was only the opening move. Everything that follows — the chemistry of the cells, the switching of the inverter, the cleverness of the thermal system, the shortening of every wire — is the same obsession, followed relentlessly into every corner of the car. An electric car is not merely a vehicle that happens to be efficient. It is a machine in which efficiency has become the organising principle, the thread you can pull to unravel every other decision.
@@ -233,18 +240,31 @@ Driving the car opens the door. Connect the two electrodes through a load — th
 A simple picture of the two directions:
 
 ```
-        CHARGING (energy in)              DISCHARGING (energy out)
+   CHARGING -- the charger forces the ions uphill
 
-   anode                cathode      anode                cathode
- (graphite)          (metal oxide) (graphite)          (metal oxide)
-     |   Li+  ---->    |               |    <----  Li+     |
-     |  (through electrolyte)          |  (through electrolyte)
-     |                 |               |                   |
-     +<---- e- (forced by charger) ----+    +---- e- ----> + through
-       the wire, storing energy             the wire = the CAR runs
+      ANODE                                    CATHODE
+   (graphite)    electrolyte + separator    (metal oxide)
+      +---+                                     +---+
+      |   | <--------------- Li+ ---------------|   |
+      +---+                                     +---+
+        |                                         |
+        +<------------------ e- ------------------+
+                     through the CHARGER
+
+   DISCHARGING -- the ions run home, and the electrons
+                  can only follow the long way round
+
+      ANODE                                    CATHODE
+   (graphite)    electrolyte + separator    (metal oxide)
+      +---+                                     +---+
+      |   |---------------- Li+ --------------->|   |
+      +---+                                     +---+
+        |                                         |
+        +------------------ e- ------------------>+
+               through the WIRE -- this is the CAR running
 ```
 
-Two things fall out of this picture immediately, and both matter for the rest of the book. First, nothing is burned, nothing is consumed, nothing moves except ions and electrons shuttling back and forth. That is why the same cell can be charged and drained hundreds or thousands of times: it is the same lithium, rocking between the same two shelves, over and over. Engineers sometimes call it the "rocking-chair" battery, and it is a good name. Second, because the ions physically have to travel through the electrolyte and squeeze into their slots, there are limits to how fast you can rush them. Push too hard, too cold, or too full, and the tidy shelving turns messy — ions pile up, plate out as metal, or damage the lattice they are meant to slot into. Almost every rule you have ever heard about looking after a battery — don't charge it in the freezing cold, don't leave it at 100 per cent, don't fast-charge it to the brim — is a direct consequence of what you have just seen. It is all about keeping the rocking gentle.
+Two things fall out of this picture immediately, and both matter for the rest of the book. First, nothing is burned, nothing is consumed, nothing moves except ions and electrons shuttling back and forth. That is why the same cell can be charged and drained hundreds or thousands of times: it is the same lithium, rocking between the same two shelves, over and over. Engineers sometimes call it the "rocking-chair" battery, and it is a good name. Second, because the ions physically have to travel through the electrolyte and squeeze into their slots, there are limits to how fast you can rush them. Push too hard, too cold, or too full, and the tidy shelving turns messy — ions pile up, plate out as metal, or damage the lattice they are meant to slot into. Almost every rule you have ever heard about looking after a battery — don't charge it in the freezing cold, don't leave it at 100 percent, don't fast-charge it to the brim — is a direct consequence of what you have just seen. It is all about keeping the rocking gentle.
 
 Energy stored as geography; current as electrons taking the scenic route. Hold that, and every battery in the book becomes legible.
 
@@ -270,14 +290,18 @@ And here is the point the whole section is built to make: **the two axes are ind
 A simple grid makes the independence obvious:
 
 ```
-                    |   CHEMISTRY (the coffee)
-                    |   NMC / NCA        LFP
-  ------------------+------------------------------------
-   FORMAT   cyl.    |   2170, 4680       possible, less
-   (the cup) 18650  |   (Tesla cars)     common in cars
-  ------------------+------------------------------------
-            prism.  |   used by some     large prismatic
-            / pouch |   makers           (CATL / BYD packs)
+   FORMAT (the cup)   \  CHEMISTRY (the coffee)
+                       \  NMC / NCA        |  LFP
+   ---------------------+------------------+------------------
+    cylindrical         |  2170, 4680      |  possible, but
+    (18650, 2170, 4680) |  -- most Teslas  |  rare in cars
+   ---------------------+------------------+------------------
+    prismatic or pouch  |  used by some    |  large blocks
+                        |  other makers    |  (CATL, BYD)
+   ---------------------+------------------+------------------
+
+   "4680" names the cup. "LFP" names the coffee.
+   Neither one, on its own, tells you the other.
 ```
 
 Why labour the distinction? Because the two axes are chosen for different reasons and traded off against different things, and the rest of this chapter needs them kept separate. The next section, on trade-offs, is almost entirely a chemistry story — density, cost, cold, cobalt. The section after, on the 4680, is almost entirely a format story — how making the container bigger and smarter changes the economics of building millions of them. Confuse the two and neither story lands. Keep them apart and you have a mental filing system that will serve you through every battery announcement you ever read, including the ones that have not happened yet.
@@ -297,9 +321,9 @@ There is no such thing as the best battery, and anyone who tells you otherwise i
 
 Start with **energy density** — how much energy you can pack into each kilogram, which is really the question of how far the car goes before it gets too heavy to bother. Here the nickel chemistries win clearly. NMC and NCA cells hold something like **150 to 250 watt-hours per kilogram**, while LFP manages roughly **90 to 160**, with the best modern versions creeping toward 200. That gap is the single reason the long-range cars use nickel: for a given weight of battery, they simply carry more energy. If range were the only thing that mattered, the conversation would end here.
 
-But range is never the only thing that matters, because of **cost**. Nickel and cobalt are expensive, mined in a few troubled places, and volatile in price. Iron and phosphate — the guts of LFP — are cheap and everywhere. The result, as of a 2024 industry survey, is LFP packs landing near **95 euros-worth per kilowatt-hour** against **130 to 150** for nickel packs, a difference that runs to thousands across a whole car. This is why LFP has swept the standard-range market: in 2024 it reached roughly 40 per cent of EV batteries globally, and around 60 per cent in China. When you are building millions of affordable cars, twenty per cent off the most expensive component is not a detail. It is the strategy.
+But range is never the only thing that matters, because of **cost**. Nickel and cobalt are expensive, mined in a few troubled places, and volatile in price. Iron and phosphate — the guts of LFP — are cheap and everywhere. The result, as of a 2024 industry survey, is LFP packs landing near **95 euros-worth per kilowatt-hour** against **130 to 150** for nickel packs, a difference that runs to thousands across a whole car. This is why LFP has swept the standard-range market: in 2024 it reached roughly 40 percent of EV batteries globally, and around 60 percent in China. When you are building millions of affordable cars, twenty percent off the most expensive component is not a detail. It is the strategy.
 
-Then **longevity**, and here the ledger flips again. LFP is the tortoise, and the tortoise wins the distance race. An LFP cell will typically survive **two to five thousand** full charge-discharge cycles, and sometimes far more, where a nickel cell may be tiring after **one to two thousand**. LFP is also relaxed about being charged all the way to 100 per cent, which nickel chemistries resent — one reason Tesla tells LFP owners to charge to full routinely and nickel owners to stop around 80 for daily use. The advice differs because the chemistry differs; it is not fussiness, it is physics, and Chapter 3 returns to why.
+Then **longevity**, and here the ledger flips again. LFP is the tortoise, and the tortoise wins the distance race. An LFP cell will typically survive **two to five thousand** full charge-discharge cycles, and sometimes far more, where a nickel cell may be tiring after **one to two thousand**. LFP is also relaxed about being charged all the way to 100 percent, which nickel chemistries resent — one reason Tesla tells LFP owners to charge to full routinely and nickel owners to stop around 80 for daily use. The advice differs because the chemistry differs; it is not fussiness, it is physics, and Chapter 3 returns to why.
 
 Now the two places nickel takes its revenge. The first is **cold**. LFP's chief weakness is a sluggishness in low temperatures — its usable energy and, especially, its willingness to accept a fast charge fall away more sharply in the cold than a nickel cell's. On a January morning an LFP car often needs to warm its own battery before it will charge quickly, which costs energy and time. Nickel chemistries suffer in the cold too, but less. This is not a fatal flaw — it is managed, as we will see, by the thermal systems in Part IV — but it is real, and northern-European owners feel it.
 
@@ -308,12 +332,18 @@ The second is **cobalt**, and this one is as much ethics as engineering. Cobalt 
 The whole negotiation, on one card:
 
 ```
-              density   cost     cycle    cold     cobalt
-              (range)   (cheap)  life     tolerance  free?
-  NMC / NCA    HIGH      low      medium    better     no
-  LFP          lower     HIGH     HIGH      worse      YES
+                        NMC / NCA           LFP
+   ------------------------------------------------------------
+    energy density       150-250 Wh/kg      90-160 Wh/kg
+    pack cost            EUR 130-150/kWh    EUR ~95/kWh
+    cycle life           1,000-2,000        2,000-5,000
+    cold tolerance       better             weaker
+    cobalt-free          no                 yes
+    charge to 100%       not for daily use  routinely fine
+   ------------------------------------------------------------
 
-  (HIGH = strong on that axis; there is no column that wins them all)
+   No column wins every row. That is why one carmaker
+   ships both, in different cars.
 ```
 
 Read that grid and the market makes itself. The affordable, high-mileage, charge-it-to-full commuter car wants LFP and its cheapness and endurance. The long-range and performance car wants nickel and its density, and pays for it in money, in cobalt, and in a shorter cycle life it manages with careful charging. Neither is the "better" battery. They are answers to different questions — which is exactly why a single manufacturer builds cars with both, and why the next thing to understand is not a chemistry at all, but a container: the 4680.
@@ -339,18 +369,41 @@ The tabless design does away with the single tab and instead folds the entire ed
 The difference, drawn crudely:
 
 ```
-   CONVENTIONAL (single tab)          TABLESS (whole edge conducts)
+   Inside the cell the electrodes are not stacked but rolled --
+   two long foil ribbons wound up like a Swiss roll. Unrolled,
+   one ribbon is about a metre long, but only as tall as the
+   cell is high. Where the current leaves is everything.
 
-   [=====long foil=====]--tab         [=====long foil=====]
-     electron travels the               | | | | | | | | |  <- entire
-     full length to one tab             edge is the contact; electron
-     = long path, more heat             crosses only the short width
-                                        = short path, runs cooler
+   CONVENTIONAL -- all the current leaves by ONE small tab
+
+                                                      [tab]
+                                                        ^
+     +---------------------------------------------------+
+     |  e- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  |
+     |  e- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  |
+     +---------------------------------------------------+
+     <---------- up to a metre of travel ---------------->
+
+     Every electron runs nearly the FULL LENGTH of the foil
+     to reach that one tab: a long path, high resistance,
+     and resistance is what makes heat.
+
+   TABLESS -- the whole EDGE of the foil becomes the contact
+
+     =====================================================
+       ^     ^     ^     ^     ^     ^     ^     ^     ^
+     +-|-----|-----|-----|-----|-----|-----|-----|-----|+
+     | e-    e-    e-    e-    e-    e-    e-    e-    e-|
+     +---------------------------------------------------+
+
+     Every electron crosses only the SHORT way -- the height
+     of the cell, a couple of centimetres instead of a metre.
+     Shorter path, lower resistance, and the cell runs cooler.
 ```
 
 Shorten the path and you lower the cell's internal resistance, and a lower-resistance cell runs cooler, which in principle lets it accept and deliver current harder without cooking itself. That was the pitch: a bigger cell, cheaper to make, that could also charge nearly as fast as the small ones despite holding far more energy. Add to it Tesla's parallel bet on a "dry" electrode process — coating the foils without the toxic solvents and long drying ovens the industry has always needed, saving energy, space and money — and Battery Day painted the 4680 as the cell that would make electric cars decisively cheaper.
 
-Here honesty is required, because this is where the story gets interesting rather than triumphant. The 4680 shipped, first in the Cybertruck and in limited Model Y production, and independent teardowns and lab tests — the careful outside scrutiny this book leans on throughout — found a more mixed picture than the promises. Sandy Munro's teardown team measured a later revision with a respectable energy-density gain of around **12 per cent** over its predecessor, real but hardly revolutionary. And the headline claim — that tabless would let the big cell fast-charge almost like a small one — has not clearly borne out; real-world DC fast-charging data has been, if anything, underwhelming, and reporting through 2026 described Tesla still struggling to make its own 4680 cells as good as the cells it buys from suppliers. The dry-electrode process, the quietly more important bet, appears to be edging toward viability at scale but has been genuinely hard to master.
+Here honesty is required, because this is where the story gets interesting rather than triumphant. The 4680 shipped, first in the Cybertruck and in limited Model Y production, and independent teardowns and lab tests — the careful outside scrutiny this book leans on throughout — found a more mixed picture than the promises. Sandy Munro's teardown team measured a later revision with a respectable energy-density gain of around **12 percent** over its predecessor, real but hardly revolutionary. And the headline claim — that tabless would let the big cell fast-charge almost like a small one — has not clearly borne out; real-world DC fast-charging data has been, if anything, underwhelming, and reporting through 2026 described Tesla still struggling to make its own 4680 cells as good as the cells it buys from suppliers. The dry-electrode process, the quietly more important bet, appears to be edging toward viability at scale but has been genuinely hard to master.
 
 So what is the 4680, in the end? Not the miracle of the keynote, and not the flop of the sceptics. It is a sane, incremental format change — fewer cells, a smarter current path, a hard manufacturing bet attached — that is delivering some of what was promised, more slowly and less completely than advertised. Which is, if you have spent any time near real engineering, the most normal outcome imaginable. The lesson worth carrying out of this chapter is not about one cell. It is that the distance between a bold announcement and a shipped product is where nearly all the actual work lives, and that the trustworthy way to know how a technology is really doing is to wait for someone to saw one open and measure it.
 
@@ -386,16 +439,21 @@ Notice what stays fixed and what changes. Both packs are ninety-six cells "tall,
 The structure, drawn as a ladder:
 
 ```
-   96 bricks in SERIES  (this builds the ~350 V, top to bottom)
-   +-----------------------------------------------+
-   | brick 96 : 46 cells in PARALLEL  === capacity |
-   | brick 95 : 46 cells in PARALLEL  === capacity |
-   |   ...          ...                            |
-   | brick  2 : 46 cells in PARALLEL  === capacity |
-   | brick  1 : 46 cells in PARALLEL  === capacity |
-   +-----------------------------------------------+
-     ^ height sets VOLTAGE      ^ width sets ENERGY
-     (fixed at 96 = ~350 V)     (46p long-range, 31p standard)
+   Each BRICK = 46 cells side by side in PARALLEL  -> capacity
+   96 BRICKS stacked in SERIES                     -> voltage
+
+        +---------------------------------------------+   ^
+   96   | [o][o][o][o] .... 46 cells .... [o][o][o][o] |   |
+   95   | [o][o][o][o] .... 46 cells .... [o][o][o][o] |   |
+    :   |                     :                       |   | 96 x 3.6 V
+    2   | [o][o][o][o] .... 46 cells .... [o][o][o][o] |   | = ~350 V
+    1   | [o][o][o][o] .... 46 cells .... [o][o][o][o] |   v
+        +---------------------------------------------+
+         <----------- width sets ENERGY ------------->
+
+   96s46p = 96 x 46 = 4,416 cells   (long range)
+   96s31p = 96 x 31 = 2,976 cells   (standard range)
+   The height never changes: every pack needs the same voltage.
 ```
 
 These bricks are then grouped into a handful of larger blocks — historically four *modules* in a Model 3 — for ease of building and wiring, though the newest structural packs, which the chapter comes to shortly, blur the modules away entirely. However they are grouped, the principle is unchanged: height for pressure, width for quantity.
@@ -426,18 +484,26 @@ And underneath all of it sits the BMS's final, absolute power: the ability to sa
 A sketch of the supervisor and what it watches:
 
 ```
-                    +---------------------------+
-   96 brick   --->  |         B M S             |
-   voltages         |  reads V, T, current      |
-   temps      --->  |  several times a second   |
-   current    --->  |                           |
-                    |  computes: charge %, health
-                    |  acts:    balance the bricks
-                    |           control heating/cooling
-                    |           open the CONTACTORS if unsafe
-                    +------------+--------------+
+   +---------------------------------------------------------------+
+   |                      B M S                                    |
+   |                                                               |
+   |     reads, several times a second, for the life of the car:   |
+   |       - the voltage of every one of the 96 bricks             |
+   |       - temperatures, from thermistors through the pack       |
+   |       - the current flowing in or out of the whole pack       |
+   |                                                               |
+   |     computes:  state of charge   (the % on your screen)       |
+   |                state of health   (capacity remaining)         |
+   |                                                               |
+   |     acts:      balances the bricks                            |
+   |                commands heating and cooling                   |
+   |                opens the contactors if anything strays        |
+   +-------------------------------+-------------------------------+
                                  |
-                    [ CONTACTORS ] --- the master switch to the car
+                                 v
+                     [ C O N T A C T O R S ]
+            the master switch between the pack's 350 V
+            and everything else in the car
 ```
 
 None of this makes the car go. The BMS produces not a single newton of thrust. What it produces is *trust* — the quiet, unglamorous assurance that four thousand volatile cells will behave like one dependable machine for fifteen years and a few hundred thousand kilometres. It is the difference between a battery and a hazard, and it never sleeps. The next question is what all this careful supervision is actually protecting, and the answer, increasingly, is not just a battery but the structure of the car itself.
@@ -462,13 +528,21 @@ That last trick is the clever heart of it. The cells are not merely stored in th
 The old way and the new, in section:
 
 ```
-   CONVENTIONAL (battery as passenger)   STRUCTURAL (battery as floor)
+   CONVENTIONAL -- the battery is a passenger
 
-   ==== car floor pan =============       ==== seats bolt here =======
-   ---- gap / mounting ------------       ##### cells, glued in #######
-   #### battery, own lid & case ###       ##### cells, glued in #######
-   ---- battery floor -------------       ==== pack base = car underside
-        (two structures)                       (one structure)
+     ============================   car floor pan
+     ----------------------------   gap + mounting
+     ############################   battery: own case, lid, cells
+     ----------------------------   battery floor
+                                    TWO structures, metal doubled up
+
+   STRUCTURAL -- the battery IS the floor
+
+     ============================   seats bolt straight onto this
+     ############################   4680 cells, glued in with
+     ############################   structural foam
+     ============================   pack base = the car's underside
+                                    ONE structure; the floor pan is gone
 ```
 
 But — and this book tries always to give you the *but* — nothing in engineering is free, and the structural pack pays for its virtues in a currency called repairability, in which it is close to bankrupt. The same teardown team that admired the rigidity was blunt about the cost: the pack has, in their words, essentially zero repairability. The top cover is bonded to the cells with a polyurethane adhesive so aggressive that getting into the pack without wrecking it ranges from extremely difficult to impossible. When the cells are foamed into a structure, you cannot easily lift out a bad module and slot in a good one, the way you could with the old bolt-together packs. A fault that once meant replacing a module can now mean replacing, or writing off, a component that is both the battery and part of the chassis.
@@ -488,25 +562,30 @@ Every battery is dying from the moment it is made, and there is nothing to be do
 
 Batteries age in two ways at once, and engineers give them two names. The first is *cycle ageing* — the wear from actually using the battery, from each charge and discharge. Every time lithium ions shuttle in and out of those crystal shelves from Chapter 2, they do a little violence: the lattice swells and shrinks, tiny cracks form, and a microscopic amount of lithium gets permanently trapped and taken out of circulation. Do this a few thousand times and the losses add up. The second is *calendar ageing* — the wear from merely existing, from time itself, whether the battery is used or not. Sitting on a shelf, a lithium cell slowly corrodes itself: a thin, self-made film called the SEI, the solid-electrolyte interphase, keeps very gradually thickening on the anode, consuming a little lithium as it grows. A battery locked in a garage for a year and never touched will still have aged.
 
-Here is the crucial part, the part that turns theory into advice: both kinds of ageing are made dramatically worse by two conditions — *heat* and *a high state of charge*. Heat speeds up every chemical reaction, including the destructive ones, which is one more reason the thermal system in Part IV matters so much. And a battery held at or near 100 per cent full sits under a kind of chemical tension — the electrodes are at their most reactive, and the self-corroding SEI reaction runs faster. The research is stark: a nickel cell left resting at 100 per cent charge can lose capacity several times faster than one kept nearer the middle, and warmth compounds it savagely. In one study a cell held full at 40 degrees degraded to worn-out in a fraction of the time it took at ordinary temperature.
+Here is the crucial part, the part that turns theory into advice: both kinds of ageing are made dramatically worse by two conditions — *heat* and *a high state of charge*. Heat speeds up most chemical reactions, including the destructive ones, which is one more reason the thermal system in Part IV matters so much. And a battery held at or near 100 percent full sits under a kind of chemical tension — the electrodes are at their most reactive, and the self-corroding SEI reaction runs faster. The research is stark: a nickel cell left resting at 100 percent charge can lose capacity several times faster than one kept nearer the middle, and warmth compounds it savagely. In one study a cell held full at 40 degrees degraded to worn-out in a fraction of the time it took at ordinary temperature.
 
-That single fact — that the top of the charge range is where the damage concentrates — is the whole reason behind the famous advice to charge a nickel-chemistry car to only about 80 per cent for everyday use, and to fill it to 100 only when you genuinely need the range and preferably just before you set off. You are not "wasting" the top twenty per cent. You are declining to store your battery in its most stressful state. The damage from 80 to 100 is out of all proportion to the extra range it buys.
+That single fact — that the top of the charge range is where the damage concentrates — is the whole reason behind the famous advice to charge a nickel-chemistry car to only about 80 percent for everyday use, and to fill it to 100 only when you genuinely need the range and preferably just before you set off. You are not "wasting" the top twenty percent. You are declining to store your battery in its most stressful state. The damage from 80 to 100 is out of all proportion to the extra range it buys.
 
-And now the chemistry from Chapter 2 pays off, because this is exactly where LFP and nickel part company. The advice differs by chemistry because the *physics* differs by chemistry. LFP's cathode is built around an extraordinarily stable phosphate structure — the bond holding it together is so strong that sitting at 100 per cent charge simply does not stress an LFP cell the way it stresses a nickel one. So LFP cars are not only permitted but positively encouraged to charge to 100 per cent regularly — partly because it is harmless, and partly for a practical second reason: LFP's flat voltage makes it hard for the BMS to estimate state of charge accurately, and an occasional trip to a known, definite 100 per cent lets the supervisor from the last section recalibrate its gauge.
+And now the chemistry from Chapter 2 pays off, because this is exactly where LFP and nickel part company. The advice differs by chemistry because the *physics* differs by chemistry. LFP's cathode is built around an extraordinarily stable phosphate structure — the bond holding it together is so strong that sitting at 100 percent charge simply does not stress an LFP cell the way it stresses a nickel one. So LFP cars are not only permitted but positively encouraged to charge to 100 percent regularly — partly because it is harmless, and partly for a practical second reason: LFP's flat voltage makes it hard for the BMS to estimate state of charge accurately, and an occasional trip to a known, definite 100 percent lets the supervisor from the last section recalibrate its gauge.
 
 The two rules of thumb, and why:
 
 ```
-   NICKEL (NMC / NCA)          LFP (lithium iron phosphate)
-   daily: charge to ~80%       daily: charge to 100% is fine
-   full only when needed       full also recalibrates the gauge
-   reason: top 20% causes       reason: stable phosphate cathode
-   disproportionate ageing      shrugs off a full charge
+                       NICKEL (NMC / NCA)    LFP
+   ---------------------------------------------------------------
+    daily charge to     about 80%             100%, routinely
+    charge to 100%      before a long trip    any time you like
+    why                 the top 20% causes    the phosphate cathode
+                        most of the ageing    shrugs a full charge off
+    bonus               --                    a full charge recalibrates
+                                              the BMS gauge
+   ---------------------------------------------------------------
 
-   BOTH chemistries dislike: heat, and sitting full for weeks
+   Both chemistries dislike the same two things:
+   heat, and being left sitting at 100% for weeks.
 ```
 
-Two caveats keep this honest. First, even LFP would rather not be *parked* at 100 per cent for weeks on end in the heat; charging to full is fine, marinating at full is not. Second, all of this is guidance about the margins. The difference between careful and careless charging is real, but it is measured in a few extra per cent of capacity over many years, not in the survival of the battery. You will not destroy a modern EV battery by charging it wrong. You will, at most, slightly hasten a decline that is already slow.
+Two caveats keep this honest. First, even LFP would rather not be *parked* at 100 percent for weeks on end in the heat; charging to full is fine, marinating at full is not. Second, all of this is guidance about the margins. The difference between careful and careless charging is real, but it is measured in a few extra percent of capacity over many years, not in the survival of the battery. You will not destroy a modern EV battery by charging it wrong. You will, at most, slightly hasten a decline that is already slow.
 
 Which is a fitting place to close the battery chapters. We began with a single cell storing energy as geography, and end with a half-tonne structural machine that ages gracefully if treated with a little understanding. The energy is now stored, supervised, and built into the car. It is time to turn it into motion — and for that we need the strangest and most elegant device in the whole vehicle: the inverter.
 
@@ -542,22 +621,6 @@ Here is the idea, and it is genuinely counterintuitive. Imagine you want to fill
 
 The inverter does exactly this with the battery's DC. Its switches chop the steady voltage into a rapid train of pulses, and by making the pulses wider when the wave should be high and narrower when it should be low, it sculpts the *average* into any shape it likes — including the gentle rise and fall of a sine wave. The motor never sees the smooth wave drawn on the engineer's whiteboard; it sees a blur of full-voltage pulses of varying width. But the motor's own coils, being electrically sluggish, smooth those pulses out, averaging the blur into precisely the surging current the whiteboard promised. The crudeness is hidden by speed.
 
-Chopping DC into the shape of a wave:
-
-```
-   what the switches actually do (on/off pulses):
-     _   __   ___   __   _        _   __   ___   __   _
-    | | |  | |   | |  | | |      | | |  | |   | |  | | |
-   _| |_|  |_|   |_|  |_| |______| |_|  |_|   |_|  |_| |___
-
-   what the motor "feels" (the smooth average):
-        .-''-.                        .-''-.
-      .'      '.                    .'      '.
-   __'          '.________________.'          '.____   ...
-                  '.            .'
-                    '-.______.-'          (one AC cycle)
-```
-
 To make the three staggered phases the motor needs, the inverter simply runs three of these switch pairs at once — one per phase — and starts each one's wave a third of a cycle after the last. Six switches in all, arranged in three pairs, each pair feeding one of the motor's three connections. That is the whole hardware: six fast switches, some large capacitors to steady the supply, and a controller clever enough to choreograph the pulse widths in real time.
 
 Everything else about the inverter — the speed of its switching, the material its switches are made from, the heat it must shed — is refinement of this single, slightly absurd, entirely successful idea: that the way to make a smooth wave, when all you have is an on/off switch, is to flick it faster than anyone can see and let physics do the smoothing. The next question is what happens when you change how fast, and how hard, you flick — because that, it turns out, is the same thing as changing the speed and the torque of the car.
@@ -580,11 +643,19 @@ Now force — torque, the twist that actually pushes the car. Torque comes not f
 Two knobs on the same box of switches:
 
 ```
-   FREQUENCY of the waves   -->  how fast the field spins  -->  SPEED
-   (cycles per second)
+   Three different rates, doing three different jobs:
 
-   PULSE WIDTH / current    -->  how strong the field is   -->  TORQUE
-   (how long switches stay open)
+   1  OUTPUT FREQUENCY ..... how fast the three waves cycle
+      (a few hundred Hz)      -> how fast the field spins
+                              -> the car's SPEED
+
+   2  PULSE WIDTH ........... how long each switch stays open
+      (the duty cycle)        -> how much current in the coils
+                              -> the car's TORQUE
+
+   3  SWITCHING FREQUENCY ... how fast the switches chop
+      (10,000-20,000 Hz)      -> smoothness against wasted heat
+                              -> the designer's balancing act
 ```
 
 This is the deep reason electric cars have that famous instant shove. In a petrol car, asking for more torque means air and fuel and spark and rising revs — a physical process with its own unavoidable delays. In an electric car, asking for more torque means telling the inverter to widen its pulses, and it can do that between one blink of its internal clock and the next. There is essentially no lag between your foot and the force at the wheels. The throttle response people rave about is really inverter response.
@@ -614,7 +685,7 @@ The catch, and the reason silicon carbide was not simply used from the start, wa
 
 Tesla took it. With the Model 3 in 2018, it became the first carmaker to build its main traction inverter around silicon-carbide MOSFETs — the faster, lower-loss switch that silicon carbide makes practical at high voltage — sourced from the European semiconductor firm STMicroelectronics. This was not a concept or a limited edition; it was the inverter in an ordinary car sold by the hundreds of thousands, and it made the Model 3 the first passenger vehicle to run its propulsion on silicon carbide. The industry noticed. Teardown analysts pulled the module apart, counted the two dozen little silicon-carbide chips inside, and worked out what it meant for efficiency.
 
-What it meant was headline numbers that had previously belonged to laboratories. Tesla's inverter-and-motor combination has been credited with efficiencies around **97 per cent** — meaning that of the electrical energy leaving the battery, only about three parts in a hundred are lost turning it into rotation. That is extraordinary, and it matters for the reason Chapter 1 hammered home: efficiency won here is range won everywhere, without adding a single expensive kilogram of battery. A few per cent recovered in the inverter is a few per cent of range handed to every car, for the cost of a better switch.
+What it meant was headline numbers that had previously belonged to laboratories. Tesla's inverter-and-motor combination has been credited with efficiencies around **97 percent** — meaning that of the electrical energy leaving the battery, only about three parts in a hundred are lost turning it into rotation. That is extraordinary, and it matters for the reason Chapter 1 hammered home: efficiency won here is range won everywhere, without adding a single expensive kilogram of battery. A few percent recovered in the inverter is a few percent of range handed to every car, for the cost of a better switch.
 
 The bet had a second, subtler payoff. Because silicon carbide runs cooler and needs less cooling hardware, and because the switches themselves are smaller, the whole inverter shrinks — less mass, less volume, fewer parts around it — and Tesla drove the module's cost down sharply over just a few years, turning the expensive exotic choice into an ordinary one. That is the quiet way a bold material bet actually pays off: not in a single dramatic moment, but in the slow conversion of "too expensive to consider" into "too good not to use."
 
@@ -645,19 +716,6 @@ That trick is called the rotating magnetic field, and it is one of those ideas t
 
 That sweeping wave is your walking magnet, and it rotates with nothing mechanical driving it — only the timing of three electrical currents. Put something magnetic in the middle, the *rotor*, and it is dragged around in pursuit, exactly like the compass needle following your walk. That pursuit is the torque. That torque, through a gear and a driveshaft, is the car.
 
-The stator making a field spin without spinning:
-
-```
-        coil A                three staggered currents make the
-          |                   "strong spot" hand off around the ring:
-    coil  ( )  coil            A peaks -> B peaks -> C peaks -> A ...
-     C   (rotor)  B
-          ( )                  the peak of magnetism sweeps round
-          |                    like a stadium wave; the ROTOR in the
-        (three coil sets       middle chases it = rotation = torque
-         120 degrees apart)
-```
-
 Everything else about a motor is a variation on how you make the middle bit — the rotor — get dragged along, and that turns out to be where the two great families of motor part company, which is the next section. But the principle underneath both is this single, beautiful one. The speed of the car is the speed of the sweeping wave, which is the frequency of the currents, which is set by the inverter — so the inverter, by choosing how fast to cycle, chooses how fast the field sweeps and therefore how fast the motor turns. The force of the car is how hard the rotor is dragged, which depends on how strong the field is, which is the current, again set by the inverter. The two knobs from the last chapter — frequency for speed, current for torque — are revealed here as the same two knobs, now seen from the motor's side.
 
 It is worth pausing on how different this is from an engine. An engine makes torque in violent, discrete events — bang, bang, bang, each a small explosion shoving a piston, the whole thing lurching from one combustion to the next and needing a heavy flywheel to smooth the lurches into something like steady rotation. A motor makes torque *continuously* and *smoothly*, because the magnetic field sweeps round without interruption. There is no bang, no pause, no roughness to smooth away. This is why an electric car is not merely quiet but eerily so — there is genuinely nothing happening that ought to make a noise. The field turns, the rotor follows, and the only sounds are the faint electrical whine of the switching and the tyres on the road.
@@ -679,24 +737,29 @@ The first kind is the **induction motor**, and it is the one Tesla started with 
 
 The second kind is the **permanent-magnet motor**, and it does the obvious thing the induction motor pointedly avoids: it puts actual magnets on the rotor. Now the stator's field has something permanently magnetic to grab, and it drags the rotor round in perfect lockstep — no slip, no lag; the rotor turns exactly as fast as the field sweeps, which is why this type is called synchronous. Tesla's version, used in the Model 3 and Y, is a sophisticated variant that also exploits the shape of the rotor's iron to add extra pull, and goes by the mouthful of names IPM-SynRM. The details matter less than the headline: because the magnets are always there, providing their magnetism for free, this motor does not have to spend energy magnetising its own rotor the way the induction motor does.
 
-That single difference — free magnetism versus made-to-order magnetism — sets up the whole trade-off. The permanent-magnet motor is more efficient, especially at the low and medium speeds where a car actually spends most of its life, because it gets its rotor field gratis; independent figures put the Model 3's permanent-magnet motor around **96 per cent** efficient against roughly **94 per cent** for a comparable induction motor. But that free magnetism has to be bought elsewhere: the magnets are made of rare-earth metals, expensive and geopolitically awkward, and — more subtly — they never switch off. Even when you are coasting and want the motor to do nothing, the magnets keep sweeping past the stator coils, generating a drag you must actively cancel.
+That single difference — free magnetism versus made-to-order magnetism — sets up the whole trade-off. The permanent-magnet motor is more efficient, especially at the low and medium speeds where a car actually spends most of its life, because it gets its rotor field gratis; independent figures put the Model 3's permanent-magnet motor around **96 percent** efficient against roughly **94 percent** for a comparable induction motor. But that free magnetism has to be bought elsewhere: the magnets are made of rare-earth metals, expensive and geopolitically awkward, and — more subtly — they never switch off. Even when you are coasting and want the motor to do nothing, the magnets keep sweeping past the stator coils, generating a drag you must actively cancel.
 
 The induction motor is the mirror image. It is a little less efficient in gentle everyday driving because of the energy spent magnetising its rotor, and it uses no rare-earth magnets — just cheap, robust copper or aluminium and iron. Its special virtue is that when you do not need it, it can be switched fully off and left to freewheel with almost no drag at all, because with no current in the stator there is no magnetism anywhere and nothing to cancel. It is also happy being pushed hard at high speed.
 
 Now the punchline, for a dual-motor car with a motor on each axle:
 
 ```
-   REAR motor: permanent-magnet (synchronous)
-     - efficient at low/medium speed = your daily commute
-     - does the everyday work, most of the time
+                     FRONT axle             REAR axle
+   ----------------------------------------------------------
+    motor            induction              permanent-magnet
+                     (asynchronous)         (synchronous)
+    rotor            squirrel cage,         rare-earth magnets
+                     no magnets             on the rotor
+    efficiency       ~94%                   ~96%
+    when idle        switches fully off,    magnets never stop;
+                     almost no drag         drag to be cancelled
+    its job          wakes for hard         does the everyday
+                     acceleration and       driving, most of
+                     high speed             the time
+   ----------------------------------------------------------
 
-   FRONT motor: induction (asynchronous)
-     - can idle with near-zero drag when not needed
-     - wakes up for hard acceleration and high speed
-     - no rare-earth magnets
-
-   Result: the efficient one runs constantly; the muscular one
-   only joins in when it earns its keep -- best of both.
+   Each motor covers the other's weakness, and the car pays
+   the full price of neither.
 ```
 
 This is why Tesla builds cars with two different kinds of motor rather than two of the same. The permanent-magnet motor on one axle handles the ordinary business of driving efficiently. The induction motor on the other axle sits idle and dragless for most of a journey, then springs to life when you ask for real acceleration or reach high speed, contributing muscle exactly when the permanent-magnet motor's efficiency advantage matters least. Each motor covers the other's weakness. The car gets the everyday economy of the magnet motor and the on-demand power and dragless coasting of the induction motor, and pays the full cost of neither.
@@ -723,17 +786,31 @@ So instead of a gearbox, an electric car has a *reduction gear* — a single, fi
 The whole "transmission," end to end:
 
 ```
-   ENGINE CAR                        ELECTRIC CAR
-   engine: narrow usable band        motor: 0 to ~18,000 rpm, strong
-      |                                 throughout
-   clutch (disconnect to shift)        |
-      |                              (no clutch -- never disconnects)
-   gearbox: 5-7 ratios, always         |
-   swapping to stay in the band     reduction gear: ONE fixed ratio
-      |                              ~9:1, divides speed x9,
-   driveshafts -> wheels             multiplies torque x9
-                                        |
-                                     driveshafts -> wheels
+   ENGINE CAR
+     engine, usable over a narrow band of revs
+       -> clutch, to disconnect for every shift
+       -> gearbox, 5 to 7 ratios, forever swapping
+       -> driveshafts -> wheels
+
+   ELECTRIC CAR
+     motor, 0 to ~18,000 rpm, strong torque throughout
+       -> ONE fixed reduction. No clutch, nothing to select.
+       -> driveshafts -> wheels
+
+   And this is all that one reduction does:
+
+     MOTOR --> [ gear pair 1 ] --> [ gear pair 2 ] --> WHEELS
+                          about 9 : 1 in total
+
+                      at the motor          at the wheels
+     ------------------------------------------------------
+     speed            up to 18,000 rpm      divided by 9
+     torque           modest                multiplied by 9
+     ------------------------------------------------------
+
+   Two pairs of cogs, a shade over nine to one, and that is
+   the entire transmission: no clutch, no gear lever, and one
+   uninterrupted pull from standstill to beyond 250 km/h.
 ```
 
 The consequences ripple outward. There is no clutch, so the drive is never interrupted — the motor stays connected to the wheels at all times, which is part of why regenerative braking (next chapter) is even possible. There is no gear-change, so there is no shift shock, no pause, no hunting for the right ratio on a hill; acceleration is one seamless surge from zero to top speed, uninterrupted, the way a single long note differs from a scale. There is no gear lever and, increasingly, no obvious "transmission" at all — just a compact housing bolting the motor to the wheels. And there are far fewer parts to build, lubricate and break: a handful of gears instead of a dozen synchronised ratios, a clutch, and their hydraulics.
@@ -759,24 +836,30 @@ Start with a component so humble it sounds like a joke in a book about electric 
 
 Tesla's drive unit instead uses an *electric* oil pump — a small independent pump with its own motor, controlled by the car's computers, that speeds up, slows down, or switches off according to what the drive unit actually needs at that moment. Gentle cruising on a cool day needs barely any flow, so the pump barely runs, and the energy that a mechanical pump would have wasted stays in the battery. Push the car hard until the motor heats up, and the pump spins up to pour cooling oil exactly where it is wanted. The pump is sized and run to minimise its own losses — flow on demand, rather than flow regardless. It is the same principle as the whole car: never spend energy on something you are not currently using.
 
-The oil's double life is itself a small elegance. The same fluid that keeps the gears from grinding is flung onto the spinning rotor to carry its heat away, then drips down into a sump, passes through a heat exchanger to hand its warmth to the main coolant, and returns to do it again. Tesla's own patents describe fussing over details most people would never imagine mattering — an elevated sump that lets gravity feed oil straight onto the specific bearings and gear teeth that need it, rather than the traditional method of letting the gears splash through a bath of oil and drag against it. Splashing wastes energy churning the oil; targeted feeding does not. It is a fraction of a per cent, chased deliberately.
+The oil's double life is itself a small elegance. The same fluid that keeps the gears from grinding is flung onto the spinning rotor to carry its heat away, then drips down into a sump, passes through a heat exchanger to hand its warmth to the main coolant, and returns to do it again. Tesla's own patents describe fussing over details most people would never imagine mattering — an elevated sump that lets gravity feed oil straight onto the specific bearings and gear teeth that need it, rather than the traditional method of letting the gears splash through a bath of oil and drag against it. Splashing wastes energy churning the oil; targeted feeding does not. It is a fraction of a percent, chased deliberately.
 
 Where the invisible wins hide:
 
 ```
-   the drive unit's quiet efficiencies (each tiny; they add up):
+   The drive unit's quiet efficiencies. Each is tiny.
+   Added up, they are worth real kilometres.
 
-   electric oil pump ....... runs only as needed, not always-on
-   oil cools the rotor ..... one fluid lubricates AND cools
-   targeted oil feed ....... gravity onto bearings, not splashing
-   dragless idle motor ..... induction motor switches fully off
-   low-friction seals ...... less rubbing where shafts exit
-   hot-oil viscosity ....... warm oil flows easier, pumps cheaper
+   electric oil pump ..... runs only as needed, never always-on
+   one fluid, two jobs ... the same oil lubricates AND cools
+   targeted oil feed ..... gravity onto the bearings and teeth
+                           that need it, instead of letting the
+                           gears splash through a bath and drag
+   dragless idle ......... the induction motor switches fully off
+   low-friction seals .... less rubbing where the shafts come out
+   warm oil on purpose ... thinner oil is cheaper to pump, so a
+                           slightly hotter unit can be the
+                           efficient one -- held on a knife-edge
+                           by software, since too hot stops cooling
 ```
 
 And there are more of the same kind, scattered through the car. The induction motor from two sections ago, able to switch fully off and freewheel with almost no drag when it is not needed, is one of these wins wearing a bigger coat. The bearings and shaft seals are chosen and shaped to rub as little as possible, because a seal that grips a spinning shaft too tightly costs energy every second of every journey. Even the temperature of the oil is played as an efficiency card: warm oil is thinner and easier to pump, so the car will sometimes tolerate a slightly hotter drive unit precisely because the thinner oil wastes less energy in pumping and churning — a balance held on a knife-edge by software, since oil that gets *too* hot stops cooling properly.
 
-None of this is the sort of thing that sells a car. You cannot feel the electric oil pump modulating its flow, or the sump feeding a bearing by gravity, or the seals rubbing a little less. That is precisely the point. These are the wins the driver never notices, which is why they are so easily overlooked and so genuinely important. A car is not made efficient by one miracle. It is made efficient by an engineering culture that treats every half-per-cent as worth chasing, everywhere, all the time — in the shape of a sump, the control of a pump, the tightness of a seal.
+None of this is the sort of thing that sells a car. You cannot feel the electric oil pump modulating its flow, or the sump feeding a bearing by gravity, or the seals rubbing a little less. That is precisely the point. These are the wins the driver never notices, which is why they are so easily overlooked and so genuinely important. A car is not made efficient by one miracle. It is made efficient by an engineering culture that treats every half-percent as worth chasing, everywhere, all the time — in the shape of a sump, the control of a pump, the tightness of a seal.
 
 Add them up across the drive unit and they are the difference between a car that goes far and one that goes a little further. Which is the whole game. We have now stored the energy, converted it, and delivered it to a single gear. What remains is to *manage* that motion — to slow the car, to split the drive between wheels, to turn the motor's talents into control — and that is the business of the next chapter.
 
@@ -807,16 +890,18 @@ In an electric drive unit, the differential does not disappear; it is simply fol
 The one drive unit, doing three jobs:
 
 ```
-   motor spin (fast, low torque)
+   motor spin  (fast, modest torque)
         |
-     [ gear pair 1 ]   step down
+   [ gear pair 1 ]   step down
         |
-     [ gear pair 2 ]   step down again  (~9:1 total)
+   [ gear pair 2 ]   step down again -- about 9:1 in total
         |
-     [ DIFFERENTIAL ]  splits drive to both wheels AND lets
-        |     |         them spin at different speeds in corners
-     left     right
-     wheel    wheel
+   [ DIFFERENTIAL ]  splits the drive to both wheels, and lets
+        |     |      them turn at different speeds in a corner
+      left   right
+      wheel  wheel
+
+   All three jobs inside one sealed aluminium box.
 ```
 
 A small elegance hides in the choice of gears. The teeth are cut at an angle — *helical* rather than straight — so that each pair of teeth rolls into contact gradually rather than meeting all at once with a slap. Straight-cut gears are marginally stronger and are what you hear whining in a racing car; helical gears are quieter, and quiet matters enormously in a car with no engine to mask other noises. In a petrol car a little gear whine vanishes under the general roar. In an electric car, where the cabin can be library-silent, the faint singing of the reduction gears is sometimes the loudest thing in the drivetrain, and engineers work hard to hush it — angling the teeth, tightening the tolerances, damping the housing.
@@ -838,19 +923,29 @@ Every time an ordinary car slows down, it commits a small act of waste so routin
 
 An electric car does not have to. And the reason is the single most satisfying fact about electric motors: a motor and a generator are the same machine. Feed electricity into a motor and it produces rotation. Force a motor to rotate and it produces electricity. It runs both ways with equal ease. So when an electric car wants to slow down, it does not have to reach for the friction brakes at all. It simply tells the inverter to run the motor as a generator — to let the wheels, still turning with the car's momentum, spin the motor and be resisted in doing so. The motor fights the rotation, which slows the car, and the energy of that slowing, instead of becoming waste heat, becomes electricity that flows back into the battery. This is *regenerative braking*, and it is the closest thing a car has to getting something for nothing.
 
-The elegance is total. The very same device that spent battery energy to speed the car up now refills the battery as the car slows down. The motor pushes, then catches. Over a journey full of the ordinary slowings of real driving — for corners, for junctions, for traffic — this clawing-back adds up, and a car that uses its regeneration well can extend its range by something on the order of **ten per cent**. That is ten per cent of range recovered not by a bigger battery or a slipperier body, but simply by refusing to throw away energy the car already had.
+The elegance is total. The very same device that spent battery energy to speed the car up now refills the battery as the car slows down. The motor pushes, then catches. Over a journey full of the ordinary slowings of real driving — for corners, for junctions, for traffic — this clawing-back adds up, and a car that uses its regeneration well can extend its range by something on the order of **ten percent**. That is ten percent of range recovered not by a bigger battery or a slipperier body, but simply by refusing to throw away energy the car already had.
 
 Waste versus recovery, side by side:
 
 ```
-   FRICTION BRAKE (petrol car)      REGEN (electric car)
-   motion --> pads clamp disc        motion --> motor spun backwards
-          --> HEAT --> gone                 --> ELECTRICITY
-                                            --> back into battery
-   the car's speed is thrown away    the car's speed is banked
+   FRICTION BRAKE (any car)      REGENERATION (electric car)
+
+   the car's motion              the car's motion
+        |                             |
+        v                             v
+   pads clamp the disc           the wheels spin the motor
+        |                             |
+        v                             v
+   HEAT on the disc              ELECTRICITY
+        |                             |
+        v                             v
+   blown away into the air       back into the battery
+
+   the speed is thrown away      the speed is banked -- worth
+                                 around 10% of range
 ```
 
-But this book prefers the honest version, and regeneration has real limits that shape how the car behaves. The first is the battery's willingness to accept charge. If the pack is completely full — say you have just charged to 100 per cent and set off downhill — there is nowhere for the recovered energy to go, and regeneration has to be dialled back or switched off, handing the job to the friction brakes after all. The same is true when the battery is very cold, because, as Chapter 2 explained, a cold battery cannot accept a fast charge without risking damage; on a freezing morning a Tesla will often show reduced regeneration until the pack has warmed, and the car warns you that braking will feel different. This is not a fault. It is the BMS from Chapter 3 protecting the cells, and it is one of the reasons the car works so hard to keep the battery in its comfortable temperature range — a theme Part IV takes up in full.
+But this book prefers the honest version, and regeneration has real limits that shape how the car behaves. The first is the battery's willingness to accept charge. If the pack is completely full — say you have just charged to 100 percent and set off downhill — there is nowhere for the recovered energy to go, and regeneration has to be dialled back or switched off, handing the job to the friction brakes after all. The same is true when the battery is very cold, because, as Chapter 2 explained, a cold battery cannot accept a fast charge without risking damage; on a freezing morning a Tesla will often show reduced regeneration until the pack has warmed, and the car warns you that braking will feel different. This is not a fault. It is the BMS from Chapter 3 protecting the cells, and it is one of the reasons the car works so hard to keep the battery in its comfortable temperature range — a theme Part IV takes up in full.
 
 The second limit is power. A motor asked to generate has a ceiling on how much it can push back, and that ceiling is generally lower than its ceiling for driving — so gentle and moderate slowing can be handled entirely by regeneration, but a genuine emergency stop demands far more braking force than the motor can provide. For that you still need the old friction brakes, clamping hard. Regeneration handles the everyday; friction handles the extremes and the emergencies.
 
@@ -876,11 +971,20 @@ Now the other pedal, and the real revolution. In an electric car, lifting off th
 The two pedals, reimagined:
 
 ```
-   ACCELERATOR                     BRAKE PEDAL
-   press  -> motor drives          press -> "slow by THIS much"
-   lift   -> motor regenerates,       car chooses: regen first,
-             slowing the car          friction added only as needed
-   (does most everyday braking)    (for hard / emergency stops)
+   ACCELERATOR                   BRAKE PEDAL
+
+   press -> the motor drives     press -> "slow me by THIS much"
+
+   lift  -> the motor            the car then chooses:
+            regenerates, and       regeneration first,
+            the car slows          friction added only as needed
+
+   does most of the everyday     kept for hard stops and
+   braking on its own            emergencies
+
+   Hold mode: below about 6.5 km/h regeneration fades away, so
+   the friction brakes are blended in to bring the car to a
+   clean, held standstill -- no pedal at all.
 ```
 
 Two footnotes keep it honest. First, one-pedal driving is beloved but not automatically more *efficient*, a subtlety often missed. Its regeneration recovers energy handsomely, but the driving style it encourages — squeezing the accelerator harder to overcome the strong lift-off braking — can burn energy too, and a smooth driver coasting toward a stop can sometimes do as well or better. What one-pedal driving reliably delivers is not maximum efficiency but a calmer, more relaxed way of driving, and far less use of the friction brakes.
@@ -905,17 +1009,24 @@ In a dual-motor Tesla, the two axles are independent — recall from earlier in 
 Nudging the car with torque:
 
 ```
-   top-down view, car turning left:
+   Top-down view, car turning left:
 
-        front                    more torque to the REAR axle
-      [FL]  [FR]                 -> helps rotate nose INTO the turn
-        |    |
-        |    |                   more torque to the FRONT axle
-      [RL]  [RR]                 -> arrests rotation, pulls STRAIGHT
-        rear
-                                 (Plaid: RL and RR driven
-   the car is "steered" partly    independently for finest control)
-   by WHERE the torque goes
+            front
+         [FL]   [FR]
+           |     |
+           |     |
+         [RL]   [RR]
+            rear
+
+   more torque to the REAR axle ..... rotates the nose INTO
+                                      the turn, sharpening it
+   more torque to the FRONT axle .... arrests that rotation and
+                                      pulls the car STRAIGHT
+
+   On the fastest cars the two rear wheels have a motor each,
+   so torque can be biased across the axle, left against right
+   -- the finest form of the trick, and one no mechanical
+   differential could match.
 ```
 
 It is worth being clear about why doing this with motors is so much better than the older ways. Traditional stability control works only by braking — it can slow a wheel to arrest a slide, but it cannot speed one up, so its only tool is to take grip away, which also scrubs off speed and momentum. Torque vectoring by motor can *give* as well as take: it can add drive to the wheel that needs it, correcting the car's line without necessarily slowing it. And it is faster, because there is no hydraulic brake to pressurise, no mechanical clutch to engage — only a change in the inverter's command, which happens at the speed of electronics. The car can begin correcting a slide before the driver's inner ear has even registered that one is starting.
@@ -946,25 +1057,30 @@ This chapter is about how that is done, and it contains some of the most quietly
 The plumbing, it turns out, is where a lot of the magic is.
 ## 7.1 Why an EV's thermal problem inverts the combustion one
 
-The engineer who used to design cooling systems for petrol engines had, in a sense, an easy brief. Make the heat go away. The engine was a furnace — recall from Chapter 1 that around seventy per cent of the fuel's energy left as waste heat — and the job was disposal: a big radiator at the front, a pump pushing coolant through the block, a fan for when the car sat in traffic, and a fixed one-way flow of heat from a place that had far too much of it to the open air that would take as much as you gave. Warming the cabin was almost an afterthought, a matter of diverting a trickle of the engine's endless excess. Nobody worried about running out of heat. There was always more heat than anyone wanted.
+The engineer who used to design cooling systems for petrol engines had, in a sense, an easy brief. Make the heat go away. The engine was a furnace — recall from Chapter 1 that around seventy percent of the fuel's energy left as waste heat — and the job was disposal: a big radiator at the front, a pump pushing coolant through the block, a fan for when the car sat in traffic, and a fixed one-way flow of heat from a place that had far too much of it to the open air that would take as much as you gave. Warming the cabin was almost an afterthought, a matter of diverting a trickle of the engine's endless excess. Nobody worried about running out of heat. There was always more heat than anyone wanted.
 
-The electric car tears this brief up and writes the opposite one. And the reason is the very efficiency the whole car is built around. A drivetrain that turns eighty-five or ninety per cent of its energy into motion is, by definition, one that wastes only ten or fifteen per cent as heat — a tenth of what an engine threw off. That is wonderful for range and catastrophic for anyone hoping to warm the cabin for free. The furnace is gone. The car that sips energy so carefully has, as a direct consequence, almost no spare warmth to give.
+The electric car tears this brief up and writes the opposite one. And the reason is the very efficiency the whole car is built around. A drivetrain that turns eighty-five or ninety percent of its energy into motion is, by definition, one that wastes only ten or fifteen percent as heat — a tenth of what an engine threw off. That is wonderful for range and catastrophic for anyone hoping to warm the cabin for free. The furnace is gone. The car that sips energy so carefully has, as a direct consequence, almost no spare warmth to give.
 
 So the first inversion is scarcity: heat changes from something you frantically dispose of to something you carefully hoard. But there is a second inversion that makes the problem genuinely harder than the one it replaced, and it concerns the battery. An engine did not much care how warm it was, within wide limits, once it was running. A lithium battery cares enormously, and in *both* directions. When it is too cold — a frosty morning — it cannot deliver its full power, cannot be fast-charged without risking the damage described in Chapter 2, and offers reduced regenerative braking; it needs *warming*. When it is too hot — hard driving, or the fierce heat of DC fast charging — it ages rapidly and, at the extreme, risks the runaway the whole design works to prevent; it needs *cooling*. The very same component demands heating on some days and cooling on others, sometimes within the same journey, and it insists on being kept inside a fairly narrow band to do its best work.
 
 Three tenants, three different demands:
 
 ```
-   what each part wants, thermally:
+   What each part wants, thermally:
 
-   BATTERY      narrow, mild band; needs WARMING when cold,
-                COOLING when hot or fast-charging  (fussiest tenant)
-   MOTOR + ELEX runs hot; almost always wants COOLING
-                -- and its waste heat is a RESOURCE to be stolen
-   CABIN        whatever the humans want; often WARMING in a
-                European winter, COOLING in summer
+   BATTERY ......... a narrow, mild band. WARMING when cold,
+                     COOLING when hot or fast-charging. The
+                     fussiest tenant -- and it changes its mind
+                     within a single journey.
 
-   one small pool of heat to satisfy all three, cheaply
+   MOTOR + POWER ... runs hot; almost always wants COOLING.
+   ELECTRONICS       Its waste heat is a RESOURCE to be stolen.
+
+   CABIN ........... whatever the humans want. WARMING through
+                     a European winter, COOLING in summer.
+
+   Three conflicting demands -- and only a tenth as much waste
+   heat as an engine had, to satisfy all of them.
 ```
 
 Put those together and the shape of the new problem appears. You have three consumers — battery, drivetrain, cabin — with conflicting and shifting needs, and only a meagre supply of waste heat to draw on. The old fixed, one-way flow is useless here. What you need instead is a system that can *reconfigure* itself: that can take the modest warmth coming off the motor and power electronics and, instead of dumping it out of a radiator, redirect it to warm a cold battery, or pipe it into the cabin. That can, on a hot day at a fast charger, do the reverse and pull heat *out* of the battery as fast as possible. That can connect and disconnect its various loops on demand, sending heat wherever the shortage is worst, moment by moment.
@@ -993,18 +1109,29 @@ The trick uses a working fluid, a refrigerant, and its willingness to change bet
 The heat pump versus the toaster:
 
 ```
-   RESISTIVE HEATER (old way)     HEAT PUMP (moving, not making)
-   1 unit electricity             1 unit electricity to run the pump
-        |                              |
-     1 unit heat  (that's all)    gathers 2-3+ units of heat from
-                                  the cold outside air (and waste
-                                  heat from the motor) and delivers
-                                  it to the cabin -- a multiplier
+   RESISTIVE HEATER -- the old way
+
+     1 unit of electricity  -->  1 unit of heat
+     and that is the ceiling, always.
+
+   HEAT PUMP -- moves heat instead of making it
+
+     1 unit of electricity  -->  runs the compressor
+                                      |
+     it gathers 2-3+ units of heat from:
+        - the cold outside air (even freezing air holds heat)
+        - waste heat from the motor and power electronics
+                                      |
+                                      v
+                           delivered into the cabin
+
+   Not free energy: a conveyor belt, not a furnace. And the
+   multiplier shrinks as the outside air gets truly cold.
 ```
 
-For an electric car the payoff is measured directly in winter range, the sorest point in the whole ownership experience. When Tesla brought a proper heat pump to the Model Y, paired with the octovalve of the next section, the gains were large: reports credited the redesigned thermal system with efficiency improvements of around ten per cent overall, and in genuinely extreme cold — where a resistive heater would be draining the battery hardest — range benefits climbed toward thirty per cent. That is not a rounding error. It is the difference between an electric car being merely tolerable in a Scandinavian February and being genuinely usable.
+For an electric car the payoff is measured directly in winter range, the sorest point in the whole ownership experience. When Tesla brought a proper heat pump to the Model Y, paired with the octovalve of the next section, the gains were large: reports credited the redesigned thermal system with efficiency improvements of around ten percent overall, and in genuinely extreme cold — where a resistive heater would be draining the battery hardest — range benefits climbed toward thirty percent. That is not a rounding error. It is the difference between an electric car being merely tolerable in a Scandinavian February and being genuinely usable.
 
-The heat pump has a second gift that suits the inverted problem perfectly: it is not limited to the outside air as its source of heat. It can just as easily gather the modest waste warmth coming off the motor and power electronics — that ten-to-fifteen per cent of "lost" energy from the last section — and pump *that* into the cabin or into a cold battery. The scarce waste heat the car does produce stops being waste and becomes another source for the pump to harvest. The device does not care where the low-grade heat comes from; it only moves it uphill to where it is wanted.
+The heat pump has a second gift that suits the inverted problem perfectly: it is not limited to the outside air as its source of heat. It can just as easily gather the modest waste warmth coming off the motor and power electronics — that ten-to-fifteen percent of "lost" energy from the last section — and pump *that* into the cabin or into a cold battery. The scarce waste heat the car does produce stops being waste and becomes another source for the pump to harvest. The device does not care where the low-grade heat comes from; it only moves it uphill to where it is wanted.
 
 Honesty, as ever, has the last word. A heat pump is more complex than a heating element, with a compressor, refrigerant, and more that can go wrong, and its magical multiplier shrinks as the outside air gets truly frigid — the colder the source, the harder the pump must work and the less it multiplies, until in deep cold it needs help from old-fashioned resistive heating after all. But for the great majority of conditions a European driver actually meets, the heat pump turns the cabin from a range-devouring luxury into an affordable comfort. It gathers heat that seems not to be there and carries it where it is needed — which is precisely the kind of scarce-resource logistics the whole thermal system exists to perform. All it needs is something to direct the flows. That something is the octovalve.
 
@@ -1026,24 +1153,26 @@ The octovalve collapses that nest into a single object. It is, at heart, one rot
 One valve, several plumbing diagrams:
 
 ```
-   the octovalve turns to reconnect the same components
-   into different loops, on demand:
+   One rotating valve, eight ports. Turn it, and the same
+   components are replumbed into a different set of loops:
 
-   position A:  [battery + drive unit] --- [radiator + chiller]
-                 (two separate parallel loops)
+   position A   [ battery + drive unit ]  [ radiator + chiller ]
+                two separate loops, running in parallel
 
-   position B:  [battery]---[drive unit]---[radiator]---[chiller]
-                 (one long series loop -- share heat around)
+   position B   [ battery ]-[ drive unit ]-[ radiator ]-[ chiller ]
+                one long series loop, sharing heat all round
 
-   position C:  [drive unit -> battery]   (steal motor's waste
-                 heat to warm a cold pack)   heat, route it uphill
+   position C   [ drive unit ] -------> [ battery ]
+                steal the motor's waste heat to warm a cold pack
 
-   one rotating part, many configurations -- no tangle of valves
+   The heat pump MAKES the cheap heat.
+   The octovalve DECIDES WHERE IT GOES.
+   Neither is much use without the other.
 ```
 
 Tesla folds this valve, together with the pumps, the coolant reservoir, and the sensors, into an integrated block the company nicknames a super-manifold — and here the numbers become almost comic. Where a conventional thermal system might contain hundreds of separate pieces, Tesla's simplified manifold reduces the heart of it to a small handful of main components. Fewer parts to make, fewer to assemble, fewer joints to leak, less mass to carry. It is the same instinct we keep meeting — the deletion of complexity — applied now to the plumbing, and it is why a hardened teardown engineer found it moving: not because a valve is glamorous, but because doing a sprawling job with one elegant part is the essence of good engineering.
 
-But the octovalve's real significance is not that it is tidy. It is that the tidiness *enables* the whole strategy of the chapter. Because one component can reconfigure the coolant paths quickly and reliably, the car can actually do the scarce-resource logistics the inverted problem demands. It can, on a cold morning, take the trickle of waste heat from the motor and power electronics and route it to warm the battery so the pack reaches its happy band sooner. It can gather heat with the heat pump and send it to the cabin. It can, arriving at a fast charger with a hot battery, throw the valve to a configuration that pours maximum cooling into the pack so it can accept a rapid charge. The heat pump *makes* the cheap heat; the octovalve *decides where it goes*. Neither is much use without the other, which is why they were designed as a pair, and why the Model Y's roughly ten per cent efficiency gain is credited to the combination rather than to either alone.
+But the octovalve's real significance is not that it is tidy. It is that the tidiness *enables* the whole strategy of the chapter. Because one component can reconfigure the coolant paths quickly and reliably, the car can actually do the scarce-resource logistics the inverted problem demands. It can, on a cold morning, take the trickle of waste heat from the motor and power electronics and route it to warm the battery so the pack reaches its happy band sooner. It can gather heat with the heat pump and send it to the cabin. It can, arriving at a fast charger with a hot battery, throw the valve to a configuration that pours maximum cooling into the pack so it can accept a rapid charge. The heat pump *makes* the cheap heat; the octovalve *decides where it goes*. Neither is much use without the other, which is why they were designed as a pair, and why the Model Y's roughly ten percent efficiency gain is credited to the combination rather than to either alone.
 
 There is a lineage worth noting, because it shows this did not arrive fully formed. The Model Y's octovalve had a predecessor in earlier Model 3s: an integrated coolant assembly enthusiasts nicknamed the "superbottle," which already gathered the reservoir, pumps, and a simpler multi-way valve into one unit. The octovalve is that idea matured — more ports, more configurations, the heat pump woven in — a reminder that even the elegant components in this book are usually the third or fourth try, not the first. Tesla was proud enough of the result to hide a little octovalve emblem inside the part, an engineer's signature on a piece of plumbing.
 
@@ -1067,14 +1196,21 @@ The same idea works the other way, before you drive rather than before you charg
 Preconditioning, both directions:
 
 ```
-   BEFORE CHARGING           BEFORE DRIVING (plugged in)
-   navigate to a charger     set a departure time
-        |                         |
-   car warms the pack on     car warms pack + cabin from
-   the way there             the WALL, not from range
-        |                         |
-   arrive warm -> charges    leave warm -> full range, full
-   at full speed             regen, comfortable, from cold
+   BEFORE CHARGING                BEFORE DRIVING (plugged in)
+
+   you navigate to a charger      you set a departure time
+        |                              |
+        v                              v
+   the car warms the pack         the car warms the pack AND
+   on the way there               the cabin from the WALL
+        |                              |
+        v                              v
+   arrive warm, and charge at     leave warm: full range, full
+   full speed from the first      regen, comfortable -- and none
+   minute                         of it paid for out of range
+
+   Warming from the wall is nearly free.
+   Warming a frozen pack on the move costs real range.
 ```
 
 Underneath both tricks lies a change in how to think about the battery, and it is the real insight of this section. We have treated the pack as a fuel tank — a store of *energy*. But a half-tonne slab of cells is also an enormous store of *heat*, a thermal flywheel. It takes a lot of energy to change the temperature of five hundred kilograms of battery, which cuts both ways: it is slow and costly to warm from stone cold, but once warm it stays warm for a long time, coasting on its own thermal mass long after the heating stops. The car exploits this. It can warm the pack while plugged in and then live off that stored warmth for the first part of a drive. It can, on the octovalve's command, use the pack as a buffer — dumping the motor's waste heat into the battery's mass to save it for later, or leaning on the pack's coolness to absorb a burst of heat. The battery is not just where the energy lives; it is a great thermal reservoir the car can charge and draw down like any other store.
@@ -1101,12 +1237,18 @@ This is why so much of the comfort strategy is really an efficiency strategy in 
 Where the energy goes to keep you comfortable:
 
 ```
-   heating the whole cabin air ....... kilowatts  (expensive)
-      softened by the HEAT PUMP ....... 2-3x cheaper than a heater
-   heated seat / steering wheel ...... tens of watts (cheap;
-      warms the body directly, not the air)   the car prefers this
-   preheat while plugged in .......... free of range (uses the wall)
-   air filtration (the fan) .......... small, steady draw
+   What comfort costs, by order of magnitude:
+
+   heating the whole cabin ....... KILOWATTS       expensive
+      via the heat pump .......... 2-3x cheaper    still the
+                                                   biggest load
+   heated seat / steering wheel .. TENS OF WATTS   cheap: warms
+                                                   the body, not
+                                                   the air
+   preheating while plugged in ... no range at all paid by the wall
+   the filtration fan ............ tens of watts   a rounding error
+
+   Clean air is cheap. Warm air is expensive.
 ```
 
 Which brings us to the other half of cabin climate: the air itself, and Tesla's most theatrically-named feature. Many Teslas carry a genuine HEPA filter — the high-efficiency particulate filter used in hospitals and clean rooms — far larger and finer than the paper element in an ordinary car, capable of trapping the great majority of fine particulates, pollen, spores and the like. Tesla pairs it with a mode it calls, with a straight face, Bioweapon Defense Mode, which runs the fan hard enough to raise the cabin to a slight positive pressure, so that filtered air is pushed *out* through every gap and unfiltered air cannot leak *in*. The car becomes a mild pressure vessel of clean air. It is a real capability — independent tests have shown it scrubbing a smoky or polluted cabin impressively — dressed in a name that belongs on a film poster.
@@ -1146,14 +1288,21 @@ But most of what a car does is not moving. It is the thousand small jobs: lighti
 Two worlds, two jobs:
 
 ```
-   HIGH-VOLTAGE WORLD (~350-400 V)   LOW-VOLTAGE WORLD (~12-16 V)
-   the big traction battery          the small auxiliary battery
-   motor + inverter                  lights, wipers, windows, locks
-   fast charging                     screens, computers, sensors
-   cabin heater, A/C compressor      pumps, fans, door handles
-   = anything that MOVES the car     = everything else
-   powerful and DANGEROUS            low-power and SAFE to touch
-   -------- kept galvanically isolated from each other --------
+   HIGH-VOLTAGE WORLD           LOW-VOLTAGE WORLD
+   ~350-400 V                   ~12-16 V (48 V on newer designs)
+   -------------------------------------------------------------
+   the big traction battery     the small auxiliary battery
+   motor + inverter             lights, wipers, windows, locks
+   fast charging                screens, computers, sensors
+   cabin heater, A/C            pumps, fans, door handles
+   -------------------------------------------------------------
+   anything that MOVES the car  everything else
+   powerful and DANGEROUS       low-power, safe to touch
+
+   +--------------------------------------------------------------+
+   |   GALVANIC ISOLATION: no electrical path between the two,    |
+   |   monitored constantly, and shut down the instant it leaks   |
+   +--------------------------------------------------------------+
 ```
 
 The word to hold onto is that last one: **isolated**. The two worlds are not merely at different voltages; they are deliberately kept electrically separate, so that the dangerous high-voltage system has no direct electrical path to anything a human might touch. Engineers call this galvanic isolation, and it is a safety cornerstone. The metal body of the car, the door handles, the pedals, the twelve-volt world the passengers live in — all of it is kept insulated from the four hundred volts under the floor, with the car constantly monitoring that isolation and ready to shut the high-voltage system down the instant it detects a leak between the worlds. You can sit in an electric car, touch every surface, and never come within an insulator's breadth of the voltage that drives it. That separation is not an accident; it is engineered, monitored, and enforced.
@@ -1180,14 +1329,22 @@ That small independent source is the low-voltage battery — the humble twelve-v
 The wake-up sequence:
 
 ```
-   1. car asleep: big pack SEALED behind open contactors
-                  (no high voltage reachable anywhere)
-   2. you approach: the 12V battery powers handles, screens, computers
-   3. computers + BMS run checks, energise the contactor coils
-   4. CONTACTORS CLOSE -> the 400V pack is now connected
-   5. the DC-DC converter (next section) takes over:
-      runs the whole 12V world AND recharges the 12V battery
-   -- if step 2 has no power, the sequence never begins --
+   1  car asleep ......... the big pack is SEALED behind open
+                           contactors; no high voltage anywhere
+                                 |
+   2  you approach ....... the 12 V battery powers the handles,
+                           the screens and the computers
+                                 |
+   3  checks ............. computers and BMS run their checks,
+                           then energise the contactor coils
+                                 |
+   4  CONTACTORS CLOSE ... the ~400 V pack is connected at last
+                                 |
+   5  DC-DC takes over ... it now runs the whole 12 V world and
+                           recharges the 12 V battery
+
+   If step 2 has no power, the sequence never begins. That is
+   how a flat 12 V battery strands a car with a full pack.
 ```
 
 This is why a flat twelve-volt battery strands an electric car so completely, and why it is one of the commoner ways for a Tesla to leave its owner stuck at exactly the wrong moment. The failure is almost absurd: a battery costing a small fraction of the car, holding a rounding error of its total energy, can immobilise the whole machine — not because the car is out of energy, but because it cannot *reach* its energy without the small battery's help. Manufacturers mitigate this — the car watches the low-voltage battery's health, tops it up, and warns you when it weakens — but the fundamental dependency remains. A great deal of engineering rests on a component most owners forget exists.
@@ -1214,13 +1371,19 @@ The second job faces inward, toward the car's own low-voltage world. Once the ca
 Two conversions, one box:
 
 ```
-   PCS = two converters sharing a housing:
+   PCS -- two converters sharing one liquid-cooled housing:
 
-   ONBOARD CHARGER   wall AC  ---->  high-voltage DC  ->  big pack
-   (faces the plug)  (charging the car from a socket)
+   +----------------------------------------------------------------+
+   |   ONBOARD CHARGER    wall AC ----> HV DC ----> the pack        |
+   |   (faces the plug)   charging the car from a socket            |
+   |                                                                |
+   |   DC-DC CONVERTER    pack HV DC ----> ~14-16 V                 |
+   |   (faces the car)    runs the lights, screens and computers,   |
+   |                      and tops up the 12 V battery              |
+   +----------------------------------------------------------------+
 
-   DC-DC CONVERTER   big pack HV DC ---->  ~14-16 V DC
-   (faces the car)   (runs lights/computers, tops up 12V battery)
+   Both are the same craft -- fast switches and magnetics --
+   so one box does two jobs. And one box can fail two jobs.
 ```
 
 Now the interesting part, which is why these two devices live in a single box. On the face of it, an AC-to-DC charger and a DC-to-DC step-down converter are different machines for different purposes. But underneath, both are exercises in the same craft — power electronics, the art of the previous chapters' inverter: switching, transforming, and converting electrical power from one form to another using fast semiconductor switches and magnetic components. They share the same family of parts, the same cooling needs, the same design language. So rather than build two separate units, each with its own casing, connectors, cooling and control board, Tesla folds them into one liquid-cooled module — the PCS — that houses both converters together. It is the same integration instinct we met with the octovalve and the structural pack: notice that two things are secretly similar, and merge them to save parts, mass, cost and space. Fewer boxes, fewer connectors, fewer things to fail, less to carry.
@@ -1247,14 +1410,18 @@ The second change is far bigger, and it is the one this section is really about:
 Why 48 volts saves so much wire:
 
 ```
-   same power delivered at different voltages:
+   The same power, delivered at two different voltages:
 
-   at 12 V:  large current  -> thick, heavy copper wiring
-   at 48 V:  1/4 the current -> much thinner, lighter wiring
-             (four times the voltage = one quarter the current
-              for the same power = a fraction of the copper)
+   at 12 V   current [############################]
+                     thick, heavy, expensive copper
 
-   and 48 V is still safely below the ~60 V shock threshold
+   at 48 V   current [#######]
+                     one quarter the current, and a small
+                     fraction of the copper
+
+   Four times the voltage = one quarter the current for the
+   same power. And 48 V is still safely below the ~60 V
+   threshold at which electricity becomes a shock hazard.
 ```
 
 That copper is not trivial. The low-voltage wiring harness of a modern car is one of its heaviest, most sprawling, most labour-intensive components — kilometres of wire threaded through the whole body, which the next chapter is devoted to. Cutting the current fourfold lets that harness slim down substantially, saving weight, cost, and the sheer effort of building it. And forty-eight volts sits at a sweet spot: high enough to bring these savings, but still comfortably below the roughly sixty-volt threshold at which electricity becomes a shock hazard to a human, so it remains part of the "safe" low-voltage world, needing none of the isolation and armour of the high-voltage side. It is the highest voltage you can use without inheriting the dangers of high voltage.
@@ -1290,13 +1457,17 @@ Tesla's Model 3 does something that, once you hear it, seems obvious — though 
 Function versus geography:
 
 ```
-   BY FUNCTION (traditional)         BY GEOGRAPHY (zonal)
-   door module ---> all 4 doors      VCFRONT --> everything up front
-   light module --> all lamps        VCLEFT  --> everything on the left
-   climate mod. --> all vents        VCRIGHT --> everything on the right
-   (each reaches across whole car)   (each handles only what's NEARBY)
+   BY FUNCTION (the old way)      BY GEOGRAPHY (zonal)
 
-   long wires crossing everywhere    short local wires to each zone
+   door module --> all 4 doors    VCFRONT --> all things up front
+   light module -> every lamp     VCLEFT  --> all things on the left
+   climate mod. -> every vent     VCRIGHT --> all things on the right
+
+   each module reaches right      each controller handles only
+   across the whole car           what is physically NEAR it
+
+   long wires crossing and        short local drops, plus one
+   overlapping everywhere         thin shared data backbone
 ```
 
 The liberating part is that a zone controller does not care what a device *is*. To VCLEFT, a driver's-door window motor, a driver's-side puddle lamp, a left-side temperature sensor and a nearby pump are all just "things near me that need power and control." It provides them power, switches them on and off, reads their sensors, and reports up to the car's central brain over a shared network. The controller is a general-purpose local agent — domain-agnostic, in the jargon — rather than a specialist. And because it is general-purpose, the same basic controller design can be dropped anywhere, which simplifies the parts list too.
@@ -1325,15 +1496,21 @@ Here is how it changes the game. Instead of waiting for a strip of metal to heat
 Melting fuse versus electronic fuse:
 
 ```
-   TRADITIONAL FUSE            eFUSE (in the zone controller)
-   metal strip melts on        MOSFET + current sensor watches
-   overcurrent                 the current continuously
-      |                            |
-   circuit breaks (slow-ish)    switches off in microseconds
-      |                            |
-   fuse is DEAD -> replace it   RESETS in software when fault clears
-      |                            |
-   a glovebox of spares         diagnostics + remote control, no spares
+   TRADITIONAL FUSE              eFUSE (in the zone controller)
+
+   a metal strip melts when      a MOSFET and a current sensor,
+   the current is too high       watching continuously
+        |                             |
+        v                             v
+   the circuit breaks            switches off in MICROSECONDS
+        |                             |
+        v                             v
+   the fuse is DEAD; someone     RESETS itself in software once
+   must physically replace it    the fault clears
+        |                             |
+        v                             v
+   a glovebox full of spares     reports which circuit faulted,
+                                 and how. No spares at all.
 ```
 
 The consequences ripple outward in ways a melting fuse could never manage. Because an eFuse is really a smart switch, the car can turn any protected circuit on or off *deliberately*, in software, not just in response to a fault. It can shut down a misbehaving device remotely. It can shed non-essential loads to save power when the low-voltage battery is weak. It can report, precisely, which circuit faulted and how — turning a diagnostic mystery ("something blew a fuse") into a specific logged event a technician, or the car itself, can read. And it can do all of this without any moving or consumable parts, so there is nothing to wear out, nothing to stock, nothing to fumble for at the roadside in the dark.
@@ -1362,23 +1539,30 @@ The zonal layout attacks this at the root. Because there is a controller in each
 Where the wire goes — and stops going:
 
 ```
-   FUNCTIONAL: long point-to-point runs everywhere
+   FUNCTIONAL: every device gets its own long wire
 
-     [central modules]====================long wires==========
-        \\        \\         \\        \\         \\
-       device    device    device    device     device
-       (each device gets its own long wire back to a module)
+     [ central modules ]
+        |   |   |   |
+        |   |   |   +------------------------ device (rear)
+        |   |   +------------------- device (right)
+        |   +---------------- device (left)
+        +--------- device (front)
 
-   ZONAL: short local drops + one shared data backbone
+     long, overlapping runs criss-crossing the whole car
 
-     [computer]==thin shared data backbone==[VCLEFT][VCRIGHT][VCFRONT]
-                                               |       |        |
-                                            nearby   nearby   nearby
-                                            devices  devices  devices
-                                            (short local wires only)
+   ZONAL: short local drops, one shared backbone
+
+     [ computer ]==============================================
+                         |            |            |
+                     [VCFRONT]    [VCLEFT]    [VCRIGHT]
+                         |            |            |
+                      nearby       nearby       nearby
+                      devices      devices      devices
+
+     only DATA travels far; power stays local
 ```
 
-The numbers make the case. Industry analysis of zonal architectures credits them with cutting wiring by as much as **fifty per cent**, and Tesla's own progression across its cars has been a steady war on harness length and mass. That saved copper is not a trivial prize. Copper is heavy and expensive, and every kilogram of wire is a kilogram the battery must haul around for the life of the car, quietly costing range — so shortening the harness feeds straight back into the efficiency obsession of Chapter 1. Less wire is more range, cheaper materials, and less mass, all at once.
+The numbers make the case. Industry analysis of zonal architectures credits them with cutting wiring by as much as **fifty percent**, and Tesla's own progression across its cars has been a steady war on harness length and mass. That saved copper is not a trivial prize. Copper is heavy and expensive, and every kilogram of wire is a kilogram the battery must haul around for the life of the car, quietly costing range — so shortening the harness feeds straight back into the efficiency obsession of Chapter 1. Less wire is more range, cheaper materials, and less mass, all at once.
 
 But the deepest benefit is one this book will return to in Part XI, and it is about *building* the car rather than driving it. A sprawling, criss-crossing traditional harness is notoriously difficult for a robot to install — it is floppy, three-dimensional, and full of long runs that must be threaded through the body by dexterous human hands. A zonal architecture, with its short local connections and small number of standard controllers, is far friendlier to automation: shorter, simpler, more modular wiring is wiring a machine can handle. So zoning does not only make the car lighter and cheaper in materials; it makes the car easier to *manufacture*, which is its own enormous saving. The way the electrical system is organised turns out to be inseparable from how the whole car is put together — a theme that runs from here all the way to gigacasting.
 
@@ -1413,14 +1597,17 @@ Why can a robot not simply install it? Because a wiring harness is floppy, three
 The harness as a physical and economic burden:
 
 ```
-   the wiring harness is:
-     LONG      several kilometres of wire in a premium car
-     HEAVY     tens of kg of copper -> range cost, forever
-     COSTLY    expensive mostly because of how it's ASSEMBLED
-     MANUAL    too floppy and variable for robots -> human hands
-     COMPLEX   the most part-number-heavy component in the car
+   The wiring harness is:
 
-   => a prime target for radical simplification
+     LONG ...... several kilometres of wire in a premium car
+     HEAVY ..... tens of kg of copper -- a range cost, forever
+     COSTLY .... expensive mostly because of how it is ASSEMBLED
+     MANUAL .... too floppy and variable for robots; human hands
+     COMPLEX ... the most part-number-heavy component in the car
+
+   which makes it a prime target for radical simplification --
+   and explains zonal wiring, 48 volts, and everything that
+   follows in this chapter.
 ```
 
 Every one of these burdens points the same way: toward making the harness *shorter and simpler*. A shorter harness is lighter, which the efficiency logic of Chapter 1 turns directly into range, because every kilogram of copper is dead weight the battery carries for the life of the car. A simpler harness is cheaper in materials. And — most importantly for the way Tesla thinks — a simpler harness is one a machine might finally be able to install, which unlocks savings in the factory that dwarf the cost of the copper itself. The harness is not just heavy; it is the bottleneck standing between the car and the fully automated assembly line that Part XI describes as the real prize.
@@ -1445,15 +1632,19 @@ The problem it solved was wiring, the very problem of the last section. Before C
 The two-wire party line:
 
 ```
-   CAN BUS: one shared pair of wires, many controllers tap in
+   CAN BUS: one shared pair of wires; every controller taps in
 
-     ==+==========+==========+==========+==========+==  (2 wires)
+     ==+==========+==========+==========+==========+==
        |          |          |          |          |
-     engine     brakes     doors      lights     sensor
-     (messages broadcast to all; urgent ones get priority)
+     motor      brakes     doors      lights     sensor
 
-   robust, cheap, simple -- but SHARED, and slow by modern
-   standards (~1 Mbit/s; a few Mbit/s for newer CAN variants)
+   Every message is broadcast to all of them, and the more
+   urgent message wins if two talk at once.
+
+   Robust, cheap, and forty years proven -- but SHARED, and
+   slow by modern standards: about 1 Mbit/s, a few Mbit/s on
+   newer variants. Fine for a hundred short conversations.
+   Hopeless for one enormous one, such as camera video.
 ```
 
 But CAN was designed for a world of small messages. Its whole job was to carry short, urgent control signals: *this switch is on; that sensor reads forty degrees; apply the brakes.* For that, its modest speed — around one megabit per second, a few megabits in newer versions — is not merely enough but ideal, because control signals are tiny and what matters is that they arrive reliably and on time, not that they arrive in bulk. For its intended purpose, CAN remains excellent, and even the newest cars still use it for exactly this kind of low-level, must-not-fail control traffic.
@@ -1486,21 +1677,24 @@ And then the loop itself, which is the cleverest touch. The cable is not a line 
 One cable, three problems solved:
 
 ```
-   ETHERLOOP: a single gigabit cable in a RING around the car
+   ETHERLOOP: one gigabit cable, run as a RING around the car
 
-        +======================================+
-        ||  data (cameras, audio, mics, ANC)   ||
-        ||  + 48 V power  -- on the SAME cable  ||
-        +==+==============================+=====+
-           |          |          |        |
-        speaker    camera     zone      mic
-        (each device taps in for BOTH data and power)
+     +=======================================================+
+     |                                                       |
+     |   carries DATA (cameras, audio, microphones)          |
+     |   AND 48 V POWER, along the very same cable           |
+     |                                                       |
+     +==+==========+==========+==========+==========+========+
+        |          |          |          |          |
+      camera    speaker      zone       mic       camera
+                            controller
 
-   cut the loop anywhere -> signals route the OTHER way round
-   = high bandwidth + power + self-healing, in one wire
+   Each device taps the loop once, for both data and power.
+   Cut the loop anywhere and the signals simply travel the
+   other way round the ring -- it heals itself.
 ```
 
-The payoff, when you combine Etherloop with everything else in this part, is measured in the currency the whole part has cared about: copper deleted. Reports credit the Cybertruck's combination of forty-eight volts, zonal controllers and the Etherloop backbone with cutting the number of cross-car wires by around two-thirds and the copper used by something like seventy per cent. That is not an incremental trim; it is a wholesale reimagining of the nervous system, and it attacks the harness problem of the first section from every angle at once — fewer wires, thinner wires, wires that carry two things instead of one, arranged so the whole thing is shorter and simpler and, crucially, closer to something a robot could install.
+The payoff, when you combine Etherloop with everything else in this part, is measured in the currency the whole part has cared about: copper deleted. Reports credit the Cybertruck's combination of forty-eight volts, zonal controllers and the Etherloop backbone with cutting the number of cross-car wires by around two-thirds and the copper used by something like seventy percent. That is not an incremental trim; it is a wholesale reimagining of the nervous system, and it attacks the harness problem of the first section from every angle at once — fewer wires, thinner wires, wires that carry two things instead of one, arranged so the whole thing is shorter and simpler and, crucially, closer to something a robot could install.
 
 Honesty and this book's conventions both require the reminder that Etherloop, like the full forty-eight-volt architecture, is direction-of-travel rather than the state of every Tesla on the road. It debuted on the Cybertruck; the mainstream Model 3 and Y still rely on more conventional mixtures of CAN and Ethernet and twelve-volt-derived power. This chapter includes Etherloop not because it is in the reference car, but because it shows, more clearly than anything else, where the nervous system is heading — and because it is the natural endpoint of every trend in this part: shorten the wire, raise the voltage, merge the functions, distribute the intelligence, and tie it all together over a fast, resilient, shared backbone.
 
@@ -1526,16 +1720,21 @@ The same logic reaches inside the car, to the humble low-voltage connectors — 
 Standardisation working in Tesla's favour:
 
 ```
-   the move: publish your own standard, invite rivals to use it
+   The move: publish your own standard, then invite rivals in.
 
    CHARGING PLUG (NACS)          LOW-VOLTAGE CONNECTORS (LVCS)
-   proprietary plug -> published  hundreds of connector types
-   -> industry adopts it          -> a small standard set
-      |                              |
-   Tesla's design becomes the    fewer parts, cheaper, and
-   default; its network gains    far friendlier to ROBOT
-   customers; costs fall for     assembly (the harness goal
-   everyone at scale             from earlier in this chapter)
+
+   a proprietary plug ...        hundreds of connector types ...
+        |                             |
+        v                             v
+   published, and adopted        cut down to one small
+   across the industry           standard set
+        |                             |
+        v                             v
+   Tesla's design becomes        fewer parts, cheaper, and far
+   the default; its network      friendlier to ROBOT assembly
+   gains customers; costs        -- the harness goal from the
+   fall for everyone at scale    start of this chapter
 ```
 
 The connective tissue between these two examples is the theme of the whole part: fewer, simpler, cheaper, more automatable. Reducing a car to a handful of standard connectors serves exactly the same end as zonal wiring and forty-eight-volt power and the Etherloop — it shortens the harness, simplifies the factory, and inches the car toward being something a machine can build. Standardisation is not separate from the engineering; it is the engineering, pursued at the level of the parts catalogue rather than the circuit.
@@ -1577,15 +1776,22 @@ The second answer: the conversion happens *outside the car*, in the charging sta
 The whole distinction, in one picture:
 
 ```
-   AC CHARGING (home / destination)
-     grid AC --> [ car's onboard charger does AC->DC ] --> battery
-     conversion is INSIDE the car -> limited by what the car
-     can carry -> ~7-11 kW -> hours
+   AC CHARGING  (home, or a destination charger)
 
-   DC FAST CHARGING (Supercharger)
-     grid AC --> [ big roadside cabinet does AC->DC ] --> battery
-     conversion is OUTSIDE the car -> no size limit, well cooled
-     -> hundreds of kW -> minutes
+     grid AC --> [ the car's onboard charger: AC to DC ] --> pack
+
+     the conversion happens INSIDE the car, so it is limited
+     by what the car can afford to carry: ~7-11 kW, and hours
+
+   DC FAST CHARGING  (a Supercharger)
+
+     grid AC --> [ big roadside cabinet: AC to DC ] --------> pack
+
+     the conversion happens OUTSIDE the car, in a cabinet with
+     no weight limit and proper cooling: hundreds of kW, minutes
+
+   One question tells you which you are using:
+   where does the conversion happen -- in the car, or the box?
 ```
 
 That is the whole thing. Slow charging and fast charging are not two different technologies so much as two different *places* to put the same converter — in the car, where it must be small and light, or in a roadside cabinet, where it can be enormous. Every other difference follows from this one. The home charger is cheap and can be anywhere there is a socket, because the expensive converting hardware is the modest one you carry with you. The fast charger is costly and lives only at dedicated stations, because the expensive converting hardware is the giant one bolted to the ground — but you get to *share* that giant with every other car that visits, which is what makes it economic.
@@ -1604,21 +1810,28 @@ So whenever you approach any charger, anywhere in the world, you can ask the one
 
 The last section left us with two converters — a small one the car carries and a giant one at the roadside — and an obvious question a sensible person immediately asks: why not just carry the giant one? If a DC fast charger can refill a battery in twenty minutes, why does every car not simply have that capability built in, so you could get a rapid charge from any socket? The answer is a lovely lesson in engineering trade-offs, and it explains the whole peculiar division of labour in EV charging.
 
-Consider what it would take to carry a Supercharger's worth of converting power around with you. A 250-kilowatt converter is not a scaled-up version of the 11-kilowatt one in the car; it is a different beast entirely. It is bulky — a substantial cabinet, not a shoebox. It is heavy, and by now you know what this book thinks of dead weight: every kilogram carried is range lost forever, so hauling a fridge-sized converter around on the off-chance you might fast-charge would quietly cost you range on every single journey. It runs hot at those power levels and needs serious liquid cooling. And it is expensive — the converting hardware is one of the pricier parts of a fast charger. To build all that into every car would mean every owner paying for, and carrying, and cooling, a massive converter that sits idle ninety-nine per cent of the time.
+Consider what it would take to carry a Supercharger's worth of converting power around with you. A 250-kilowatt converter is not a scaled-up version of the 11-kilowatt one in the car; it is a different beast entirely. It is bulky — a substantial cabinet, not a shoebox. It is heavy, and by now you know what this book thinks of dead weight: every kilogram carried is range lost forever, so hauling a fridge-sized converter around on the off-chance you might fast-charge would quietly cost you range on every single journey. It runs hot at those power levels and needs serious liquid cooling. And it is expensive — the converting hardware is one of the pricier parts of a fast charger. To build all that into every car would mean every owner paying for, and carrying, and cooling, a massive converter that sits idle ninety-nine percent of the time.
 
 So the engineering does the obvious economical thing: it splits the job by how often each kind of charging is actually needed. Most charging, by far, happens slowly and predictably — overnight at home, or during the hours a car sits parked at work or a hotel. For that, a small, cheap, light onboard charger is perfect, because time is abundant when you are asleep. The car carries only what it needs for the common case. The rare case — needing a lot of energy fast, on a long journey — is handled by putting the giant, expensive converter *at the roadside*, where it does not have to be carried, can be as big and well-cooled as necessary, and, crucially, is **shared**. One Supercharger cabinet serves car after car after car, so its cost is spread across thousands of charging sessions rather than borne by a single vehicle.
 
 The division of labour:
 
 ```
-   ONBOARD CHARGER (you carry it)    SUPERCHARGER (you visit it)
-   small, light, cheap               huge, heavy, expensive, cooled
-   converts AC->DC in the car        converts AC->DC in the cabinet
-   ~7-11 kW                          up to 250 kW+ (V3), more on V4
-   for the COMMON case:              for the RARE case:
-   slow, overnight, plentiful time   fast, on a journey, in a hurry
-   anywhere there's a socket         only at dedicated stations
-   idle cost: you carry it always    cost SHARED across many cars
+   ONBOARD CHARGER               SUPERCHARGER
+   (you carry it everywhere)     (you visit it)
+   -------------------------------------------------------------
+   small, light, cheap           huge, heavy, expensive, cooled
+   converts AC->DC in the car    converts AC->DC in the cabinet
+   ~7-11 kW                      up to 250 kW and beyond
+   for the COMMON case:          for the RARE case:
+   slow, overnight, time to      fast, mid-journey, in a hurry
+   spare
+   anywhere there is a socket    only at dedicated stations
+   you carry its weight even     its cost is SHARED across
+   when it is idle               every car that visits
+   -------------------------------------------------------------
+
+   Not rivals: one car, two doors into the same battery.
 ```
 
 This is why the Supercharger network matters as much as the car itself, and why it deserves a word here even in a book about engineering rather than business. A fast charger is useless in isolation; what makes it valuable is that there are many of them, reliably working, spaced along the routes people actually drive. Tesla's decision to build that network itself — rather than wait for others to — is one of the reasons its cars became practical for long journeys years before many rivals, and it is the network, as much as the plug, that every other carmaker wanted access to when they adopted Tesla's connector in the story of Chapter 10. The car and the network are two halves of one system; neither is much use without the other.
@@ -1638,7 +1851,7 @@ And yet even the mightiest roadside converter cannot make a battery charge at fu
 
 Ask someone how long an electric car takes to charge and they will usually quote a single number — "twenty minutes," "an hour" — as though charging happened at a steady rate, like filling a bath. It does not, and the belief that it does is the source of more road-trip frustration than any other misunderstanding. Charging is fast at first and slows down as the battery fills, sometimes dramatically, and the shape of that slowdown — the *charge curve* — is one of the most useful things a driver can carry in their head.
 
-Picture the curve. You arrive at a fast charger with a fairly empty battery, plug in, and the power leaps up — perhaps to the charger's full rated speed, a couple of hundred kilowatts, energy pouring in. This is the fast part, and it typically holds from a low state of charge up to somewhere around the halfway mark. Then, as the battery fills past roughly fifty per cent and heads toward eighty, the power begins to ease off. Past eighty per cent it falls away sharply, so that the final climb from eighty to a hundred can take almost as long as everything before it combined. The battery that gulped its first half in fifteen minutes may take another forty to sip its way to completely full. The curve starts high and tapers, like a sprinter slowing to a walk.
+Picture the curve. You arrive at a fast charger with a fairly empty battery, plug in, and the power leaps up — perhaps to the charger's full rated speed, a couple of hundred kilowatts, energy pouring in. This is the fast part, and it typically holds from a low state of charge up to somewhere around the halfway mark. Then, as the battery fills past roughly fifty percent and heads toward eighty, the power begins to ease off. Past eighty percent it falls away sharply, so that the final climb from eighty to a hundred can take almost as long as everything before it combined. The battery that gulped its first half in fifteen minutes may take another forty to sip its way to completely full. The curve starts high and tapers, like a sprinter slowing to a walk.
 
 Why? The reasons reach straight back to the chemistry of Chapter 2 and the watchful BMS of Chapter 3, and they are all really the same reason wearing different clothes. Remember that charging means forcing lithium ions into the graphite anode's parking spaces. When the battery is nearly empty, those spaces are plentiful and the ions slot in easily, so you can push hard and fast. As the battery fills, the easy spaces are taken, and the remaining ions must be crammed into a structure that is increasingly full — pushed somewhere they are progressively less willing to go. Force them in too fast at that point and you risk exactly the damage the BMS exists to prevent: lithium plating out as metal, heat building up, cells straying toward danger. So the BMS deliberately throttles the charging rate as the battery fills, trading speed for the battery's safety and longevity. It is not the charger giving up; it is the car's guardian easing off the throttle to protect the pack.
 
@@ -1647,21 +1860,30 @@ Two other effects from the same family pile on near the top. Heat: fast charging
 The shape of a fast charge:
 
 ```
-   charging power (kW)
-    high |####
-         |########
-         |############
-         |################          <- fast: plenty of empty
-         |####################         parking spaces, push hard
-         |########################
-         |##############################
-         |####################################  <- tapering as
-    low  |__________________________________########  it fills
-         0%    20%    40%    60%    80%    100%
-              (peak)          |----- slow crawl -----|
+   Charging power, against how full the battery already is:
+
+   250 kW |    #######
+          |   ###############
+          |  ####################
+      190 | #########################
+          | ############################
+          |#################################
+      125 |####################################
+          |#######################################
+          |##########################################
+       60 |#############################################
+          |################################################
+          |##################################################
+          +--------------------------------------------------
+           0%      20%      40%      60%      80%    100%
+           |------- the fast stretch -------|--the crawl--|
+
+   Fast while there are empty parking spaces to fill, slower
+   and slower as they run out. Which is why 10-80% is the
+   number that matters on a journey, and 0-100% is not.
 ```
 
-Out of this comes the single most valuable piece of practical charging advice, and it is delightfully simple: on a road trip, **charge to about eighty per cent and drive on.** The stretch from eighty to a hundred is the slowest, least rewarding part of the curve — you spend a long time gaining relatively little range — so you almost always cover more distance in less total time by charging to eighty, driving, and stopping again briefly, than by waiting at each stop for a full battery. The "0 to 100 per cent" time that people quote is nearly meaningless for journey planning; the number that matters is something like "10 to 80 per cent," the fast part of the curve, where fast charging earns its name.
+Out of this comes the single most valuable piece of practical charging advice, and it is delightfully simple: on a road trip, **charge to about eighty percent and drive on.** The stretch from eighty to a hundred is the slowest, least rewarding part of the curve — you spend a long time gaining relatively little range — so you almost always cover more distance in less total time by charging to eighty, driving, and stopping again briefly, than by waiting at each stop for a full battery. The "0 to 100 percent" time that people quote is nearly meaningless for journey planning; the number that matters is something like "10 to 80 percent," the fast part of the curve, where fast charging earns its name.
 
 Two useful footnotes tie the chapter together. First, this is exactly why preconditioning from Chapter 7 matters so much: arriving with a warm, ready battery lets the car sit up at the top of the fast part of the curve from the moment you plug in, instead of crawling while the pack warms. A cold battery has a low, sad charge curve; a preconditioned one has a tall, fast one. Second, the taper explains the apparent paradox that a bigger, more powerful charger does not always charge much faster — because past a certain point the limit is the battery's appetite, not the charger's power, and a 350-kilowatt charger cannot force a nearly-full pack to accept 350 kilowatts any more than a fire hose can fill an almost-full glass faster than a tap.
 
@@ -1686,18 +1908,21 @@ Recall the PCS, the Power Conversion System bolted under the rear seat in its co
 The energy, running the other way:
 
 ```
-   CHARGING (Chapters 11.1-11.3)
-   grid AC ---> [ onboard charger ] ---> DC ---> pack
+   CHARGING  (sections 11.1 to 11.3)
 
-   DISCHARGING (the same silicon, reversed)
-   pack ---> DC ---> [ same switches, inverting ] ---> AC
-                            |
-                            +--> V2L   a socket: tools, kettle
-                            +--> V2H   the house, via a gateway
-                            +--> V2G   the grid, sold back
+     grid AC ---> [ onboard charger ] ---> DC ---> the pack
 
-   the gateway's real job: disconnect the house from the
-   street FIRST, so the car cannot backfeed a dead line
+   DISCHARGING  (the same silicon, running backwards)
+
+     the pack ---> DC ---> [ the same switches, inverting ] ---> AC
+                                                          |
+                        V2L  a socket: tools, a kettle <--+
+                        V2H  the house, through a gateway <-+
+                        V2G  the grid, sold back <----------+
+
+   The gateway's real job is not conversion but disconnection:
+   it cuts the house off from the street FIRST, so the car can
+   never backfeed a line someone believes is dead.
 ```
 
 With that plumbing in place the numbers become domestic rather than theoretical. Powershare Home Backup delivers up to **11.5 kilowatts** to a house — comfortably more than a home draws at its busiest — and Tesla's claim is that a Cybertruck can carry a household through a blackout for **more than three days**. The simpler modes need less apparatus: the truck's own sockets supply up to **9.6 kilowatts** for tools or a campsite, which is enough to run a building site, and the car can also charge another electric car, roadside, from its own pack. Somewhere in there the car stops being a consumer of the energy system and becomes a participant in it.
@@ -1726,11 +1951,18 @@ Amid the chaos, one genuinely good idea deserves singling out, because it is a s
 The regional picture, roughly as it stands in 2026:
 
 ```
-   REGION          AC plug        DC fast plug
-   Europe          Type 2         CCS2 (Type 2 + 2 DC pins)  [mandated]
-   North America   J1772 -> NACS  CCS1 / CHAdeMO -> NACS (winning)
-   Japan           Type 1         CHAdeMO (fading)
-   China           GB/T AC        GB/T DC
+   REGION           AC plug          DC fast plug
+   ---------------------------------------------------------
+   Europe           Type 2           CCS2  (Type 2 + 2 DC
+                                     pins), mandated by law
+   North America    J1772 -> NACS    CCS1 and CHAdeMO,
+                                     now giving way to NACS
+   Japan            Type 1           CHAdeMO, fading
+   China            GB/T AC          GB/T DC
+   ---------------------------------------------------------
+
+   Europe arrived at one standard by decree; North America
+   fought for a decade and arrived at Tesla's.
 ```
 
 For a European reader, there is a happy simplicity worth stating plainly, because it is the context this book is written in. Europe largely avoided the worst of the war by regulating early: Type 2 for AC and CCS2 for DC were effectively mandated as the common standards, and — crucially — Tesla went along with it. European Teslas do not use a proprietary Tesla plug; they use the same Type 2 and CCS2 connectors as everyone else, and Tesla opened its European Supercharger network to other brands' CCS cars. So the continent where this book is set is the one where the connector wars barely happened: a European EV driver, whatever the badge, mostly plugs the same standard connector into mostly compatible chargers. The tidiness was bought by regulation acting before the fragmentation could set, a reminder that sometimes the way to win a standards war is to prevent it.
@@ -1774,19 +2006,30 @@ The second fact is the one that really matters for range, and it is worse. The *
 The cube law, made concrete:
 
 ```
-   speed        drag FORCE      power to overcome drag
-   x1  (base)      x1                  x1
-   x2  (double)    x4                  x8
-   x3  (triple)    x9                 x27
+   Double the speed. What happens to the fight against air?
 
-   -> going faster costs power far out of proportion to the speed
+   speed          drag FORCE      power needed to overcome it
+   ------------------------------------------------------------
+    x1  base         x1                     x1
+    x2  double       x4                     x8
+    x3  triple       x9                    x27
+   ------------------------------------------------------------
+
+   that power, drawn to scale:
+
+     x1   #
+     x2   ########
+     x3   ###########################
+
+   Going faster costs power wildly out of proportion to the
+   speed -- which is also why easing off buys back so much.
 ```
 
-Abstract numbers do not persuade, so here is what the cube law does to a real electric vehicle. Take a van cruising at 80 km/h with a certain range. Speed up to roughly 95 km/h and the range noticeably shrinks. Push on to 110, and it shrinks again. By the time you are travelling at around 130 km/h instead of 80, the range can have collapsed by something approaching *forty per cent* — the same battery, the same road, the same weather, carrying you barely more than half as far, purely because you chose to hurry. That is not a gentle penalty for speed; it is a cliff, and every electric-car driver who has watched their predicted range evaporate on a fast autobahn has felt it directly.
+Abstract numbers do not persuade, so here is what the cube law does to a real electric vehicle. Take a van cruising at 80 km/h with a certain range. Speed up to roughly 95 km/h and the range noticeably shrinks. Push on to 110, and it shrinks again. By the time you are travelling at around 130 km/h instead of 80, the range can have collapsed by something approaching *forty percent* — the same battery, the same road, the same weather, carrying you barely more than half as far, purely because you chose to hurry. That is not a gentle penalty for speed; it is a cliff, and every electric-car driver who has watched their predicted range evaporate on a fast autobahn has felt it directly.
 
 There is a threshold hidden in all this that explains why aerodynamics dominates the chapter. At low, around-town speeds, air resistance is minor — the car spends most of its energy on other things, chiefly the rolling resistance of the tyres, which is the next chapter's subject. But because air resistance grows so explosively with speed while those other losses grow only gently, there comes a point — somewhere in the range of ordinary main-road speeds — where the air overtakes everything else and becomes the single largest force the car is fighting. Above that point, on a motorway, well over half of all the energy the car uses can be going to push air aside. The faster you go, the more totally the air dominates, until at high speed almost nothing else matters.
 
-This is the physics that justifies the entire war described in the chapter opener. If range at motorway speed is mostly a battle against air, and if the cost of that battle rises with the *cube* of speed, then shaving even a small amount off a car's aerodynamic drag pays off enormously at exactly the speeds where range is scarcest and most anxiously watched. A car that is ten per cent slipperier is not ten per cent better only at the margins; it is meaningfully better on every long, fast journey, which is precisely where electric cars have most needed to prove themselves. The cube law is why a family saloon is sculpted with the obsessive care once reserved for aircraft, and why the drag coefficient figures from Chapter 1 — the 0.23, the 0.219 — are quoted with such pride.
+This is the physics that justifies the entire war described in the chapter opener. If range at motorway speed is mostly a battle against air, and if the cost of that battle rises with the *cube* of speed, then shaving even a small amount off a car's aerodynamic drag pays off enormously at exactly the speeds where range is scarcest and most anxiously watched. A car that is ten percent slipperier is not ten percent better only at the margins; it is meaningfully better on every long, fast journey, which is precisely where electric cars have most needed to prove themselves. The cube law is why a family saloon is sculpted with the obsessive care once reserved for aircraft, and why the drag coefficient figures from Chapter 1 — the 0.23, the 0.219 — are quoted with such pride.
 
 It also hands the driver a piece of free advice that no software update can beat: if you want more range on a long trip, slow down a little. Because the penalty is cubic, easing off from 130 to 115 km/h buys back a surprisingly large slice of range for a very small cost in journey time. The same physics that punishes haste so severely rewards a gentle lift of the foot just as generously. The air is an unforgiving opponent, but it is an honest one — and it fights hardest exactly where, and when, the car can least afford it. The next question is *where*, physically, on the car this fight is happening, and the answer is not where most people would guess.
 
@@ -1808,21 +2051,23 @@ Then there is the underbody — the whole underside of the car, which on a tradi
 Where the drag hides:
 
 ```
-   sources of a car's aerodynamic drag (roughly):
+   Where a car's aerodynamic drag actually comes from:
 
-   the body shape + frontal area .... the part everyone expects
-   WHEELS + WHEEL WELLS ............. ~25% -- the big surprise
-   the UNDERBODY .................... churned, cluttered airflow
-   mirrors, gaps, aerials, trim ..... small but they add up
+   body shape + frontal area ..... the part everyone expects
+   WHEELS and WHEEL WELLS ........ about 25% -- the big surprise
+   the UNDERBODY ................. churned, cluttered airflow
+   mirrors, gaps, aerials, trim .. small, but they add up
 
-   => the biggest wins are often NOT at the sleek nose
+   The biggest wins are usually NOT at the glamorous nose.
+   They are down at the wheels and under the floor, where
+   nobody is looking.
 ```
 
 Once you know this, the design of an aerodynamic electric car suddenly reads like a checklist of counter-measures against each of these hidden sources, and the electric car has one enormous advantage that a petrol car never did. Recall that the whole underside of a Tesla is a flat slab — the structural battery pack from Chapter 3. Where a petrol car has a chaotic underbody of exhaust and driveshafts, an electric car has, essentially, a smooth floor: the pack forms a flat belly pan over most of the underside, and the car adds smooth covers over the rest, so that air flowing beneath slides across a clean surface rather than tumbling through clutter. The deletion of the engine and its plumbing pays an aerodynamic dividend the designers did not have to work for — the flat floor comes almost free with the architecture.
 
 The wheels get their own dedicated treatment, which is the subject of the next section, because they are both a huge source of drag and a battleground of taste. But the rest of the car is shaped, detail by detail, to deny the air the places it likes to make trouble. The near-absent grille means the front is a smooth face rather than a hole for air to fall into and thrash around behind — an electric car needs far less cooling air than an engine did, so it can seal up the opening that a petrol car had to leave gaping. The flush door handles retract so as not to interrupt the airflow sliding down the car's flanks. The mirrors are sculpted, the pillars angled, the tail shaped to let the air close back in cleanly behind the car rather than leaving a turbulent, dragging wake. Every one of these is a small answer to the question *where is the air making trouble here?*
 
-The lesson worth carrying forward is that aerodynamics is not about one heroic shape but about a hundred small refusals to waste air — and that the biggest opportunities are often invisible, down at the wheels and under the floor rather than up at the glamorous nose. It is the same pattern we saw with efficiency inside the drive unit: no single miracle, but an accumulation of unglamorous wins, each worth a fraction of a per cent, that together decide how far the car goes at speed. And nowhere is the accumulation more visible — or more contentious — than in the humble, much-argued-over wheel.
+The lesson worth carrying forward is that aerodynamics is not about one heroic shape but about a hundred small refusals to waste air — and that the biggest opportunities are often invisible, down at the wheels and under the floor rather than up at the glamorous nose. It is the same pattern we saw with efficiency inside the drive unit: no single miracle, but an accumulation of unglamorous wins, each worth a fraction of a percent, that together decide how far the car goes at speed. And nowhere is the accumulation more visible — or more contentious — than in the humble, much-argued-over wheel.
 
 ---
 
@@ -1835,25 +2080,30 @@ The lesson worth carrying forward is that aerodynamics is not about one heroic s
 
 Here is a small human drama that plays out in the mind of nearly every new electric-car owner, and it is the perfect note to end the aerodynamics chapter on, because it is where cold physics collides with something physics has no opinion about: taste.
 
-The previous section revealed that the wheels are responsible for roughly a quarter of a car's drag, much of it from air being churned by the open spokes and escaping the wheel wells. The engineering solution is obvious and effective: cover the spokes. Fit a smooth disc — an *aerodynamic wheel cover* — over the open face of the wheel, so that instead of a spinning cage that thrashes the air, the wheel presents a flat, calm surface that lets the air slip past. It works. A good aero cover can improve real-world range by around **four per cent** — which, given the cube-law stakes of the last two sections, is a genuinely valuable gain, worth several kilometres on a long motorway run, for nothing more than a plastic disc.
+The previous section revealed that the wheels are responsible for roughly a quarter of a car's drag, much of it from air being churned by the open spokes and escaping the wheel wells. The engineering solution is obvious and effective: cover the spokes. Fit a smooth disc — an *aerodynamic wheel cover* — over the open face of the wheel, so that instead of a spinning cage that thrashes the air, the wheel presents a flat, calm surface that lets the air slip past. It works. A good aero cover can improve real-world range by around **four percent** — which, given the cube-law stakes of the last two sections, is a genuinely valuable gain, worth several kilometres on a long motorway run, for nothing more than a plastic disc.
 
-Four per cent of range is not nothing. And yet a large fraction of owners take one look at the smooth aero covers, decide they look like the wheels of a dishwasher, prise them off, and expose the sculpted alloy spokes underneath — knowingly trading range for looks. Tesla, caught between its engineers and its customers, has sold cars both ways: aero covers over plain wheels for the efficiency-minded, and open, stylish alloys for those who would rather see the range go than be seen driving on covers. This is the styling-versus-range tax, and it is one of the few places in the whole car where the buyer is handed the efficiency trade-off directly and asked to choose.
+Four percent of range is not nothing. And yet a large fraction of owners take one look at the smooth aero covers, decide they look like the wheels of a dishwasher, prise them off, and expose the sculpted alloy spokes underneath — knowingly trading range for looks. Tesla, caught between its engineers and its customers, has sold cars both ways: aero covers over plain wheels for the efficiency-minded, and open, stylish alloys for those who would rather see the range go than be seen driving on covers. This is the styling-versus-range tax, and it is one of the few places in the whole car where the buyer is handed the efficiency trade-off directly and asked to choose.
 
 The trade, laid bare:
 
 ```
    AERO WHEEL COVER              OPEN ALLOY SPOKES
-   smooth face, calm airflow     sculpted, "looks like a wheel"
-   ~4% more real-world range     ~4% less range
-   often called ugly             often preferred on looks
-   -> the buyer chooses: kilometres, or kerb appeal
+   ------------------------------------------------------------
+   smooth face, calm airflow     sculpted, and it looks like
+                                 a wheel is supposed to look
+   about 4% MORE real range      about 4% LESS
+   widely called ugly            widely preferred
+   ------------------------------------------------------------
+
+   The buyer chooses: kilometres, or kerb appeal. Both are
+   legitimate answers, and the car politely admits it.
 ```
 
 It is worth dwelling on why this tension is sharper for an electric car than it ever was for a petrol one, because it reveals something about the whole project. On a petrol car, the aerodynamic penalty of pretty open wheels was real but invisible — it cost a trickle of extra fuel that nobody noticed or costed. The energy was cheap and the tank refilled in two minutes, so the drag of a handsome wheel simply vanished into the general noise of running a car. On an electric car, the same drag is *legible*. It shows up as a smaller number on the range display, a slightly earlier charging stop, a visible consequence you can watch. The electric car, by making energy scarce and range precious, drags an old, hidden trade-off into the daylight and forces the owner to have an opinion about it. The physics did not change; the *stakes* did, and with them the visibility.
 
 And the wheel is only the most obvious example of a tension that runs through the entire exterior. Every one of the aerodynamic features from the last section — the flush handles, the sealed nose, the smooth flanks — is, in some small way, a negotiation between what is slippery and what is beautiful, or between what is slippery and what is convenient. Flush handles are slicker but fiddlier to use, especially in ice. A sealed front is cleaner but denies the car the aggressive grille that many buyers find handsome. Designers of electric cars live permanently on this knife-edge, trying to make shapes that are both aerodynamically excellent and things people actually want to own — because a car so efficient that nobody buys it has solved the wrong problem.
 
-Which is the honest, slightly deflating truth to end on, and a useful corrective to the engineering triumphalism that a book like this can slide into. The aerodynamicist would give you a smooth, teardrop-shaped, covered-wheeled car of extraordinary efficiency, and you would not buy it, because it would look strange and be awkward to live with. The real car is always a treaty between the wind-tunnel and the showroom, between the range display and the human eye. The four per cent from a wheel cover is real, and so is the owner's right to look at it and say, no thank you, I would rather have the pretty wheels and accept the cost. Efficiency is the organising obsession of this book, but it is not the only thing people want from a car, and the aero wheel is where the car politely admits it.
+Which is the honest, slightly deflating truth to end on, and a useful corrective to the engineering triumphalism that a book like this can slide into. The aerodynamicist would give you a smooth, teardrop-shaped, covered-wheeled car of extraordinary efficiency, and you would not buy it, because it would look strange and be awkward to live with. The real car is always a treaty between the wind-tunnel and the showroom, between the range display and the human eye. The four percent from a wheel cover is real, and so is the owner's right to look at it and say, no thank you, I would rather have the pretty wheels and accept the cost. Efficiency is the organising obsession of this book, but it is not the only thing people want from a car, and the aero wheel is where the car politely admits it.
 
 With the air dealt with — its physics, its hiding places, and its small daily argument with taste — we can turn to the other great resistance the car fights every metre it travels, one that matters even more at the low speeds where the air goes quiet: the grip and drag of four patches of rubber on the road.
 
@@ -1866,7 +2116,7 @@ With the air dealt with — its physics, its hiding places, and its small daily 
 - The "styling tax" framing and the greater visibility of the trade-off in EVs are analysis grounded in the cube-law stakes of 12.1 and this book's efficiency theme; rolling resistance is the subject of Chapter 13.
 # 13. Where rubber meets road
 
-Everything this book has described so far — the energy stored with such care, converted at ninety-seven per cent efficiency, delivered through a single elegant gear, its every waste watt hunted down — all of it, in the end, has to reach the ground through four patches of rubber each about the size of your hand. That is the humbling truth of any car. The whole magnificent machine touches the road only through four contact patches, and whatever happens there sets the ultimate limit on everything else. The most efficient drivetrain in the world is at the mercy of its tyres.
+Everything this book has described so far — the energy stored with such care, converted at ninety-seven percent efficiency, delivered through a single elegant gear, its every waste watt hunted down — all of it, in the end, has to reach the ground through four patches of rubber each about the size of your hand. That is the humbling truth of any car. The whole magnificent machine touches the road only through four contact patches, and whatever happens there sets the ultimate limit on everything else. The most efficient drivetrain in the world is at the mercy of its tyres.
 
 For an electric car this old truth acquires a new sharpness, and for reasons that by now will feel familiar. The car is heavy, because batteries are heavy. It delivers its torque instantly and violently, because that is what electric motors do. And its energy is precious, because range is precious. Each of these facts lands directly on the tyres — making them work harder, wear faster, and matter more to efficiency than the tyres on any petrol car ever did. The contact patch, that unglamorous handshake between rubber and tarmac, turns out to be a place where the electric car's defining characteristics all come home to roost.
 
@@ -1882,14 +2132,30 @@ Most drivers have never heard of it, because in a petrol car it was buried in th
 Two forces, two regimes:
 
 ```
-   force fighting the car vs. speed:
+   Which force is the car actually fighting?
 
-   AERODYNAMIC DRAG  low at town speed --> EXPLODES on the motorway
-   ROLLING RESISTANCE roughly constant, dominant at LOW speeds
+   force
+        |                                              ##
+        |                                            ##
+        |                                          ##
+        |                                       ###
+        |                                     ##
+        |                                  ###
+        |                               ###
+        |                           ####
+        |================================================
+        |                  #####
+        |           #######
+        |###########
+        +------------------------------------------------
+         0      40     80     120    160 km/h
 
-   city driving  -> rolling resistance rules
-   motorway      -> air rules
-   (an EV must win BOTH battles to have good range everywhere)
+   #  aerodynamic drag -- tiny in town, EXPLODES on the motorway
+   =  rolling resistance -- roughly constant at any speed
+
+   They cross at around 80 km/h. Below it the tyres are the
+   main enemy; above it, the air. An electric car has to win
+   both battles to have good range everywhere.
 ```
 
 Now, why does an electric car care about this more than a petrol car did? Three reasons, and they are the same three that run through the whole chapter. The first is the one from Chapter 1: an electric drivetrain is so efficient that there are very few *other* losses left, so the losses that remain — chiefly rolling resistance and air — loom proportionally much larger. In a petrol car, where the engine was throwing away three-quarters of the fuel anyway, the drag of the tyres was a rounding error lost among far bigger wastages. In an electric car, where almost nothing else is wasted, the tyres' flexing becomes one of the biggest remaining leaks, and plugging it matters.
@@ -1911,7 +2177,7 @@ That collision of demands is exactly what the next section is about, because it 
 - The two-regime (city vs motorway) framing cross-references the cube law of Chapter 12; EV weight from the battery mass of Chapter 3.
 ## 13.2 EV-specific tyres and faster wear
 
-New electric-car owners are often blindsided by a bill they did not expect. The car needs almost no servicing — no oil changes, no spark plugs, barely any brake wear, as the next chapter will explain — and then, sooner than they thought possible, it needs new tyres. Electric cars chew through tyres noticeably faster than petrol cars, commonly by something like **twenty to thirty per cent**, and the reasons are a neat summary of everything that makes an electric car what it is. The tyre wear is not a defect; it is the car's own character, written into the rubber.
+New electric-car owners are often blindsided by a bill they did not expect. The car needs almost no servicing — no oil changes, no spark plugs, barely any brake wear, as the next chapter will explain — and then, sooner than they thought possible, it needs new tyres. Electric cars chew through tyres noticeably faster than petrol cars, commonly by something like **twenty to thirty percent**, and the reasons are a neat summary of everything that makes an electric car what it is. The tyre wear is not a defect; it is the car's own character, written into the rubber.
 
 Three forces conspire to grind the tread down faster. The first is weight, again. An electric car carries several hundred extra kilograms of battery, and all of it presses down through the tyres, which now bear a heavier load with every rotation. Heavier load means more force scrubbing the rubber against the road, especially at the rear where much of the battery mass sits, and more force means faster wear. The very mass that makes the car feel planted and lowers its centre of gravity is slowly sanding its tyres away.
 
@@ -1922,14 +2188,21 @@ The third is regenerative braking, the mirror image of the same effect. Just as 
 Why EV tyres wear faster, and how they fight back:
 
 ```
-   what wears EV tyres:            how EV-specific tyres respond:
-   heavy battery (extra load) ---> reinforced sidewalls, XL load rating
-   instant torque (micro-slip) --> tougher tread compounds
-   regen braking (shear) -------->   (hold up under high torque)
-   + owners want RANGE ---------->  low rolling resistance compound
-   + cabin is silent -----------> foam lining inside to hush road noise
+   What wears an EV's tyres          how EV tyres answer
+   ------------------------------------------------------------
+   heavy battery, extra load  -->  reinforced sidewalls, and
+                                   an XL load rating
+   instant torque, micro-slip -->  tougher tread compounds
+   regenerative braking       -->  built to take high torque
+                                   through the contact patch
+   owners want RANGE          -->  low-rolling-resistance
+                                   compound
+   the cabin is SILENT        -->  foam lining bonded inside
+                                   to hush the road noise
+   ------------------------------------------------------------
 
-   -> a tyre asked to be strong, grippy, efficient AND quiet at once
+   One tyre asked to be strong, grippy, efficient and quiet
+   all at once -- and those demands pull against each other.
 ```
 
 This is why electric cars increasingly wear *EV-specific* tyres, which are not a marketing gimmick but genuinely different objects engineered for a genuinely harder brief. They have reinforced sidewalls and higher load ratings to carry the battery's weight without deforming. They use tougher tread compounds to survive the instant torque. They aim for low rolling resistance to protect range, per the last section. And — a lovely detail that shows how one design choice ripples into another — many of them contain a layer of sound-absorbing foam bonded inside the tyre, for a reason that has nothing to do with wear at all: because an electric car has no engine noise to mask the drone of the tyres on the road, that road noise becomes far more noticeable in the quiet cabin, so the tyre itself must be quietened from within. The silence the electric drivetrain creates forces the tyre to become a noise-control device.
@@ -1954,14 +2227,19 @@ Start with what "a bigger wheel" actually means, because there is a subtlety peo
 The consequences, and they compound:
 
 ```
-   SMALL wheel (e.g. 18")           LARGE wheel (e.g. 21")
-   tall, deep tyre                  thin, low-profile tyre
-   lighter                          heavier (more metal)
-   more sidewall cushion            less cushion -> harsher ride
-   lower rolling resistance         higher rolling resistance
-   smaller, less draggy             bigger face -> more aero drag
-   MORE RANGE, comfier              LESS RANGE, firmer -- but "looks"
-   looks modest                     fills the arches, sporty stance
+   SMALL wheel (say 18 inch)     LARGE wheel (say 21 inch)
+   ------------------------------------------------------------
+   tall, deep tyre               thin, low-profile tyre
+   lighter                       heavier -- more metal
+   more sidewall cushion         less cushion, harsher ride
+   lower rolling resistance      higher rolling resistance
+   smaller, less draggy face     bigger face, more aero drag
+   ------------------------------------------------------------
+   MORE RANGE, and comfier       LESS RANGE, and firmer
+   looks modest                  fills the arches, sporty
+
+   The engineering answer and the showroom answer disagree,
+   and the buyer gets to settle it.
 ```
 
 First, weight. A bigger rim is more metal, so it weighs more — and not just any weight, but the worst kind. Wheel weight is *unsprung* and *rotating*: unsprung because it sits below the suspension springs, where extra mass hurts ride and handling most, and rotating because a wheel must be spun up and slowed down constantly, which takes more energy the heavier and larger it is. Heavier wheels blunt both efficiency and the crispness of the ride.
@@ -1972,7 +2250,7 @@ Third — and this is where the chapter's themes converge — range. A bigger wh
 
 So the honest engineering recommendation — smaller wheels, taller tyres, more range, better ride — is the one a great many buyers cheerfully ignore, because they want the car to look the way the big wheels make it look, and they are entitled to. This is the third time in two chapters we have met the same pattern: the aerodynamically or mechanically optimal choice is often the one people find least attractive, and the electric car, by making energy scarce and range visible, keeps dragging that trade-off into the open and handing it to the buyer. The wheel cover, the wheel size, the flush handle — again and again, efficiency and desire sit on opposite sides of the table, and the buyer gets to choose which one wins.
 
-There is a broader point worth drawing out as the chapter closes, because it is easy to lose in the detail. The tyre and wheel are where the electric car's grand efficiency story becomes a set of small, personal, daily decisions. All the cleverness upstream — the ninety-seven-per-cent inverter, the heat pump, the shortened harness — is fixed at the factory and invisible to the owner. But the contact patch is where the owner's own choices start to matter: which tyres, what pressures, how big the wheels, how hard the right foot. A driver who wants maximum range has real levers to pull down here at road level, and a driver who wants the car to look and feel a certain way can knowingly spend some range to get it. After a whole book of engineering decisions made by others, the humble black tyre is where the car finally hands *you* the trade-off. And there is one more thing the tyre does in an electric car that it never had to do before, which has nothing to do with grip or range and everything to do with the fact that you can suddenly hear it.
+There is a broader point worth drawing out as the chapter closes, because it is easy to lose in the detail. The tyre and wheel are where the electric car's grand efficiency story becomes a set of small, personal, daily decisions. All the cleverness upstream — the ninety-seven-percent inverter, the heat pump, the shortened harness — is fixed at the factory and invisible to the owner. But the contact patch is where the owner's own choices start to matter: which tyres, what pressures, how big the wheels, how hard the right foot. A driver who wants maximum range has real levers to pull down here at road level, and a driver who wants the car to look and feel a certain way can knowingly spend some range to get it. After a whole book of engineering decisions made by others, the humble black tyre is where the car finally hands *you* the trade-off. And there is one more thing the tyre does in an electric car that it never had to do before, which has nothing to do with grip or range and everything to do with the fact that you can suddenly hear it.
 
 ---
 
@@ -1996,19 +2274,24 @@ And then the glass, which is where the story becomes properly clever. Ordinary s
 Where the quiet comes from:
 
 ```
-   SOURCE            PATH              BOUNDARY         CABIN
-   ------            ----              --------         -----
-   tyre cavity  -->  bushings     -->  acoustic    -->  active
-   drumming          + subframe        laminated        noise
-      |              mounts            glass            cancel.
-      v                 |                 |                |
-   foam inside       softer rubber     2 panes +        mics hear
-   the tyre          absorbs the       soft inter-      the boom,
-   (13.2)            vibration         layer that       speakers
-                                       shears sound     play its
-                                       into heat        opposite
+   The engine used to MASK all of this, for free. Take it
+   away and the noise must be fought at every stage:
 
-   the engine used to MASK all of this for free
+   SOURCE     the tyre cavity drumming on the road
+      |       answered by: foam bonded inside the tyre (13.2)
+      v
+   PATH       vibration travelling up into the body
+      |       answered by: softer suspension and subframe
+      |       bushings, which absorb instead of transmitting
+      v
+   BOUNDARY   noise pressing at the glass and the door seals
+      |       answered by: acoustic laminated glass -- two
+      |       panes around a soft interlayer that shears sound
+      |       into heat -- plus reshaped door edges and seals
+      v
+   CABIN      whatever still gets through
+              answered by: microphones hear the boom, and the
+              speakers play its exact opposite
 ```
 
 The last stage is the one that would have been science fiction in a car with an engine. Because the cabin is now quiet enough for it to work, some Teslas run *active noise cancellation* on road noise: microphones listen for the low-frequency boom coming up through the structure, and the audio system plays a precisely inverted waveform through the speakers so the two cancel. This is the same trick as a pair of noise-cancelling headphones, applied to a room, and it is only feasible because it needs serious real-time computation and a network fast enough to carry the microphone signals — which is exactly why the Etherloop of section 10.3 lists cabin-microphone traffic for noise cancellation among the reasons the car outgrew the CAN bus. The car's data backbone exists, in small part, to make the car quieter.
@@ -2047,14 +2330,20 @@ Then the damper. An *adaptive damper* contains a valve that can be electronicall
 Fixed versus adaptive:
 
 ```
-   TRADITIONAL              ELECTRONIC (air + adaptive)
-   steel coil spring        AIR SPRING: change height on demand
-     one fixed stiffness      - lower at speed -> less aero drag
-     one fixed height         - raise for rough roads / driveways
-   fixed-rate damper          - self-levels under load
-     one compromise         ADAPTIVE DAMPER: firmness varies
-   set for life               continuously, per wheel, per bump
-                              -> comfort AND control, not either/or
+   TRADITIONAL                 ELECTRONIC (air + adaptive)
+   ------------------------------------------------------------
+   steel coil spring           AIR SPRING
+     one fixed stiffness         lower at speed -> less drag
+     one fixed height            raise for rough roads
+                                 self-levels under load
+
+   fixed-rate damper           ADAPTIVE DAMPER
+     one compromise, set         firmness varies continuously,
+     for life                    per wheel, per bump
+   ------------------------------------------------------------
+
+   A fixed mechanical property becomes an adjustable one --
+   and once it is adjustable, software controls it.
 ```
 
 The truly modern twist is that the suspension has started to look *ahead*, and here the electric car's identity as a connected computer comes into play. Because these cars are networked and share data — a theme Part VIII develops fully — a Tesla can download map data about rough patches of road, generated by other Teslas that drove there before, and pre-emptively raise its ride height or soften its damping *before* it reaches a known bad stretch, rather than only reacting once the wheels hit it. The car braces for a pothole it has never personally met, because thousands of other cars warned it. The suspension stops being merely reactive and becomes, in a small way, predictive — a physical system steered by the fleet's collective memory.
@@ -2081,15 +2370,22 @@ The consequence is wonderful and slightly absurd. Friction brakes wear out becau
 Brakes: the great reversal:
 
 ```
-   PETROL CAR                     ELECTRIC CAR
-   friction brakes do all         regen does most slowing
-   the slowing                    friction brakes held in reserve
-      |                              |
-   pads wear out every            pads barely wear -- may last
-   ~50-60k km, replaced often     the life of the car
-      |                              |
-   enemy = WEAR                   enemy = RUST from disuse
-                                  (occasional hard braking cleans them)
+   PETROL CAR                    ELECTRIC CAR
+
+   friction brakes do all        regeneration does most of
+   of the slowing                the slowing; friction is
+        |                        held in reserve
+        v                             |
+   pads wear out every                v
+   50-60,000 km, replaced        pads barely wear, and may
+   again and again               last the life of the car
+        |                             |
+        v                             v
+   the enemy is WEAR             the enemy is RUST, from
+                                 sheer disuse
+
+   Hence the strangest maintenance advice in motoring:
+   go and brake hard occasionally, to clean them off.
 ```
 
 But — the inevitable but — a brake that is never used develops a different problem, and it is the problem behind that odd warning. Steel discs left unused, especially in a damp European climate, begin to *corrode*. A film of rust forms on the disc surface and, worse, the moving parts of the caliper can grow stiff or seize from lack of exercise. A brake is a mechanical thing that expects to be used; leave it idle in the weather and it deteriorates not from wear but from neglect, like a hinge that rusts stiff because no one ever opens the door. So the car occasionally prompts the driver to apply the friction brakes firmly a few times, which scrubs the rust film off the discs and keeps the caliper parts moving freely. The maintenance task has inverted: not "replace the worn brakes" but "please wear the brakes down a little so they don't rust."
@@ -2123,20 +2419,25 @@ Two boxes, one pedal:
    your foot
       |
       v
-   PEDAL SENSOR  (travel + force -- no fluid connection)
+   PEDAL SENSOR      travel and force. No fluid connection.
       |
       v
-   iBOOSTER  ......... decides regen-vs-friction split
-      |                electric motor pushes master cylinder
-      |                (no vacuum, no engine needed)
+   iBOOSTER          an electric motor pushes the master
+      |              cylinder -- no vacuum, no engine needed.
+      |              It decides the regen-vs-friction split.
       v
-   HYDRAULIC CONTROL UNIT ...... one valve per wheel
-      |                          ABS / traction / stability
-      +----> FL      FR      RL      RR
-                (each modulated independently)
+   HYDRAULIC         one valve per wheel, so each can be
+   CONTROL UNIT      braked independently. This is what runs
+      |              ABS, traction control and stability.
+      |
+      +------+-------+-------+
+      |      |       |       |
+      v      v       v       v
+     FL     FR      RL      RR
 
-   inputs: 4 wheel-speed sensors, steering angle,
-           yaw rate, and the motor's regen capability
+   watching all the while: four wheel-speed sensors, the
+   steering angle, the yaw rate, and how much regenerative
+   braking the motor can supply at this moment
 ```
 
 This makes the brake system the quietest safety-critical computer in the car: it arbitrates between two utterly different mechanisms, holds the pedal feeling constant across every temperature and state of charge, runs the three stability systems — and its entire measure of success is that you notice none of it. One further consequence matters, and Chapter 18 leans on it. Because the booster can build pressure *without the pedal being touched at all*, it is the actuator that automatic emergency braking uses: when the camera decides the car must stop and there is no foot on the pedal, this is the thing that stops it. Bosch claims it builds pressure roughly **three times faster** than the older hydraulic unit alone — and in an emergency stop, that difference is measured in metres.
@@ -2164,12 +2465,19 @@ Electric power steering throws the hydraulics away. In its place sits an electri
 Hydraulic versus electric assistance:
 
 ```
-   HYDRAULIC POWER STEERING       ELECTRIC POWER STEERING (EPS)
-   engine-driven pump, always on  electric motor assists on demand
-   pressurised fluid, valves      sensor reads your input, motor helps
-   wastes energy running dry      draws power only when you steer
-   purely mechanical assist       SOFTWARE controls the assistance
-                                  -> and the motor can steer ITSELF
+   HYDRAULIC POWER STEERING      ELECTRIC POWER STEERING
+   ------------------------------------------------------------
+   a pump driven by the engine   an electric motor assists
+   runs constantly, always on    only when you actually steer
+   pressurised fluid and valves  a sensor reads your input,
+                                 and the motor helps
+   wastes energy going straight  draws nothing going straight
+   the assist is mechanical      SOFTWARE sets the assistance
+   ------------------------------------------------------------
+
+   And the consequence that matters most: a motor that can
+   turn the rack is a motor that can steer the car ITSELF.
+   Every self-driving feature rests on this one fact.
 ```
 
 But the efficiency is almost the smaller point. The larger one is that an electric motor is a thing a computer can command, and this quietly transforms what steering can be. Because software now sits between your hands and the assistance, the car can vary how much help it gives according to the situation — lots of assistance at parking speed, so the wheel turns with a fingertip, and less at motorway speed, so the steering feels firm, planted and precise. It can add a gentle self-centring, nudging the wheel back to straight. And — this is the profound part — because the motor can push the steering rack on its own, the car can *steer itself*. Every self-parking manoeuvre, every gentle correction that keeps the car in its lane, every wheel movement made by Autopilot or Full Self-Driving, is the electric power steering motor turning the wheels in response to a computer rather than a pair of hands.
@@ -2196,15 +2504,25 @@ Which means the entire viability of steer-by-wire rests on one thing: it must no
 Redundancy, so no single failure disconnects you:
 
 ```
-   STEER-BY-WIRE (no mechanical column)
+   STEER-BY-WIRE -- no mechanical column at all
 
-   steering wheel --> 3 position sensors (2 outvote a bad one)
-                         |
-                  dual-redundant 48V Ethernet loop (two paths)
-                         |
-   steering rack <-- 2 motors (one fails, the other steers)
+   the steering wheel
+        |
+        v
+   THREE position sensors ...... if one disagrees, the other
+        |                        two outvote it
+        v
+   DUAL-redundant 48 V ......... two independent paths, so one
+   Ethernet loop                 severed wire changes nothing
+        |
+        v
+   TWO rack motors ............. if one dies, the other still
+        |                        steers the car
+        v
+   the front wheels
 
-   sacred mechanical link REPLACED by wires + built-in backups
+   Everything critical exists at least twice. The sacred
+   mechanical link is replaced by wires and built-in backups.
 ```
 
 Notice how many threads of the book converge here. Steer-by-wire leans on the forty-eight-volt architecture of Chapter 8, because turning a steering rack takes real power, and doing it at forty-eight volts rather than twelve means thinner wires to the steering motors — one of the specific features that pushed Tesla toward the higher voltage in the first place. It leans on the resilient Ethernet loop of Chapter 10 for its fail-operational communication. And it is the ultimate expression of the substitution we have traced from the very first chapter: the last mechanical linkage, the one everyone thought untouchable, finally converted into a signal.
@@ -2231,13 +2549,24 @@ At high speed the logic flips. Now the rear wheels turn in the *same* direction 
 Opposite at low speed, together at high speed:
 
 ```
-   LOW SPEED (parking, U-turns)     HIGH SPEED (lane changes)
-   front wheels: turn left          front wheels: turn left
-   rear wheels:  turn RIGHT         rear wheels:  turn LEFT (less)
-        \        /                       \        \
-         \      /                         \        \
-   -> shortens the car, TIGHT turn   -> stable, planted, smooth
-      (nimble in tight spaces)          (steady at speed)
+   LOW SPEED -- parking, U-turns
+
+     front wheels   turn LEFT
+     rear wheels    turn RIGHT -- the opposite way
+
+     the car pivots about its middle and takes a much
+     tighter circle, as though it were a shorter car
+
+   HIGH SPEED -- lane changes, motorway curves
+
+     front wheels   turn LEFT
+     rear wheels    turn LEFT too, but only slightly
+
+     the whole car slides across as one: stable and planted,
+     with none of the tail-swing of a sharp turn-in
+
+   Same hardware, opposite behaviour -- chosen by software,
+   according to how fast you are going.
 ```
 
 On the Cybertruck the rear wheels move only a few degrees — around three, with the potential for more via a software update, since the angle is set in software rather than fixed in metal — but even that small movement transforms how a large vehicle behaves, because turning circle is exquisitely sensitive to rear-wheel angle. A handful of degrees at the back is worth an enormous improvement in manoeuvrability at the front.
@@ -2277,14 +2606,18 @@ So Tesla, rather than buy a general-purpose chip, designed its own — a process
 The AI brain's peculiar job:
 
 ```
-   ORDINARY CAR COMPUTER          FSD / AI COMPUTER
-   runs step-by-step rules        runs neural networks
-   "if X then Y"                  learns patterns from millions
-                                    of examples
-   modest, general-purpose        specialised silicon for one kind
-                                    of maths, done at huge volume
-   handles switches, logic        turns camera VIDEO into an
-                                    understanding of the world
+   ORDINARY CAR COMPUTER         FSD / AI COMPUTER
+   ------------------------------------------------------------
+   runs step-by-step rules       runs neural networks
+   written by a programmer       learned from millions of
+   -- if X, then Y               examples, not written by hand
+
+   modest, general-purpose       silicon specialised for one
+   silicon                       kind of maths, at huge volume
+
+   handles switches and logic    turns camera VIDEO into an
+                                 understanding of the world
+   ------------------------------------------------------------
 ```
 
 It is worth pausing on the sheer relentlessness of what this computer does, because it is easy to say "it processes camera data" and miss how astonishing that is. Every fraction of a second, from a standstill to motorway speed, it is taking in the full view around the car, identifying every relevant object, tracking where each one is and predicting where each is going, working out the geometry of the road and the rules that apply, and deciding what the car should do — all fast enough to react before a hazard becomes a collision, and reliably enough to be trusted with human lives. It never blinks, never tires, never glances at its phone. Whatever one thinks of how *well* it does the driving — and Part IX takes an honest look at exactly that, because the claims and the reality do not always match — the raw feat of doing it at all, in real time, in a box the size of a paperback, is genuinely remarkable.
@@ -2311,12 +2644,18 @@ But here is the crucial design decision, and it is the whole point of the sectio
 Two minds, two standards, one wall:
 
 ```
-   FSD COMPUTER (safety-critical)   MCU (infotainment)
-   perceives the road, drives       maps, music, browser, games
-   must NEVER crash or hang          may crash -- it's just an app
-   simple, verified, relentless      rich, complex, frequently updated
-   ----------------- kept SEPARATE -----------------
-   a frozen game must NOT be able to freeze the steering
+   FSD COMPUTER                  MCU (infotainment)
+   safety-critical               not safety-critical
+   ------------------------------------------------------------
+   perceives the road, drives    maps, music, browser, games
+   must NEVER crash or hang      may crash -- it is only an app
+   simple, verified, relentless  rich, complex, updated often
+   ------------------------------------------------------------
+
+        kept deliberately SEPARATE, even when they
+        happen to share one physical box
+
+   A frozen game must not be able to freeze the steering.
 ```
 
 Why does this matter so much? Because the qualities that make good infotainment are exactly the qualities you must *never* want in a safety system. Infotainment should be feature-rich, always changing, pushing the limits of what the hardware can do — and software like that, inevitably, sometimes misbehaves. Anyone who has owned a Tesla has seen the central screen freeze, or an app hang, or the map stutter. That is the normal, tolerable cost of a rich consumer system. It would be utterly *intolerable* if the same glitch could freeze the car's perception of the road or its control of the brakes. So the two are separated: the infotainment computer can crash, reboot, and misbehave to its heart's content, and the driving computer carries on completely unaffected, because they are different machines and the driving one is walled off from the chaos of the entertainment one.
@@ -2343,13 +2682,22 @@ The zone controllers are computers, but of a humbler and more numerous kind than
 A three-tier mind:
 
 ```
-   TIER 1  FSD / AI computer   -- the HEAD: perceives, decides
-              |  (high-level intentions: "slow down", "turn")
-   TIER 2  central control      -- coordination and the vehicle's
-              |                     master logic
-   TIER 3  ZONE CONTROLLERS     -- the HANDS: switch lights, run
-           VCFRONT/LEFT/RIGHT      pumps, drive motors, read sensors
+   TIER 1   FSD / AI COMPUTER      the HEAD
+            perceives and decides
+               |
+               |  high-level intentions: "slow down", "turn"
+               v
+   TIER 2   CENTRAL CONTROL        coordination and the
+            vehicle master logic   car's overall logic
+               |
+               |  specific commands: "raise that window"
+               v
+   TIER 3   ZONE CONTROLLERS       the HANDS
+            VCFRONT, VCLEFT,       switch lights, run pumps,
+            VCRIGHT                drive motors, read sensors
                                    simple, robust, real-time
+
+   Complexity at the top. Dependability at the bottom.
 ```
 
 The relationship between the tiers is one of *intentions flowing down and actions flowing up*. A high-level system forms an intention — the driving computer decides the car should slow for a corner, or the driver presses a window switch, or the thermal logic decides the battery needs cooling. That intention travels, over the data backbone of Chapter 10, to the relevant zone controller, which translates it into the actual electrical business of making it happen: pulling this much current through that pump, switching this circuit through its solid-state eFuse, driving that motor. And information flows the other way too — each zone controller constantly reports what its sensors see back up to the higher tiers, so the car's brain always knows the state of every region. The head thinks; the hands act and report; the backbone carries the traffic between them.
@@ -2378,14 +2726,20 @@ That is the whole logic of the car's divided mind. Put the entertainment on one 
 Why the walls exist:
 
 ```
-   the principle: complex software WILL fail -- so CONTAIN failure
+   The principle: complex software WILL fail.
+   So build the car to CONTAIN the failure.
 
-   infotainment crashes  --> stays on the MCU; driving unaffected
-   an app hangs          --> the safety computer never even notices
-   a bad media update    --> can't reach the systems that keep you safe
-   the AI brain troubled --> simple zone controllers keep basics running
+   infotainment crashes ...... stays on the MCU; the driving
+                               is completely unaffected
+   an app hangs .............. the safety computer never even
+                               notices
+   a bad media update ........ cannot reach the systems that
+                               keep you alive
+   the AI brain is troubled .. the simple zone controllers
+                               keep the basics running
 
-   many isolated computers > one all-powerful brain that fails as one
+   Many isolated computers beat one all-powerful brain that
+   fails all at once.
 ```
 
 The separation buys three distinct things, each valuable on its own. The first is *safety*, as above: a failure in a non-critical system cannot cascade into a critical one, so the car's ability to perceive, steer and stop is protected from the chaos of everything else. The second is *independent development*: because the systems are walled off, the infotainment can be a fast-moving consumer platform, updated weekly with new toys, while the driving software is developed slowly and validated to a far higher standard — each free to move at its right pace without the other holding it back or dragging it into recklessness. The third is *security*. A car connected to the internet is a target, and if an attacker were ever to compromise the infotainment system — the most exposed, most feature-rich, most internet-facing part — the isolation means they would find themselves trapped in the entertainment computer, walled off from the systems that actually drive the car. The barriers that contain a crash also contain an intruder.
@@ -2425,14 +2779,20 @@ The third is the humble but valuable one: *fixes*. Bugs get corrected, quirks sm
 What an update can change:
 
 ```
-   OVER-THE-AIR UPDATE (downloads while parked, installs on approval)
+   An update downloads while the car is parked, and installs
+   only once you approve it. What arrives:
 
-   NEW FEATURES ...... games, apps, UI, dashcam, navigation, Autopilot
-   PERFORMANCE ....... acceleration, range, regen, thermal behaviour
-                       (same hardware, better code -> better car)
-   FIXES ............. bugs patched fleet-wide, no dealer visit
+   NEW FEATURES .... apps, interface, dashcam, navigation,
+                     driver-assistance behaviour
+   PERFORMANCE ..... acceleration, range, regeneration, thermal
+                     behaviour -- same hardware, better code
+   FIXES ........... bugs patched across the whole fleet at
+                     once, with no visit to a dealer
 
-   => the car is a PLATFORM that keeps changing, not a fixed object
+   The car stops being a fixed object bought once, and becomes
+   a platform that keeps changing underneath you -- which cuts
+   both ways, since the power to improve it from afar is also
+   the power to change it, and it is not your power.
 ```
 
 The consequence is a reversal of the oldest fact about owning a car: that it is all downhill from the showroom. A software-defined car can be *newer*, in capability, three years into its life than it was on the day it was bought — running the same software as a car fresh off the line, gaining features its original buyers never imagined. The car stops being a depreciating fixed asset and becomes something closer to a device that is supported, updated, and improved over time. That is a genuinely new relationship between a person and their car, and it is one of the things owners cite most warmly.
@@ -2457,13 +2817,21 @@ Let us collect the examples the book has already met, because seeing them togeth
 The vanishing linkages:
 
 ```
-   CONTROL        OLD (mechanical)        NEW (by-wire signal)
-   accelerator    cable to throttle       signal to the inverter
-   gear select    linkage to gearbox      software picks motor direction
-   brake          hydraulic push          request; regen+friction blended
-   steering       shaft to the rack       (steer-by-wire) pure signal
+   CONTROL       OLD (mechanical)      NEW (a signal)
+   ---------------------------------------------------------
+   accelerator   cable to a throttle   a request to the
+                                       inverter
+   gear select   linkage into the      software picks which
+                 gearbox               way the motor spins
+   brake         your foot pushes      a request; regen and
+                 the fluid             friction blended
+   steering      a shaft to the rack   pure signal, on the
+                                       cars that have gone
+                                       to steer-by-wire
+   ---------------------------------------------------------
 
-   every control: a physical connection -> a request to a computer
+   Every primary control: a physical connection becomes a
+   request to a computer.
 ```
 
 Why does this matter beyond tidiness? Because the moment a control is a signal rather than a mechanical connection, *software can sit in the middle of it* — and that changes what the control can do. When your foot is mechanically linked to the throttle, your foot is the only thing deciding the throttle. When your foot merely *requests* acceleration from a computer, the computer can shape that request: smoothing it, limiting it for traction, blending it with regeneration, overriding it in an emergency, or — the ultimate step — supplying it *itself* when no foot is on the pedal at all. Every by-wire control is a control that software can mediate, improve, customise, and, crucially, operate autonomously. The vanishing of the mechanical linkage is precisely what makes a self-driving car possible: you cannot have a computer drive a car whose controls can only be moved by human muscle, but you can the moment every control is a signal the computer can generate.
@@ -2494,15 +2862,18 @@ Then there is what the car does while you are gone. Because a Tesla is festooned
 The connected car's new powers:
 
 ```
-   CELLULAR MODEM ... always online: updates, live traffic, streaming,
-                      remote control from the app
-   PHONE-AS-KEY ..... car recognises your phone; unlocks as you
-                      approach; no key or fob to carry
-   SENTRY MODE ...... parked cameras watch, record, alert your phone
-   REMOTE CONTROL ... precondition, check charge, locate, honk, all
-                      from the app, from anywhere
+   CELLULAR MODEM .... always online: updates, live traffic,
+                       streaming, and the phone app
+   PHONE-AS-KEY ...... the car recognises your phone and
+                       unlocks as you walk up. No fob.
+   SENTRY MODE ....... parked, the cameras keep watching,
+                       record, and alert your phone
+   REMOTE CONTROL .... precondition, check the charge, locate
+                       it, sound the horn -- from anywhere
 
-   the car is no longer a sealed island -- it is a connected device
+   The car stops being a sealed island and becomes a
+   connected device -- with everything that implies, in
+   convenience and in data leaving the vehicle.
 ```
 
 All of this is real and mostly wonderful, and it is why owners often describe the car as feeling less like a vehicle and more like a smartphone that happens to have wheels. But a device this connected and this observant raises questions a sealed island never did, and honesty requires stating them plainly rather than waving them away. A permanently-connected car is a car whose location, movements, and status are continuously known to its manufacturer. A car covered in cameras that watch while parked is a car that is, unavoidably, a mobile surveillance device — recording not just would-be thieves but bystanders, streets, and neighbours. The data that makes the features work — where you drive, how you drive, what your cameras see — is genuinely useful and genuinely personal, and it flows off the car to servers you do not control. None of this is hidden or sinister, and much of it is opt-in or adjustable, but it is a real change in what it means to own a car, and a thoughtful owner should understand it rather than simply enjoy the conveniences.
@@ -2527,17 +2898,28 @@ Most of the time they agree, and nothing happens. But every so often the network
 The loop that compounds:
 
 ```
-   millions of cars driving  ---> each runs "shadow mode":
-   (cameras always watching)      predicts vs. what the human did
-            ^                                |
-            |                                v  divergences flagged
-   OTA push improved              interesting clips uploaded
-   software to the WHOLE fleet             |
-            ^                                v
-            |                        train BETTER neural networks
-   validate the new networks <----  on the new real-world data
+   +--> millions of cars driving, cameras always watching
+   |                     |
+   |                     v
+   |    each runs SHADOW MODE: it quietly predicts what it
+   |    would do, and compares that against what the human
+   |    actually did
+   |                     |
+   |                     v
+   |    where the two DIVERGE, the clip is flagged and
+   |    uploaded -- the interesting cases, not everything
+   |                     |
+   |                     v
+   |    better neural networks are trained on that new
+   |    real-world data, in the data centre
+   |                     |
+   |                     v
+   |    the improved software is validated, then pushed
+   |    over the air to the WHOLE fleet
+   |                     |
+   +---------------------+
 
-   each turn of the loop makes every car a little smarter
+   Each turn of the loop makes every car a little better.
 ```
 
 What happens next is the training. Tesla gathers these clips — the scale is staggering, with reports of hundreds of thousands of video snippets flowing in every second from the global fleet [INFERENCE — figures are company/analyst claims, hard to independently verify] — and uses them to train new, improved versions of the neural networks, teaching the AI to handle the very situations where it previously stumbled. The improved networks are tested, validated, and then pushed back out to the entire fleet as an over-the-air update, from the first section of this chapter. And now the loop closes and begins again: the smarter software drives (and shadow-drives) on millions of cars, which find the *next* set of situations it gets wrong, which feed the next round of training. Round and round, each turn feeding the next.
@@ -2575,13 +2957,19 @@ What is striking about this suite is not what it contains but what it *no longer
 The subtraction, step by step:
 
 ```
-   what Tesla progressively REMOVED to reach cameras-only:
+   What Tesla progressively REMOVED on the way to
+   cameras-only:
 
-   ~2021  radar (forward-looking) ....... gone from 3/Y, then S/X
-   ~2022  ultrasonic parking sensors .... gone from mainstream cars
-   remaining:  8 CAMERAS + neural networks = "Tesla Vision"
+   around 2021   forward-looking RADAR
+                 dropped from Model 3/Y, then S/X
+   around 2022   ULTRASONIC parking sensors
+                 dropped from the mainstream cars
 
-   the recurring instinct -- do more with less -- applied to SENSES
+   what remains:  8 CAMERAS + neural networks
+                  -- branded "Tesla Vision"
+
+   The book's recurring instinct -- do more with less --
+   applied, boldly, to the car's senses themselves.
 ```
 
 Why remove senses from a safety system? Tesla's reasons are a mix of the practical and the philosophical, and they are worth setting out plainly because they are the foundation of the whole bet. The practical ones are cost and simplicity: the sensors are not free — the ultrasonic set alone was reported to cost around a hundred euros' worth per car — and removing them saves money across millions of vehicles and simplifies the wiring and the software. The philosophical ones are more interesting and more contested. Tesla's argument, articulated by its engineers, is that combining fundamentally different senses is not the free lunch it appears to be. When a camera says one thing and a radar says another — and they sometimes disagree, because they sense the world in different ways — the car must decide which to believe, and that arbitration is itself a source of error and confusion. Tesla claimed that as its camera-based system improved, the radar started *subtracting* from its performance rather than adding to it, injecting conflicting signals that the vision system was better off without. Better, they argued, to have one excellent sense than several that quarrel.
@@ -2610,15 +2998,25 @@ Now the case *against*, which is equally serious and comes from equally informed
 The argument, fairly stated:
 
 ```
-   THE BET (vision-only)            THE CRITICISM (need more senses)
-   humans drive on eyes+brain       cameras INFER depth; lidar/radar
-   -> cameras+AI should suffice        MEASURE it directly
-   cameras cheap -> every car        cameras fail in fog/rain/snow/glare/
-   -> more data -> better AI            dark; radar/lidar don't
-   one sensor -> no conflicting      one sensor -> no redundancy; a
-   signals to arbitrate                fooled camera has no backup
-   rich detail: colour, text,        many experts: safe unsupervised
-   lights, gestures                     autonomy NEEDS diverse sensors
+   THE BET (vision only)         THE CRITICISM (not enough)
+   ------------------------------------------------------------
+   humans drive on eyes and      cameras INFER depth; radar
+   a brain, so cameras and AI    and lidar MEASURE it
+   ought to be sufficient        directly, which is safer
+
+   cameras are cheap, so every   cameras fail in fog, rain,
+   car carries them -- more      snow, glare and darkness.
+   data, and a better AI         Radar and lidar do not.
+
+   one sense means no            one sense means no
+   conflicting signals to        redundancy: a fooled camera
+   arbitrate between             has nothing to check it
+
+   rich detail: colour, text,    many experts hold that safe
+   brake lights, gestures        autonomy REQUIRES diverse
+                                 sensors, and lidar is now
+                                 far cheaper than it was
+   ------------------------------------------------------------
 ```
 
 The evidence, as of 2026, is genuinely mixed and does not hand victory to either side. Tesla's vision system has improved markedly and, by some measures of active safety, its cars perform well. At the same time, camera-only driving has shown persistent weaknesses — including the unnerving phenomenon of "phantom braking," where the car brakes hard for a hazard that is not there, a classic symptom of a vision system misreading a shadow or a reflection — and independent assessments of how often a human must take over still fall well short of what unsupervised autonomy would demand. Meanwhile the economic ground has been shifting under the debate: one of Tesla's strongest original arguments, that lidar was hopelessly expensive, has weakened as lidar prices have fallen, softening the cost case for going without it.
@@ -2652,15 +3050,22 @@ Tesla's answer has evolved through generations, each a response to wanting more 
 The inference computer's brief:
 
 ```
-   INFERENCE = running an already-trained network (not learning)
+   INFERENCE = running an already-trained network.
+   The car applies what was learned elsewhere. It does not
+   learn anything here.
 
-   the car's brain must be:
-     FAST ........ decide many times a second, before it's too late
-     COMPACT ..... small, low-power (HW3 ~80W; HW4 ~160W)
-     REDUNDANT ... TWO chips that cross-check each other
-                   -> if one is wrong or fails, the other catches it
+   The brain in the car must be:
 
-   it APPLIES what was learned elsewhere; it does not learn here
+     FAST ......... decide many times a second, before the
+                    moment to decide has passed
+     COMPACT ...... small and low-power, because it rides
+                    in a car (HW3 ~80 W, HW4 ~160 W)
+     REDUNDANT .... TWO chips, cross-checking each other, so
+                    that if one is wrong or fails outright,
+                    the other catches it
+
+   A single chip deciding whether to brake for a child would
+   be a single point of failure, in the most literal sense.
 ```
 
 One design feature deserves special note because it embodies a principle from earlier in the book: redundancy. The Hardware 4 computer contains not one but *two* self-driving chips, and this doubling is deliberate. The two can work on the same problem and cross-check each other, so that if one produces a wrong answer or fails outright, the other is there — the same "make everything at least twice" logic we met in the steer-by-wire system of Chapter 14, applied now to the brain rather than the steering. A single chip deciding whether to brake for a child would be a single point of failure in the most literal and unacceptable sense; two chips checking each other is how you make a safety-critical decision trustworthy. The car's perception, like its steering, is built to survive the failure of any one part.
@@ -2687,14 +3092,20 @@ Think of it as the difference between an education and a job. *Training* a neura
 Two kinds of thinking, two very different places:
 
 ```
-   TRAINING (building the intelligence)   DRIVING (using it)
-   in giant data centres                  in the car
-   MEGAWATTS of power                     ~80-160 watts
-   weeks / months, offline                real-time, right now
-   grinds through millions of examples    runs the finished network
-   done ONCE, then copied to all cars     done constantly, per car
+   TRAINING                      DRIVING
+   building the intelligence     using it
+   ------------------------------------------------------------
+   in giant data centres         in the car
+   MEGAWATTS of power            80 to 160 watts
+   weeks or months, offline      real time, right now
+   grinds through millions       runs the finished network
+   of examples                   once, per frame
+   done ONCE, then copied        done constantly, in every
+   to every car                  car, forever
+   ------------------------------------------------------------
 
-   the HEAVY compute is NOT in the car -- it's in the data centre
+   The heavy thinking is NOT in the car. It happens in a
+   building the car will never visit.
 ```
 
 Tesla built specialised machinery for this training side, most famously a supercomputer project called Dojo, designed specifically to chew through the fleet's video data and train the driving networks. The story of Dojo is itself a lesson in how fast this field moves and how provisional even big bets can be: after years of development, Tesla wound the Dojo project down around 2025, judging it an evolutionary dead-end, and shifted its focus to new-generation chips (called AI5 and AI6) intended to handle both the training in the data centre and the inference in the car. This book flags that as very much a moving story — the specific hardware names will date quickly — but the underlying division does not change: whatever machine does it, *training* is a colossal offline effort, and *driving* is a small real-time one.
@@ -2723,14 +3134,22 @@ Then the grander claim. **Full Self-Driving** — which Tesla, under regulatory 
 Name versus reality:
 
 ```
-   NAME says ...              REALITY (2026) is ...
-   "Autopilot"                adaptive cruise + lane-keeping (assist)
-   "Full Self-Driving"        supervised assist: can attempt city
-                              driving BUT the human must watch
-                              constantly and take over instantly
+   THE NAME SAYS ...        THE REALITY IN 2026 IS ...
+   ------------------------------------------------------------
+   "Autopilot"              adaptive cruise control and
+                            lane-keeping. Assistance.
 
-   BOTH are SAE "Level 2": the HUMAN is driving and responsible,
-   with the car assisting -- NOT the car driving itself
+   "Full Self-Driving"      supervised assistance. It can
+                            attempt city driving, BUT the
+                            human must watch constantly and
+                            be ready to take over instantly.
+   ------------------------------------------------------------
+
+   Both are SAE Level 2. That means the HUMAN is driving and
+   the human is responsible, with the car assisting -- not
+   the car driving itself.
+
+   Trust the assistance. Do not trust the name.
 ```
 
 The engineers' own framework makes the point precisely. There is a widely-used scale of driving automation, running from Level 0 (no automation) to Level 5 (goes anywhere, no human needed). Crucially, there is a bright line between Level 2 and Level 3: at Level 2 and below, *the human is driving* and the system merely assists, so the human is responsible for everything; at Level 3 and above, the *system* is doing the driving under defined conditions, and may allow the human to disengage. Both Autopilot and Full Self-Driving (Supervised), as of 2026, sit at **Level 2**. Despite the names, the human is legally and practically the driver, responsible for the car's every move. The system is a very sophisticated assistant, not a chauffeur.
@@ -2770,13 +3189,23 @@ Delete the engine, and the problem vanishes — and in its place you get one of 
 The front end, engine versus empty:
 
 ```
-   PETROL CAR (engine in the way)     ELECTRIC CAR (empty frunk)
-   [bumper][ ENGINE BLOCK ][cabin]    [bumper][  empty space  ][cabin]
-              (rigid)                          (crushes freely)
-   in a crash the block can be        the whole nose folds and
-   shoved toward the cabin            absorbs energy -- no rigid
-   -> limits the crumple, risks       mass to intrude on occupants
-      intrusion into occupant space
+   Side view of the nose, in a frontal impact:
+
+   PETROL CAR
+     [bumper][==== ENGINE BLOCK ====][ cabin ]
+                    rigid, heavy
+     the block cannot crush, so the crumple zone is short --
+     and in a hard enough hit the block is shoved backwards,
+     toward the people
+
+   ELECTRIC CAR
+     [bumper][      empty  frunk      ][ cabin ]
+                 designed to fold
+     the whole nose collapses progressively, soaking up energy
+     over a long distance, with no rigid mass to intrude
+
+   Nobody designed this as a safety feature. It is simply
+   what is left when the engine goes.
 ```
 
 The results show up plainly in crash tests. When electric cars with this layout have been through the standard government crash programmes, they have tended to perform exceptionally in frontal impacts, and the generous, unobstructed front crumple zone is a large part of why. There are documented real-world crashes in which the long crush of an electric car's engine-less nose absorbed an enormous impact and the occupants walked away — outcomes that the presence of a rigid engine block might well have changed. This is not marketing; it is a straightforward consequence of geometry. Give a crash more room and more material to spend its energy on before it reaches people, and people come out better.
@@ -2801,14 +3230,21 @@ The reason is a single number that governs how easily anything tips over: the he
 High mass versus low mass:
 
 ```
-   TALL PETROL SUV                 ELECTRIC CAR
-   engine + mass sit HIGH          battery mass sits LOW (in floor)
+   TALL PETROL SUV                ELECTRIC CAR
+   mass sits HIGH                 mass sits LOW, in the floor
 
-        [  mass  ]                       [ cabin ]
-        [        ]                       [       ]
-     ___[________]___              ______[_______]______
-        (high CoG)                 [##### battery #####]  (low CoG)
-     tips more easily              extremely hard to roll over
+        [  engine  ]                    [  cabin  ]
+        [   mass   ]                    [         ]
+        [          ]                    [         ]
+     ___[__________]___           ______[_________]______
+                                  [#####  battery  #####]
+
+     centre of gravity HIGH        centre of gravity LOW
+     -> tips more easily           -> extremely hard to roll
+
+   The same slab of battery that costs the car range, wears
+   its tyres and complicates its plumbing is what makes it
+   nearly impossible to turn over.
 ```
 
 The consequence is a car that strongly resists rolling over even when provoked. When electric cars with floor-mounted batteries have been subjected to the standard rollover tests, some have posted the best rollover-resistance scores on record — better than not just other cars but the very SUVs that the rollover problem was invented for. In some cases the testing machinery struggled to tip them at all through the normal procedures, because the low, heavy battery simply refused to let the car go over. A crash mode that engineers had fought for decades was, for the electric car, largely solved by where the battery happened to need to go.
@@ -2837,14 +3273,23 @@ Notice the elegant two-way relationship here, because it is the heart of the sec
 Protecting the store of energy in the floor:
 
 ```
-   layers of defence around the cells:
+   Layers of defence around the cells, outermost first:
 
-   side-sill / cross-member CAGE ... spreads side-impact loads
-   underbody SHIELDING ............. stops road-debris intrusion
-   the pack's own STRUCTURE ........ stiff enough to resist AND
-                                     to help protect the car
-   cell spacing + barriers ......... contain a single failed cell,
-                                     slow cell-to-cell spread
+   1  SIDE SILLS and CROSS-MEMBERS
+      a cage that spreads side-impact loads around the pack
+      rather than into it
+
+   2  UNDERBODY SHIELDING
+      armour against road debris thrown up from beneath
+
+   3  THE PACK'S OWN STRUCTURE
+      stiff enough both to resist intrusion and to help
+      hold the car together (the structural pack of 3.3)
+
+   4  CELL SPACING and BARRIERS
+      if one cell does fail, contain it and slow the spread
+      to its neighbours -- turning a sudden catastrophe into
+      a slower, more survivable event
 ```
 
 The second line of defence assumes the first has failed — that despite everything, a cell has been damaged and begins to overheat. Here the goal shifts from prevention to *containment*: stopping one bad cell from taking the whole pack with it. The pack is engineered so that a single cell in thermal runaway is, as far as possible, isolated from its neighbours — with spacing, heat-resistant barriers and flame-rated insulation between cells and modules, and venting paths to channel the hot gases safely away rather than letting them ignite the cell next door. The thermal system of Part IV plays its part too, able to pour cooling into a troubled region to slow the cascade. The design cannot promise that a severely damaged pack will never burn, but it can buy time — and time, in a crash, is what lets occupants get clear before a slow-developing battery fire takes hold.
@@ -2871,16 +3316,29 @@ Backing this up is the constant *isolation monitoring* also introduced in Chapte
 Automatic protection, and signals for rescuers:
 
 ```
-   IN THE CRASH (automatic, milliseconds):
-     impact sensed -> CONTACTORS OPEN -> HV pack disconnected
-     isolation monitoring -> shut down if voltage leaks to the body
-     low-voltage world survives -> hazards, door releases, e-call
+   IN THE CRASH -- automatic, within milliseconds
 
-   FOR THE RESCUERS (making the danger legible):
-     orange = high-voltage cables (never cut)
-     a "first responder loop" to cut, to guarantee de-energising
-     standardised rescue sheets: where to cut, where NOT to
-     awareness: a damaged pack can REIGNITE hours later
+     impact sensed
+          |
+          v
+     CONTACTORS OPEN -- the HV pack is disconnected and its
+     energy sealed inside its own armoured box
+          |
+          v
+     the LOW-voltage world survives, and keeps the hazard
+     lights, door releases and emergency call alive
+
+     running throughout: isolation monitoring, which shuts
+     the system down if any voltage leaks to the bodywork
+
+   FOR THE RESCUERS -- making the danger legible
+
+     ORANGE ............ the colour of every HV cable. Never cut.
+     first-responder ... a designated loop to cut, which
+     loop                guarantees the system is de-energised
+     rescue sheets ..... standardised diagrams: where to cut,
+                         and where absolutely not to
+     and a warning ..... a damaged pack can reignite hours later
 ```
 
 But automatic isolation is not enough on its own, because a rescuer must be able to *trust* that the car is safe before cutting into it, and to make the danger visible. So electric cars are built to communicate their hazards to the people who deal with wrecks. High-voltage cabling is coloured a distinctive orange, an industry convention that tells any trained responder: never cut this. Cars are provided with a designated *first-responder loop* or cut point — a specific place a firefighter can sever to guarantee the high-voltage system is de-energised, a manual backstop to the automatic contactors. And manufacturers publish standardised rescue sheets showing exactly where the battery, the cables, and the safe cutting points are, so that a crew can cut a roof off to reach a trapped occupant without slicing into a live cable or the pack itself. Making the invisible danger legible — colour-coded, documented, with a clear "cut here to make safe" — is as much a part of the car's safety design as any armour.
@@ -2916,13 +3374,22 @@ Once you see this, a whole hidden layer of the car's design comes into focus, an
 Two ways to make the same thing:
 
 ```
-   MANY PARTS (traditional)         FEW PARTS (design for manufacture)
-   12 stampings + 30 welds          1 large casting
-   + fixtures + inspection          + far less to inspect
-   + suppliers + part numbers       + fewer suppliers, fewer errors
-      |                                |
-   more labour, more variables,     cheaper, faster, more consistent
-   more ways to go wrong            -- even if heavier or "cruder"
+   MANY PARTS (the traditional way)
+     12 stampings + 30 welds + fixtures + inspection
+     + more suppliers + more part numbers
+          |
+          v
+     more labour, more variables, more ways to go wrong
+
+   FEW PARTS (design for manufacture)
+     1 large casting
+     + far less to inspect + fewer suppliers
+          |
+          v
+     cheaper, faster and more consistent -- even where the
+     result is heavier, or looks cruder
+
+   The car and the factory are designed in the same breath.
 ```
 
 This reframes almost every earlier chapter. When Chapter 3 described the structural battery pack, it noted that bonding the battery into the body deleted a separate floor structure — that was a manufacturing win, fewer parts to assemble, before it was anything else. When Chapter 9 explained zonal wiring, the deepest benefit was that short, modular wiring is easier for a machine to install than a sprawling harness. When Chapter 10 praised standardised connectors, the point was to shrink the parts catalogue and simplify the factory. Each of these was presented, in its place, as electrical or structural engineering. Underneath, each was also a decision about how to *build* the car more cheaply and more automatically. The manufacturing logic was there all along, driving choices we examined for other reasons.
@@ -2949,17 +3416,23 @@ The machine that does it is called a Giga Press, and it is genuinely enormous �
 Seventy parts, one shot:
 
 ```
-   TRADITIONAL REAR UNDERBODY        GIGACASTING
-   ~70 stamped steel parts           1 aluminium casting
-   hundreds of welds                 poured in one shot
-   many robots, long sequence        ~300 fewer robots (per Tesla)
-   variable fit, much inspection     consistent, little to inspect
-      |                                 |
-   heavy, slow, costly               ~30% lighter, ~40% cheaper
-                                     (by Tesla's own estimates)
+   TRADITIONAL REAR UNDERBODY    GIGACASTING
+   ------------------------------------------------------------
+   about 70 stamped steel parts  1 aluminium casting
+   hundreds of welds             poured in a single shot
+   many robots, a long           about 300 fewer robots,
+   sequence of operations        by Tesla's own account
+   variable fit, much            consistent, with little
+   inspection needed             left to inspect
+   ------------------------------------------------------------
+   heavy, slow, costly           around 30% lighter and 40%
+                                 cheaper, by Tesla's estimates
+
+   And the same consolidation that makes it cheap to build
+   is what makes it expensive to repair. One see-saw.
 ```
 
-The benefits, when it works, are exactly the design-for-manufacturing wins of the last section, delivered at spectacular scale. Consolidating seventy parts into one eliminates all the welding between them, and with it the hundreds of robots that did the welding — Tesla has claimed the change removed something like three hundred robots from the line. It eliminates the variability of lining up many parts, so the finished structure is more consistent and dimensionally accurate. It removes a small mountain of logistics — seventy part numbers, their suppliers, their storage, their sequencing — replaced by one casting. And by Tesla's own estimates the approach can cut the underbody's weight by around thirty per cent and its cost by up to forty. Fewer parts, less labour, less weight, lower cost, better consistency: it is the manufacturing dream made metal, and it is why much of the rest of the industry scrambled to copy it.
+The benefits, when it works, are exactly the design-for-manufacturing wins of the last section, delivered at spectacular scale. Consolidating seventy parts into one eliminates all the welding between them, and with it the hundreds of robots that did the welding — Tesla has claimed the change removed something like three hundred robots from the line. It eliminates the variability of lining up many parts, so the finished structure is more consistent and dimensionally accurate. It removes a small mountain of logistics — seventy part numbers, their suppliers, their storage, their sequencing — replaced by one casting. And by Tesla's own estimates the approach can cut the underbody's weight by around thirty percent and its cost by up to forty. Fewer parts, less labour, less weight, lower cost, better consistency: it is the manufacturing dream made metal, and it is why much of the rest of the industry scrambled to copy it.
 
 But this book always tells you the price, and gigacasting's price is steep and worth understanding, because it echoes a warning from earlier in the book. The first cost is capital: a Giga Press is a multi-million-euro machine, and the moulds ("dies") for it are hugely expensive too, which means the whole approach only makes economic sense at very high production volumes — you must build a great many identical cars to spread that colossal fixed cost. It also demanded a new aluminium alloy, developed specially, that could be cast into so large and complex a shape and still have the right strength — a metallurgical problem in its own right. And there is the drawback that connects directly to the next chapter: *repairability*. When a car's rear underbody is a single giant casting, a collision that would once have crumpled a few replaceable stamped parts can instead damage the one enormous casting — which cannot be unwelded and patched, only replaced whole, at great cost, if it can be replaced at all. A part designed to eliminate assembly is, almost by definition, a part designed to resist disassembly.
 
@@ -2985,17 +3458,23 @@ Take the three main players in turn. *Aluminium* is the lightweight champion: ro
 Right metal, right job:
 
 ```
-   ALUMINIUM      light, castable, corrosion-resistant
-                  -> big gigacastings, weight-critical panels
-                  (costs more, softer, harder to repair)
+   ALUMINIUM    light, castable, corrosion-resistant
+                used for: the big gigacastings, and panels
+                where weight matters most
+                the cost: dearer, softer, harder to repair
 
-   STEEL          strong, cheap, easy to form/join
-                  -> the safety cage around the occupants
-                  (heavier -- used where strength must win)
+   STEEL        strong, cheap, easy to form and to join
+                used for: the safety cage around the people
+                the cost: heavy -- so it is used where
+                strength simply has to win
 
-   STAINLESS      extremely durable, needs no paint
-                  -> Cybertruck exoskeleton (structural skin)
-                  (heavy, hard to form -- an unusual choice)
+   STAINLESS    extremely durable, and needs no paint at all
+                used for: the Cybertruck's structural skin
+                the cost: heavy and hard to form -- which is
+                why that car has flat panels and sharp folds
+
+   The silhouette is not a style choice. It is the material,
+   showing through.
 ```
 
 Then there is the outlier, *stainless steel*, and it deserves a mention precisely because it is so unusual — a piece of "direction of travel" rather than the norm. The Cybertruck is built with a stainless-steel *exoskeleton*: instead of a conventional body where an inner structure is covered by non-structural painted panels, the tough stainless outer skin is itself part of the structure. The appeal is real — stainless is exceptionally durable, resists dents and corrosion, and needs no paint at all, deleting the entire enormous, expensive, energy-hungry paint shop from the factory. But the price is equally real: stainless is heavy, and it is notoriously hard to form into the curved shapes cars usually have, which is a large part of why the Cybertruck is so aggressively flat-panelled and angular. Its shape is not only a style choice; it is what stainless steel is willing to be bent into. The material dictated the form.
@@ -3020,13 +3499,19 @@ Recall the problem. A traditional wiring harness is a sprawling, floppy, three-d
 Why the harness resists robots:
 
 ```
-   what robots are GREAT at:        what the harness IS:
-   rigid, repeatable, precise       floppy, 3D, variable
-   grip-place-weld solid parts      thread limp wire through holes,
-                                    plug hidden connectors by feel
-      |                                |
-   almost everything else in         => the last big job left to
-   the factory is automated             HUMAN HANDS
+   WHAT ROBOTS ARE GREAT AT      WHAT A WIRING HARNESS IS
+   ------------------------------------------------------------
+   rigid, repeatable, precise    floppy, three-dimensional,
+                                 different every time
+   grip, place and weld solid    thread limp wire through
+   parts                         holes, and plug hidden
+                                 connectors by feel
+   ------------------------------------------------------------
+
+   Almost everything else in the factory is automated. This
+   is the last big job still left to human hands -- which is
+   why every wire deleted, shortened or standardised is a
+   step toward a car a robot can build end to end.
 ```
 
 Now every wiring decision in Part V reads differently. When Chapter 9 introduced zonal architecture with its short local wiring drops, one of the deepest motives was that short, simple, modular wiring is far easier for a machine to handle than long runs threading across the whole car. When Chapter 10 described the shrinking harness and the standardised connectors, the goal was explicitly to make the wiring something a robot might finally install. When Chapter 8 moved to forty-eight volts and thinner wires, and Chapter 10 folded data and power into a single resilient loop, part of the payoff was a physically simpler nervous system — fewer, thinner, shorter wires with fewer, standardised plugs. All of these were presented as electrical engineering. All of them are also a sustained campaign to defeat the one thing keeping humans on the assembly line: the un-automatable harness.
@@ -3057,14 +3542,23 @@ The second is *speed of innovation*, and this is subtler. When you make the cell
 Why make it yourself:
 
 ```
-   ASSEMBLER (buy the parts)        VERTICAL INTEGRATION (make them)
-   design car, buy pieces,          make cells, motors, chips,
-   bolt together                    software, castings, even refine
-      |                             lithium -- in-house
-   cheaper per part, simpler           |
-   BUT: can't deeply co-design,     control cost of the biggest parts;
-   bound by suppliers' limits       CO-DESIGN everything together;
-   and priorities                   adapt fast when the world breaks
+   ASSEMBLER                     VERTICALLY INTEGRATED
+   (buy the parts)               (make the parts)
+   ------------------------------------------------------------
+   design the car, buy the       make the cells, motors,
+   pieces, bolt them together    chips, software, castings --
+                                 even refine the lithium
+
+   cheaper per part, and         controls the cost of the
+   far simpler to run            biggest components
+
+   BUT cannot deeply co-design,  CAN co-design everything
+   and is bound by suppliers'    together, and adapt fast
+   limits and priorities         when the world breaks
+   ------------------------------------------------------------
+
+   The integration described all through this book is only
+   available to a company that owns the pieces it is fusing.
 ```
 
 The third reason is *resilience*, and it was proven dramatically in the semiconductor shortage that paralysed the car industry in the early 2020s. When the chips that carmakers depended on suddenly became unavailable, most manufacturers simply stopped — they could not build cars without parts they did not control and could not substitute. Tesla, because it wrote its own software, could rewrite that software to work with *different*, available chips, and keep building. That is the deep payoff of owning your capabilities: when you control something, you can *adapt* it when the world changes; when you merely buy it, your ability to adapt is bounded by your supplier's capacity, priorities, and problems. Vertical integration trades some everyday efficiency for the ability to bend rather than break when things go wrong.
@@ -3098,16 +3592,24 @@ The logic is one we have met repeatedly, now seen from the repair shop rather th
 The see-saw:
 
 ```
-   INTEGRATION (great for building)   REPAIRABILITY (great for owning)
-   fewer parts, fewer joints          separate parts you can swap
-   cast/bonded as one                 unbolt the damaged bit, replace
-      |                                  |
-   cheap to build, light, stiff       cheap to fix, but heavier,
-                                       more parts, costlier to build
-   BUT minor damage -> big part       minor damage -> small part
-   -> costly repair or write-off      -> small repair
+   INTEGRATION                   REPAIRABILITY
+   (wonderful for building)      (wonderful for owning)
+   ------------------------------------------------------------
+   fewer parts, fewer joints,    separate parts you can swap
+   cast and bonded as one        one at a time
+        |                             |
+        v                             v
+   cheap to build, light,        cheap to fix -- but heavier,
+   stiff                         more parts, dearer to build
+        |                             |
+        v                             v
+   minor damage means a big      minor damage means a small
+   part: a costly repair, or     part: a small repair
+   a write-off
+   ------------------------------------------------------------
 
-   press down one end, the other rises
+   Press down on one end and the other rises. There is no
+   position where both ends are up.
 ```
 
 The consequences ripple outward to every owner, not just the unlucky one in the crash. Because integrated cars can be expensive to repair and prone to being written off after moderate damage, insurers price that risk in, and premiums for such cars can run high. The environmental cost is real too: scrapping a whole car over localised damage wastes all the energy and materials that went into the rest of it — a poor outcome for a product sold partly on its greenness. And there is a control dimension, echoing the software chapters: repairs to these integrated structures are often restricted to manufacturer-certified centres with the right equipment and documentation, which limits the independent repair shops that once kept old cars cheaply alive.
@@ -3127,27 +3629,34 @@ And yet the most expensive, most integrated, least repairable component of all �
 - The manufacturability-vs-repairability see-saw references the structural pack (Chapter 3) and gigacasting (Chapter 20); the contested, evolving verdict is stated per this book's honesty convention.
 ## 21.2 Second-life packs and recycling
 
-When is a battery dead? The intuitive answer — when it stops working — is wrong, and the real answer is one of the more hopeful facts in this whole book. A battery is retired from a car not when it stops working but when it stops working *well enough for a car*, and that threshold is surprisingly high: an EV pack is typically pulled when it still holds something like **seventy to eighty per cent** of its original capacity. In a car, that lost fifth or quarter matters — it means noticeably less range, which owners feel keenly. But seventy per cent of an enormous car battery is still a very large, very capable battery. It has not died. It has merely become overqualified for one job and perfect for another.
+When is a battery dead? The intuitive answer — when it stops working — is wrong, and the real answer is one of the more hopeful facts in this whole book. A battery is retired from a car not when it stops working but when it stops working *well enough for a car*, and that threshold is surprisingly high: an EV pack is typically pulled when it still holds something like **seventy to eighty percent** of its original capacity. In a car, that lost fifth or quarter matters — it means noticeably less range, which owners feel keenly. But seventy percent of an enormous car battery is still a very large, very capable battery. It has not died. It has merely become overqualified for one job and perfect for another.
 
 That other job is standing still. The reason a fading pack is a problem in a car but not in a building is that a car battery lives a brutal life — deep discharges, hard fast-charging, violent bursts of current for acceleration, constant temperature swings, and the ever-present penalty of weight. A battery bolted to the ground storing energy for a home, a business, or the electricity grid faces none of this. It can be charged and discharged gently and predictably, kept at a steady temperature, and never has to be light, because nothing has to carry it. Under those kind conditions, a pack that was tired in a car can serve for many more years. So retired EV batteries are given a *second life*: taken from scrapped or crashed cars, tested, sorted, and reassembled into stationary storage systems — the big battery packs that store solar energy for the night, steady the grid, or back up a building. Real projects already run on hundreds of these second-life packs, quietly doing the easy work of storage long after their cars are gone.
 
 The battery's two lives, and its afterlife:
 
 ```
-   FIRST LIFE (in the car)     ~100% -> retired around 70-80%
-        |                       (brutal: deep cycles, fast charge,
-        |                        weight, temperature swings)
+   FIRST LIFE -- in the car
+     100%  ------------------------->  retired at 70-80%
+     a brutal job: deep cycles, fast charging, heavy,
+     and swinging through every temperature
+        |
         v
-   SECOND LIFE (stationary)    70-80% -> down to maybe ~50%+
-        |                       (gentle: steady, predictable, no
-        |                        weight limit -- grid/home storage)
+   SECOND LIFE -- stationary storage
+     70-80%  ----------------------->  down to perhaps 50%
+     a gentle job: steady, predictable, and nobody cares
+     what it weighs -- grid and home storage
+        |
         v
-   RECYCLING (raw material)    reclaim >95% of lithium, nickel,
-                               cobalt, copper -> new batteries
-                               (the loop closes; less mining)
+   RECYCLING -- raw material
+     more than 95% of the lithium, nickel, cobalt and copper
+     reclaimed, and sent back into new cells
+
+   The most expensive and most criticised component in the
+   car is the one that most stubbornly refuses to be waste.
 ```
 
-And when even the second life is over — when the pack is too tired for stationary storage too — it still does not become mere rubbish, because of what it is made of. A dead battery is, in effect, a rich and concentrated *ore*, packed with exactly the expensive metals that are so costly and so environmentally fraught to dig out of the ground: lithium, nickel, cobalt, copper. Recycling reclaims them. Modern battery-recycling processes can recover the great majority of these materials — one leading recycler reports reclaiming **over ninety-five per cent** of the critical metals — and feed them straight back into making new cells. The metal that was mined once can be used again and again, so that a battery at the true end of its life becomes the raw material for the next generation of batteries, closing the loop and cutting the need for fresh mining.
+And when even the second life is over — when the pack is too tired for stationary storage too — it still does not become mere rubbish, because of what it is made of. A dead battery is, in effect, a rich and concentrated *ore*, packed with exactly the expensive metals that are so costly and so environmentally fraught to dig out of the ground: lithium, nickel, cobalt, copper. Recycling reclaims them. Modern battery-recycling processes can recover the great majority of these materials — one leading recycler reports reclaiming **over ninety-five percent** of the critical metals — and feed them straight back into making new cells. The metal that was mined once can be used again and again, so that a battery at the true end of its life becomes the raw material for the next generation of batteries, closing the loop and cutting the need for fresh mining.
 
 This transforms the environmental story of the battery, and it is worth being clear-eyed about why. One of the strongest criticisms of electric cars has always been the ugliness of battery mining — the environmental and human cost of extracting lithium and cobalt. Second life and recycling do not erase that cost, but they change its shape profoundly: a well-recycled battery pays its mining debt *once* and then keeps giving, first as a car battery, then as grid storage, then as feedstock for new cells, rather than being extracted, used briefly, and thrown away. The material is borrowed from the earth, not consumed. The more mature this loop becomes, the less each new battery depends on fresh mining, and the better the whole enterprise looks against the fossil-fuel alternative, whose fuel is burned once and gone forever.
 
@@ -3184,14 +3693,24 @@ You walk up to the car, and it knows you: your phone speaks to it over short-ran
 The drive, as the systems wake:
 
 ```
-   overnight  -> scheduled preheat: heat pump + octovalve, from the wall
-   you arrive -> phone-as-key unlocks; 12V wakes the car; contactors close
-   you press  -> inverter turns DC into three staggered AC waves
-   you go     -> rotating field drags the rotor; instant torque
-   you corner -> torque vectoring + low battery keep it planted
-   you slow   -> motor runs backward: regen refills the pack
-   you charge -> preconditioned pack takes a fast DC charge
-   you park   -> Sentry Mode watches; the car sleeps; 12V stands guard
+   overnight    scheduled preheat: heat pump and octovalve
+                warm the cabin and pack, using the WALL
+   you arrive   phone-as-key unlocks; the 12 V battery wakes
+                the car; the contactors close
+   you press    the inverter chops DC into three staggered
+                AC waves
+   you go       the rotating field drags the rotor round --
+                full torque, instantly
+   you corner   torque vectoring trims the line; the low
+                battery keeps the car flat
+   you slow     the motor runs backwards; regeneration pours
+                the energy back into the pack
+   you charge   a preconditioned pack accepts a fast DC
+                charge from the first minute
+   you park     Sentry Mode watches; the car sleeps; the
+                12 V battery stands guard over the giant
+
+   Not one of those systems worked alone.
 ```
 
 You press the accelerator, and there is no cable, no throttle, no delay — only a signal to the inverter, which begins chopping the battery's steady direct current into three staggered waves of alternating current, twenty thousand switching operations a second, never once getting it wrong (Chapter 4). Those waves make a magnetic field sweep around the motor's stator, and the rotor is dragged after it, delivering full torque from the instant you ask (Chapter 5). The single reduction gear steps the motor's fast spin down and its torque up, the differential splits the drive between the wheels (Chapter 6), and the car surges forward in near silence.
@@ -3200,7 +3719,7 @@ At the first junction you turn, and systems you never think about keep you compo
 
 On the motorway the air becomes the enemy, its resistance climbing with the cube of your speed, and the car's whole shape — the sealed nose, the flush handles, the flat floor that is really the battery pack — fights it for every kilometre of range (Chapter 12), while the low-rolling-resistance tyres fight the road (Chapter 13). All the while, the three tiers of computer hum along: the zone controllers switching lights and pumps by geography (Chapters 9 and 15), the whole car's chatter flowing over its data backbone (Chapter 10), and — if you engage it, watching the road as attentively as ever — the self-driving computer turning eight camera streams into decisions (Chapters 17 and 18).
 
-You navigate to a charger, and half an hour out the car begins warming the battery again so it will arrive ready to drink (Chapter 7). You plug in; the roadside cabinet pushes DC straight into the preconditioned pack, fast at first and tapering as it fills, and you leave at eighty per cent (Chapter 11). Then home, and park, and walk away — the car locks itself, and Sentry Mode's cameras keep watch while it sleeps, the little low-voltage battery once again standing guard over the sealed high-voltage giant (Chapters 16 and 8).
+You navigate to a charger, and half an hour out the car begins warming the battery again so it will arrive ready to drink (Chapter 7). You plug in; the roadside cabinet pushes DC straight into the preconditioned pack, fast at first and tapering as it fills, and you leave at eighty percent (Chapter 11). Then home, and park, and walk away — the car locks itself, and Sentry Mode's cameras keep watch while it sleeps, the little low-voltage battery once again standing guard over the sealed high-voltage giant (Chapters 16 and 8).
 
 Not one of those systems worked alone. The preconditioning needed the navigation, which needed the connectivity; the acceleration needed the inverter, the battery, the thermal system keeping the battery in its window, and the zone controllers carrying the commands. A single unremarkable drive is a symphony of cooperation, every player from every chapter of this book coming in on cue. That is the whole car — and to see the cooperation at its most physical, we can follow not the drive but the energy, one thread of it, from the wall to the road.
 
@@ -3222,27 +3741,37 @@ The journey of one joule:
 
 ```
    grid AC
-     |  AC -> DC conversion (onboard charger OR roadside cabinet)
-   DC into the pack -> stored as ION POSITION in a cell
-     |  (waits; balanced and kept at the right temperature)
-   you accelerate:
-   cell -> BMS/contactors -> INVERTER (DC -> 3-phase AC)
+     |   AC to DC -- in the onboard charger, or in the
+     |   roadside cabinet
+     v
+   DC into the pack, stored as ION POSITION inside a cell
+     |   (it waits there, balanced and held at the right
+     |    temperature, until you ask for it)
+     v
+   BMS and contactors let it out
      |
-   MOTOR: AC makes a rotating field; the rotor is dragged round
+     v
+   INVERTER  --  DC becomes three-phase AC
      |
-   reduction gear (speed down, torque up) -> differential
+     v
+   MOTOR  --  the AC makes a rotating field; the rotor chases it
      |
-   driveshaft -> wheel -> the contact patch -> the ROAD
+     v
+   REDUCTION GEAR  --  speed down, torque up  --  DIFFERENTIAL
+     |
+     v
+   driveshaft  ->  wheel  ->  the contact patch  ->  the ROAD
 
-   ~85% of what left the battery reaches the road; a petrol
-   car delivers ~20% of its fuel. same journey, opposite result.
+   About 85% of what leaves the battery reaches the road.
+   A petrol car delivers about 20% of its fuel.
+   Same journey. Opposite result.
 ```
 
 Now you press the accelerator, and our joule is called. The ion is released and rushes home to the metal-oxide cathode, and its abandoned electron, forbidden to follow through the electrolyte, is forced out through the wires — that forced detour *is* the current (Chapter 2). It flows to the inverter, which chops the steady DC into three staggered waves of AC, sculpting them with switches flicking twenty thousand times a second (Chapter 4). Our joule, now riding an alternating current, reaches the motor's stator coils and helps make the magnetic field sweep round; the rotor, dragged after the field, turns (Chapter 5). The energy has become rotation.
 
 That rotation passes through the single reduction gear, which trades the motor's fast, gentle spin for the wheel's slower, stronger one, and through the differential, which splits it to the wheels and lets them turn at their own rates through a corner (Chapter 6). It reaches the wheel, and the wheel presses the tyre against the road, and at the contact patch — that hand-sized handshake between rubber and tarmac (Chapter 13) — our joule finally does the one thing the whole car exists to do: it pushes the road backward, and the car forward. From grid to pavement, the journey is complete.
 
-Here is the number that makes the whole book cohere. Of the energy that left the battery, something like *eighty-five per cent* actually reaches the road — the losses along the way, in the inverter, the motor, the gear, the tyres, adding up to only fifteen or so (Chapters 1, 4, 5). Compare that with the petrol car of Chapter 1, which delivered barely a fifth of its fuel's energy to the wheels and threw the rest away as heat. Same journey, from stored energy to moving car; opposite outcome. The electric car's supremacy is not a matter of one clever trick but of this: at every single stage of the journey, it loses less. The efficient storage, the efficient conversion, the efficient motor, the efficient gear, the slippery body, the low-resistance tyres — each contributes its few per cent, and the few per cent compound, all the way down the chain, into a car that spends the great majority of its energy on motion and only a sliver on waste.
+Here is the number that makes the whole book cohere. Of the energy that left the battery, something like *eighty-five percent* actually reaches the road — the losses along the way, in the inverter, the motor, the gear, the tyres, adding up to only fifteen or so (Chapters 1, 4, 5). Compare that with the petrol car of Chapter 1, which delivered barely a fifth of its fuel's energy to the wheels and threw the rest away as heat. Same journey, from stored energy to moving car; opposite outcome. The electric car's supremacy is not a matter of one clever trick but of this: at every single stage of the journey, it loses less. The efficient storage, the efficient conversion, the efficient motor, the efficient gear, the slippery body, the low-resistance tyres — each contributes its few percent, and the few percent compound, all the way down the chain, into a car that spends the great majority of its energy on motion and only a sliver on waste.
 
 That is the through-line of the entire book, made visible in a single joule's journey. Efficiency was never one feature; it was the organising obsession of Chapter 1, followed relentlessly into every system, and here at the end you can watch it pay off at every step from plug to pavement. The energy the petrol car squandered as heat, the electric car keeps, all the way to the road. Which is the perfect vantage point from which to ask the book's final honest question: with the whole machine before us, where are its true marvels — and where did the story get ahead of the reality?
 
@@ -3256,20 +3785,27 @@ That is the through-line of the entire book, made visible in a single joule's jo
 
 Now that the whole car is before us, we can do the thing this book promised in its very first pages: judge it honestly. Not with the breathless register of the advertisement, and not with the reflexive sneer of the sceptic, but with the earned judgement of someone who has looked carefully at every system and can now say where the genuine brilliance lies — and where the story got ahead of the machine. The two, it turns out, are largely different places, and noticing that is the most useful thing this chapter can leave you with.
 
-Here is the quiet scandal of the electric car: its real marvels are almost entirely the parts nobody markets. Ask a stranger what is impressive about a Tesla and they will say something about self-driving, or acceleration, or the big screen. But walk back through this book and the things that made you sit up were somewhere else entirely. The thermal system — a heat pump conjuring warmth from freezing air, routed around the car by a single valve so elegant it made a teardown veteran reach for the word "beautiful" (Chapter 7). The inverter, flicking silicon-carbide switches twenty thousand times a second to sculpt smooth power from raw direct current, at ninety-seven per cent efficiency (Chapter 4). The battery pack that is also the floor, also the crash structure, also the thing that keeps the car from rolling over (Chapters 3 and 19). The electrical backbone, deleting kilometres of copper by the simple act of organising the car by geography instead of by function (Chapters 9 and 10). The relentless, unglamorous efficiency chain that delivers eighty-five per cent of stored energy to the road (Chapter 22). None of these is advertised. All of them are genuinely, quietly extraordinary.
+Here is the quiet scandal of the electric car: its real marvels are almost entirely the parts nobody markets. Ask a stranger what is impressive about a Tesla and they will say something about self-driving, or acceleration, or the big screen. But walk back through this book and the things that made you sit up were somewhere else entirely. The thermal system — a heat pump conjuring warmth from freezing air, routed around the car by a single valve so elegant it made a teardown veteran reach for the word "beautiful" (Chapter 7). The inverter, flicking silicon-carbide switches twenty thousand times a second to sculpt smooth power from raw direct current, at ninety-seven percent efficiency (Chapter 4). The battery pack that is also the floor, also the crash structure, also the thing that keeps the car from rolling over (Chapters 3 and 19). The electrical backbone, deleting kilometres of copper by the simple act of organising the car by geography instead of by function (Chapters 9 and 10). The relentless, unglamorous efficiency chain that delivers eighty-five percent of stored energy to the road (Chapter 22). None of these is advertised. All of them are genuinely, quietly extraordinary.
 
 Marvels versus marketing:
 
 ```
-   THE REAL MARVELS (barely marketed)   THE LOUDEST CLAIMS (over-sold)
-   heat pump + octovalve                "Full Self-Driving"
-   silicon-carbide inverter, 97%        robotaxi "next year"
-   structural pack (floor+crash+battery) some Battery Day 4680 promises
-   zonal wiring, 48V, harness deleted   autonomy timelines
-   the whole efficiency chain           "revolutionary", "it drives itself"
+   THE REAL MARVELS              THE LOUDEST CLAIMS
+   (barely marketed)             (over-sold)
+   ------------------------------------------------------------
+   the heat pump and octovalve   "Full Self-Driving"
+   the silicon-carbide           a robotaxi "next year"
+   inverter, at 97%              -- for several years running
+   the structural pack: floor,   some of the Battery Day
+   crash structure and battery   promises for the 4680
+   in one
+   zonal wiring, 48 volts, and   autonomy timelines,
+   kilometres of harness gone    generally
+   the whole efficiency chain    "revolutionary"
+   ------------------------------------------------------------
 
-   the brilliance is quiet; the hype is loud; they are
-   mostly NOT the same things.
+   The brilliance is quiet. The hype is loud. They are
+   mostly not the same things.
 ```
 
 Now the other column, told with the same honesty. Where did marketing outrun engineering? Overwhelmingly in one place: autonomy. "Full Self-Driving" is a name that describes a destination as though it were the current address; as Chapter 18 set out plainly, the system as of 2026 is sophisticated driver-*assistance* that legally and practically requires an attentive human, and regulators have compelled Tesla to soften the very name because it misled. The robotaxi that was perpetually a year or two away has been a year or two away for a long time. The vision-only bet (Chapter 17) may yet pay off, but it is a bet, not a settled triumph, and it has been sold with more certainty than the evidence supports. And the pattern is older than autonomy: even the celebrated 4680 cell (Chapter 2) arrived more slowly and less completely than the keynote promised. Again and again, the gap opens in the same place — not in the mundane engineering, which tends to be excellent and undersold, but in the futuristic promises, which tend to be oversold and late.
@@ -3304,15 +3840,21 @@ The advantages read like a wish-list answering every complaint this book has rai
 The frontier, honestly drawn:
 
 ```
-   TODAY (liquid electrolyte)     SOLID-STATE (the prize)
-   flammable liquid               non-flammable solid
-   ~150-300 Wh/kg                 potentially ~300-900 Wh/kg
-   graphite anode                 lithium-metal anode (far more energy)
-      |                              |
-   mature, cheap, shipping now    huge promise -- BUT very hard to
-                                  manufacture; solids don't conform,
-                                  need defect-free thin sheets, new
-                                  factories -> realistic scale: 2030s
+   TODAY (liquid electrolyte)    SOLID-STATE (the prize)
+   ------------------------------------------------------------
+   a flammable liquid            a non-flammable solid
+   about 150-300 Wh/kg           potentially 300-900 Wh/kg
+   graphite anode                lithium-metal anode, holding
+                                 far more energy
+   ------------------------------------------------------------
+   mature, cheap, shipping       enormous promise -- but very
+   in millions of cars today     hard to manufacture: solids
+                                 will not conform, the sheets
+                                 must be thin and defect-free,
+                                 and it needs new factories
+
+   Realistic scale: the 2030s. Watch the frontier closely,
+   and believe the timelines cautiously.
 ```
 
 So why is it not here already? Because — and this should sound familiar from the 4680 story of Chapter 2 — the physics is promising and the *manufacturing* is brutal. A liquid electrolyte has one wonderful property: it flows into every crevice, wetting the electrodes perfectly, keeping contact as the cell swells and shrinks with each charge. A solid cannot do this. Getting a solid electrolyte to maintain intimate, stable contact with solid electrodes, across millions of cycles, without gaps forming, requires high pressure or exquisitely engineered surfaces. Producing the solid electrolyte as an ultra-thin, dense, defect-free sheet, at enormous scale and low cost, demands manufacturing processes that barely exist yet. This is why, despite a steady drumbeat of announcements and the occasional genuinely-shipping small cell, most sober assessments in 2026 put mass-market solid-state cars firmly in the 2030s. The laboratory result is real; the road-ready, affordable, mass-produced version is the hard part, and the hard part is where the years go — exactly the lesson of 22.3, now pointed at the future.
@@ -3332,24 +3874,32 @@ Which leaves one last question, the one the book opened with and should close wi
 - The "laboratory vs affordable mass production" caution mirrors the 4680 lesson of Chapter 2 and the verdict of 22.3; timelines stated as of 2026 per this book's convention.
 ## 23.2 How much efficiency is left to win
 
-We end where we began, with efficiency — the organising obsession of Chapter 1, the thread that ran through every system in the book. And we end with an honest and slightly deflating arithmetic, because it is the truest thing to say about where the electric car goes from here. The drivetrain is already so efficient that there is very little room left to improve it. From the battery to the wheels, the modern electric car delivers something like eighty-five to ninety per cent of its energy to the road. The ceiling is one hundred per cent, and you cannot pass it. Which means the entire remaining prize inside the drivetrain — everything left to win between here and physical perfection — is that last ten or fifteen per cent, and every point of it is harder to claim than the one before.
+We end where we began, with efficiency — the organising obsession of Chapter 1, the thread that ran through every system in the book. And we end with an honest and slightly deflating arithmetic, because it is the truest thing to say about where the electric car goes from here. The drivetrain is already so efficient that there is very little room left to improve it. From the battery to the wheels, the modern electric car delivers something like eighty-five to ninety percent of its energy to the road. The ceiling is one hundred percent, and you cannot pass it. Which means the entire remaining prize inside the drivetrain — everything left to win between here and physical perfection — is that last ten or fifteen percent, and every point of it is harder to claim than the one before.
 
-This is the mark of a mature technology, and it should be said plainly. The heroic era of drivetrain efficiency — the era this book has largely celebrated, of silicon-carbide inverters and ninety-seven-per-cent conversion and heat pumps and shortened wire — is, in a sense, nearly over, not because anyone failed but because it so nearly succeeded. When you have already captured eighty-five per cent, the remaining gains are polishing, not revolution: a fraction of a percent from a better seal, a better switch, a slightly slipperier shape. Worth having, worth chasing, but incremental. The big, dramatic efficiencies have mostly already been won, and won impressively. There is no second engine left to delete.
+This is the mark of a mature technology, and it should be said plainly. The heroic era of drivetrain efficiency — the era this book has largely celebrated, of silicon-carbide inverters and ninety-seven-percent conversion and heat pumps and shortened wire — is, in a sense, nearly over, not because anyone failed but because it so nearly succeeded. When you have already captured eighty-five percent, the remaining gains are polishing, not revolution: a fraction of a percent from a better seal, a better switch, a slightly slipperier shape. Worth having, worth chasing, but incremental. The big, dramatic efficiencies have mostly already been won, and won impressively. There is no second engine left to delete.
 
 Where the efficiency frontier moves:
 
 ```
-   INSIDE the drivetrain          nearly maxed out (~85-90%);
-   (battery -> wheels)            only a few % left, each one harder
+   INSIDE the drivetrain, battery to wheels:
 
-   the frontier moves OUTWARD:
-     the BATTERY .......... denser/lighter -> less weight to haul,
-                            less energy needed for the same range
-     WEIGHT ............... lighter car -> less energy, everywhere
-     the GRID ............. cleaner electricity -> the car is only
-                            as clean as the power that charges it
-     UTILISATION ......... using cars well: right-sized, shared,
-                            charged smartly -> system-level efficiency
+     [################################################--]  85-90%
+     nearly maxed out. Only a few percent left, and each
+     one is harder to win than the last.
+
+   So the frontier moves OUTWARD:
+
+     the BATTERY ...... denser and lighter, so there is less
+                        weight to haul for the same range
+     WEIGHT ........... a lighter car needs less energy,
+                        everywhere, on every trip, forever
+     the GRID ......... a car is only as clean as the
+                        electricity that charges it
+     UTILISATION ...... right-sized, shared, charged when
+                        power is cheap and clean
+
+   The battle inside the machine is close to won. The ones
+   that remain are upstream and outward -- a different book.
 ```
 
 So where do the meaningful gains now come from? Increasingly, from *outside* the drivetrain. From the battery, as the last section described — not to make the drivetrain more efficient, but to make it lighter, so the car has less mass to haul and needs less energy for the same journey; a denser battery is an efficiency gain in disguise, paid in weight. From reducing the mass of everything else, since every kilogram removed is energy saved on every trip forever. And from the largest levers of all, which lie beyond the car entirely: the *grid* that makes the electricity, because a car is only as clean as the power that charges it, and the great environmental prize is not a slightly better inverter but a decarbonised supply; and the *way the cars are used* — charged when energy is cheap and clean, right-sized to actual needs, perhaps shared rather than parked twenty-three hours a day — which is efficiency at the level of the whole system rather than the single vehicle.

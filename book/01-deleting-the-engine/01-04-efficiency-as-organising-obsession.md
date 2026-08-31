@@ -8,22 +8,23 @@ The reason is the battery, and it is worth being blunt about it. The battery is 
 
 This is the single idea that explains almost every strange design choice in the rest of this book. Once you see it, you cannot unsee it.
 
-Why does a Tesla have those flush door handles that pop out to greet you? To smooth the airflow. Why the near-total absence of a front grille? Because a hole in the front of a car is a hole that air falls into, and air is the enemy. Why the smooth belly pan under the floor, the small aerodynamic wheel covers that owners either love or quietly replace, the obsessive sculpting of every mirror and pillar? All of it is a war on drag — and drag matters ferociously because, as we will see in Part VII, the effort of pushing air aside rises with the *cube* of speed, so a car that is a little slippery at 120 km/h is a lot slippery where it counts. The result is a body with a drag coefficient of around **0.23** — and, in the latest version, **0.219** — numbers that put a family saloon into territory once reserved for the odd hand-built streamliner. Tesla's own engineers have said that this single aerodynamic improvement was the largest factor in an eight per cent efficiency gain on the updated car. Eight per cent, from shaping the air.
+Why does a Tesla have those flush door handles that pop out to greet you? To smooth the airflow. Why the near-total absence of a front grille? Because a hole in the front of a car is a hole that air falls into, and air is the enemy. Why the smooth belly pan under the floor, the small aerodynamic wheel covers that owners either love or quietly replace, the obsessive sculpting of every mirror and pillar? All of it is a war on drag — and drag matters ferociously because, as we will see in Part VII, the effort of pushing air aside rises with the *cube* of speed, so a car that is a little slippery at 120 km/h is a lot slippery where it counts. The result is a body with a drag coefficient of around **0.23** — and, in the latest version, **0.219** — numbers that put a family saloon into territory once reserved for the odd hand-built streamliner. Tesla's own engineers have said that this single aerodynamic improvement was the largest factor in an eight percent efficiency gain on the updated car. Eight percent, from shaping the air.
 
 The obsession does not stop at the skin. It reaches into the tyres, chosen and constructed to roll with less resistance. Into the heat pump, which we will meet later, whose entire reason for existing is to warm the cabin using a quarter of the electricity a simple heater would burn. Into the regenerative braking that scavenges back the energy of every slowing. Into the motor, tuned for efficiency across the speeds you actually drive, and into an oil pump for that motor that is itself electric, so it only runs when needed rather than being dragged along constantly. None of these is dramatic on its own. Each buys back a percent, or a fraction of a percent. Added together, across the whole car, they are the difference between a usable range and a disappointing one.
 
-The payoff is a number that would have been science fiction to an engine designer. Where a petrol car delivers perhaps a fifth of its fuel's energy to the road, an electric car delivers the great majority of it — commonly **80 to 90 per cent**, measured from the battery to the wheels. A Model 3 will carry a person and their shopping using somewhere around **130 to 160 watt-hours per kilometre**, which is to say it travels the length of a football pitch on roughly the energy an electric kettle uses to not-quite-boil.
+The payoff is a number that would have been science fiction to an engine designer. Where a petrol car delivers perhaps a fifth of its fuel's energy to the road, an electric car delivers the great majority of it — commonly **80 to 90 percent**, measured from the battery to the wheels. A Model 3 will carry a person and their shopping using somewhere around **130 to 160 watt-hours per kilometre**, which is to say it travels the length of a football pitch on roughly the energy an electric kettle uses to not-quite-boil.
 
 The contrast, drawn crudely:
 
 ```
-Where the energy goes (battery / tank  ->  wheels)
+   Where the energy goes  (tank or battery  ->  wheels)
+   Both bars are the same 100 units.  # = reaches the wheels.
 
-  PETROL CAR   [######--------------------------]  ~1 part in 5 reaches
-                wheels ~20%   lost as heat ~80%      the road
+   PETROL    [########--------------------------------]  ~20%
+   ELECTRIC  [##################################------]  ~85%
 
-  ELECTRIC CAR [##########################------]  ~4-5 parts in 5 reach
-                wheels ~85%          losses ~15%     the road
+   Same bar, same scale: about one part in five, against
+   four to four and a half.
 ```
 
 This is why "efficiency as an obsession" is the right frame for the whole machine, and why it belongs at the end of the first chapter. Deleting the engine was only the opening move. Everything that follows — the chemistry of the cells, the switching of the inverter, the cleverness of the thermal system, the shortening of every wire — is the same obsession, followed relentlessly into every corner of the car. An electric car is not merely a vehicle that happens to be efficient. It is a machine in which efficiency has become the organising principle, the thread you can pull to unravel every other decision.

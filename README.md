@@ -8,11 +8,11 @@ Knowledge cutoff for the text: **2026**. The book dates itself rather than prete
 to be timeless.
 
 - Free on GitHub. Optional donations: _[donation link TBD]_
-- Built from one markdown file per subchapter, concatenated to a single PDF.
+- Built from one markdown file per subchapter, concatenated into PDF and EPUB.
 
 ## Build
 
-Two ways to produce `out/how-a-tesla-works.pdf`:
+### PDF — `out/how-a-tesla-works.pdf`
 
 **Canonical (pandoc + LaTeX):**
 ```bash
@@ -25,8 +25,26 @@ Requires `pandoc` and a LaTeX engine (`xelatex`).
 pip install markdown-pdf
 python build_pdf.py
 ```
-Renders an A4 PDF with a generated table of contents using PyMuPDF. This is
-the route used to build the current PDF (140 pages).
+Renders A4 via PyMuPDF, and is the route used to build the shipped PDF. It
+also does two things the renderer will not do on its own: it prints a
+**clickable Contents section** (every line is a link, and the bookmark
+outline matches it), and it keeps every ASCII diagram whole — `markdown-pdf`
+ignores `page-break-inside`, so the build detects diagrams straddling a page
+boundary and pushes them onto the next page, repeating until none split.
+
+### EPUB — `out/how-a-tesla-works.epub`
+
+```bash
+pip install markdown
+python build_ebook.py
+```
+
+The EPUB is assembled directly, so it carries both navigation documents:
+`nav.xhtml` (EPUB 3) and `toc.ncx` (EPUB 2). Every reader therefore gets a
+clickable, nested table of contents — parts, chapters and subchapters.
+
+No MOBI is produced. Amazon retired the format in 2022, and current Kindles
+take EPUB directly via Send-to-Kindle, so the EPUB covers Kindle too.
 
 ## Status
 

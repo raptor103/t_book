@@ -9,16 +9,18 @@ In an electric drive unit, the differential does not disappear; it is simply fol
 The one drive unit, doing three jobs:
 
 ```
-   motor spin (fast, low torque)
+   motor spin  (fast, modest torque)
         |
-     [ gear pair 1 ]   step down
+   [ gear pair 1 ]   step down
         |
-     [ gear pair 2 ]   step down again  (~9:1 total)
+   [ gear pair 2 ]   step down again -- about 9:1 in total
         |
-     [ DIFFERENTIAL ]  splits drive to both wheels AND lets
-        |     |         them spin at different speeds in corners
-     left     right
-     wheel    wheel
+   [ DIFFERENTIAL ]  splits the drive to both wheels, and lets
+        |     |      them turn at different speeds in a corner
+      left   right
+      wheel  wheel
+
+   All three jobs inside one sealed aluminium box.
 ```
 
 A small elegance hides in the choice of gears. The teeth are cut at an angle — *helical* rather than straight — so that each pair of teeth rolls into contact gradually rather than meeting all at once with a slap. Straight-cut gears are marginally stronger and are what you hear whining in a racing car; helical gears are quieter, and quiet matters enormously in a car with no engine to mask other noises. In a petrol car a little gear whine vanishes under the general roar. In an electric car, where the cabin can be library-silent, the faint singing of the reduction gears is sometimes the loudest thing in the drivetrain, and engineers work hard to hush it — angling the teeth, tightening the tolerances, damping the housing.

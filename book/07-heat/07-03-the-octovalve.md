@@ -9,24 +9,26 @@ The octovalve collapses that nest into a single object. It is, at heart, one rot
 One valve, several plumbing diagrams:
 
 ```
-   the octovalve turns to reconnect the same components
-   into different loops, on demand:
+   One rotating valve, eight ports. Turn it, and the same
+   components are replumbed into a different set of loops:
 
-   position A:  [battery + drive unit] --- [radiator + chiller]
-                 (two separate parallel loops)
+   position A   [ battery + drive unit ]  [ radiator + chiller ]
+                two separate loops, running in parallel
 
-   position B:  [battery]---[drive unit]---[radiator]---[chiller]
-                 (one long series loop -- share heat around)
+   position B   [ battery ]-[ drive unit ]-[ radiator ]-[ chiller ]
+                one long series loop, sharing heat all round
 
-   position C:  [drive unit -> battery]   (steal motor's waste
-                 heat to warm a cold pack)   heat, route it uphill
+   position C   [ drive unit ] -------> [ battery ]
+                steal the motor's waste heat to warm a cold pack
 
-   one rotating part, many configurations -- no tangle of valves
+   The heat pump MAKES the cheap heat.
+   The octovalve DECIDES WHERE IT GOES.
+   Neither is much use without the other.
 ```
 
 Tesla folds this valve, together with the pumps, the coolant reservoir, and the sensors, into an integrated block the company nicknames a super-manifold — and here the numbers become almost comic. Where a conventional thermal system might contain hundreds of separate pieces, Tesla's simplified manifold reduces the heart of it to a small handful of main components. Fewer parts to make, fewer to assemble, fewer joints to leak, less mass to carry. It is the same instinct we keep meeting — the deletion of complexity — applied now to the plumbing, and it is why a hardened teardown engineer found it moving: not because a valve is glamorous, but because doing a sprawling job with one elegant part is the essence of good engineering.
 
-But the octovalve's real significance is not that it is tidy. It is that the tidiness *enables* the whole strategy of the chapter. Because one component can reconfigure the coolant paths quickly and reliably, the car can actually do the scarce-resource logistics the inverted problem demands. It can, on a cold morning, take the trickle of waste heat from the motor and power electronics and route it to warm the battery so the pack reaches its happy band sooner. It can gather heat with the heat pump and send it to the cabin. It can, arriving at a fast charger with a hot battery, throw the valve to a configuration that pours maximum cooling into the pack so it can accept a rapid charge. The heat pump *makes* the cheap heat; the octovalve *decides where it goes*. Neither is much use without the other, which is why they were designed as a pair, and why the Model Y's roughly ten per cent efficiency gain is credited to the combination rather than to either alone.
+But the octovalve's real significance is not that it is tidy. It is that the tidiness *enables* the whole strategy of the chapter. Because one component can reconfigure the coolant paths quickly and reliably, the car can actually do the scarce-resource logistics the inverted problem demands. It can, on a cold morning, take the trickle of waste heat from the motor and power electronics and route it to warm the battery so the pack reaches its happy band sooner. It can gather heat with the heat pump and send it to the cabin. It can, arriving at a fast charger with a hot battery, throw the valve to a configuration that pours maximum cooling into the pack so it can accept a rapid charge. The heat pump *makes* the cheap heat; the octovalve *decides where it goes*. Neither is much use without the other, which is why they were designed as a pair, and why the Model Y's roughly ten percent efficiency gain is credited to the combination rather than to either alone.
 
 There is a lineage worth noting, because it shows this did not arrive fully formed. The Model Y's octovalve had a predecessor in earlier Model 3s: an integrated coolant assembly enthusiasts nicknamed the "superbottle," which already gathered the reservoir, pumps, and a simpler multi-way valve into one unit. The octovalve is that idea matured — more ports, more configurations, the heat pump woven in — a reminder that even the elegant components in this book are usually the third or fourth try, not the first. Tesla was proud enough of the result to hide a little octovalve emblem inside the part, an engineer's signature on a piece of plumbing.
 

@@ -9,14 +9,21 @@ The same idea works the other way, before you drive rather than before you charg
 Preconditioning, both directions:
 
 ```
-   BEFORE CHARGING           BEFORE DRIVING (plugged in)
-   navigate to a charger     set a departure time
-        |                         |
-   car warms the pack on     car warms pack + cabin from
-   the way there             the WALL, not from range
-        |                         |
-   arrive warm -> charges    leave warm -> full range, full
-   at full speed             regen, comfortable, from cold
+   BEFORE CHARGING                BEFORE DRIVING (plugged in)
+
+   you navigate to a charger      you set a departure time
+        |                              |
+        v                              v
+   the car warms the pack         the car warms the pack AND
+   on the way there               the cabin from the WALL
+        |                              |
+        v                              v
+   arrive warm, and charge at     leave warm: full range, full
+   full speed from the first      regen, comfortable -- and none
+   minute                         of it paid for out of range
+
+   Warming from the wall is nearly free.
+   Warming a frozen pack on the move costs real range.
 ```
 
 Underneath both tricks lies a change in how to think about the battery, and it is the real insight of this section. We have treated the pack as a fuel tank — a store of *energy*. But a half-tonne slab of cells is also an enormous store of *heat*, a thermal flywheel. It takes a lot of energy to change the temperature of five hundred kilograms of battery, which cuts both ways: it is slow and costly to warm from stone cold, but once warm it stays warm for a long time, coasting on its own thermal mass long after the heating stops. The car exploits this. It can warm the pack while plugged in and then live off that stored warmth for the first part of a drive. It can, on the octovalve's command, use the pack as a buffer — dumping the motor's waste heat into the battery's mass to save it for later, or leaning on the pack's coolness to absorb a burst of heat. The battery is not just where the energy lives; it is a great thermal reservoir the car can charge and draw down like any other store.

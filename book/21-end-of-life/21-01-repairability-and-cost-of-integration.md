@@ -7,16 +7,24 @@ The logic is one we have met repeatedly, now seen from the repair shop rather th
 The see-saw:
 
 ```
-   INTEGRATION (great for building)   REPAIRABILITY (great for owning)
-   fewer parts, fewer joints          separate parts you can swap
-   cast/bonded as one                 unbolt the damaged bit, replace
-      |                                  |
-   cheap to build, light, stiff       cheap to fix, but heavier,
-                                       more parts, costlier to build
-   BUT minor damage -> big part       minor damage -> small part
-   -> costly repair or write-off      -> small repair
+   INTEGRATION                   REPAIRABILITY
+   (wonderful for building)      (wonderful for owning)
+   ------------------------------------------------------------
+   fewer parts, fewer joints,    separate parts you can swap
+   cast and bonded as one        one at a time
+        |                             |
+        v                             v
+   cheap to build, light,        cheap to fix -- but heavier,
+   stiff                         more parts, dearer to build
+        |                             |
+        v                             v
+   minor damage means a big      minor damage means a small
+   part: a costly repair, or     part: a small repair
+   a write-off
+   ------------------------------------------------------------
 
-   press down one end, the other rises
+   Press down on one end and the other rises. There is no
+   position where both ends are up.
 ```
 
 The consequences ripple outward to every owner, not just the unlucky one in the crash. Because integrated cars can be expensive to repair and prone to being written off after moderate damage, insurers price that risk in, and premiums for such cars can run high. The environmental cost is real too: scrapping a whole car over localised damage wastes all the energy and materials that went into the rest of it — a poor outcome for a product sold partly on its greenness. And there is a control dimension, echoing the software chapters: repairs to these integrated structures are often restricted to manufacturer-certified centres with the right equipment and documentation, which limits the independent repair shops that once kept old cars cheaply alive.

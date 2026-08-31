@@ -13,19 +13,24 @@ And then the glass, which is where the story becomes properly clever. Ordinary s
 Where the quiet comes from:
 
 ```
-   SOURCE            PATH              BOUNDARY         CABIN
-   ------            ----              --------         -----
-   tyre cavity  -->  bushings     -->  acoustic    -->  active
-   drumming          + subframe        laminated        noise
-      |              mounts            glass            cancel.
-      v                 |                 |                |
-   foam inside       softer rubber     2 panes +        mics hear
-   the tyre          absorbs the       soft inter-      the boom,
-   (13.2)            vibration         layer that       speakers
-                                       shears sound     play its
-                                       into heat        opposite
+   The engine used to MASK all of this, for free. Take it
+   away and the noise must be fought at every stage:
 
-   the engine used to MASK all of this for free
+   SOURCE     the tyre cavity drumming on the road
+      |       answered by: foam bonded inside the tyre (13.2)
+      v
+   PATH       vibration travelling up into the body
+      |       answered by: softer suspension and subframe
+      |       bushings, which absorb instead of transmitting
+      v
+   BOUNDARY   noise pressing at the glass and the door seals
+      |       answered by: acoustic laminated glass -- two
+      |       panes around a soft interlayer that shears sound
+      |       into heat -- plus reshaped door edges and seals
+      v
+   CABIN      whatever still gets through
+              answered by: microphones hear the boom, and the
+              speakers play its exact opposite
 ```
 
 The last stage is the one that would have been science fiction in a car with an engine. Because the cabin is now quiet enough for it to work, some Teslas run *active noise cancellation* on road noise: microphones listen for the low-frequency boom coming up through the structure, and the audio system plays a precisely inverted waveform through the speakers so the two cancel. This is the same trick as a pair of noise-cancelling headphones, applied to a room, and it is only feasible because it needs serious real-time computation and a network fast enough to carry the microphone signals — which is exactly why the Etherloop of section 10.3 lists cabin-microphone traffic for noise cancellation among the reasons the car outgrew the CAN bus. The car's data backbone exists, in small part, to make the car quieter.

@@ -6,19 +6,6 @@ That trick is called the rotating magnetic field, and it is one of those ideas t
 
 That sweeping wave is your walking magnet, and it rotates with nothing mechanical driving it — only the timing of three electrical currents. Put something magnetic in the middle, the *rotor*, and it is dragged around in pursuit, exactly like the compass needle following your walk. That pursuit is the torque. That torque, through a gear and a driveshaft, is the car.
 
-The stator making a field spin without spinning:
-
-```
-        coil A                three staggered currents make the
-          |                   "strong spot" hand off around the ring:
-    coil  ( )  coil            A peaks -> B peaks -> C peaks -> A ...
-     C   (rotor)  B
-          ( )                  the peak of magnetism sweeps round
-          |                    like a stadium wave; the ROTOR in the
-        (three coil sets       middle chases it = rotation = torque
-         120 degrees apart)
-```
-
 Everything else about a motor is a variation on how you make the middle bit — the rotor — get dragged along, and that turns out to be where the two great families of motor part company, which is the next section. But the principle underneath both is this single, beautiful one. The speed of the car is the speed of the sweeping wave, which is the frequency of the currents, which is set by the inverter — so the inverter, by choosing how fast to cycle, chooses how fast the field sweeps and therefore how fast the motor turns. The force of the car is how hard the rotor is dragged, which depends on how strong the field is, which is the current, again set by the inverter. The two knobs from the last chapter — frequency for speed, current for torque — are revealed here as the same two knobs, now seen from the motor's side.
 
 It is worth pausing on how different this is from an engine. An engine makes torque in violent, discrete events — bang, bang, bang, each a small explosion shoving a piston, the whole thing lurching from one combustion to the next and needing a heavy flywheel to smooth the lurches into something like steady rotation. A motor makes torque *continuously* and *smoothly*, because the magnetic field sweeps round without interruption. There is no bang, no pause, no roughness to smooth away. This is why an electric car is not merely quiet but eerily so — there is genuinely nothing happening that ought to make a noise. The field turns, the rotor follows, and the only sounds are the faint electrical whine of the switching and the tyres on the road.

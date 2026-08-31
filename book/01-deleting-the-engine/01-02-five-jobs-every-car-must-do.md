@@ -17,15 +17,18 @@ Here is the list.
 Diagram of the five jobs and where each lives in this book:
 
 ```
-   STORE  -->  CONVERT  -->  DELIVER  -->  [ MANAGE HEAT ]
-  energy       to spin      to wheels        throughout
-     |            |             |                 |
-  battery      motor +       reduction        heat pump,
-   pack        inverter       gear, axle       octovalve
-     |____________|_____________|_________________|
-                        |
-                   [ CONTROL ]  <-- computers, software,
-                                    the whole car talking
+   Three jobs sit in a line, one after the other:
+
+     1 STORE   -->   2 CONVERT   -->   3 DELIVER   --> wheels
+       energy          to spin           to wheels
+         |               |                   |
+      battery         motor +            reduction
+       pack           inverter           gear, axle
+
+   Two more wrap around all three, all of the time:
+
+     4 MANAGE HEAT ..... heat pump, octovalve
+     5 CONTROL ......... computers, software
 ```
 
 That is the entire job description of a motor car, and it has not changed in a hundred and forty years. What has changed — completely, radically, in the space of a single generation — is how a Tesla answers each line of it. It stores energy in a way a Victorian engineer would not recognise. It converts that energy with a device that has one moving part instead of two hundred. It delivers the motion with a single fixed gear and no clutch at all. It manages heat as a treasured resource rather than a nuisance. And it controls the lot with software that can be rewritten overnight while the car sleeps in your driveway.

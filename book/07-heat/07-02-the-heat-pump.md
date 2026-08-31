@@ -11,18 +11,29 @@ The trick uses a working fluid, a refrigerant, and its willingness to change bet
 The heat pump versus the toaster:
 
 ```
-   RESISTIVE HEATER (old way)     HEAT PUMP (moving, not making)
-   1 unit electricity             1 unit electricity to run the pump
-        |                              |
-     1 unit heat  (that's all)    gathers 2-3+ units of heat from
-                                  the cold outside air (and waste
-                                  heat from the motor) and delivers
-                                  it to the cabin -- a multiplier
+   RESISTIVE HEATER -- the old way
+
+     1 unit of electricity  -->  1 unit of heat
+     and that is the ceiling, always.
+
+   HEAT PUMP -- moves heat instead of making it
+
+     1 unit of electricity  -->  runs the compressor
+                                      |
+     it gathers 2-3+ units of heat from:
+        - the cold outside air (even freezing air holds heat)
+        - waste heat from the motor and power electronics
+                                      |
+                                      v
+                           delivered into the cabin
+
+   Not free energy: a conveyor belt, not a furnace. And the
+   multiplier shrinks as the outside air gets truly cold.
 ```
 
-For an electric car the payoff is measured directly in winter range, the sorest point in the whole ownership experience. When Tesla brought a proper heat pump to the Model Y, paired with the octovalve of the next section, the gains were large: reports credited the redesigned thermal system with efficiency improvements of around ten per cent overall, and in genuinely extreme cold — where a resistive heater would be draining the battery hardest — range benefits climbed toward thirty per cent. That is not a rounding error. It is the difference between an electric car being merely tolerable in a Scandinavian February and being genuinely usable.
+For an electric car the payoff is measured directly in winter range, the sorest point in the whole ownership experience. When Tesla brought a proper heat pump to the Model Y, paired with the octovalve of the next section, the gains were large: reports credited the redesigned thermal system with efficiency improvements of around ten percent overall, and in genuinely extreme cold — where a resistive heater would be draining the battery hardest — range benefits climbed toward thirty percent. That is not a rounding error. It is the difference between an electric car being merely tolerable in a Scandinavian February and being genuinely usable.
 
-The heat pump has a second gift that suits the inverted problem perfectly: it is not limited to the outside air as its source of heat. It can just as easily gather the modest waste warmth coming off the motor and power electronics — that ten-to-fifteen per cent of "lost" energy from the last section — and pump *that* into the cabin or into a cold battery. The scarce waste heat the car does produce stops being waste and becomes another source for the pump to harvest. The device does not care where the low-grade heat comes from; it only moves it uphill to where it is wanted.
+The heat pump has a second gift that suits the inverted problem perfectly: it is not limited to the outside air as its source of heat. It can just as easily gather the modest waste warmth coming off the motor and power electronics — that ten-to-fifteen percent of "lost" energy from the last section — and pump *that* into the cabin or into a cold battery. The scarce waste heat the car does produce stops being waste and becomes another source for the pump to harvest. The device does not care where the low-grade heat comes from; it only moves it uphill to where it is wanted.
 
 Honesty, as ever, has the last word. A heat pump is more complex than a heating element, with a compressor, refrigerant, and more that can go wrong, and its magical multiplier shrinks as the outside air gets truly frigid — the colder the source, the harder the pump must work and the less it multiplies, until in deep cold it needs help from old-fashioned resistive heating after all. But for the great majority of conditions a European driver actually meets, the heat pump turns the cabin from a range-devouring luxury into an affordable comfort. It gathers heat that seems not to be there and carries it where it is needed — which is precisely the kind of scarce-resource logistics the whole thermal system exists to perform. All it needs is something to direct the flows. That something is the octovalve.
 

@@ -9,12 +9,18 @@ But here is the crucial design decision, and it is the whole point of the sectio
 Two minds, two standards, one wall:
 
 ```
-   FSD COMPUTER (safety-critical)   MCU (infotainment)
-   perceives the road, drives       maps, music, browser, games
-   must NEVER crash or hang          may crash -- it's just an app
-   simple, verified, relentless      rich, complex, frequently updated
-   ----------------- kept SEPARATE -----------------
-   a frozen game must NOT be able to freeze the steering
+   FSD COMPUTER                  MCU (infotainment)
+   safety-critical               not safety-critical
+   ------------------------------------------------------------
+   perceives the road, drives    maps, music, browser, games
+   must NEVER crash or hang      may crash -- it is only an app
+   simple, verified, relentless  rich, complex, updated often
+   ------------------------------------------------------------
+
+        kept deliberately SEPARATE, even when they
+        happen to share one physical box
+
+   A frozen game must not be able to freeze the steering.
 ```
 
 Why does this matter so much? Because the qualities that make good infotainment are exactly the qualities you must *never* want in a safety system. Infotainment should be feature-rich, always changing, pushing the limits of what the hardware can do — and software like that, inevitably, sometimes misbehaves. Anyone who has owned a Tesla has seen the central screen freeze, or an app hang, or the map stutter. That is the normal, tolerable cost of a rich consumer system. It would be utterly *intolerable* if the same glitch could freeze the car's perception of the road or its control of the brakes. So the two are separated: the infotainment computer can crash, reboot, and misbehave to its heart's content, and the driving computer carries on completely unaffected, because they are different machines and the driving one is walled off from the chaos of the entertainment one.
