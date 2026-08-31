@@ -9,14 +9,15 @@ That sweeping wave is your walking magnet, and it rotates with nothing mechanica
 The stator making a field spin without spinning:
 
 ```
-   Three coil sets, spaced 120 degrees around the stator.
-   Each set is a pair, facing each other across the rotor:
+   Three coil sets, spaced 120 degrees around the stator:
 
                         [ A ]
                           |
-               [ C ] --( rotor )-- [ B ]
                           |
-                        [ A ]
+                      ( rotor )
+                     /         \
+                    /           \
+               [ C ]             [ B ]
 
    time -->   A strongest    B strongest    C strongest   A ...
 
