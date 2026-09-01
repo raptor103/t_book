@@ -104,7 +104,11 @@ Every subchapter is its own markdown file. Subchapter files live inside a folder
 how-a-tesla-works/
   README.md                          <- landing page
   PROJECT-BRIEF.md                   <- this file
-  build.sh                           <- concatenate + render
+  build_all.py                       <- builds every output in out/
+  build_markdown.py                  <- single-file markdown
+  build_pdf.py                       <- PDF (the shipped route)
+  build_ebook.py                     <- EPUB
+  build.sh                           <- PDF via pandoc + LaTeX
   book/
     00-front-matter/
       00-00-title.md

@@ -8,9 +8,30 @@ Knowledge cutoff for the text: **2026**. The book dates itself rather than prete
 to be timeless.
 
 - Sold as an ebook. Source kept here.
-- Built from one markdown file per subchapter, concatenated into PDF and EPUB.
+- Built from one markdown file per subchapter, concatenated into markdown,
+  PDF and EPUB.
 
 ## Build
+
+Everything in `out/`, in one go:
+
+```bash
+python build_all.py
+```
+
+That runs the three builds below in order and leaves nothing stale behind.
+Each is also runnable on its own when only one output is wanted — but note
+that running just one updates only that output.
+
+### Single-file markdown — `out/how-a-tesla-works.md`
+
+```bash
+python build_markdown.py
+```
+
+Every subchapter concatenated in book order and otherwise untouched, LaTeX
+directives included. This is the source edition; the two builds below each
+drop what they cannot use.
 
 ### PDF — `out/how-a-tesla-works.pdf`
 
