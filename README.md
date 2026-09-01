@@ -13,15 +13,19 @@ to be timeless.
 
 ## Build
 
-Everything in `out/`, in one go:
+**A build is always all three artefacts:**
 
 ```bash
 python build_all.py
 ```
 
-That runs the three builds below in order and leaves nothing stale behind.
-Each is also runnable on its own when only one output is wanted — but note
-that running just one updates only that output.
+The book ships as markdown, PDF and EPUB, and all three come from the same
+pass over `book/` so they cannot disagree. Never finish a change by running
+just one of the builds below — a stale artefact still looks finished, which
+is how `out/how-a-tesla-works.md` once spent three commits contradicting the
+other two.
+
+The individual scripts are there for iterating on a single builder.
 
 ### Single-file markdown — `out/how-a-tesla-works.md`
 
@@ -35,13 +39,6 @@ drop what they cannot use.
 
 ### PDF — `out/how-a-tesla-works.pdf`
 
-**Canonical (pandoc + LaTeX):**
-```bash
-./build.sh
-```
-Requires `pandoc` and a LaTeX engine (`xelatex`).
-
-**Dependency-light (pure Python, no LaTeX):**
 ```bash
 pip install pymupdf markdown-it-py
 python build_pdf.py
@@ -74,6 +71,16 @@ clickable, nested table of contents — parts, chapters and subchapters.
 
 No MOBI is produced. Amazon retired the format in 2022, and current Kindles
 take EPUB directly via Send-to-Kindle, so the EPUB covers Kindle too.
+
+### `build.sh` — the LaTeX route, PDF only
+
+```bash
+./build.sh
+```
+
+Renders the PDF alone, via `pandoc` and `xelatex`, and leaves the markdown
+and EPUB untouched. It is not a build in the sense above — use it only to
+compare typesetting against the Python route, never to produce a release.
 
 ## Status
 

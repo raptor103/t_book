@@ -141,7 +141,11 @@ how-a-tesla-works/
 
 ### Build
 
-Final step, once drafting and cutting are done: concatenate every markdown file in sort order and render one PDF to `out/how-a-tesla-works.pdf`. Pandoc with a monospace font that preserves ASCII diagram alignment, A4 page size, and a generated table of contents. `build.sh` should be reproducible from a clean checkout.
+**A build means all three artefacts, always — `python build_all.py`.** The book ships as markdown, PDF and EPUB, and shipping one that disagrees with the others is worse than shipping nothing: whichever is stale still looks finished. `build_all.py` concatenates every markdown file in sort order and produces all three from that one pass, so they cannot drift apart.
+
+Never finish a change to `book/` by running only `build_pdf.py`, only `build_ebook.py`, or only `build_markdown.py`. Those exist for iterating on a single builder, not for producing a release.
+
+The PDF is A4 with a monospace font that preserves ASCII diagram alignment, and a generated, clickable table of contents. `build.sh` is a separate pandoc + LaTeX route to **the PDF alone** — it is not a build in the sense above, and leaves the other two artefacts stale. All builds should be reproducible from a clean checkout.
 
 ### Session logistics
 
