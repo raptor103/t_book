@@ -22,15 +22,23 @@ Requires `pandoc` and a LaTeX engine (`xelatex`).
 
 **Dependency-light (pure Python, no LaTeX):**
 ```bash
-pip install markdown-pdf
+pip install pymupdf markdown-it-py
 python build_pdf.py
 ```
-Renders A4 via PyMuPDF, and is the route used to build the shipped PDF. It
-also does two things the renderer will not do on its own: it prints a
-**clickable Contents section** (every line is a link, and the bookmark
-outline matches it), and it keeps every ASCII diagram whole — `markdown-pdf`
-ignores `page-break-inside`, so the build detects diagrams straddling a page
-boundary and pushes them onto the next page, repeating until none split.
+Renders A4 via PyMuPDF's Story engine, and is the route used to build the
+shipped PDF. It also does two things the renderer will not do on its own.
+
+It prints a **clickable Contents section** — every line is a link, and the
+bookmark outline matches it.
+
+And it keeps every ASCII diagram whole, without leaving half-empty pages
+behind. The book is laid out as one continuous flow, so text fills each page
+to the bottom; PyMuPDF ignores `page-break-inside`, so where a diagram would
+be cut across a page boundary — or parted from the one-line lead-in that
+introduces it — the build ends that page early, just above the lead-in, and
+the pair moves down together. The gap left behind is never worse than the
+diagram's own height, whereas a hard page break strands whatever was still
+empty. The build reports its emptiest pages so this stays visible.
 
 ### EPUB — `out/how-a-tesla-works.epub`
 
