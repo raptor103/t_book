@@ -30,7 +30,7 @@ A high-level but genuinely technical overview of how a modern electric car works
 | Diagrams | ASCII only, inline in the text. No rendered figures, no image assets |
 | Source files | One markdown file per subchapter, in a per-chapter folder |
 | Final artefact | All markdown concatenated into a single PDF |
-| Distribution | Free on GitHub, optional donations |
+| Distribution | Sold as an ebook (Amazon). No free-to-read or donation framing in the text |
 | Editions | English only. No Czech edition |
 
 **Note on dropping model comparisons:** this removes the *framing*, not the technology. Several genuinely important systems first appeared on models other than the 3/Y — 48V architecture, steer-by-wire, Etherloop, the shift from lead-acid to lithium low-voltage batteries. These stay in the book, written as technology and as direction of travel, not as "the Cybertruck does X while the Model 3 does Y." Subchapters 8.4, 10.3 and 14.4 are affected by this and should not be deleted on a future read of this brief.
@@ -102,7 +102,7 @@ Every subchapter is its own markdown file. Subchapter files live inside a folder
 
 ```
 how-a-tesla-works/
-  README.md                          <- landing page, donation link
+  README.md                          <- landing page
   PROJECT-BRIEF.md                   <- this file
   build.sh                           <- concatenate + render
   book/

@@ -7,7 +7,7 @@ curious non-engineer.
 Knowledge cutoff for the text: **2026**. The book dates itself rather than pretending
 to be timeless.
 
-- Free on GitHub. Optional donations: _[donation link TBD]_
+- Sold as an ebook. Source kept here.
 - Built from one markdown file per subchapter, concatenated into PDF and EPUB.
 
 ## Build

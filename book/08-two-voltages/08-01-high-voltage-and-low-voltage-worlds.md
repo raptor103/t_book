@@ -18,7 +18,7 @@ Two worlds, two jobs:
    cabin heater, A/C            pumps, fans, door handles
    -------------------------------------------------------------
    anything that MOVES the car  everything else
-   powerful and DANGEROUS       low-power, safe to touch
+   powerful and DANGEROUS       low-power
 
    +--------------------------------------------------------------+
    |   GALVANIC ISOLATION: no electrical path between the two,    |
