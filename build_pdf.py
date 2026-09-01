@@ -3,10 +3,11 @@
 Pure-Python PDF build for "How a Tesla Works".
 
 Concatenates every markdown file under book/ in sort order and renders a
-single A4 PDF with a generated table of contents. Uses markdown-pdf
-(PyMuPDF), so no LaTeX / pandoc is required.
+single A4 PDF with a generated table of contents. Uses markdown-it for the
+markdown and PyMuPDF's Story engine for layout, so no LaTeX / pandoc is
+required.
 
-    pip install markdown-pdf
+    pip install pymupdf markdown-it-py
     python build_pdf.py
 
 Output: out/how-a-tesla-works.pdf
@@ -15,11 +16,20 @@ The canonical build (pandoc + xelatex) lives in build.sh; this script is the
 dependency-light fallback that runs anywhere Python does. Monospace ASCII
 diagrams are kept <=76 chars wide, so at 8pt they never overflow A4 margins.
 
-markdown-pdf cannot draw footers, so page numbers are stamped on afterwards
-with PyMuPDF. The title page is left unnumbered, and every other page prints
-its own PDF page number, so the printed folio matches the bookmark targets.
+The book is laid out as one continuous flow, so text fills every page. The
+one exception is a diagram that would land badly -- cut across a page
+boundary, or parted from the lead-in that introduces it. That page is ended
+early, just above the lead-in, and the pair moves down together. The gap
+this leaves is never worse than the diagram's own height, unlike a hard page
+break, which strands however much of the page was still empty.
+
+PyMuPDF cannot draw footers, so page numbers are stamped on afterwards. The
+title page is left unnumbered, and every other page prints its own PDF page
+number, so the printed folio matches the bookmark targets.
 """
 import glob
+import io
+import itertools
 import os
 import re
 import sys
@@ -29,30 +39,42 @@ BOOK = os.path.join(ROOT, "book")
 OUT_DIR = os.path.join(ROOT, "out")
 OUT_PDF = os.path.join(OUT_DIR, "how-a-tesla-works.pdf")
 
-CSS = """
-body { font-family: serif; font-size: 11pt; line-height: 1.45; }
-h1 { font-family: sans-serif; font-size: 20pt; margin-top: 18pt; }
-h2 { font-family: sans-serif; font-size: 15pt; margin-top: 14pt; }
-h3 { font-family: sans-serif; font-size: 12pt; }
-p  { margin: 6pt 0; }
-pre, code { font-family: monospace; font-size: 8pt; }
-pre { white-space: pre; line-height: 1.15; margin: 6pt 0; }
-table { border-collapse: collapse; font-size: 10pt; }
-th, td { border: 1px solid #999; padding: 3pt 6pt; }
-hr { border: none; border-top: 1px solid #ccc; }
+PAPER = "A4"
+BORDERS = (36, 36, -36, -36)
+TOC_LEVEL = 2
+
+# Diagram height is worked out from these rather than measured, so they must
+# stay the numbers the stylesheet actually uses -- hence the interpolation.
+PRE_PT = 8
+PRE_SPACING = 1.15
+PRE_LINE_PT = PRE_PT * PRE_SPACING
+
+CSS = f"""
+body {{ font-family: serif; font-size: 11pt; line-height: 1.45; }}
+h1 {{ font-family: sans-serif; font-size: 20pt; margin-top: 18pt; }}
+h2 {{ font-family: sans-serif; font-size: 15pt; margin-top: 14pt; }}
+h3 {{ font-family: sans-serif; font-size: 12pt; }}
+p  {{ margin: 6pt 0; }}
+pre, code {{ font-family: monospace; font-size: {PRE_PT}pt; }}
+pre {{ white-space: pre; line-height: {PRE_SPACING}; margin: 6pt 0; }}
+table {{ border-collapse: collapse; font-size: 10pt; }}
+th, td {{ border: 1px solid #999; padding: 3pt 6pt; }}
+hr {{ border: none; border-top: 1px solid #ccc; }}
 """
 
-# Page-number footer. Section borders are (36, 36, -36, -36), so body text
-# stops 36pt above the page foot; the folio sits in that margin.
+# Page-number footer. Borders stop body text 36pt above the page foot; the
+# folio sits in that margin.
 FOLIO_FONT = "helv"
 FOLIO_SIZE = 9
 FOLIO_COLOR = (0.45, 0.45, 0.45)
 FOLIO_BASELINE_FROM_BOTTOM = 22
 SKIP_PAGES = 1  # title page carries no number
 
-# Keeping diagrams whole is iterative; cap the passes so a pathological
-# diagram (one taller than a page) cannot loop forever.
-MAX_BREAK_PASSES = 12
+# A placed diagram shorter than this much of its full height was cut off.
+SPLIT_SLACK = 0.5
+
+# One trim is added per pass, so this only has to exceed the diagram count.
+MAX_TRIM_PASSES = 200
 
 
 def source_headings(combined):
@@ -86,7 +108,7 @@ def _ascii(s):
 def prepend_toc(path, headings=None):
     """Insert a printed, clickable Contents section after the title page.
 
-    markdown-pdf emits a bookmark outline but no visible contents, so this
+    The render produces a bookmark outline but no visible contents, so this
     reads that outline, lays it out as pages, inserts them, and adds a GoTo
     link over every line. Line count does not depend on the page numbers
     printed, so one pass is enough -- but the targets must be shifted by the
@@ -212,100 +234,180 @@ def stamp_page_numbers(path):
     return numbered
 
 
-def find_code_blocks(lines):
-    """Locate fenced blocks. Returns dicts with fence line indices and text."""
-    blocks, inside, start, body = [], False, 0, []
-    for i, ln in enumerate(lines):
+# Every diagram in the book is introduced by a one-line lead-in ending in a
+# colon, so the lead-in is tagged along with the diagram and the two are
+# moved as a pair -- a caption stranded at the foot of a page while its
+# diagram starts the next one reads worse than the gap it saves.
+LEAD_IN = re.compile(r"(?:<p>(?P<lead>(?:(?!</p>).)*)</p>\s*)?<pre>", re.S)
+
+
+def markdown_html(combined):
+    """Render the book to HTML, tagging each diagram and its lead-in.
+
+    The ids are what make the layout engine report where each diagram
+    landed; nothing in the finished PDF refers to them.
+    """
+    from markdown_it import MarkdownIt
+
+    html = MarkdownIt("commonmark").enable("table").render(combined)
+    n = itertools.count()
+
+    def tag(m):
+        i = next(n)
+        pre = f'<pre id="d{i}">'
+        if m.group("lead") is None:
+            return pre
+        return f'<p id="c{i}">{m.group("lead")}</p>\n{pre}'
+
+    return LEAD_IN.sub(tag, html)
+
+
+def diagram_heights(combined):
+    """Full laid-out height of every fenced block, in points, in book order.
+
+    A fenced block is one monospace line per source line at a fixed line
+    height, so this is exact -- and knowing what a diagram *should* measure
+    is how a placed one can be told to have been cut short.
+    """
+    heights, inside, n = [], False, 0
+    for ln in combined.split("\n"):
         if ln.startswith("```"):
             if inside:
-                blocks.append({"start": start, "end": i, "lines": body})
-                inside = False
-            else:
-                inside, start, body = True, i, []
-        elif inside and ln.strip():
-            body.append(ln.strip())
-    return blocks
+                heights.append(n * PRE_LINE_PT)
+            inside, n = not inside, 0
+        elif inside:
+            n += 1
+    return heights
 
 
-def mono_lines_by_page(path):
-    """Every monospace line in the PDF, in reading order, with its page."""
+def render(html, trims):
+    """Lay the whole book out as one continuous flow; return the document.
+
+    `trims` maps a 0-based page index to the y-coordinate that page should
+    end at, so everything below flows onto the next page. Also returns the
+    bookmark outline and where every tagged element landed, as
+    ``{"d": {index: (page, top, height)}, "c": {...}}`` -- diagrams and
+    their lead-ins.
+    """
     import pymupdf
 
+    rect = pymupdf.paper_rect(PAPER)
+    full = rect + BORDERS
+    buf = io.BytesIO()
+    writer = pymupdf.DocumentWriter(buf)
+    story = pymupdf.Story(html=html, user_css=CSS)
+
+    toc, hrefs, page = [], [], [0]
+    placed = {"d": {}, "c": {}}
+
+    def record(pos):
+        pos.page_num = page[0] + 1
+        hrefs.append(pos)
+        if not pos.open_close & 1:                # only "open" items
+            return
+        if pos.id:
+            placed[pos.id[0]][int(pos.id[1:])] = (page[0], pos.rect[1],
+                                                  pos.rect[3] - pos.rect[1])
+        if 0 < pos.heading <= TOC_LEVEL:
+            toc.append([pos.heading, pos.text, page[0] + 1])
+
+    more = 1
+    while more:
+        where = pymupdf.Rect(full)
+        if page[0] in trims:
+            where.y1 = trims[page[0]]
+        device = writer.begin_page(rect)
+        more, _ = story.place(where)
+        story.element_positions(record, {})
+        story.draw(device)
+        writer.end_page()
+        page[0] += 1
+
+    writer.close()
+    buf.seek(0)
+    return pymupdf.Story.add_pdf_links(buf, hrefs), toc, placed
+
+
+def misplaced(heights, placed, skip):
+    """Diagrams that fell badly, earliest first, as (page, top, index).
+
+    Two faults count: a diagram cut across a page boundary, and a diagram
+    parted from the lead-in that introduces it. Both are cured the same way
+    -- end the page where the pair begins -- so both are reported as the
+    point the pair starts at.
+    """
+    diagrams, leads = placed["d"], placed["c"]
     out = []
-    doc = pymupdf.open(path)
+    for i, height in enumerate(heights):
+        if i in skip:
+            continue
+        page, top, drawn = diagrams[i]
+        lead = leads.get(i)
+        if drawn >= height - SPLIT_SLACK and not (lead and lead[0] < page):
+            continue
+        out.append((lead[0], lead[1], i) if lead else (page, top, i))
+    return sorted(out)
+
+
+def keep_diagrams_whole(html, heights):
+    """Render, ending pages early where needed so no diagram falls badly.
+
+    Each pass fixes only the *earliest* remaining fault. Ending a page early
+    moves nothing above it, so every trim already agreed stays correct and
+    the loop can never undo its own work -- which is what lets it walk down
+    the book once instead of iterating to a fixed point.
+    """
+    import pymupdf
+
+    full = pymupdf.paper_rect(PAPER) + BORDERS
+    trims, stuck = {}, set()
+    for _ in range(MAX_TRIM_PASSES):
+        doc, toc, placed = render(html, trims)
+        faults = misplaced(heights, placed, stuck)
+        if not faults:
+            return doc, toc, trims, stuck
+        page, top, i = faults[0]
+        if top - 1 <= full.y0 + 1:
+            # The pair already begins a page, so no trim can lift it higher.
+            # Settle for the diagram alone if that is still worth moving.
+            page, top, _ = placed["d"][i]
+        if heights[i] > full.y1 - full.y0 or top - 1 <= full.y0 + 1:
+            stuck.add(i)
+            continue
+        doc.close()
+        trims[page] = top - 1
+    raise RuntimeError("diagram layout did not settle")
+
+
+def page_fill(doc):
+    """How much of each page's text block is used, emptiest page first.
+
+    Measured against the text block rather than the sheet, and ignoring
+    anything in the bottom margin, so the stamped folio does not read as a
+    full page.
+    """
+    top, foot = BORDERS[1], -BORDERS[3]
+    out = []
     for pno, page in enumerate(doc):
-        rows = []
+        floor = page.rect.height - foot
+        bottom = top
         for blk in page.get_text("dict")["blocks"]:
             if blk.get("type") != 0:
                 continue
             for ln in blk["lines"]:
-                if not any("mono" in s["font"].lower() or "courier" in s["font"].lower()
-                           for s in ln["spans"]):
-                    continue
-                txt = "".join(s["text"] for s in ln["spans"]).strip()
-                if txt:
-                    rows.append((ln["bbox"][1], txt))
-        rows.sort()
-        out.extend((pno, t) for _, t in rows)
-    doc.close()
-    return out
-
-
-def split_diagrams(blocks, rendered):
-    """Align source blocks to rendered lines; report blocks spanning pages."""
-    bad, cursor = [], 0
-    for b in blocks:
-        pages, matched = set(), 0
-        for want in b["lines"]:
-            # Skip ahead to this line; tolerates prose that shares the font.
-            probe = cursor
-            while probe < len(rendered) and rendered[probe][1] != want:
-                probe += 1
-            if probe >= len(rendered):
-                continue           # unmatched: ignore rather than guess
-            pages.add(rendered[probe][0])
-            cursor, matched = probe + 1, matched + 1
-        if matched >= 2 and len(pages) > 1:
-            b["pages"] = sorted(pages)
-            bad.append(b)
-    return bad
-
-
-def break_line_for(lines, block):
-    """Line index to break at: keep the caption paragraph with its diagram."""
-    i = block["start"] - 1
-    while i > 0 and not lines[i].strip():          # back over blank lines
-        i -= 1
-    while i > 0 and lines[i].strip():              # back over the caption
-        i -= 1
-    return i + 1
-
-
-def render(combined, break_lines, files_count):
-    from markdown_pdf import MarkdownPdf, Section
-
-    lines = combined.split("\n")
-    cuts = sorted(set(break_lines))
-    chunks, prev = [], 0
-    for c in cuts:
-        chunks.append("\n".join(lines[prev:c]))
-        prev = c
-    chunks.append("\n".join(lines[prev:]))
-
-    pdf = MarkdownPdf(toc_level=2)
-    for chunk in chunks:
-        if chunk.strip():
-            pdf.add_section(Section(chunk, toc=True, paper_size="A4"), user_css=CSS)
-    pdf.meta["title"] = "How a Tesla Works"
-    pdf.meta["author"] = ""
-    pdf.save(OUT_PDF)
+                if ln["bbox"][3] <= floor and "".join(
+                        sp["text"] for sp in ln["spans"]).strip():
+                    bottom = max(bottom, ln["bbox"][3])
+        out.append(((bottom - top) / (floor - top), pno + 1))
+    return sorted(out)
 
 
 def main():
     try:
-        import markdown_pdf  # noqa: F401
+        import markdown_it                        # noqa: F401
+        import pymupdf                            # noqa: F401
     except ImportError:
-        sys.exit("markdown-pdf not installed. Run: pip install markdown-pdf")
+        sys.exit("Missing dependency. Run: pip install pymupdf markdown-it-py")
 
     files = sorted(glob.glob(os.path.join(BOOK, "**", "*.md"), recursive=True))
     if not files:
@@ -320,35 +422,38 @@ def main():
         parts.append(text.strip())
 
     combined = "\n\n".join(parts) + "\n"
-    lines = combined.split("\n")
-    blocks = find_code_blocks(lines)
+    html = markdown_html(combined)
+    heights = diagram_heights(combined)
+    if html.count("<pre id=") != len(heights):
+        sys.exit("fenced blocks and rendered <pre> elements do not correspond")
 
     os.makedirs(OUT_DIR, exist_ok=True)
 
-    # The renderer ignores page-break-inside, but every Section starts on a
-    # fresh page. So: render, find diagrams straddling a page boundary, cut a
-    # Section just before each one, and repeat. Adding a break moves later
-    # content, so this has to converge rather than run once.
-    break_lines = set()
-    for attempt in range(1, MAX_BREAK_PASSES + 1):
-        render(combined, break_lines, len(files))
-        bad = split_diagrams(blocks, mono_lines_by_page(OUT_PDF))
-        if not bad:
-            break
-        new = {break_line_for(lines, b) for b in bad} - break_lines
-        if not new:
-            print(f"  warning: {len(bad)} diagram(s) still split; no new break points")
-            break
-        break_lines |= new
-        print(f"  pass {attempt}: {len(bad)} split diagram(s), "
-              f"{len(break_lines)} page break(s) inserted")
+    doc, toc, trims, stuck = keep_diagrams_whole(html, heights)
+    doc.set_metadata({"title": "How a Tesla Works", "author": ""})
+    doc.set_toc(toc)
+    doc.save(OUT_PDF)
+    body_pages = doc.page_count
+    doc.close()
 
     toc_pages = prepend_toc(OUT_PDF, source_headings(combined))
     numbered = stamp_page_numbers(OUT_PDF)
+
+    import pymupdf
+    with pymupdf.open(OUT_PDF) as final:
+        # The front matter and the last page of the book are short by nature.
+        worst = [(f, p) for f, p in page_fill(final)
+                 if 1 + toc_pages < p < final.page_count]
+
     print(f"Rendered {len(files)} files -> {OUT_PDF}")
     print(f"Contents: {toc_pages} page(s), every line a clickable link")
     print(f"Numbered {numbered} pages (title page left blank)")
-    print(f"Page breaks inserted to keep diagrams whole: {len(break_lines)}")
+    print(f"Body set as one flow over {body_pages} pages; {len(trims)} "
+          f"page(s) ended early to keep a diagram with its lead-in")
+    if stuck:
+        print(f"  warning: {len(stuck)} diagram(s) could not be placed cleanly")
+    print("Emptiest body pages: " +
+          ", ".join(f"p{p} {f:.0%}" for f, p in worst[:5]))
 
 
 if __name__ == "__main__":

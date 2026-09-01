@@ -7,9 +7,6 @@
 Knowledge cutoff: 2026. Metric units, European context.
 Reference vehicle: Tesla Model 3 / Model Y.
 
-Free to read and share. If it taught you something, you can leave a tip —
-see the project page for details.
-
 \newpage
 # Preface
 
@@ -290,15 +287,17 @@ And here is the point the whole section is built to make: **the two axes are ind
 A simple grid makes the independence obvious:
 
 ```
-   FORMAT (the cup)   \  CHEMISTRY (the coffee)
-                       \  NMC / NCA        |  LFP
-   ---------------------+------------------+------------------
-    cylindrical         |  2170, 4680      |  possible, but
-    (18650, 2170, 4680) |  -- most Teslas  |  rare in cars
-   ---------------------+------------------+------------------
-    prismatic or pouch  |  used by some    |  large blocks
-                        |  other makers    |  (CATL, BYD)
-   ---------------------+------------------+------------------
+                          +---------------------------------------+
+                          |        CHEMISTRY (the coffee)         |
+   +----------------------+--------------------+------------------+
+   |  FORMAT (the cup)    |  NMC / NCA         |  LFP             |
+   +----------------------+--------------------+------------------+
+   |  cylindrical         |  2170, 4680        |  possible, but   |
+   |  (18650, 2170, 4680) |  -- most Teslas    |  rare in cars    |
+   +----------------------+--------------------+------------------+
+   |  prismatic or pouch  |  used by some      |  large blocks    |
+   |                      |  other makers      |  (CATL, BYD)     |
+   +----------------------+--------------------+------------------+
 
    "4680" names the cup. "LFP" names the coffee.
    Neither one, on its own, tells you the other.
@@ -1000,34 +999,11 @@ That last point has a lovely material consequence, which Chapter 14 returns to: 
 - arXiv (haptic pedal feel, 2019) and Shop4Tesla — one-pedal driving does not guarantee higher efficiency; independence of friction brakes for emergency stopping. Reduced brake wear developed in 14.2.
 ## 6.4 Multi-motor torque vectoring
 
-A car corners on a knife-edge that most drivers never think about. In a turn, the four tyres are each doing slightly different work, each with a slightly different grip on the road, and the balance between them decides whether the car turns obediently, pushes wide, or slides its tail. For a century, managing that balance was a matter of suspension geometry, tyre choice, and — when things went wrong — a driver's reflexes and, later, electronic stability systems that could only ever *subtract* grip by pinching a brake on one wheel. An electric car with more than one motor can do something categorically different: it can *add* precisely metered thrust to individual wheels, faster than any human and faster than any brake, to steer the car with power itself. This is torque vectoring, and it is where multiple motors stop being about straight-line speed and start being about poise.
+A car corners on a knife-edge that most drivers never think about. In a turn, the four tyres are each doing slightly different work, each with a slightly different grip on the road, and the balance between them decides whether the car turns obediently, pushes wide, or slides its tail. For a century, managing that balance was a matter of suspension geometry, tyre choice, and — when things went wrong — a driver's reflexes and, later, electronic stability systems that could only ever *subtract* grip by pinching a brake on one wheel. An electric car with more than one motor can do something categorically different: it can *add* precisely metered thrust to individual wheels, faster than any human, to steer the car with power itself. This is torque vectoring, and it is where multiple motors stop being about straight-line speed and start being about poise.
 
 The principle is simple to state. If you drive the wheels on one side of the car, or one end of it, a little harder than the other, you create a twisting force that tends to rotate the car about its vertical axis — engineers call this rotation *yaw*. Push the outside of a corner harder and you help swing the nose *into* the turn; push the inside or the front harder and you *straighten* the car out of a slide. Because an electric motor's torque can be dialled up or down in millionths of a second, a car with independent motors can apply exactly the right nudge, exactly when needed, to keep itself pointed where the driver intends — trimming understeer, catching oversteer, all invisibly, many times a second.
 
 In a dual-motor Tesla, the two axles are independent — recall from earlier in the chapter that there is no mechanical shaft joining them, only software. So the car can shift torque front-to-rear at will: more torque to the rear to sharpen the car's turn-in, more to the front to calm it and pull it straight. Tesla's own description of its performance mode is almost tactile — extra torque to the rear axle helps rotate the nose into a corner, torque to the front arrests that rotation and pulls the car straight. The highest-performance cars go further still, with a pair of motors at the rear that can be driven *independently of each other*, so the car can command the left and right rear wheels separately — the fullest form of the trick, biasing torque across the axle to rotate the car through a bend with a precision no mechanical differential could match.
-
-Nudging the car with torque:
-
-```
-   Top-down view, car turning left:
-
-            front
-         [FL]   [FR]
-           |     |
-           |     |
-         [RL]   [RR]
-            rear
-
-   more torque to the REAR axle ..... rotates the nose INTO
-                                      the turn, sharpening it
-   more torque to the FRONT axle .... arrests that rotation and
-                                      pulls the car STRAIGHT
-
-   On the fastest cars the two rear wheels have a motor each,
-   so torque can be biased across the axle, left against right
-   -- the finest form of the trick, and one no mechanical
-   differential could match.
-```
 
 It is worth being clear about why doing this with motors is so much better than the older ways. Traditional stability control works only by braking — it can slow a wheel to arrest a slide, but it cannot speed one up, so its only tool is to take grip away, which also scrubs off speed and momentum. Torque vectoring by motor can *give* as well as take: it can add drive to the wheel that needs it, correcting the car's line without necessarily slowing it. And it is faster, because there is no hydraulic brake to pressurise, no mechanical clutch to engage — only a change in the inverter's command, which happens at the speed of electronics. The car can begin correcting a slide before the driver's inner ear has even registered that one is starting.
 
@@ -1297,7 +1273,7 @@ Two worlds, two jobs:
    cabin heater, A/C            pumps, fans, door handles
    -------------------------------------------------------------
    anything that MOVES the car  everything else
-   powerful and DANGEROUS       low-power, safe to touch
+   powerful and DANGEROUS       low-power
 
    +--------------------------------------------------------------+
    |   GALVANIC ISOLATION: no electrical path between the two,    |
@@ -1716,26 +1692,6 @@ The clearest case is the charging plug. For years North America had a messy stan
 Look at what Tesla gained by giving something away. Its plug design became the industry default, which entrenches Tesla's engineering choices at the heart of every rival's car. Its charging network, already dominant, gained a flood of new paying customers driving other brands. And the sheer scale of a single shared standard drives down the cost of every connector, adapter and charger for everyone — Tesla included — because the whole industry now buys the same parts. Generosity and self-interest turn out to be the same act: by making its standard free, Tesla made its standard *win*, and a winning standard is worth far more than a jealously guarded one that stays niche.
 
 The same logic reaches inside the car, to the humble low-voltage connectors — the little plugs where every wire meets every device. Here the enemy is not a rival standard but sheer chaos: a typical car uses a bewildering variety of different connector types, hundreds of them, a legacy of decades of each supplier and each system doing its own thing. That variety is expensive, complicated to manufacture, and hostile to automation — every different connector is a different part to stock and a different motion for a robot to learn. Tesla's response was to publish a Low Voltage Connector Standard, a deliberately small, rationalised set of connector types meant to cover the whole car, and — as with the charging plug — to offer it to the industry rather than hoard it.
-
-Standardisation working in Tesla's favour:
-
-```
-   The move: publish your own standard, then invite rivals in.
-
-   CHARGING PLUG (NACS)          LOW-VOLTAGE CONNECTORS (LVCS)
-
-   a proprietary plug ...        hundreds of connector types ...
-        |                             |
-        v                             v
-   published, and adopted        cut down to one small
-   across the industry           standard set
-        |                             |
-        v                             v
-   Tesla's design becomes        fewer parts, cheaper, and far
-   the default; its network      friendlier to ROBOT assembly
-   gains customers; costs        -- the harness goal from the
-   fall for everyone at scale    start of this chapter
-```
 
 The connective tissue between these two examples is the theme of the whole part: fewer, simpler, cheaper, more automatable. Reducing a car to a handful of standard connectors serves exactly the same end as zonal wiring and forty-eight-volt power and the Etherloop — it shortens the harness, simplifies the factory, and inches the car toward being something a machine can build. Standardisation is not separate from the engineering; it is the engineering, pursued at the level of the parts catalogue rather than the circuit.
 

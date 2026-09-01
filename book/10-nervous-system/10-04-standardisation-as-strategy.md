@@ -8,26 +8,6 @@ Look at what Tesla gained by giving something away. Its plug design became the i
 
 The same logic reaches inside the car, to the humble low-voltage connectors — the little plugs where every wire meets every device. Here the enemy is not a rival standard but sheer chaos: a typical car uses a bewildering variety of different connector types, hundreds of them, a legacy of decades of each supplier and each system doing its own thing. That variety is expensive, complicated to manufacture, and hostile to automation — every different connector is a different part to stock and a different motion for a robot to learn. Tesla's response was to publish a Low Voltage Connector Standard, a deliberately small, rationalised set of connector types meant to cover the whole car, and — as with the charging plug — to offer it to the industry rather than hoard it.
 
-Standardisation working in Tesla's favour:
-
-```
-   The move: publish your own standard, then invite rivals in.
-
-   CHARGING PLUG (NACS)          LOW-VOLTAGE CONNECTORS (LVCS)
-
-   a proprietary plug ...        hundreds of connector types ...
-        |                             |
-        v                             v
-   published, and adopted        cut down to one small
-   across the industry           standard set
-        |                             |
-        v                             v
-   Tesla's design becomes        fewer parts, cheaper, and far
-   the default; its network      friendlier to ROBOT assembly
-   gains customers; costs        -- the harness goal from the
-   fall for everyone at scale    start of this chapter
-```
-
 The connective tissue between these two examples is the theme of the whole part: fewer, simpler, cheaper, more automatable. Reducing a car to a handful of standard connectors serves exactly the same end as zonal wiring and forty-eight-volt power and the Etherloop — it shortens the harness, simplifies the factory, and inches the car toward being something a machine can build. Standardisation is not separate from the engineering; it is the engineering, pursued at the level of the parts catalogue rather than the circuit.
 
 And there is a larger lesson here that echoes beyond wiring, one worth carrying into the rest of the book. Tesla's habit of publishing standards — the charging plug, the connector set, the forty-eight-volt architecture of Chapter 8 — reflects a company that often competes less by keeping secrets than by *setting the terms* everyone else must build to. When your design becomes the industry's default, you no longer merely make a good product; you shape the ground on which every competitor stands. That is a different and more durable kind of advantage than any single clever component, and it is one reason the influence of these cars runs well beyond the number of them on the road.

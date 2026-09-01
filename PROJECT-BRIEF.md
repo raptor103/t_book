@@ -30,7 +30,7 @@ A high-level but genuinely technical overview of how a modern electric car works
 | Diagrams | ASCII only, inline in the text. No rendered figures, no image assets |
 | Source files | One markdown file per subchapter, in a per-chapter folder |
 | Final artefact | All markdown concatenated into a single PDF |
-| Distribution | Free on GitHub, optional donations |
+| Distribution | Sold as an ebook (Amazon). No free-to-read or donation framing in the text |
 | Editions | English only. No Czech edition |
 
 **Note on dropping model comparisons:** this removes the *framing*, not the technology. Several genuinely important systems first appeared on models other than the 3/Y — 48V architecture, steer-by-wire, Etherloop, the shift from lead-acid to lithium low-voltage batteries. These stay in the book, written as technology and as direction of travel, not as "the Cybertruck does X while the Model 3 does Y." Subchapters 8.4, 10.3 and 14.4 are affected by this and should not be deleted on a future read of this brief.
@@ -102,9 +102,13 @@ Every subchapter is its own markdown file. Subchapter files live inside a folder
 
 ```
 how-a-tesla-works/
-  README.md                          <- landing page, donation link
+  README.md                          <- landing page
   PROJECT-BRIEF.md                   <- this file
-  build.sh                           <- concatenate + render
+  build_all.py                       <- builds every output in out/
+  build_markdown.py                  <- single-file markdown
+  build_pdf.py                       <- PDF (the shipped route)
+  build_ebook.py                     <- EPUB
+  build.sh                           <- PDF via pandoc + LaTeX
   book/
     00-front-matter/
       00-00-title.md
@@ -137,7 +141,11 @@ how-a-tesla-works/
 
 ### Build
 
-Final step, once drafting and cutting are done: concatenate every markdown file in sort order and render one PDF to `out/how-a-tesla-works.pdf`. Pandoc with a monospace font that preserves ASCII diagram alignment, A4 page size, and a generated table of contents. `build.sh` should be reproducible from a clean checkout.
+**A build means all three artefacts, always — `python build_all.py`.** The book ships as markdown, PDF and EPUB, and shipping one that disagrees with the others is worse than shipping nothing: whichever is stale still looks finished. `build_all.py` concatenates every markdown file in sort order and produces all three from that one pass, so they cannot drift apart.
+
+Never finish a change to `book/` by running only `build_pdf.py`, only `build_ebook.py`, or only `build_markdown.py`. Those exist for iterating on a single builder, not for producing a release.
+
+The PDF is A4 with a monospace font that preserves ASCII diagram alignment, and a generated, clickable table of contents. `build.sh` is a separate pandoc + LaTeX route to **the PDF alone** — it is not a build in the sense above, and leaves the other two artefacts stale. All builds should be reproducible from a clean checkout.
 
 ### Session logistics
 
