@@ -1,8 +1,10 @@
 ## 17.1 The camera suite, and dropping radar and ultrasonics
 
-Walk around a Tesla and try to spot the cameras, and you will mostly fail, because they are small and tucked discreetly into the bodywork. But there are eight of them, and together they give the car a full three-hundred-and-sixty-degree view of its surroundings. Three look forward from behind the windscreen, at different focal lengths — a wide one for the near scene, a main one for the middle distance, and a narrow one for spotting things far down the road. Two look forward-and-sideways from the front flanks, watching for cross-traffic at junctions. Two more look backward along the sides, for lane changes and overtaking cars. And one looks straight back from above the rear plate. Between them, they see everything around the car at once, continuously, and it is this flood of eight video streams that the AI brain of Chapter 15 spends its life interpreting.
+Walk around a Tesla and try to spot the cameras, and you will mostly fail, because they are small and tucked discreetly into the bodywork. But there are eight of them, and together they give the car a full three-hundred-and-sixty-degree view of its surroundings. Two look forward from behind the windscreen, at different focal lengths — a main one for the middle distance and a narrow one for spotting things far down the road, the earlier third wide-angle lens having been dropped once higher-resolution sensors made it unnecessary. One looks forward from low in the front bumper, a recent addition that sees what the windscreen cameras cannot: the kerb, the bollard, the ground immediately ahead. Two look forward-and-sideways from the front flanks, watching for cross-traffic at junctions. Two more look backward along the sides, for lane changes and overtaking cars. And one looks straight back from above the rear plate. Between them, they see everything around the car at once, continuously, and it is this flood of eight video streams that the AI brain of Chapter 15 spends its life interpreting.
 
 What is striking about this suite is not what it contains but what it *no longer* contains, because Tesla arrived at cameras-only by a deliberate campaign of removal. Most cars aiming at any kind of self-driving carry a mix of sensor types, on the sensible-sounding logic that different senses cover each other's weaknesses. Tesla started that way too, then began stripping the other senses out. In 2021 it removed the forward *radar* from the Model 3 and Model Y, and later from the Model S and X. In 2022 it went further and removed the *ultrasonic sensors* — the little proximity sensors around the bumpers that every modern car uses for parking — from its mainstream cars. What remained was vision alone: eight cameras and the neural networks that interpret them, a system Tesla calls Tesla Vision.
+
+One honest complication belongs here, because the campaign of removal was not quite the one-way street the story usually implies. From 2023 Tesla quietly fitted a *new* high-definition radar — a 76-to-77-gigahertz unit known internally as Phoenix — to the Model S and Model X built on the newer computer hardware, and to the Cybertruck. It is not the old radar returning; it is a far more capable sensor, and Tesla has been notably quiet about how much, if at all, the driving software actually leans on it. The mainstream Model 3 and Model Y — the reference cars of this book — remain camera-only. But "Tesla is vision-only" is a claim about most Teslas rather than all of them, and a company that removed radar as a matter of principle putting a better one back on its most expensive cars is exactly the kind of detail this book would rather report than tidy away.
 
 The subtraction, step by step:
 
@@ -18,6 +20,11 @@ The subtraction, step by step:
    what remains:  8 CAMERAS + neural networks
                   -- branded "Tesla Vision"
 
+   and one wrinkle:
+   from 2023     a NEW high-definition radar quietly
+                 appears on HW4 Model S/X and Cybertruck.
+                 Not on the Model 3 or Model Y.
+
    The book's recurring instinct -- do more with less --
    applied, boldly, to the car's senses themselves.
 ```
@@ -28,12 +35,14 @@ Underneath all of it sits the logic of the last chapter. Tesla's deepest bet is 
 
 The honest immediate cost of this deletion was real and worth recording. When Tesla removed the ultrasonic sensors before its vision-based replacement was fully ready, cars shipped that *temporarily lost* familiar features — parking distance displays, automatic parking, the Summon function that creeps the car toward you — while the software caught up to do those jobs with cameras alone. Owners paid, in lost function, for the company's conviction that vision would eventually do everything the sensors had done and more. Some features returned; the episode showed both the boldness of the strategy and its willingness to make customers live on the promise.
 
-So the car sees the world through eight eyes and nothing else — no radar humming through fog, no laser scanner building a precise three-dimensional map, no ultrasonic chirps judging the distance to a wall. Just cameras, and a brain trained to understand them. Whether that is enough — enough for the parking assistance owners noticed losing, and enough for the far grander goal of a car that drives itself anywhere — is the single most argued-over question in the field, and the next section lays out both sides of it as fairly as the state of knowledge in 2026 allows.
+So the reference car of this book sees the world through eight eyes and nothing else — no radar humming through fog, no laser scanner building a precise three-dimensional map, no ultrasonic chirps judging the distance to a wall. Just cameras, and a brain trained to understand them. Whether that is enough — enough for the parking assistance owners noticed losing, and enough for the far grander goal of a car that drives itself anywhere — is the single most argued-over question in the field, and the next section lays out both sides of it as fairly as the state of knowledge in 2026 allows.
 
 ---
 
 **Sources**
 
-- Electrek, Repairer Driven News, Green Car Reports, AutoPilot Review — Tesla Vision eight-camera suite (three forward, two forward-side, two rearward-side, one rear); radar removed from 3/Y in 2021 and S/X in 2022; ultrasonic sensors removed from mainstream cars in 2022 (~$114/vehicle cited).
+- Electrek, Repairer Driven News, Green Car Reports, AutoPilot Review — Tesla Vision eight-camera suite; radar removed from 3/Y in 2021 and S/X in 2022; ultrasonic sensors removed from mainstream cars in 2022 (~$114/vehicle cited).
+- Not a Tesla App ("Tesla Guide: Number of Cameras"), Drive Tesla, Tesla Oracle, Notebookcheck — the current HW4 suite: two forward windscreen cameras rather than the earlier three, plus a front bumper camera introduced on the Cybertruck and the 2025 Model Y, for eight in total.
+- InsideEVs, Teslarati, autoevolution, Go-Parts — teardown confirmation of the 76–77 GHz "Phoenix" high-definition radar fitted to HW4 Model S/X from 2023 and to the Cybertruck, and absent from the HW4 Model 3/Y. Whether and how far the driving software uses it is not published. [INFERENCE]
 - Electrek / Not a Tesla App — Tesla/Musk and Andrej Karpathy rationale: cost, sensor-fusion complexity, radar reducing signal-to-noise, priority on fleet data over added sensors.
 - CarExpert / Tesla support — temporary loss of Park Assist, Autopark, and Summon after ultrasonic removal. Vision-vs-sensor debate developed in 17.2.

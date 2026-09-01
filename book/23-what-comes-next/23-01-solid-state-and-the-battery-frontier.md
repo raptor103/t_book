@@ -2,7 +2,7 @@
 
 Return, at the end, to where the book began its real work: the single cell of Chapter 2, and the liquid electrolyte sloshing between its electrodes. That liquid is the quiet villain of the whole battery story. It is flammable, which is the root of the fire risk that haunts Part X. It limits how the cell can be built and how much energy it can safely hold. And it is the thing the most anticipated battery breakthrough of the age proposes to abolish. Replace the flammable liquid electrolyte with a *solid* one — a ceramic or glassy material that lithium ions can still travel through — and you have a *solid-state battery*, and the prize is large enough to explain why so much money and hope are pointed at it.
 
-The advantages read like a wish-list answering every complaint this book has raised about batteries. Safety first: a solid electrolyte is not flammable, so the fire risk that shapes so much of the pack's armour and the firefighters' fears falls dramatically — thermal trouble begins at far higher temperatures than in a liquid cell. Then energy density: a solid electrolyte can enable a pure lithium-metal anode, which holds vastly more lithium than the graphite one from Chapter 2, so the cell can store far more energy for its weight. The figures quoted for solid-state cells — energy densities perhaps two or three times today's — would mean, in the language of Chapter 1, either much greater range or, more interestingly, the *same* range from a smaller, lighter, cheaper battery, which would ripple efficiency gains through the entire car.
+The advantages read like a wish-list answering every complaint this book has raised about batteries. Safety first: a solid electrolyte is not flammable, so the fire risk that shapes so much of the pack's armour and the firefighters' fears falls dramatically — thermal trouble begins at far higher temperatures than in a liquid cell. Then energy density: a solid electrolyte can enable a pure lithium-metal anode, which holds vastly more lithium than the graphite one from Chapter 2, so the cell can store far more energy for its weight. The figures the serious programmes are aiming at — energy densities around four to five hundred watt-hours per kilogram, against roughly two hundred and fifty to three hundred for today's best production cells, so call it a doubling — would mean, in the language of Chapter 1, either much greater range or, more interestingly, the *same* range from a smaller, lighter, cheaper battery, which would ripple efficiency gains through the entire car.
 
 The frontier, honestly drawn:
 
@@ -10,7 +10,8 @@ The frontier, honestly drawn:
    TODAY (liquid electrolyte)    SOLID-STATE (the prize)
    ------------------------------------------------------------
    a flammable liquid            a non-flammable solid
-   about 150-300 Wh/kg           potentially 300-900 Wh/kg
+   about 150-300 Wh/kg           400-500 Wh/kg is what the
+                                 credible programmes target
    graphite anode                lithium-metal anode, holding
                                  far more energy
    ------------------------------------------------------------
@@ -36,6 +37,7 @@ Which leaves one last question, the one the book opened with and should close wi
 
 **Sources**
 
-- BatteryTechOnline, IDTechEx, ScienceDirect, greenlancer — solid-state batteries: non-flammable solid electrolyte, higher thermal-runaway threshold, lithium-metal anode enabling ~300–900 Wh/kg vs ~150–300 for current Li-ion; manufacturing challenges (solid-solid contact, defect-free thin electrolyte sheets, new processes); realistic mass-market timeline in the 2030s.
+- BatteryTechOnline, IDTechEx, ScienceDirect, greenlancer — solid-state batteries: non-flammable solid electrolyte, higher thermal-runaway threshold, lithium-metal anode; manufacturing challenges (solid-solid contact, defect-free thin electrolyte sheets, new processes); realistic mass-market timeline in the 2030s.
+- Toyota's published solid-state target (~450–500 Wh/kg) and QuantumScape's independently verified B-sample cells (~301 Wh/kg, 844 Wh/L), against ~150–300 Wh/kg for current production Li-ion. Much higher figures circulate, but they are theoretical ceilings for the chemistry rather than targets for a shippable automotive cell, and are not used here.
 - Same sources — silicon anodes as a nearer-term incremental gain; sodium-ion trading energy density for low cost/abundant materials, suited to cheaper/short-range vehicles and stationary storage (Chapter 21).
 - The "laboratory vs affordable mass production" caution mirrors the 4680 lesson of Chapter 2 and the verdict of 22.3; timelines stated as of 2026 per this book's convention.
