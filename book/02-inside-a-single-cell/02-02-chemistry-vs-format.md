@@ -13,15 +13,17 @@ And here is the point the whole section is built to make: **the two axes are ind
 A simple grid makes the independence obvious:
 
 ```
-   FORMAT (the cup)   \  CHEMISTRY (the coffee)
-                       \  NMC / NCA        |  LFP
-   ---------------------+------------------+------------------
-    cylindrical         |  2170, 4680      |  possible, but
-    (18650, 2170, 4680) |  -- most Teslas  |  rare in cars
-   ---------------------+------------------+------------------
-    prismatic or pouch  |  used by some    |  large blocks
-                        |  other makers    |  (CATL, BYD)
-   ---------------------+------------------+------------------
+                          +---------------------------------------+
+                          |        CHEMISTRY (the coffee)         |
+   +----------------------+--------------------+------------------+
+   |  FORMAT (the cup)    |  NMC / NCA         |  LFP             |
+   +----------------------+--------------------+------------------+
+   |  cylindrical         |  2170, 4680        |  possible, but   |
+   |  (18650, 2170, 4680) |  -- most Teslas    |  rare in cars    |
+   +----------------------+--------------------+------------------+
+   |  prismatic or pouch  |  used by some      |  large blocks    |
+   |                      |  other makers      |  (CATL, BYD)     |
+   +----------------------+--------------------+------------------+
 
    "4680" names the cup. "LFP" names the coffee.
    Neither one, on its own, tells you the other.
