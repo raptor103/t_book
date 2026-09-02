@@ -16,7 +16,7 @@ Fixed versus adaptive:
    steel coil spring           AIR SPRING
      one fixed stiffness         lower at speed -> less drag
      one fixed height            raise for rough roads
-                                 self-levels under load
+                                 stays level when loaded
 
    fixed-rate damper           ADAPTIVE DAMPER
      one compromise, set         firmness varies continuously,
