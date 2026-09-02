@@ -1,4 +1,4 @@
-## 12.1 Drag rises with the cube of speed
+## 12.1 Power rises with the cube of speed
 
 Most things in life scale in a comfortable, proportional way. Drive twice as far and you use roughly twice the fuel; buy twice as much and you pay twice the price. Our intuition is built for this kind of straightforward arithmetic, and it serves us well almost everywhere — except when it comes to pushing a car through air, where the numbers behave in a way so steep and so punishing that it genuinely surprises people who ought to know better.
 

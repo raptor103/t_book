@@ -29,7 +29,7 @@ North America is the region where the war actually raged, and where it is now en
 
 The deeper point, and the reason this belongs in a book about engineering rather than politics, is that a charging connector is *infrastructure*, and infrastructure is only as good as its universality. The finest fast charger in the world is worthless if your plug does not fit it, and the value of a charging network grows with the square of how many cars can use it. The connector wars were a decade-long, expensive demonstration that the *shape of the plug* was never really the point — the point was agreement, and the technical merits of any one connector mattered far less than getting everyone to use the same one. That both major markets have now, by very different routes, arrived at a single standard is arguably better news for electric cars than any improvement to the connectors themselves.
 
-With that, filling the car up is demystified: convert the electricity somewhere, in the car or the cabinet; carry a small charger and visit big ones; respect the taper and charge to eighty on trips; and plug in a connector that, at long last, mostly fits. The car is now stored, driven, cooled, wired, and refuelled. It is time to send it out into the world and see what fights back — beginning with the air.
+With that, filling the car up is demystified: convert the electricity somewhere, in the car or the cabinet; carry a small charger and visit big ones; respect the taper and charge to eighty on trips; and plug in a connector that, at long last, mostly fits. The car is now stored, driven, cooled, wired, and recharged. It is time to send it out into the world and see what fights back — beginning with the air.
 
 ---
 

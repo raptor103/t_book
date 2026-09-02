@@ -241,7 +241,7 @@ The manuscript does not persist between conversations. The container filesystem 
 ### Part VII — Air, Road, and Chassis
 
 **12. Fighting the air**
-12.1 Drag rises with the cube of speed
+12.1 Power rises with the cube of speed
 12.2 Where drag actually comes from — wheels, wells, underbody
 12.3 Aero wheels and the styling-vs-range tax
 
