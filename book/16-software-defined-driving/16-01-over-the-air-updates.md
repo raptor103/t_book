@@ -24,9 +24,7 @@ What an update can change:
                      once, with no visit to a dealer
 
    The car stops being a fixed object bought once, and becomes
-   a platform that keeps changing underneath you -- which cuts
-   both ways, since the power to improve it from afar is also
-   the power to change it, and it is not your power.
+   a platform that keeps changing.
 ```
 
 The consequence is a reversal of the oldest fact about owning a car: that it is all downhill from the showroom. A software-defined car can be *newer*, in capability, three years into its life than it was on the day it was bought — running the same software as a car fresh off the line, gaining features its original buyers never imagined. The car stops being a depreciating fixed asset and becomes something closer to a device that is supported, updated, and improved over time. That is a genuinely new relationship between a person and their car, and it is one of the things owners cite most warmly.
