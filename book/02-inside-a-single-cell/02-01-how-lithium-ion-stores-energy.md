@@ -41,8 +41,6 @@ A simple picture of the two directions:
 
 Two things fall out of this picture immediately, and both matter for the rest of the book. First, nothing is burned, nothing is consumed, nothing moves except ions and electrons shuttling back and forth. That is why the same cell can be charged and drained hundreds or thousands of times: it is the same lithium, rocking between the same two shelves, over and over. Engineers sometimes call it the "rocking-chair" battery, and it is a good name. Second, because the ions physically have to travel through the electrolyte and squeeze into their slots, there are limits to how fast you can rush them. Push too hard, too cold, or too full, and the tidy shelving turns messy — ions pile up, plate out as metal, or damage the lattice they are meant to slot into. Almost every rule you have ever heard about looking after a battery — don't charge it in the freezing cold, don't leave it at 100 percent, don't fast-charge it to the brim — is a direct consequence of what you have just seen. It is all about keeping the rocking gentle.
 
-Energy stored as geography; current as electrons taking the scenic route. Hold that, and every battery in the book becomes legible.
-
 ---
 
 **Sources**

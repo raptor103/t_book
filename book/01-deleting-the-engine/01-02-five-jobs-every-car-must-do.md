@@ -1,6 +1,6 @@
 ## 1.2 The five jobs every car must do
 
-Strip away the badges, the marketing, the arguments about gasoline versus electric, and every car ever built — the Model T, a Formula One car, the Tesla in this book — is trying to do the same five things. Not four, not six. Five. Once you can see them, the whole machine stops being a mystery and becomes a to-do list, and the difference between a combustion car and an electric one becomes wonderfully easy to describe: they agree completely on the list and disagree on almost every line of it.
+Strip away the badges, the marketing, the arguments about gasoline versus electric, and every car ever built — the Model T, a Formula One car, the Tesla in this book — is trying to do the same five things. Once you can see them, the whole machine stops being a mystery and becomes a to-do list, and the difference between a combustion car and an electric one becomes wonderfully easy to describe: they agree completely on the list and disagree on almost every line of it.
 
 Here is the list.
 
