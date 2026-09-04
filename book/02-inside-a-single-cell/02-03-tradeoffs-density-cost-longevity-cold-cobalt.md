@@ -4,7 +4,7 @@ There is no such thing as the best battery, and anyone who tells you otherwise i
 
 Start with **energy density** — how much energy you can pack into each kilogram, which is really the question of how far the car goes before it gets too heavy to bother. Here the nickel chemistries win clearly. NMC and NCA cells hold something like **150 to 250 watt-hours per kilogram**, while LFP manages roughly **90 to 160**, with the best modern versions creeping toward 200. That gap is the single reason the long-range cars use nickel: for a given weight of battery, they simply carry more energy. If range were the only thing that mattered, the conversation would end here.
 
-But range is never the only thing that matters, because of **cost**. Nickel and cobalt are expensive, mined in a few troubled places, and volatile in price. Iron and phosphate — the guts of LFP — are cheap and everywhere. The result, as of a 2024 industry survey, is LFP packs landing near **95 euros-worth per kilowatt-hour** against **130 to 150** for nickel packs, a difference that runs to thousands across a whole car. This is why LFP has swept the standard-range market: by 2024 it accounted for close to half of all EV batteries globally, and for roughly three-quarters of Chinese demand — a share that was touching eighty percent by the end of that year. When you are building millions of affordable cars, thirty percent off the most expensive component is not a detail. It is the strategy.
+But range is never the only thing that matters, because of **cost**. Nickel and cobalt are expensive, mined in a few troubled places, and volatile in price. Iron and phosphate — the guts of LFP — are cheap and everywhere. The result, as of a 2024 industry survey, is LFP packs landing near **95 dollars-worth per kilowatt-hour** against **130 to 150** for nickel packs, a difference that runs to thousands across a whole car. This is why LFP has swept the standard-range market: by 2024 it accounted for close to half of all EV batteries globally, and for roughly three-quarters of Chinese demand — a share that was touching eighty percent by the end of that year. When you are building millions of affordable cars, thirty percent off the most expensive component is not a detail. It is the strategy.
 
 Then **longevity**, and here the ledger flips again. LFP is the tortoise, and the tortoise wins the distance race. An LFP cell will typically survive **two to five thousand** full charge-discharge cycles, and sometimes far more, where a nickel cell may be tiring after **one to two thousand**. LFP is also relaxed about being charged all the way to 100 percent, which nickel chemistries resent — one reason Tesla tells LFP owners to charge to full routinely and nickel owners to stop around 80 for daily use. The advice differs because the chemistry differs; it is not fussiness, it is physics, and Chapter 3 returns to why.
 
@@ -18,7 +18,7 @@ The whole negotiation, on one card:
                         NMC / NCA           LFP
    ------------------------------------------------------------
     energy density       150-250 Wh/kg      90-160 Wh/kg
-    pack cost            EUR 130-150/kWh    EUR ~95/kWh
+    pack cost            USD 130-150/kWh    USD ~95/kWh
     cycle life           1,000-2,000        2,000-5,000
     cold tolerance       better             weaker
     cobalt-free          no                 yes

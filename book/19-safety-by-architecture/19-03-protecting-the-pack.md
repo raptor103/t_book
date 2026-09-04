@@ -6,28 +6,6 @@ The first line of defence is straightforward: armour. The pack is wrapped in a r
 
 Notice the elegant two-way relationship here, because it is the heart of the section. The battery pack is not merely a fragile thing to be protected; it is also *part of the protection*. Recall from Chapter 3 that the structural pack is stiff enough to help hold the car together — so the very same rigid, load-bearing slab that stiffens the body and resists the crash is the thing being kept safe by that stiffness. The pack protects the car, and the car protects the pack, in a single integrated structure. A strong pack makes a strong car, and a strong car keeps the pack from harm. The two safeties are woven together, which is exactly why the structural battery, for all its repairability drawbacks, is prized by crash engineers.
 
-Protecting the store of energy in the floor:
-
-```
-   Layers of defence around the cells, outermost first:
-
-   1  SIDE SILLS and CROSS-MEMBERS
-      a cage that spreads side-impact loads around the pack
-      rather than into it
-
-   2  UNDERBODY SHIELDING
-      armour against road debris thrown up from beneath
-
-   3  THE PACK'S OWN STRUCTURE
-      stiff enough both to resist intrusion and to help
-      hold the car together (the structural pack of 3.3)
-
-   4  CELL SPACING and BARRIERS
-      if one cell does fail, contain it and slow the spread
-      to its neighbours -- turning a sudden catastrophe into
-      a slower, more survivable event
-```
-
 The second line of defence assumes the first has failed — that despite everything, a cell has been damaged and begins to overheat. Here the goal shifts from prevention to *containment*: stopping one bad cell from taking the whole pack with it. The pack is engineered so that a single cell in thermal runaway is, as far as possible, isolated from its neighbours — with spacing, heat-resistant barriers and flame-rated insulation between cells and modules, and venting paths to channel the hot gases safely away rather than letting them ignite the cell next door. The thermal system of Part IV plays its part too, able to pour cooling into a troubled region to slow the cascade. The design cannot promise that a severely damaged pack will never burn, but it can buy time — and time, in a crash, is what lets occupants get clear before a slow-developing battery fire takes hold.
 
 This is genuinely hard engineering, and it is worth being honest that it is never perfect. A sufficiently violent crash can defeat any armour, and a lithium fire, once truly under way, is difficult to stop. What the protection buys is a large reduction in how often a crash reaches the cells at all, and a crucial delay when it does — turning what could be an instant catastrophe into a slower, more survivable event. The statistics, as far as they can be trusted, suggest electric cars are not more prone to fire than petrol cars overall, and may be less so; but when an electric car does burn, it burns differently, and that difference matters most to the people who arrive to deal with it.

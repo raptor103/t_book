@@ -4,27 +4,6 @@ Here is a question that sounds simple and is not: what limits how cheap a car ca
 
 Once you see this, a whole hidden layer of the car's design comes into focus, and it explains features that make no sense from a purely driving-focused point of view. Consider: a part that does its job perfectly but requires twelve separate pieces welded together in a precise sequence is, from a manufacturing standpoint, *worse* than a single part that does the same job — even if the single part is heavier or uses more material — because the single part eliminates a dozen chances for error, a dozen welds to inspect, a dozen components to source and store. The best design is often not the one that is cleverest on the road but the one that is simplest to build. This is the principle engineers call *design for manufacturing*, and Tesla pursues it with unusual ferocity.
 
-Two ways to make the same thing:
-
-```
-   MANY PARTS (the traditional way)
-     12 stampings + 30 welds + fixtures + inspection
-     + more suppliers + more part numbers
-          |
-          v
-     more labour, more variables, more ways to go wrong
-
-   FEW PARTS (design for manufacture)
-     1 large casting
-     + far less to inspect + fewer suppliers
-          |
-          v
-     cheaper, faster and more consistent -- even where the
-     result is heavier, or looks cruder
-
-   The car and the factory are designed in the same breath.
-```
-
 This reframes almost every earlier chapter. When Chapter 3 described the structural battery pack, it noted that bonding the battery into the body deleted a separate floor structure — that was a manufacturing win, fewer parts to assemble, before it was anything else. When Chapter 9 explained zonal wiring, the deepest benefit was that short, modular wiring is easier for a machine to install than a sprawling harness. When Chapter 10 praised standardised connectors, the point was to shrink the parts catalogue and simplify the factory. Each of these was presented, in its place, as electrical or structural engineering. Underneath, each was also a decision about how to *build* the car more cheaply and more automatically. The manufacturing logic was there all along, driving choices we examined for other reasons.
 
 And it runs the other way too: the demand to be buildable actively *shapes* what the car becomes, sometimes overriding what would otherwise be the obvious engineering choice. A part might be redesigned to be castable in one piece, or a wiring run rerouted so a robot arm can reach it, or a component relocated so it can be installed from one direction without flipping the car. These are not compromises forced on a finished design; they are inputs to the design from the start. The car is engineered, simultaneously, to work *and* to be made — and when the two pull in different directions, the need to be made cheaply and automatically often wins, because a superb car that cannot be built affordably at scale is, commercially, no car at all.

@@ -4,24 +4,6 @@ If you visit a modern car factory, you will be struck by how few people there ar
 
 Recall the problem. A traditional wiring harness is a sprawling, floppy, three-dimensional web of kilometres of wire, and floppiness is precisely what robots cannot handle. A robot arm is superb at rigid, repeatable motions — grip this solid part, place it exactly there, weld — and hopeless at the dexterous, judgement-laden business of threading a limp bundle of wires through holes, around corners, into awkward cavities, and plugging dozens of connectors into hidden sockets. That is work for human fingers, with their sense of touch and their ability to coax a floppy thing into place. So the harness became an island of manual labour in an automated sea, and — being one of the most complex and time-consuming parts to install — a stubborn brake on the dream of a car built entirely by machine.
 
-Why the harness resists robots:
-
-```
-   WHAT ROBOTS ARE GREAT AT      WHAT A WIRING HARNESS IS
-   ------------------------------------------------------------
-   rigid, repeatable, precise    floppy, three-dimensional,
-                                 different every time
-   grip, place and weld solid    thread limp wire through
-   parts                         holes, and plug hidden
-                                 connectors by feel
-   ------------------------------------------------------------
-
-   Almost everything else in the factory is automated. This
-   is the last big job still left to human hands -- which is
-   why every wire deleted, shortened or standardised is a
-   step toward a car a robot can build end to end.
-```
-
 Now every wiring decision in Part V reads differently. When Chapter 9 introduced zonal architecture with its short local wiring drops, one of the deepest motives was that short, simple, modular wiring is far easier for a machine to handle than long runs threading across the whole car. When Chapter 10 described the shrinking harness and the standardised connectors, the goal was explicitly to make the wiring something a robot might finally install. When Chapter 8 moved to forty-eight volts and thinner wires, and Chapter 10 folded data and power into a single resilient loop, part of the payoff was a physically simpler nervous system — fewer, thinner, shorter wires with fewer, standardised plugs. All of these were presented as electrical engineering. All of them are also a sustained campaign to defeat the one thing keeping humans on the assembly line: the un-automatable harness.
 
 The strategy, then, is *design for automation* — not making a better robot to install the old floppy harness, but redesigning the harness so that it is no longer floppy and difficult, so that a robot *can* install it. Shorter runs, modular segments, standardised connectors, wiring routed so a machine arm can reach and seat it, even research into flatter, more rigid, more structured wiring that behaves less like spaghetti and more like a part a robot can pick and place. The car's nervous system is being reshaped, deliberately, to fit the capabilities of the machines that build it — the exact inversion of the usual order, in which the wiring is designed and then someone works out how to install it.

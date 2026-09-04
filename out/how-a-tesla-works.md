@@ -320,7 +320,7 @@ There is no such thing as the best battery, and anyone who tells you otherwise i
 
 Start with **energy density** — how much energy you can pack into each kilogram, which is really the question of how far the car goes before it gets too heavy to bother. Here the nickel chemistries win clearly. NMC and NCA cells hold something like **150 to 250 watt-hours per kilogram**, while LFP manages roughly **90 to 160**, with the best modern versions creeping toward 200. That gap is the single reason the long-range cars use nickel: for a given weight of battery, they simply carry more energy. If range were the only thing that mattered, the conversation would end here.
 
-But range is never the only thing that matters, because of **cost**. Nickel and cobalt are expensive, mined in a few troubled places, and volatile in price. Iron and phosphate — the guts of LFP — are cheap and everywhere. The result, as of a 2024 industry survey, is LFP packs landing near **95 euros-worth per kilowatt-hour** against **130 to 150** for nickel packs, a difference that runs to thousands across a whole car. This is why LFP has swept the standard-range market: by 2024 it accounted for close to half of all EV batteries globally, and for roughly three-quarters of Chinese demand — a share that was touching eighty percent by the end of that year. When you are building millions of affordable cars, thirty percent off the most expensive component is not a detail. It is the strategy.
+But range is never the only thing that matters, because of **cost**. Nickel and cobalt are expensive, mined in a few troubled places, and volatile in price. Iron and phosphate — the guts of LFP — are cheap and everywhere. The result, as of a 2024 industry survey, is LFP packs landing near **95 dollars-worth per kilowatt-hour** against **130 to 150** for nickel packs, a difference that runs to thousands across a whole car. This is why LFP has swept the standard-range market: by 2024 it accounted for close to half of all EV batteries globally, and for roughly three-quarters of Chinese demand — a share that was touching eighty percent by the end of that year. When you are building millions of affordable cars, thirty percent off the most expensive component is not a detail. It is the strategy.
 
 Then **longevity**, and here the ledger flips again. LFP is the tortoise, and the tortoise wins the distance race. An LFP cell will typically survive **two to five thousand** full charge-discharge cycles, and sometimes far more, where a nickel cell may be tiring after **one to two thousand**. LFP is also relaxed about being charged all the way to 100 percent, which nickel chemistries resent — one reason Tesla tells LFP owners to charge to full routinely and nickel owners to stop around 80 for daily use. The advice differs because the chemistry differs; it is not fussiness, it is physics, and Chapter 3 returns to why.
 
@@ -334,7 +334,7 @@ The whole negotiation, on one card:
                         NMC / NCA           LFP
    ------------------------------------------------------------
     energy density       150-250 Wh/kg      90-160 Wh/kg
-    pack cost            EUR 130-150/kWh    EUR ~95/kWh
+    pack cost            USD 130-150/kWh    USD ~95/kWh
     cycle life           1,000-2,000        2,000-5,000
     cold tolerance       better             weaker
     cobalt-free          no                 yes
@@ -3219,28 +3219,6 @@ The first line of defence is straightforward: armour. The pack is wrapped in a r
 
 Notice the elegant two-way relationship here, because it is the heart of the section. The battery pack is not merely a fragile thing to be protected; it is also *part of the protection*. Recall from Chapter 3 that the structural pack is stiff enough to help hold the car together — so the very same rigid, load-bearing slab that stiffens the body and resists the crash is the thing being kept safe by that stiffness. The pack protects the car, and the car protects the pack, in a single integrated structure. A strong pack makes a strong car, and a strong car keeps the pack from harm. The two safeties are woven together, which is exactly why the structural battery, for all its repairability drawbacks, is prized by crash engineers.
 
-Protecting the store of energy in the floor:
-
-```
-   Layers of defence around the cells, outermost first:
-
-   1  SIDE SILLS and CROSS-MEMBERS
-      a cage that spreads side-impact loads around the pack
-      rather than into it
-
-   2  UNDERBODY SHIELDING
-      armour against road debris thrown up from beneath
-
-   3  THE PACK'S OWN STRUCTURE
-      stiff enough both to resist intrusion and to help
-      hold the car together (the structural pack of 3.3)
-
-   4  CELL SPACING and BARRIERS
-      if one cell does fail, contain it and slow the spread
-      to its neighbours -- turning a sudden catastrophe into
-      a slower, more survivable event
-```
-
 The second line of defence assumes the first has failed — that despite everything, a cell has been damaged and begins to overheat. Here the goal shifts from prevention to *containment*: stopping one bad cell from taking the whole pack with it. The pack is engineered so that a single cell in thermal runaway is, as far as possible, isolated from its neighbours — with spacing, heat-resistant barriers and flame-rated insulation between cells and modules, and venting paths to channel the hot gases safely away rather than letting them ignite the cell next door. The thermal system of Part IV plays its part too, able to pour cooling into a troubled region to slow the cascade. The design cannot promise that a severely damaged pack will never burn, but it can buy time — and time, in a crash, is what lets occupants get clear before a slow-developing battery fire takes hold.
 
 This is genuinely hard engineering, and it is worth being honest that it is never perfect. A sufficiently violent crash can defeat any armour, and a lithium fire, once truly under way, is difficult to stop. What the protection buys is a large reduction in how often a crash reaches the cells at all, and a crucial delay when it does — turning what could be an instant catastrophe into a slower, more survivable event. The statistics, as far as they can be trusted, suggest electric cars are not more prone to fire than petrol cars overall, and may be less so; but when an electric car does burn, it burns differently, and that difference matters most to the people who arrive to deal with it.
@@ -3261,34 +3239,6 @@ Imagine arriving, as a firefighter, at the wreck of a car you have never seen th
 The first and most important measure happens automatically, in the instant of the crash, and it draws on the two-worlds architecture of Chapter 8. The moment the car detects a serious impact — through the same sensors that fire the airbags — it throws open the *contactors*, the heavy switches that connect the high-voltage battery to the rest of the car. In milliseconds, the pack is disconnected, sealing its dangerous energy inside its own armoured box, so that the high-voltage cables running through the crushed car are no longer live. This is why the two electrical worlds were kept separate and why the low-voltage battery from Chapter 8 matters so much: because the low-voltage world is independent, the car can cut off the high-voltage pack entirely while the twelve-volt system keeps the hazard lights flashing, the doors unlockable, and the emergency call placed. The frightening voltage is isolated the instant it becomes a threat, automatically, before anyone human is even aware a crash has happened.
 
 Backing this up is the constant *isolation monitoring* also introduced in Chapter 8 — the car's continuous check that no high voltage is leaking into the metal body or anywhere a person might touch. If a crash compromises the insulation, the car detects the fault and can shut the high-voltage system down, so that the wreck does not become electrified. The same watchfulness that keeps the voltage away from occupants in normal driving keeps it away from rescuers in a crash.
-
-Automatic protection, and signals for rescuers:
-
-```
-   IN THE CRASH -- automatic, within milliseconds
-
-     impact sensed
-          |
-          v
-     CONTACTORS OPEN -- the HV pack is disconnected and its
-     energy sealed inside its own armoured box
-          |
-          v
-     the LOW-voltage world survives, and keeps the hazard
-     lights, door releases and emergency call alive
-
-     running throughout: isolation monitoring, which shuts
-     the system down if any voltage leaks to the bodywork
-
-   FOR THE RESCUERS -- making the danger legible
-
-     ORANGE ............ the colour of every HV cable. Never cut.
-     first-responder ... a designated loop to cut, which
-     loop                guarantees the system is de-energised
-     rescue sheets ..... standardised diagrams: where to cut,
-                         and where absolutely not to
-     and a warning ..... a damaged pack can reignite hours later
-```
 
 But automatic isolation is not enough on its own, because a rescuer must be able to *trust* that the car is safe before cutting into it, and to make the danger visible. So electric cars are built to communicate their hazards to the people who deal with wrecks. High-voltage cabling is coloured a distinctive orange, an industry convention that tells any trained responder: never cut this. Cars are provided with a designated *first-responder loop* or cut point — a specific place a firefighter can sever to guarantee the high-voltage system is de-energised, a manual backstop to the automatic contactors. And manufacturers publish standardised rescue sheets showing exactly where the battery, the cables, and the safe cutting points are, so that a crew can cut a roof off to reach a trapped occupant without slicing into a live cable or the pack itself. Making the invisible danger legible — colour-coded, documented, with a clear "cut here to make safe" — is as much a part of the car's safety design as any armour.
 
@@ -3320,27 +3270,6 @@ Here is a question that sounds simple and is not: what limits how cheap a car ca
 
 Once you see this, a whole hidden layer of the car's design comes into focus, and it explains features that make no sense from a purely driving-focused point of view. Consider: a part that does its job perfectly but requires twelve separate pieces welded together in a precise sequence is, from a manufacturing standpoint, *worse* than a single part that does the same job — even if the single part is heavier or uses more material — because the single part eliminates a dozen chances for error, a dozen welds to inspect, a dozen components to source and store. The best design is often not the one that is cleverest on the road but the one that is simplest to build. This is the principle engineers call *design for manufacturing*, and Tesla pursues it with unusual ferocity.
 
-Two ways to make the same thing:
-
-```
-   MANY PARTS (the traditional way)
-     12 stampings + 30 welds + fixtures + inspection
-     + more suppliers + more part numbers
-          |
-          v
-     more labour, more variables, more ways to go wrong
-
-   FEW PARTS (design for manufacture)
-     1 large casting
-     + far less to inspect + fewer suppliers
-          |
-          v
-     cheaper, faster and more consistent -- even where the
-     result is heavier, or looks cruder
-
-   The car and the factory are designed in the same breath.
-```
-
 This reframes almost every earlier chapter. When Chapter 3 described the structural battery pack, it noted that bonding the battery into the body deleted a separate floor structure — that was a manufacturing win, fewer parts to assemble, before it was anything else. When Chapter 9 explained zonal wiring, the deepest benefit was that short, modular wiring is easier for a machine to install than a sprawling harness. When Chapter 10 praised standardised connectors, the point was to shrink the parts catalogue and simplify the factory. Each of these was presented, in its place, as electrical or structural engineering. Underneath, each was also a decision about how to *build* the car more cheaply and more automatically. The manufacturing logic was there all along, driving choices we examined for other reasons.
 
 And it runs the other way too: the demand to be buildable actively *shapes* what the car becomes, sometimes overriding what would otherwise be the obvious engineering choice. A part might be redesigned to be castable in one piece, or a wiring run rerouted so a robot arm can reach it, or a component relocated so it can be installed from one direction without flipping the car. These are not compromises forced on a finished design; they are inputs to the design from the start. The car is engineered, simultaneously, to work *and* to be made — and when the two pull in different directions, the need to be made cheaply and automatically often wins, because a superb car that cannot be built affordably at scale is, commercially, no car at all.
@@ -3358,34 +3287,17 @@ The rest of this part follows that principle into its most striking consequences
 - "The factory is the product" and the co-design of vehicle and factory are widely reported descriptions of Tesla's manufacturing philosophy; gigacasting developed in 20.2.
 ## 20.2 Gigacasting
 
-Imagine the back third of a car's underbody — the complex structure beneath the rear seats and boot that holds the suspension, absorbs crash loads, and ties the body together. In a traditional car this is an assembly of *dozens* of separate pieces: sheets of steel stamped into shape, then welded, bolted and glued together in a long, carefully-sequenced dance involving hundreds of robots, each weld a step that must be done right and then checked. It is one of the most complex and labour-intensive regions of the whole car body. Now imagine deleting all of it — all seventy-odd parts, all those welds — and replacing it with a *single* piece, cast in one shot like a toy soldier poured from a mould. That is gigacasting, and it is the boldest manufacturing idea in the modern car.
+Imagine the back third of a car's underbody — the complex structure beneath the rear seats and boot that holds the suspension, absorbs crash loads, and ties the body together. In a traditional car this is an assembly of *dozens* of separate pieces: sheets of steel stamped into shape, then welded, bolted and glued together in a long, carefully-sequenced dance involving hundreds of robots, each weld a step that must be done right and then checked. It is one of the most complex and labour-intensive regions of the whole car body. Now imagine deleting all of it — all those dozens of parts, all those welds — and replacing it with a *single* piece, cast in one shot like a toy soldier poured from a mould. That is gigacasting, and it is one of the boldest manufacturing ideas in modern car-making.
 
-The machine that does it is called a Giga Press, and it is genuinely enormous — one of the largest die-casting machines ever built, a device the size of a small house that clamps a mould shut with thousands of tonnes of force and injects molten aluminium into it under tremendous pressure. The aluminium fills every cavity of the mould, cools, and is lifted out as a single, finished, intricate part that would otherwise have been an assembly of seventy. Tesla pioneered this at automotive scale, first casting a single-piece rear underbody for the Model Y that replaced around seventy stamped-and-welded parts with one, and has pushed toward casting the front and eventually larger portions of the body the same way.
+The machine that does it is called a Giga Press, and it is genuinely enormous — one of the largest die-casting machines ever built, a device the size of a small house that clamps a mould shut with thousands of tonnes of force and injects molten aluminium into it under tremendous pressure. The aluminium fills every cavity of the mould, cools, and is lifted out as a single, finished, intricate part that would otherwise have been an assembly of dozens. Tesla pioneered this at automotive scale, first casting a single-piece rear underbody for the Model Y that replaced dozens of stamped-and-welded parts with one, and has pushed toward casting the front and eventually larger portions of the body the same way.
 
-Seventy parts, one shot:
+The benefits, when it works, are exactly the design-for-manufacturing wins of the last section, delivered at spectacular scale. Consolidating dozens of parts into one eliminates all the welding between them, and with it the hundreds of robots that did the welding — Tesla has claimed the change removed hundreds of robots from the line. It eliminates the variability of lining up many parts, so the finished structure is more consistent and dimensionally accurate. It removes a small mountain of logistics — all those part numbers, their suppliers, their storage, their sequencing — replaced by one casting. And by Tesla's own estimates the approach can cut the underbody's weight by around thirty percent and its cost by up to forty. Fewer parts, less labour, less weight, lower cost, better consistency: it is the manufacturing dream made metal, and it is why much of the rest of the industry scrambled to copy it.
 
-```
-   TRADITIONAL REAR UNDERBODY    GIGACASTING
-   ------------------------------------------------------------
-   about 70 stamped steel parts  1 aluminium casting
-   hundreds of welds             poured in a single shot
-   many robots, a long           about 300 fewer robots,
-   sequence of operations        by Tesla's own account
-   variable fit, much            consistent, with little
-   inspection needed             left to inspect
-   ------------------------------------------------------------
-   heavy, slow, costly           around 30% lighter and 40%
-                                 cheaper, by Tesla's estimates
-
-   And the same consolidation that makes it cheap to build
-   is what makes it expensive to repair. One see-saw.
-```
-
-The benefits, when it works, are exactly the design-for-manufacturing wins of the last section, delivered at spectacular scale. Consolidating seventy parts into one eliminates all the welding between them, and with it the hundreds of robots that did the welding — Tesla has claimed the change removed something like three hundred robots from the line. It eliminates the variability of lining up many parts, so the finished structure is more consistent and dimensionally accurate. It removes a small mountain of logistics — seventy part numbers, their suppliers, their storage, their sequencing — replaced by one casting. And by Tesla's own estimates the approach can cut the underbody's weight by around thirty percent and its cost by up to forty. Fewer parts, less labour, less weight, lower cost, better consistency: it is the manufacturing dream made metal, and it is why much of the rest of the industry scrambled to copy it.
-
-But this book always tells you the price, and gigacasting's price is steep and worth understanding, because it echoes a warning from earlier in the book. The first cost is capital: a Giga Press is a multi-million-euro machine, and the moulds ("dies") for it are hugely expensive too, which means the whole approach only makes economic sense at very high production volumes — you must build a great many identical cars to spread that colossal fixed cost. It also demanded a new aluminium alloy, developed specially, that could be cast into so large and complex a shape and still have the right strength — a metallurgical problem in its own right. And there is the drawback that connects directly to the next chapter: *repairability*. When a car's rear underbody is a single giant casting, a collision that would once have crumpled a few replaceable stamped parts can instead damage the one enormous casting — which cannot be unwelded and patched, only replaced whole, at great cost, if it can be replaced at all. A part designed to eliminate assembly is, almost by definition, a part designed to resist disassembly.
+But this book always tells you the price, and gigacasting's price is steep and worth understanding, because it echoes a warning from earlier in the book. The first cost is capital: a Giga Press is a multi-million-dollar machine, and the moulds ("dies") for it are hugely expensive too, which means the whole approach only makes economic sense at very high production volumes — you must build a great many identical cars to spread that colossal fixed cost. It also demanded a new aluminium alloy, developed specially, that could be cast into so large and complex a shape and still have the right strength — a metallurgical problem in its own right. And there is the drawback that connects directly to the next chapter: *repairability*. When a car's rear underbody is a single giant casting, a collision that would once have crumpled a few replaceable stamped parts can instead damage the one enormous casting — which cannot be unwelded and patched, only replaced whole, at great cost, if it can be replaced at all. A part designed to eliminate assembly is, almost by definition, a part designed to resist disassembly.
 
 This is the same tension we met with the structural battery pack in Chapter 3, and it is not a coincidence — it is the deep signature of the whole design-for-manufacturing philosophy. Every act of consolidation that makes the car cheaper and simpler to *build* tends, by the same logic, to make it harder and more expensive to *repair*. Integration and repairability are two ends of one see-saw: press down on the cost of manufacturing and the cost of repair rises at the other end. Tesla has consistently chosen the manufacturing end, betting that cars built this way are cheap enough, and crash-safe enough, that the repair penalty is worth it. Whether that bet is right for the owner, as opposed to the maker, is one of the questions the next chapter takes up.
+
+Big single-piece castings also point toward a different way of assembling the whole car, one Tesla has designed for its next-generation, lower-cost vehicles — the robotaxi and the cheaper models built alongside it — and calls *unboxed* assembly. A conventional car is built up around a single steel body-in-white: the shell is welded together first, then everything is fitted *into* it, workers and robots reaching awkwardly inside a progressively more enclosed box. The unboxed idea breaks that box apart. The car is split into a handful of large modules — front, rear, floor, sides — each of them built up in parallel on its own line, painted and stuffed with wiring, seats and trim while it is still open and easy to reach, and only near the very end are the finished modules brought together and joined into a car. Because the modules are worked on at the same time rather than one after another, and because each stays accessible until the last moment, the claim is a faster line in a smaller building. The giant castings are what make it practical: each is already one of those big modules, delivered in a single piece rather than assembled from a hundred. Gigacasting and unboxing are the same instinct — consolidate, parallelise, delete steps — applied to the part and to the whole.
 
 Gigacasting is the most visible face of "the factory is the product" — a car body reconceived around the capabilities of one gigantic machine. But a casting must be made of *something*, and the choice of what to cast, stamp, and fold a car from is its own set of trade-offs, which the next section explores.
 
@@ -3395,6 +3307,7 @@ Gigacasting is the most visible face of "the factory is the product" — a car b
 
 - Electrek, InsideEVs, alcircle, HotCars — Giga Press casts a single-piece rear underbody replacing ~70 parts; ~300 fewer robots; ~30% weight and ~40% cost reduction (Tesla estimates); requires a specially developed aluminium alloy.
 - Automotive Manufacturing Solutions, Notebookcheck, Sunrise Metal — Giga Press scale and capital cost (~$18–25M per press), economic viability only at high volume (~100,000+ units/die); repairability and high repair-cost concerns.
+- Tesla Investor Day 2023 coverage (Electrek, InsideEVs, Automotive Manufacturing Solutions) — the "unboxed" assembly process for the next-generation/robotaxi platform: parallel build of large sub-assemblies (front, rear, floor, sides) joined late, promising a smaller factory footprint and faster throughput; large castings serve as those modules.
 - The manufacturing-vs-repairability trade-off references the structural pack of Chapter 3 and is developed in Chapter 21.
 ## 20.3 Materials: aluminium, steel, stainless
 
@@ -3444,24 +3357,6 @@ The broader lesson is that material choice in a modern car is a genuinely multi-
 If you visit a modern car factory, you will be struck by how few people there are. Great halls where robots stamp, weld, glue and lift, moving with a speed and precision no human could match, and only a scattering of workers overseeing them. The automation is nearly total — nearly. There is one region of the assembly where the robots thin out and the human hands return, one job that has stubbornly resisted the machines for decades, and it is the one we met back in Chapter 10: installing the wiring harness. Understanding why reveals the final frontier of "the factory is the product," and why Tesla redesigned the car's entire nervous system partly to conquer it.
 
 Recall the problem. A traditional wiring harness is a sprawling, floppy, three-dimensional web of kilometres of wire, and floppiness is precisely what robots cannot handle. A robot arm is superb at rigid, repeatable motions — grip this solid part, place it exactly there, weld — and hopeless at the dexterous, judgement-laden business of threading a limp bundle of wires through holes, around corners, into awkward cavities, and plugging dozens of connectors into hidden sockets. That is work for human fingers, with their sense of touch and their ability to coax a floppy thing into place. So the harness became an island of manual labour in an automated sea, and — being one of the most complex and time-consuming parts to install — a stubborn brake on the dream of a car built entirely by machine.
-
-Why the harness resists robots:
-
-```
-   WHAT ROBOTS ARE GREAT AT      WHAT A WIRING HARNESS IS
-   ------------------------------------------------------------
-   rigid, repeatable, precise    floppy, three-dimensional,
-                                 different every time
-   grip, place and weld solid    thread limp wire through
-   parts                         holes, and plug hidden
-                                 connectors by feel
-   ------------------------------------------------------------
-
-   Almost everything else in the factory is automated. This
-   is the last big job still left to human hands -- which is
-   why every wire deleted, shortened or standardised is a
-   step toward a car a robot can build end to end.
-```
 
 Now every wiring decision in Part V reads differently. When Chapter 9 introduced zonal architecture with its short local wiring drops, one of the deepest motives was that short, simple, modular wiring is far easier for a machine to handle than long runs threading across the whole car. When Chapter 10 described the shrinking harness and the standardised connectors, the goal was explicitly to make the wiring something a robot might finally install. When Chapter 8 moved to forty-eight volts and thinner wires, and Chapter 10 folded data and power into a single resilient loop, part of the payoff was a physically simpler nervous system — fewer, thinner, shorter wires with fewer, standardised plugs. All of these were presented as electrical engineering. All of them are also a sustained campaign to defeat the one thing keeping humans on the assembly line: the un-automatable harness.
 
@@ -3527,7 +3422,7 @@ But for understanding *how a Tesla works*, vertical integration is the keystone,
 
 Every machine in this book has been described in its prime — storing energy, making motion, thinking, surviving. But machines do not stay in their prime. They age, they crash, they wear out, and eventually they die, and what happens then is not an afterthought to how a car works but a real and revealing part of it. The end of a car's life exposes, more honestly than any brochure, the true consequences of the design decisions made at its beginning. This short chapter follows the electric car to its end, and finds there both the sharpest cost of everything the book has praised, and one of the most genuinely hopeful facts about the whole enterprise.
 
-The cost first. Chapter after chapter has celebrated integration — the merging of parts, the deletion of joints, the casting of seventy pieces into one, the bonding of the battery into the body. Every one of those moves made the car lighter, cheaper to build, stiffer, more efficient. And every one of them, this chapter must now admit, made the car harder to *repair*. A machine designed so its parts cannot easily be separated is a machine that resists being taken apart to fix — and when it is damaged, the bill, or the verdict of the insurer, can be brutal. The very integration that is the car's engineering glory is its repair-shop curse, and the two are inseparable.
+The cost first. Chapter after chapter has celebrated integration — the merging of parts, the deletion of joints, the casting of dozens of pieces into one, the bonding of the battery into the body. Every one of those moves made the car lighter, cheaper to build, stiffer, more efficient. And every one of them, this chapter must now admit, made the car harder to *repair*. A machine designed so its parts cannot easily be separated is a machine that resists being taken apart to fix — and when it is damaged, the bill, or the verdict of the insurer, can be brutal. The very integration that is the car's engineering glory is its repair-shop curse, and the two are inseparable.
 
 But the chapter does not end in gloom, because the largest and most valuable object in the car has a remarkable second act. When the battery is too tired to drive a car well, it is very far from dead — it is merely overqualified for a gentler job, and there are gentler jobs waiting. And when even that second life is over, the pack turns out not to be waste at all but a rich ore, from which the expensive metals can be reclaimed and sent round again. The battery that seemed, at the start of the book, to be the electric car's heaviest burden turns out, at the end, to be the part that most refuses to become rubbish.
 
@@ -3536,7 +3431,7 @@ So the chapter has two subjects: the price of integration, paid at the repair sh
 
 Here is a scenario that has genuinely happened, and it captures the whole problem in one image: a car is in a low-speed collision — the sort of parking-lot bump that would once have meant a bent panel and a modest bill — and the insurer writes the entire car off. Not because it cannot be driven, but because the damage reached a part that cannot economically be repaired, and replacing that part costs more than the car is worth. The car is scrapped over an injury that, on an older vehicle, would have been an afternoon's work at a body shop. This is the cost of integration, arriving at the end of the car's life, and it is the bill for many of the things this book has praised.
 
-The logic is one we have met repeatedly, now seen from the repair shop rather than the factory. Every act of consolidation that made the car cheaper to *build* tends to make it harder to *fix*, because the two are opposites: building is assembly, repairing is partial disassembly, and a design optimised to resist being taken apart resists both. The structural battery pack of Chapter 3, bonded together with fierce adhesive, was described by teardown experts as having essentially "zero repairability" — you cannot lift out one bad module and slot in a good one when the cells are foamed into a structural slab. The gigacastings of Chapter 20 replaced seventy repairable stamped parts with one huge casting that, if damaged, may have to be replaced whole rather than patched. Damage that a multi-part structure would have localised to a few cheap pieces can, in an integrated one, compromise a large and costly component. The see-saw between manufacturability and repairability, flagged all through the book, tips hard toward the manufacturer at the owner's expense.
+The logic is one we have met repeatedly, now seen from the repair shop rather than the factory. Every act of consolidation that made the car cheaper to *build* tends to make it harder to *fix*, because the two are opposites: building is assembly, repairing is partial disassembly, and a design optimised to resist being taken apart resists both. The structural battery pack of Chapter 3, bonded together with fierce adhesive, was described by teardown experts as having essentially "zero repairability" — you cannot lift out one bad module and slot in a good one when the cells are foamed into a structural slab. The gigacastings of Chapter 20 replaced dozens of repairable stamped parts with one huge casting that, if damaged, may have to be replaced whole rather than patched. Damage that a multi-part structure would have localised to a few cheap pieces can, in an integrated one, compromise a large and costly component. The see-saw between manufacturability and repairability, flagged all through the book, tips hard toward the manufacturer at the owner's expense.
 
 The see-saw:
 
