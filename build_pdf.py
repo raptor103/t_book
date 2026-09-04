@@ -39,6 +39,17 @@ BOOK = os.path.join(ROOT, "book")
 OUT_DIR = os.path.join(ROOT, "out")
 OUT_PDF = os.path.join(OUT_DIR, "how-a-tesla-works.pdf")
 
+# Image cover, dropped in as page 1. The artwork uses the Amazon KDP aspect
+# ratio, which is taller than A4; fitted to page height it leaves a thin strip
+# down each side, filled here with black.
+COVER = os.path.join(ROOT, "front_cover", "Book cover V1.png")
+COVER_FRAME = (0, 0, 0)
+
+# Pages that precede the printed Contents: the image cover and the title page.
+# The Contents is inserted after them, they carry no folio, and heading page
+# numbers are shifted past the cover.
+FRONT_PAGES = 2
+
 PAPER = "A4"
 BORDERS = (36, 36, -36, -36)
 TOC_LEVEL = 2
@@ -60,6 +71,11 @@ pre {{ white-space: pre; line-height: {PRE_SPACING}; margin: 6pt 0; }}
 table {{ border-collapse: collapse; font-size: 10pt; }}
 th, td {{ border: 1px solid #999; padding: 3pt 6pt; }}
 hr {{ border: none; border-top: 1px solid #ccc; }}
+.sources {{ font-size: 9pt; color: #555555; }}
+.titlepage {{ text-align: center; page-break-after: always; }}
+.titlepage h1 {{ font-size: 40pt; margin-top: 190pt; margin-bottom: 16pt; }}
+.titlepage h3 {{ font-size: 18pt; font-weight: normal; margin: 0 0 18pt; }}
+.titlepage p  {{ font-size: 13pt; }}
 """
 
 # Page-number footer. Borders stop body text 36pt above the page foot; the
@@ -68,7 +84,7 @@ FOLIO_FONT = "helv"
 FOLIO_SIZE = 9
 FOLIO_COLOR = (0.45, 0.45, 0.45)
 FOLIO_BASELINE_FROM_BOTTOM = 22
-SKIP_PAGES = 1  # title page carries no number
+SKIP_PAGES = FRONT_PAGES  # cover and title page carry no number
 
 # A placed diagram shorter than this much of its full height was cut off.
 SPLIT_SLACK = 0.5
@@ -105,8 +121,23 @@ def _ascii(s):
     return s
 
 
+def insert_cover_page(doc):
+    """Add the image cover as page 1, fitted to the sheet on a gold ground.
+
+    The artwork is taller than A4, so it is scaled to the full page height and
+    centred; the frame-coloured background fills the thin strips left at the
+    sides, so the cover's gold border appears to reach the edge of the sheet.
+    """
+    import pymupdf
+
+    rect = pymupdf.paper_rect(PAPER)
+    page = doc.new_page(0, width=rect.width, height=rect.height)
+    page.draw_rect(page.rect, color=None, fill=COVER_FRAME)
+    page.insert_image(page.rect, filename=COVER, keep_proportion=True)
+
+
 def prepend_toc(path, headings=None):
-    """Insert a printed, clickable Contents section after the title page.
+    """Insert a printed, clickable Contents section after the front pages.
 
     The render produces a bookmark outline but no visible contents, so this
     reads that outline, lays it out as pages, inserts them, and adds a GoTo
@@ -158,15 +189,15 @@ def prepend_toc(path, headings=None):
     n = len(pages)
 
     for i in range(n):
-        doc.new_page(1 + i, width=595, height=842)
+        doc.new_page(FRONT_PAGES + i, width=595, height=842)
 
-    # Pages are inserted *after* the title page, so anything already on
-    # page 1 stays put; everything from page 2 on moves down by n.
+    # Pages are inserted *after* the front pages (cover + title), so those
+    # stay put; everything below them moves down by n.
     def shift(p):
-        return p if p <= 1 else p + n
+        return p if p <= FRONT_PAGES else p + n
 
     for i, rowset in enumerate(pages):
-        page = doc[1 + i]
+        page = doc[FRONT_PAGES + i]
         if i == 0:
             page.insert_text((X0, 60), "Contents", fontname="hebo", fontsize=17)
         for r, title, target, y in rowset:
@@ -201,7 +232,7 @@ def prepend_toc(path, headings=None):
 
     # Shift every existing bookmark past the inserted pages, and put a
     # Contents bookmark at the front so the outline matches the printed TOC.
-    doc.set_toc([[1, "Contents", 2]] +
+    doc.set_toc([[1, "Contents", FRONT_PAGES + 1]] +
                 [[lvl, t, shift(pg)] for lvl, t, pg in outline])
     doc.saveIncr()
     doc.close()
@@ -240,6 +271,18 @@ def stamp_page_numbers(path):
 # diagram starts the next one reads worse than the gap it saves.
 LEAD_IN = re.compile(r"(?:<p>(?P<lead>(?:(?!</p>).)*)</p>\s*)?<pre>", re.S)
 
+# Each subchapter ends with a "Sources" note -- a bold label and a bullet
+# list. It is reference apparatus, not body text, so it is wrapped and set a
+# step smaller and greyer, letting the prose above it carry the page.
+SOURCES = re.compile(r"<p><strong>Sources</strong></p>\s*<ul>.*?</ul>", re.S)
+
+# The book title and its two lines beneath it are wrapped so they can be set
+# large and centred on a page of their own, ended by the page break the
+# .titlepage rule carries -- the one deliberate break in an otherwise
+# continuous flow.
+TITLE = re.compile(
+    r"<h1>How a Tesla Works</h1>\s*<h3>.*?</h3>\s*<p>.*?</p>", re.S)
+
 
 def markdown_html(combined):
     """Render the book to HTML, tagging each diagram and its lead-in.
@@ -250,6 +293,8 @@ def markdown_html(combined):
     from markdown_it import MarkdownIt
 
     html = MarkdownIt("commonmark").enable("table").render(combined)
+    html = SOURCES.sub(lambda m: f'<div class="sources">{m.group(0)}</div>', html)
+    html = TITLE.sub(lambda m: f'<div class="titlepage">{m.group(0)}</div>', html, count=1)
     n = itertools.count()
 
     def tag(m):
@@ -430,7 +475,10 @@ def main():
     os.makedirs(OUT_DIR, exist_ok=True)
 
     doc, toc, trims, stuck = keep_diagrams_whole(html, heights)
-    doc.set_metadata({"title": "How a Tesla Works", "author": ""})
+    # Prepend the image cover; every heading now sits one page later.
+    insert_cover_page(doc)
+    toc = [[lvl, t, pg + 1] for lvl, t, pg in toc]
+    doc.set_metadata({"title": "How a Tesla Works", "author": "Jiri Kosek"})
     doc.set_toc(toc)
     doc.save(OUT_PDF)
     body_pages = doc.page_count
@@ -443,7 +491,7 @@ def main():
     with pymupdf.open(OUT_PDF) as final:
         # The front matter and the last page of the book are short by nature.
         worst = [(f, p) for f, p in page_fill(final)
-                 if 1 + toc_pages < p < final.page_count]
+                 if FRONT_PAGES + toc_pages < p < final.page_count]
 
     print(f"Rendered {len(files)} files -> {OUT_PDF}")
     print(f"Contents: {toc_pages} page(s), every line a clickable link")

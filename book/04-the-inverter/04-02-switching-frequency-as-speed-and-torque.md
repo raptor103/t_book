@@ -24,7 +24,7 @@ Two knobs on the same box of switches:
                               -> the designer's balancing act
 ```
 
-This is the deep reason electric cars have that famous instant shove. In a petrol car, asking for more torque means air and fuel and spark and rising revs — a physical process with its own unavoidable delays. In an electric car, asking for more torque means telling the inverter to widen its pulses, and it can do that between one blink of its internal clock and the next. There is essentially no lag between your foot and the force at the wheels. The throttle response people rave about is really inverter response.
+This is the deep reason electric cars have that famous instant shove. In a gasoline car, asking for more torque means air and fuel and spark and rising revs — a physical process with its own unavoidable delays. In an electric car, asking for more torque means telling the inverter to widen its pulses, and it can do that between one blink of its internal clock and the next. There is essentially no lag between your foot and the force at the wheels. The throttle response people rave about is really inverter response.
 
 There is a third number lurking here, easy to confuse with the first, and worth separating cleanly: the *switching frequency* itself — how many times a second the switches flick on and off to build the waves. This is far faster than the waves it produces. The output waves might cycle a few hundred times a second at most; the switches underneath them chop away at something like **ten to twenty thousand** times a second, painting each smooth wave out of thousands of tiny pulses. Turn this rate up and the waves come out smoother and the motor runs quieter and more precisely — but every flick of a switch wastes a little energy as heat, so switching faster than you need is simply pouring efficiency away. Choosing the switching frequency is a balancing act between smoothness and loss, and it is one of the quiet arts of inverter design. It is also, incidentally, why an electric car sometimes emits a faint high-pitched whine that rises and falls: you are hearing the switching, or its effects in the motor, leaking into the range of human ears.
 
@@ -38,4 +38,4 @@ Which raises the obvious engineering question. If every flick of a switch costs 
 
 - evengineeringonline.com and Union College capstone — inverter output frequency sets motor speed; current (pulse width) sets torque; PWM carrier switching in the ~10–20 kHz range.
 - General power-electronics principle — switching-frequency trade-off between waveform smoothness and switching losses; audible inverter/motor whine as a by-product.
-- Instant torque response attributed to microsecond inverter current control (per Chapter 1 sources); rotating-field motor behaviour developed in Chapter 5.
+- Instant torque response attributed to microsecond inverter current control (per Chapter 1 sources); rotating-field motor behavior developed in Chapter 5.

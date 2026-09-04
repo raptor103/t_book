@@ -6,7 +6,7 @@ On one side sit the Tesla books, and there are a great many of them. They are ab
 
 On the other side sit the engineering textbooks — sober, authoritative, and priced like a small kitchen appliance. Open one and you are three pages into a differential equation before anyone has explained why you should care. These books are written by experts, for people who are on their way to becoming experts. They assume you already want to build the thing.
 
-And in between — nothing. There is no book for the person who does not want to build an electric car but very much wants to *understand* one. Who has stood next to a Tesla at a charging bay, heard the faint tick and whir of a machine cooling itself, and thought: what is actually going on in there? Not the marketing version. The real version. The one an engineer would recognise.
+And in between — nothing. There is no book for the person who does not want to build an electric car but very much wants to *understand* one. Who has stood next to a Tesla at a charging bay, heard the faint tick and whir of a machine cooling itself, and thought: what is actually going on in there? Not the marketing version. The real version. The one an engineer would recognize.
 
 This is that book.
 

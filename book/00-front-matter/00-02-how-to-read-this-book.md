@@ -10,9 +10,9 @@ A few things worth knowing before you start.
 
 **The diagrams are deliberately crude.** Every diagram in this book is drawn in plain text characters — lines and slashes and boxes made of dashes. This is a choice, not a limitation. A simple diagram that shows you the *shape* of an idea is worth more than a glossy render that hides the mechanism, and plain-text drawings have the happy property of never breaking, never needing a caption in six-point type, and never pretending to a precision they do not have. Read them as maps of the *relationships* between parts, not as blueprints.
 
-**Units are metric, in a European frame.** Kilometres, kilograms, degrees Celsius, kilowatts. Where a figure is more famous in another form, the book will occasionally translate.
+**Units are metric, with imperial in tow.** Kilometers, kilograms, degrees Celsius, kilowatts — the language engineers actually work in — with miles, pounds, and Fahrenheit given alongside wherever a figure lands more familiarly that way. The book is written to read the same on either side of the Atlantic.
 
-**There is no maths.** Not because the maths is unimportant — it is the whole hidden engine of the field — but because you do not need it to understand what is happening, any more than you need to read sheet music to be moved by a song. Where a relationship matters, it is described in words and pictures.
+**There is no math.** Not because the math is unimportant — it is the whole hidden engine of the field — but because you do not need it to understand what is happening, any more than you need to read sheet music to be moved by a song. Where a relationship matters, it is described in words and pictures.
 
 A small label appears in the text from time to time. **[INFERENCE]** marks something known only from teardowns or patents rather than from the manufacturer's own word; these are meant to survive, because knowing *how* we know something is half the fun.
 

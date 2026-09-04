@@ -2,9 +2,9 @@
 
 In 2020, at an event Tesla called Battery Day, the company unveiled a new cell with the unglamorous name 4680 and made a set of promises about it grand enough to move the share price. Six years on it is one of the more instructive stories in the whole book — not because it failed, and not because it triumphed, but because it did neither cleanly, and the gap between what was promised and what arrived tells you more about real engineering than any success story could.
 
-Recall from earlier that 4680 is a *format*, not a chemistry — a cylinder 46 millimetres across and 80 tall, roughly the size of a small tin of tomato purée, and about five times the volume of the 2170 cells it was meant to supersede. Making the can bigger sounds trivial, even backward; surely more, smaller cells give you more control? But bigger cells mean fewer of them for the same pack — thousands instead of tens of thousands — and fewer parts to make, weld, wire and monitor is fewer chances to get something wrong and less cost in the assembling. The 4680's first argument for existing is simply arithmetic: a big cell is a cheap cell to build with, if you can build the cell itself.
+Recall from earlier that 4680 is a *format*, not a chemistry — a cylinder 46 millimeters across and 80 tall, roughly the size of a small tin of tomato purée, and about five times the volume of the 2170 cells it was meant to supersede. Making the can bigger sounds trivial, even backward; surely more, smaller cells give you more control? But bigger cells mean fewer of them for the same pack — thousands instead of tens of thousands — and fewer parts to make, weld, wire and monitor is fewer chances to get something wrong and less cost in the assembling. The 4680's first argument for existing is simply arithmetic: a big cell is a cheap cell to build with, if you can build the cell itself.
 
-The clever part, though, is not the size. It is a change to the internals with the faintly comic name *tabless*, and it revives an idea older than the hype around it. Inside any cylindrical cell the electrodes are not stacked but rolled — two long ribbons of foil wound up like a Swiss roll. In a conventional cell, the current is collected by a little metal tab welded to that ribbon at one point, which means every electron produced anywhere along the metre-long foil has to travel the whole winding length to reach the tab before it can leave. That is a long, resistive journey, and resistance means heat, and heat is the thing that limits how hard you can charge and discharge a cell.
+The clever part, though, is not the size. It is a change to the internals with the faintly comic name *tabless*, and it revives an idea older than the hype around it. Inside any cylindrical cell the electrodes are not stacked but rolled — two long ribbons of foil wound up like a Swiss roll. In a conventional cell, the current is collected by a little metal tab welded to that ribbon at one point, which means every electron produced anywhere along the meter-long foil has to travel the whole winding length to reach the tab before it can leave. That is a long, resistive journey, and resistance means heat, and heat is the thing that limits how hard you can charge and discharge a cell.
 
 The tabless design does away with the single tab and instead folds the entire edge of the foil into the connection, so the whole rim of the roll becomes one giant contact. Now an electron only has to cross the short width of the ribbon — the height of the cell — rather than run its entire length.
 
@@ -13,7 +13,7 @@ The difference, drawn crudely:
 ```
    Inside the cell the electrodes are not stacked but rolled --
    two long foil ribbons wound up like a Swiss roll. Unrolled,
-   one ribbon is about a metre long, but only as tall as the
+   one ribbon is about a meter long, but only as tall as the
    cell is high. Where the current leaves is everything.
 
    CONVENTIONAL -- all the current leaves by ONE small tab
@@ -24,7 +24,7 @@ The difference, drawn crudely:
      |  e- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  |
      |  e- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  |
      +---------------------------------------------------+
-     <---------- up to a metre of travel ---------------->
+     <---------- up to a meter of travel ---------------->
 
      Every electron runs nearly the FULL LENGTH of the foil
      to reach that one tab: a long path, high resistance,
@@ -39,7 +39,7 @@ The difference, drawn crudely:
      +---------------------------------------------------+
 
      Every electron crosses only the SHORT way -- the height
-     of the cell, a couple of centimetres instead of a metre.
+     of the cell, a couple of centimeters instead of a meter.
      Shorter path, lower resistance, and the cell runs cooler.
 ```
 
@@ -53,7 +53,7 @@ So what is the 4680, in the end? Not the miracle of the keynote, and not the flo
 
 **Sources**
 
-- Munro / leandesign.com, "Cybertruck's 4680 Battery: Inside Tesla's Gen 2 Cell" — ~12% energy-density gain on later revision; tabless design characterisation.
+- Munro / leandesign.com, "Cybertruck's 4680 Battery: Inside Tesla's Gen 2 Cell" — ~12% energy-density gain on later revision; tabless design characterization.
 - InsideEVs, "Tesla's 4680-Type Battery Cell Teardown: Specs Revealed" and IOPscience teardown (2024) — 4680 dimensions (46×80 mm) and internal construction.
 - InsideEVs, Drive Tesla, CleanTechnica (April 2022) — first customer deliveries of 4680-cell, structural-pack Model Ys from Gigafactory Texas, some eighteen months before Cybertruck deliveries began in November 2023.
 - notateslaapp.com and evlithium.com — dry-cathode/dry-electrode process goals; tabless current-path and lower internal resistance explanation.
