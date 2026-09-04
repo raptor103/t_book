@@ -3424,7 +3424,7 @@ Every machine in this book has been described in its prime — storing energy, m
 
 The cost first. Chapter after chapter has celebrated integration — the merging of parts, the deletion of joints, the casting of dozens of pieces into one, the bonding of the battery into the body. Every one of those moves made the car lighter, cheaper to build, stiffer, more efficient. And every one of them, this chapter must now admit, made the car harder to *repair*. A machine designed so its parts cannot easily be separated is a machine that resists being taken apart to fix — and when it is damaged, the bill, or the verdict of the insurer, can be brutal. The very integration that is the car's engineering glory is its repair-shop curse, and the two are inseparable.
 
-But the chapter does not end in gloom, because the largest and most valuable object in the car has a remarkable second act. When the battery is too tired to drive a car well, it is very far from dead — it is merely overqualified for a gentler job, and there are gentler jobs waiting. And when even that second life is over, the pack turns out not to be waste at all but a rich ore, from which the expensive metals can be reclaimed and sent round again. The battery that seemed, at the start of the book, to be the electric car's heaviest burden turns out, at the end, to be the part that most refuses to become rubbish.
+But the chapter does not end in gloom, because the largest and most valuable object in the car has a remarkable second act. When the battery is too tired to drive a car well, it is very far from dead — it still has far more to give than a gentler job would ask of it, and there are gentler jobs waiting. And when even that second life is over, the pack turns out not to be waste at all but a rich ore, from which the expensive metals can be reclaimed and sent round again. The battery that seemed, at the start of the book, to be the electric car's heaviest burden turns out, at the end, to be the part that most refuses to become rubbish.
 
 So the chapter has two subjects: the price of integration, paid at the repair shop, and the afterlife of the battery, which redeems some of that price. The beginning of a car's story, seen from its end.
 ## 21.1 Repairability and the cost of integration
@@ -3473,7 +3473,7 @@ And yet the most expensive, most integrated, least repairable component of all �
 - The manufacturability-vs-repairability see-saw references the structural pack (Chapter 3) and gigacasting (Chapter 20); the contested, evolving verdict is stated per this book's honesty convention.
 ## 21.2 Second-life packs and recycling
 
-When is a battery dead? The intuitive answer — when it stops working — is wrong, and the real answer is one of the more hopeful facts in this whole book. A battery is retired from a car not when it stops working but when it stops working *well enough for a car*, and that threshold is surprisingly high: an EV pack is typically pulled when it still holds something like **seventy to eighty percent** of its original capacity. In a car, that lost fifth or quarter matters — it means noticeably less range, which owners feel keenly. But seventy percent of an enormous car battery is still a very large, very capable battery. It has not died. It has merely become overqualified for one job and perfect for another.
+When is a battery dead? The intuitive answer — when it stops working — is wrong, and the real answer is one of the more hopeful facts in this whole book. A battery is retired from a car not when it stops working but when it stops working *well enough for a car*, and that threshold is surprisingly high: an EV pack is typically pulled when it still holds something like **seventy to eighty percent** of its original capacity. In a car, that lost fifth or quarter matters — it means noticeably less range, which owners feel keenly. But seventy percent of an enormous car battery is still a very large, very capable battery. It has not died. It has merely moved on from one job and become perfect for another.
 
 That other job is standing still. The reason a fading pack is a problem in a car but not in a building is that a car battery lives a brutal life — deep discharges, hard fast-charging, violent bursts of current for acceleration, constant temperature swings, and the ever-present penalty of weight. A battery bolted to the ground storing energy for a home, a business, or the electricity grid faces none of this. It can be charged and discharged gently and predictably, kept at a steady temperature, and never has to be light, because nothing has to carry it. Under those kind conditions, a pack that was tired in a car can serve for many more years. So retired EV batteries are given a *second life*: taken from scrapped or crashed cars, tested, sorted, and reassembled into stationary storage systems — the big battery packs that store solar energy for the night, steady the grid, or back up a building. Real projects already run on hundreds of these second-life packs, quietly doing the easy work of storage long after their cars are gone.
 
@@ -3504,9 +3504,9 @@ And when even the second life is over — when the pack is too tired for station
 
 This transforms the environmental story of the battery, and it is worth being clear-eyed about why. One of the strongest criticisms of electric cars has always been the ugliness of battery mining — the environmental and human cost of extracting lithium and cobalt. Second life and recycling do not erase that cost, but they change its shape profoundly: a well-recycled battery pays its mining debt *once* and then keeps giving, first as a car battery, then as grid storage, then as feedstock for new cells, rather than being extracted, used briefly, and thrown away. The material is borrowed from the earth, not consumed. The more mature this loop becomes, the less each new battery depends on fresh mining, and the better the whole enterprise looks against the fossil-fuel alternative, whose fuel is burned once and gone forever.
 
-Honesty keeps this from being a fairy tale. Second-life batteries are fiddly and costly to repurpose — packs from different cars vary, their remaining health must be carefully tested, and reassembling them is labour that eats into the economics — so the second-life market is real but still maturing. And recycling, for all its promise, has to scale up enormously to handle the coming wave of retired packs, and the reclaimed-material loop is not yet closed at the scale the industry needs. These are works in progress, not accomplished facts. But the *direction* is clear and genuinely encouraging, and it is the right place to end the story of the physical car: with its heaviest, most expensive, most criticised component turning out to be the one that most stubbornly refuses to become waste — used hard, then used gently, then melted down and born again.
+Second-life batteries are fiddly and costly to repurpose — packs from different cars vary, their remaining health must be carefully tested, and reassembling them is labour that eats into the economics — so the second-life market is real but still maturing. And recycling, for all its promise, has to scale up enormously to handle the coming wave of retired packs, and the reclaimed-material loop is not yet closed at the scale the industry needs. These are works in progress, not accomplished facts. But the *direction* is clear and genuinely encouraging, and it is the right place to end the story of the physical car: with its heaviest, most expensive, most criticised component turning out to be the one that most stubbornly refuses to become waste — used hard, then used gently, then melted down and born again.
 
-And so the machine we have followed from a single cell to a finished car reaches the end of its life and, in its largest part, simply begins another. That circularity is a fitting close to the tour of the car itself. What remains is to step back and see the whole thing at once — to watch every system we have examined work together in a single drive, and to weigh, honestly, where the real marvels lie and where the marketing outran the engineering. That is the final part of the book.
+And so the machine we have followed from a single cell to a finished car reaches the end of its life and, in its largest part, simply begins another. That circularity is a fitting close to the tour of the car itself. What remains is to step back and see the whole thing at once — to watch every system we have examined work together in a single ordinary drive. That is where the book turns next.
 
 ---
 
@@ -3523,7 +3523,7 @@ We have spent this whole book taking the car apart. Chapter by chapter, system b
 
 This part puts the car back together. Its job is synthesis: to take the parts we have understood separately and watch them work as one, because that is the only way to see what an electric car really is. A battery is interesting; a battery that is being kept at the perfect temperature by a heat pump routed through an octovalve, supervised by a management system, feeding an inverter switching twenty thousand times a second, all coordinated over a resilient data loop by three tiers of computer, while the whole thing is warmed in advance because the navigation knows you are heading to a charger — that is not merely interesting. That is a single, breathtakingly integrated machine, and it only becomes visible when you stop looking at the parts and start looking at the conversation between them.
 
-This chapter makes that conversation concrete in two ways. First, it traces a single ordinary drive — a cold morning, a journey, a charge, a return — and names every system as it wakes, cooperates, and hands off to the next, so you can feel the whole car working at once. Then it follows the energy itself, one thread of it, from the plug on the wall all the way to the patch of rubber pressing on the road, through every conversion and every system it passes. And finally, with the whole machine in view, it does the thing this book has promised from the start: it weighs, as honestly as it can, where the real marvels of this car lie — and where the marketing ran out ahead of the engineering.
+This chapter makes that conversation concrete by tracing a single ordinary drive — a cold morning, a journey, a charge, a return — and naming every system as it wakes, cooperates, and hands off to the next, so you can feel the whole car working at once.
 
 Here, at last, is the whole car.
 ## 22.1 A drive, traced through every system
@@ -3534,38 +3534,15 @@ Before you have even left the house, the car has begun to stir. Last night you s
 
 You walk up to the car, and it knows you: your phone speaks to it over short-range wireless, the door handles present themselves, and it unlocks without a key (Chapter 16). Inside, the big screen — run by the infotainment computer, walled off from anything that could hurt you (Chapter 15) — is already showing your route. When you pressed to wake the car, the small low-voltage battery powered the computers and closed the contactors, connecting the great high-voltage pack that had sat sealed and safe overnight (Chapter 8), and the management system ran its checks over every one of the pack's cells (Chapter 3).
 
-The drive, as the systems wake:
-
-```
-   overnight    scheduled preheat: heat pump and octovalve
-                warm the cabin and pack, using the WALL
-   you arrive   phone-as-key unlocks; the 12 V battery wakes
-                the car; the contactors close
-   you press    the inverter chops DC into three staggered
-                AC waves
-   you go       the rotating field drags the rotor round --
-                full torque, instantly
-   you corner   torque vectoring trims the line; the low
-                battery keeps the car flat
-   you slow     the motor runs backwards; regeneration pours
-                the energy back into the pack
-   you charge   a preconditioned pack accepts a fast DC
-                charge from the first minute
-   you park     Sentry Mode watches; the car sleeps; the
-                12 V battery stands guard over the giant
-
-   Not one of those systems worked alone.
-```
-
 You press the accelerator, and there is no cable, no throttle, no delay — only a signal to the inverter, which begins chopping the battery's steady direct current into three staggered waves of alternating current, twenty thousand switching operations a second, never once getting it wrong (Chapter 4). Those waves make a magnetic field sweep around the motor's stator, and the rotor is dragged after it, delivering full torque from the instant you ask (Chapter 5). The single reduction gear steps the motor's fast spin down and its torque up, the differential splits the drive between the wheels (Chapter 6), and the car surges forward in near silence.
 
 At the first junction you turn, and systems you never think about keep you composed: the low, heavy battery in the floor holds the car flat (Chapter 19), the electric power steering answers with just the right weight (Chapter 14), and if you had asked too much, torque vectoring would have nudged individual wheels to keep you pointed true (Chapter 6). You lift off for a red light, and the motor runs backward as a generator, slowing the car and pouring the energy of your motion back into the battery rather than wasting it as heat — you barely touch the brake pedal, and the friction brakes, idle, quietly do not wear (Chapters 6 and 14).
 
 On the motorway the air becomes the enemy, the power to push through it climbing with the cube of your speed, and the car's whole shape — the sealed nose, the flush handles, the flat floor that is really the battery pack — fights it for every kilometre of range (Chapter 12), while the low-rolling-resistance tyres fight the road (Chapter 13). All the while, the three tiers of computer hum along: the zone controllers switching lights and pumps by geography (Chapters 9 and 15), the whole car's chatter flowing over its data backbone (Chapter 10), and — if you engage it, watching the road as attentively as ever — the self-driving computer turning the camera streams into decisions (Chapters 17 and 18).
 
-You navigate to a charger, and half an hour out the car begins warming the battery again so it will arrive ready to drink (Chapter 7). You plug in; the roadside cabinet pushes DC straight into the preconditioned pack, fast at first and tapering as it fills, and you leave at eighty percent (Chapter 11). Then home, and park, and walk away — the car locks itself, and Sentry Mode's cameras keep watch while it sleeps, the little low-voltage battery once again standing guard over the sealed high-voltage giant (Chapters 16 and 8).
+You navigate to a charger, and half an hour out the car begins warming the battery again so it will arrive ready to charge (Chapter 7). You plug in; the roadside cabinet pushes DC straight into the preconditioned pack, fast at first and tapering as it fills, and you leave at eighty percent (Chapter 11). Then home, and park, and walk away — the car locks itself, and Sentry Mode's cameras keep watch while it sleeps, the little low-voltage battery once again standing guard over the sealed high-voltage giant (Chapters 16 and 8).
 
-Not one of those systems worked alone. The preconditioning needed the navigation, which needed the connectivity; the acceleration needed the inverter, the battery, the thermal system keeping the battery in its window, and the zone controllers carrying the commands. A single unremarkable drive is a symphony of cooperation, every player from every chapter of this book coming in on cue. That is the whole car — and to see the cooperation at its most physical, we can follow not the drive but the energy, one thread of it, from the wall to the road.
+Not one of those systems worked alone. The preconditioning needed the navigation, which needed the connectivity; the acceleration needed the inverter, the battery, the thermal system keeping the battery in its window, and the zone controllers carrying the commands. A single unremarkable drive is a symphony of cooperation, every player from every chapter of this book coming in on cue. That is the whole car: not a collection of clever parts but one deeply integrated machine. Having watched it work as one, only a single question remains — where a machine this complete goes next.
 
 ---
 
@@ -3573,184 +3550,51 @@ Not one of those systems worked alone. The preconditioning needed the navigation
 
 - Synthesis subchapter. Each system referenced is grounded in its own chapter (parenthetical cross-references throughout): preconditioning and thermal (Chapter 7), battery (Chapters 2–3), electrical backbone (Chapters 8–10), inverter (Chapter 4), motor and motion (Chapters 5–6), chassis (Chapter 14), aero and tyres (Chapters 12–13), computers and software (Chapters 15–18), charging (Chapter 11), safety (Chapter 19).
 - No new factual claims are introduced here beyond those established and sourced in the referenced chapters.
-## 22.2 Following the energy from plug to pavement
-
-Let us do something the whole book has been building toward: follow a single unit of energy — call it one joule, though the amount does not matter — on its complete journey from the power station to the pavement, through every transformation and every system it meets. It is the most physical way to see the car as one connected machine, because energy, unlike a story, cannot skip a step. It must pass through each stage in turn, and at each stage a little is lost, and what survives is what moves the car.
-
-Our joule begins as alternating current in the grid, arriving at the wall. If you are charging slowly at home, it flows into the car's onboard charger, which converts it from AC to DC (Chapter 11) — the first conversion. If you are at a fast charger, the conversion happened in the roadside cabinet and the DC arrives ready-made (Chapter 11). Either way, our joule is now direct current, and it flows through the closed contactors (Chapter 8) into the battery pack.
-
-There, it is stored not as electricity but as *position* — the energy pushes a lithium ion into a parking space in the graphite anode, against its will, where it will wait, held by chemistry, until called upon (Chapter 2). Our joule now sits in one cell among thousands, its charge balanced against its neighbours by the watchful management system, its temperature held in the narrow comfortable band by the thermal system (Chapters 3 and 7). It may wait minutes or days.
-
-The journey of one joule:
-
-```
-   grid AC
-     |   AC to DC -- in the onboard charger, or in the
-     |   roadside cabinet
-     v
-   DC into the pack, stored as ION POSITION inside a cell
-     |   (it waits there, balanced and held at the right
-     |    temperature, until you ask for it)
-     v
-   BMS and contactors let it out
-     |
-     v
-   INVERTER  --  DC becomes three-phase AC
-     |
-     v
-   MOTOR  --  the AC makes a rotating field; the rotor chases it
-     |
-     v
-   REDUCTION GEAR  --  speed down, torque up  --  DIFFERENTIAL
-     |
-     v
-   driveshaft  ->  wheel  ->  the contact patch  ->  the ROAD
-
-   About 85% of what leaves the battery reaches the road.
-   A petrol car delivers about 20% of its fuel.
-   Same journey. Opposite result.
-```
-
-Now you press the accelerator, and our joule is called. The ion is released and rushes home to the metal-oxide cathode, and its abandoned electron, forbidden to follow through the electrolyte, is forced out through the wires — that forced detour *is* the current (Chapter 2). It flows to the inverter, which chops the steady DC into three staggered waves of AC, sculpting them with switches flicking twenty thousand times a second (Chapter 4). Our joule, now riding an alternating current, reaches the motor's stator coils and helps make the magnetic field sweep round; the rotor, dragged after the field, turns (Chapter 5). The energy has become rotation.
-
-That rotation passes through the single reduction gear, which trades the motor's fast, gentle spin for the wheel's slower, stronger one, and through the differential, which splits it to the wheels and lets them turn at their own rates through a corner (Chapter 6). It reaches the wheel, and the wheel presses the tyre against the road, and at the contact patch — that hand-sized handshake between rubber and tarmac (Chapter 13) — our joule finally does the one thing the whole car exists to do: it pushes the road backward, and the car forward. From grid to pavement, the journey is complete.
-
-Here is the number that makes the whole book cohere. Of the energy that left the battery, something like *eighty-five percent* actually reaches the road — the losses along the way, in the inverter, the motor, the gear, the tyres, adding up to only fifteen or so (Chapters 1, 4, 5). Compare that with the petrol car of Chapter 1, which delivered barely a fifth of its fuel's energy to the wheels and threw the rest away as heat. Same journey, from stored energy to moving car; opposite outcome. The electric car's supremacy is not a matter of one clever trick but of this: at every single stage of the journey, it loses less. The efficient storage, the efficient conversion, the efficient motor, the efficient gear, the slippery body, the low-resistance tyres — each contributes its few percent, and the few percent compound, all the way down the chain, into a car that spends the great majority of its energy on motion and only a sliver on waste.
-
-That is the through-line of the entire book, made visible in a single joule's journey. Efficiency was never one feature; it was the organising obsession of Chapter 1, followed relentlessly into every system, and here at the end you can watch it pay off at every step from plug to pavement. The energy the petrol car squandered as heat, the electric car keeps, all the way to the road. Which is the perfect vantage point from which to ask the book's final honest question: with the whole machine before us, where are its true marvels — and where did the story get ahead of the reality?
-
----
-
-**Sources**
-
-- Synthesis subchapter tracing energy through systems grounded in their own chapters: AC/DC conversion and charging (Chapter 11), contactors (Chapter 8), lithium-ion storage (Chapter 2), BMS/thermal (Chapters 3, 7), inverter (Chapter 4), motor (Chapter 5), reduction gear/differential (Chapter 6), tyre contact patch (Chapter 13).
-- The ~85% battery-to-wheel vs ~20% petrol tank-to-wheel figures are from Chapter 1's sources (fueleconomy.gov and battery-to-wheel efficiency literature). No new claims introduced.
-## 22.3 Where the real marvels are — and where marketing outran engineering
-
-Now that the whole car is before us, we can do the thing this book promised in its very first pages: judge it honestly. Not with the breathless register of the advertisement, and not with the reflexive sneer of the sceptic, but with the earned judgement of someone who has looked carefully at every system and can now say where the genuine brilliance lies — and where the story got ahead of the machine. The two, it turns out, are largely different places, and noticing that is the most useful thing this chapter can leave you with.
-
-Here is the quiet scandal of the electric car: its real marvels are almost entirely the parts nobody markets. Ask a stranger what is impressive about a Tesla and they will say something about self-driving, or acceleration, or the big screen. But walk back through this book and the things that made you sit up were somewhere else entirely. The thermal system — a heat pump conjuring warmth from freezing air, routed around the car by a single valve so elegant it made a teardown veteran reach for the word "beautiful" (Chapter 7). The inverter, flicking silicon-carbide switches twenty thousand times a second to sculpt smooth power from raw direct current, at ninety-seven percent efficiency (Chapter 4). The battery pack that is also the floor, also the crash structure, also the thing that keeps the car from rolling over (Chapters 3 and 19). The electrical backbone, deleting kilometres of copper by the simple act of organising the car by geography instead of by function (Chapters 9 and 10). The relentless, unglamorous efficiency chain that delivers eighty-five percent of stored energy to the road (Chapter 22). None of these is advertised. All of them are genuinely, quietly extraordinary.
-
-Marvels versus marketing:
-
-```
-   THE REAL MARVELS              THE LOUDEST CLAIMS
-   (barely marketed)             (over-sold)
-   ------------------------------------------------------------
-   the heat pump and octovalve   "Full Self-Driving"
-   the silicon-carbide           a robotaxi "next year"
-   inverter, at 97%              -- for several years running
-   the structural pack: floor,   some of the Battery Day
-   crash structure and battery   promises for the 4680
-   in one
-   zonal wiring, 48 volts, and   autonomy timelines,
-   kilometres of harness gone    generally
-   the whole efficiency chain    "revolutionary"
-   ------------------------------------------------------------
-
-   The brilliance is quiet. The hype is loud. They are
-   mostly not the same things.
-```
-
-Now the other column, told with the same honesty. Where did marketing outrun engineering? Overwhelmingly in one place: autonomy. "Full Self-Driving" is a name that describes a destination as though it were the current address; as Chapter 18 set out plainly, the system as of 2026 is sophisticated driver-*assistance* that legally and practically requires an attentive human, and regulators have compelled Tesla to soften the very name because it misled. The robotaxi that was perpetually a year or two away has been a year or two away for a long time. The vision-only bet (Chapter 17) may yet pay off, but it is a bet, not a settled triumph, and it has been sold with more certainty than the evidence supports. And the pattern is older than autonomy: even the celebrated 4680 cell (Chapter 2) arrived more slowly and less completely than the keynote promised. Again and again, the gap opens in the same place — not in the mundane engineering, which tends to be excellent and undersold, but in the futuristic promises, which tend to be oversold and late.
-
-Why does the gap fall so consistently along that line? Because the two kinds of claim are different in nature. The quiet marvels — the inverter, the thermal loop, the structural pack — are *engineering that has already happened*, shippable, measurable, verifiable by anyone who saws a car open. They are done, and being done, they can be modest and true. The loud claims are *predictions about the future* — that the software will cross the vast gap to autonomy, that the timeline will hold — and predictions are where optimism and salesmanship creep in, because the future cannot yet be measured and contradicted. The engineering that exists is better than advertised precisely because it exists; the engineering that is promised is worse than advertised precisely because it is still only promised.
-
-This is the balanced verdict the book has been working toward, and it is worth holding onto because it applies well beyond one company. The electric car — this electric car — is a genuine engineering triumph, and the triumph is real in exactly the places the marketing ignores: the storage, the conversion, the thermal management, the electrical architecture, the manufacturing, the sheer density of clever integration. It is a machine that deserves the admiration this book has tried to earn for it. And it is also a machine sold with a persistent layer of overstatement about the things it cannot yet do, chiefly drive itself, and a reader is best served by holding both truths at once: deep respect for the engineering that is, and clear-eyed skepticism about the engineering that is merely promised.
-
-The most useful habit this book can leave you with is the one that separates those two columns. When you next hear a claim about an electric car, ask which kind it is. Is it a description of something that already exists and can be measured — a heat pump's efficiency, a pack's rigidity, an inverter's losses? Then it is probably, if anything, undersold. Or is it a promise about what the car will do next year — drive itself, need no supervision? Then treat it with the patience the last few years have taught. The marvels are quiet and real. The hype is loud and future-tense. Tell them apart, and you understand not just how a Tesla works, but how to think about it — which is the whole purpose of the exercise. What remains is only to look, briefly and honestly, at what genuinely comes next.
-
----
-
-**Sources**
-
-- Editorial synthesis subchapter. The "real marvels" draw on Chapters 3, 4, 7, 9, 10, 19, 22; the "over-sold claims" draw on the sourced discussions in Chapters 2 (4680), 17 (vision-only), and 18 (Autopilot/FSD naming, regulatory action).
-- No new factual claims are introduced; the judgements are the author's, resting on evidence established and sourced earlier in the book, consistent with its honesty-about-uncertainty convention.
 # 23. What comes next
 
-A book that has spent so long insisting on honesty about the present owes a certain modesty about the future, and this last chapter tries to provide it. Predicting where technology goes is a fool's errand — the graveyard of confident forecasts is vast, and much of it was written by people who understood their subject far better than any one book can. So this is not a chapter of predictions. It is a chapter about *where the frontiers are*: the places where the hardest problems remain unsolved, where the next real gains will have to come from if they come at all, and where, therefore, the interesting work is being done.
+This is not a chapter of predictions — the graveyard of confident technology forecasts is vast. It is a short chapter about *where the frontiers are*: the places where the hardest problems remain unsolved, and where the next real gains will have to come from if they come at all.
 
-Two frontiers matter most, and they are the same two that have shaped this entire book. The first is the battery — which is only fitting, because the battery was the thing that kept the electric car waiting in the wings for a century, and it remains the component with the most room left to improve and the most consequential improvements still to make. The second is efficiency itself, the organising obsession of Chapter 1, now that the drivetrain has been refined so far that one has to ask an honest question: how much is actually left to win, and where will it come from?
+Three frontiers matter most. The first is the **battery** — still the component with the most room left to improve, as it has been since before the electric car could even leave the wings. The second is **autonomy** — the car that drives itself, which is the boldest thing the industry, and Tesla above all, has promised, and the one still furthest from delivered. The third is **efficiency** itself, the organising obsession of Chapter 1, now so nearly perfected inside the drivetrain that the honest question is how much is really left to win.
 
-These two closing sections take those frontiers in turn. First, the battery frontier — solid-state cells, silicon anodes, sodium chemistries, the genuine breakthroughs being chased and the persistent gap between the laboratory and the road, told with the same skepticism about timelines that the rest of the book has tried to model. Then a reflective accounting of efficiency: how close the drivetrain already is to the ceiling, why the remaining gains must increasingly come from outside the drivetrain, and what that says about where the electric car goes from here.
-
-And then the book ends — not with a grand prophecy, but by returning to where it began, and to the small astonishment that has run underneath every chapter: that a machine so ordinary, one we walk past every day, should turn out to be so full of quiet cleverness. Here is what comes next, and here is where we take our leave.
+The sections that follow take those frontiers briefly in turn, and then the book ends — not with a grand prophecy, but by returning to the driveway where it began.
 ## 23.1 Solid-state and the battery frontier
 
-Return, at the end, to where the book began its real work: the single cell of Chapter 2, and the liquid electrolyte sloshing between its electrodes. That liquid is the quiet villain of the whole battery story. It is flammable, which is the root of the fire risk that haunts Part X. It limits how the cell can be built and how much energy it can safely hold. And it is the thing the most anticipated battery breakthrough of the age proposes to abolish. Replace the flammable liquid electrolyte with a *solid* one — a ceramic or glassy material that lithium ions can still travel through — and you have a *solid-state battery*, and the prize is large enough to explain why so much money and hope are pointed at it.
+Return, at the end, to the single cell of Chapter 2 and its liquid electrolyte — the quiet villain of the whole battery story. It is flammable, the root of the fire risk that haunts Part X, and it caps how much energy a cell can safely hold. The most anticipated breakthrough of the age proposes to abolish it: replace the flammable liquid with a *solid* electrolyte that lithium ions can still travel through, and you have a *solid-state battery*.
 
-The advantages read like a wish-list answering every complaint this book has raised about batteries. Safety first: a solid electrolyte is not flammable, so the fire risk that shapes so much of the pack's armour and the firefighters' fears falls dramatically — thermal trouble begins at far higher temperatures than in a liquid cell. Then energy density: a solid electrolyte can enable a pure lithium-metal anode, which holds vastly more lithium than the graphite one from Chapter 2, so the cell can store far more energy for its weight. The figures the serious programmes are aiming at — energy densities around four to five hundred watt-hours per kilogram, against roughly two hundred and fifty to three hundred for today's best production cells, so call it a doubling — would mean, in the language of Chapter 1, either much greater range or, more interestingly, the *same* range from a smaller, lighter, cheaper battery, which would ripple efficiency gains through the entire car.
+The prize is large. A solid electrolyte does not burn, and it enables a lithium-metal anode holding far more energy than graphite — the serious programmes aim at roughly a doubling of energy density. That means either much greater range or, more usefully, the same range from a smaller, lighter, cheaper battery. So why is it not here? Because — as with the 4680 story of Chapter 2 — the physics is promising and the *manufacturing* is brutal: a liquid wets every crevice and keeps contact as the cell breathes, and a solid will not, so holding stable contact and mass-producing defect-free solid sheets barely works yet. Most sober assessments in 2026 put mass-market solid-state cars in the 2030s.
 
-The frontier, honestly drawn:
-
-```
-   TODAY (liquid electrolyte)    SOLID-STATE (the prize)
-   ------------------------------------------------------------
-   a flammable liquid            a non-flammable solid
-   about 150-300 Wh/kg           400-500 Wh/kg is what the
-                                 credible programmes target
-   graphite anode                lithium-metal anode, holding
-                                 far more energy
-   ------------------------------------------------------------
-   mature, cheap, shipping       enormous promise -- but very
-   in millions of cars today     hard to manufacture: solids
-                                 will not conform, the sheets
-                                 must be thin and defect-free,
-                                 and it needs new factories
-
-   Realistic scale: the 2030s. Watch the frontier closely,
-   and believe the timelines cautiously.
-```
-
-So why is it not here already? Because — and this should sound familiar from the 4680 story of Chapter 2 — the physics is promising and the *manufacturing* is brutal. A liquid electrolyte has one wonderful property: it flows into every crevice, wetting the electrodes perfectly, keeping contact as the cell swells and shrinks with each charge. A solid cannot do this. Getting a solid electrolyte to maintain intimate, stable contact with solid electrodes, across millions of cycles, without gaps forming, requires high pressure or exquisitely engineered surfaces. Producing the solid electrolyte as an ultra-thin, dense, defect-free sheet, at enormous scale and low cost, demands manufacturing processes that barely exist yet. This is why, despite a steady drumbeat of announcements and the occasional genuinely-shipping small cell, most sober assessments in 2026 put mass-market solid-state cars firmly in the 2030s. The laboratory result is real; the road-ready, affordable, mass-produced version is the hard part, and the hard part is where the years go — exactly the lesson of 22.3, now pointed at the future.
-
-Solid-state is the glamorous frontier, but it is not the only one, and the others matter for a fuller picture. Nearer term, *silicon anodes* — adding silicon to the graphite to hold more lithium — promise a more incremental boost to energy density and are arriving sooner and more quietly. At the other end of the market, *sodium-ion* batteries take the opposite tack: they give up energy density (sodium stores less than lithium) in exchange for using sodium, which is cheap and everywhere instead of contested and mined, making them attractive for cheaper, shorter-range cars and for the stationary storage of Chapter 21. The battery frontier is not a single race toward one super-cell but a spreading of chemistries, each suited to a different job — dense and expensive for long range, cheap and rugged for everything else.
-
-The honest summary, in the spirit of the whole book, is this. The battery remains the component with the most room to improve and the most consequential improvements still to make — it was the bottleneck that kept the electric car waiting for a century, and it is still where the largest gains lie. Real breakthroughs are being pursued, and some will arrive. But the gap between a promising cell in a laboratory and an affordable pack under a family car is wide, slow, and paved with manufacturing problems, and it should be crossed in the imagination only as fast as the factories actually cross it. Watch the battery frontier closely; believe the timelines cautiously. That has been good advice for the whole history of this technology, and there is no reason to think it stops being good now.
-
-Which leaves one last question, the one the book opened with and should close with: efficiency. If the drivetrain is already so good, and the battery is where the gains are — how much efficiency is really left to win?
+Around it, nearer-term *silicon anodes* add a quieter boost, and cheap, rugged *sodium-ion* cells trade energy density for abundant materials. The frontier is not one race but a spread of chemistries, each for a different job — and the rule holds throughout: watch it closely, believe the timelines cautiously. That is where the hardest *physical* limits still bind. The next frontier is not physical at all — it is the promise that the car will drive itself.
 
 ---
 
 **Sources**
 
 - BatteryTechOnline, IDTechEx, ScienceDirect, greenlancer — solid-state batteries: non-flammable solid electrolyte, higher thermal-runaway threshold, lithium-metal anode; manufacturing challenges (solid-solid contact, defect-free thin electrolyte sheets, new processes); realistic mass-market timeline in the 2030s.
-- Toyota's published solid-state target (~450–500 Wh/kg) and QuantumScape's independently verified B-sample cells (~301 Wh/kg, 844 Wh/L), against ~150–300 Wh/kg for current production Li-ion. Much higher figures circulate, but they are theoretical ceilings for the chemistry rather than targets for a shippable automotive cell, and are not used here.
+- Toyota's published solid-state target (~450–500 Wh/kg) and QuantumScape's independently verified B-sample cells (~301 Wh/kg, 844 Wh/L), against ~150–300 Wh/kg for current production Li-ion. Higher figures that circulate are theoretical ceilings, not shippable-cell targets, and are not used here.
 - Same sources — silicon anodes as a nearer-term incremental gain; sodium-ion trading energy density for low cost/abundant materials, suited to cheaper/short-range vehicles and stationary storage (Chapter 21).
-- The "laboratory vs affordable mass production" caution mirrors the 4680 lesson of Chapter 2 and the verdict of 22.3; timelines stated as of 2026 per this book's convention.
-## 23.2 How much efficiency is left to win
+- The "laboratory vs affordable mass production" caution mirrors the 4680 lesson of Chapter 2; timelines stated as of 2026 per this book's convention.
+## 23.2 The road to full autonomy
 
-We end where we began, with efficiency — the organising obsession of Chapter 1, the thread that ran through every system in the book. And we end with an honest and slightly deflating arithmetic, because it is the truest thing to say about where the electric car goes from here. The drivetrain is already so efficient that there is very little room left to improve it. From the battery to the wheels, the modern electric car delivers something like eighty-five to ninety percent of its energy to the road. The ceiling is one hundred percent, and you cannot pass it. Which means the entire remaining prize inside the drivetrain — everything left to win between here and physical perfection — is that last ten or fifteen percent, and every point of it is harder to claim than the one before.
+If the battery is the frontier of physics, autonomy is the frontier of ambition — and it is the one Tesla has staked itself on most completely. The goal, stated plainly, is a car that drives itself anywhere, in any conditions, with no one watching over it: what engineers call **Level 5** autonomy, the top of the ladder. Below it sits Level 4, a car that drives itself fully but only inside a mapped, agreed area; below that, the Level 2 driver-*assistance* that personal cars ship with today, where a human must stay ready to take over (Chapter 18). Level 5 is the summit where the human is not merely unwatched but unnecessary — where a car can be built with no pedals and no wheel at all.
 
-This is the mark of a mature technology, and it should be said plainly. The heroic era of drivetrain efficiency — the era this book has largely celebrated, of silicon-carbide inverters and ninety-seven-percent conversion and heat pumps and shortened wire — is, in a sense, nearly over, not because anyone failed but because it so nearly succeeded. When you have already captured eighty-five percent, the remaining gains are polishing, not revolution: a fraction of a percent from a better seal, a better switch, a slightly slipperier shape. Worth having, worth chasing, but incremental. The big, dramatic efficiencies have mostly already been won, and won impressively. There is no second engine left to delete.
+The prize is not just convenience but a different machine. A car that needs no driver can work as a *robotaxi* — earning while its owner sleeps, or removing the owner altogether from a fleet that runs around the clock. It reframes the car from a thing you buy and park twenty-three hours a day into a service that is almost always moving. This is the vision behind the purpose-built Cybercab and the robotaxi fleet, and it is why Tesla treats self-driving not as a feature but as the company's whole future.
 
-Where the efficiency frontier moves:
+Honesty, as ever, requires the counter-weight. As of 2026 the summit is not reached: Tesla runs a limited, supervised robotaxi service in a few geofenced areas — Level 4 in a small box, not Level 5 everywhere — while the vision-only bet (Chapter 17) remains a bet rather than a settled triumph, and full autonomy has been "a year away" for several years running. The last few percent of driving — the rare, strange, dangerous moments — is proving, exactly as the battery did, to be where the years go. But the *direction* is unmistakable, and the goal is clear: delete the driver, as this book's first act was to delete the engine.
 
-```
-   INSIDE the drivetrain, battery to wheels:
+That leaves the last frontier, and the one the book opened with: efficiency.
 
-     [################################################--]  85-90%
-     nearly maxed out. Only a few percent left, and each
-     one is harder to win than the last.
+---
 
-   So the frontier moves OUTWARD:
+**Sources**
 
-     the BATTERY ...... denser and lighter, so there is less
-                        weight to haul for the same range
-     WEIGHT ........... a lighter car needs less energy,
-                        everywhere, on every trip, forever
-     the GRID ......... a car is only as clean as the
-                        electricity that charges it
-     UTILISATION ...... right-sized, shared, charged when
-                        power is cheap and clean
+- SAE J3016 levels of driving automation (Levels 0–5) — the standard ladder used here; Level 5 as full autonomy with no operational-design-domain limit and no required human fallback.
+- Builds on the autonomy discussion of Chapters 17 (vision-only approach) and 18 (Autopilot/FSD as Level 2 driver assistance in personal cars; supervised robotaxi service and Cybercab as part of the robotaxi fleet; geofenced Level 4 operation as of 2026), each with its own sources.
+- The judgement that full autonomy is Tesla's central strategic goal, and the timeline caution, are the author's, resting on evidence established and sourced earlier in the book, per its honesty-about-uncertainty convention.
+## 23.3 How much efficiency is left to win
 
-   The battle inside the machine is close to won. The ones
-   that remain are upstream and outward -- a different book.
-```
+We end where we began, with efficiency — the organising obsession of Chapter 1 — and with a slightly deflating arithmetic. From the battery to the wheels, the modern electric car already delivers something like eighty-five to ninety percent of its energy to the road, and the ceiling is one hundred percent. So the entire remaining prize inside the drivetrain is that last ten or fifteen percent, and every point of it is harder to win than the one before. The heroic era — silicon-carbide inverters, heat pumps, shortened wire — is nearly over, not because anyone failed but because it so nearly succeeded. There is no second engine left to delete.
 
-So where do the meaningful gains now come from? Increasingly, from *outside* the drivetrain. From the battery, as the last section described — not to make the drivetrain more efficient, but to make it lighter, so the car has less mass to haul and needs less energy for the same journey; a denser battery is an efficiency gain in disguise, paid in weight. From reducing the mass of everything else, since every kilogram removed is energy saved on every trip forever. And from the largest levers of all, which lie beyond the car entirely: the *grid* that makes the electricity, because a car is only as clean as the power that charges it, and the great environmental prize is not a slightly better inverter but a decarbonised supply; and the *way the cars are used* — charged when energy is cheap and clean, right-sized to actual needs, perhaps shared rather than parked twenty-three hours a day — which is efficiency at the level of the whole system rather than the single vehicle.
-
-That is the genuine shape of the future, and it is worth ending on because it reframes the whole enterprise. The electric car has very nearly won the battle Chapter 1 laid out: the battle to turn stored energy into motion with almost no waste. That battle is close to over, and it was won decisively. The battles that remain are different in kind — upstream, at the power station, and outward, in how a society builds, charges, and uses its cars. The cleverness has, in a sense, done its job inside the machine, and the frontier has moved to the world around it. The engine was deleted; the drivetrain was perfected; what is left is largely a problem of energy and systems and infrastructure, which is a different book, and perhaps a different kind of expert.
+So the meaningful gains now come from *outside* the drivetrain: from a denser battery that makes the car lighter, from shedding mass everywhere, and above all from beyond the car entirely — the *grid* that makes the electricity, since a car is only as clean as its power, and the *way cars are used*, charged when energy is cheap and clean, right-sized, perhaps shared rather than parked. The battle inside the machine is close to won. The ones that remain are upstream and outward — a different book.
 
 ---
 
