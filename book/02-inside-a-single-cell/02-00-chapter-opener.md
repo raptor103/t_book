@@ -2,7 +2,7 @@
 
 # 2. Inside a single cell
 
-If you could shrink yourself to the size of a grain of salt and climb inside one of the battery cells in a Tesla, you would find yourself in a place of almost unbearable tidiness. No flame, no explosion, no moving parts of any kind — none of the violence we associate with power. Just two forests of microscopic structure, a few thousandths of a millimetre apart, and a swarm of atoms drifting back and forth between them, quietly, endlessly, like commuters who never quite arrive.
+If you could shrink yourself to the size of a grain of salt and climb inside one of the battery cells in a Tesla, you would find yourself in a place of almost unbearable tidiness. No flame, no explosion, no moving parts of any kind — none of the violence we associate with power. Just two forests of microscopic structure, a few thousandths of a millimeter apart, and a swarm of atoms drifting back and forth between them, quietly, endlessly, like commuters who never quite arrive.
 
 That drifting is where the energy lives. Not in a fire, not in pressure, but in *position* — in the simple fact that certain atoms would rather be on one side of the cell than the other, and can be persuaded, at a price, to sit on the wrong side and wait. Charging the battery is the act of paying that price and parking the atoms where they do not want to be. Driving the car is letting them go home, and stealing the energy they give up on the way.
 

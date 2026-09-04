@@ -2,7 +2,7 @@
 
 # 11. Charging, demystified
 
-Refuelling a petrol car is so simple that a child understands it: liquid goes in a hole, a gauge goes up, you drive away. It is over in two minutes and there is nothing to know. Charging an electric car is where a great many otherwise-enthusiastic newcomers get confused, frustrated, or quietly put off — not because it is genuinely difficult, but because it is surrounded by a fog of jargon, competing numbers, and half-understood advice. Kilowatts and kilowatt-hours, AC and DC, Level 2 and DC fast, tapering, connectors with a zoo of incompatible shapes. It sounds like a subject that requires an engineering degree.
+Refueling a gasoline car is so simple that a child understands it: liquid goes in a hole, a gauge goes up, you drive away. It is over in two minutes and there is nothing to know. Charging an electric car is where a great many otherwise-enthusiastic newcomers get confused, frustrated, or quietly put off — not because it is genuinely difficult, but because it is surrounded by a fog of jargon, competing numbers, and half-understood advice. Kilowatts and kilowatt-hours, AC and DC, Level 2 and DC fast, tapering, connectors with a zoo of incompatible shapes. It sounds like a subject that requires an engineering degree.
 
 It does not. Underneath the fog, charging rests on a small number of genuinely simple ideas, and once you have them, the whole confusing landscape snaps into focus and stays there. This chapter is an attempt to hand you those ideas, cleanly.
 

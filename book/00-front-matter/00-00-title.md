@@ -4,7 +4,4 @@
 
 *A field guide to the machine, for the curious non-engineer.*
 
-Knowledge cutoff: 2026. Metric units, European context.
-Reference vehicle: Tesla Model 3 / Model Y.
-
 \newpage

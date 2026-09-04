@@ -38,7 +38,7 @@ Plain definitions of the terms used in this book. Where a term has a home chapte
 
 **FSD (Full Self-Driving).** Tesla's most advanced driver-assistance system, officially "Full Self-Driving (Supervised)." As of 2026 it requires a fully attentive human and is *not* autonomous. (Ch 18)
 
-**Gigacasting.** Casting a large section of car body as one huge aluminium piece, replacing dozens of stamped-and-welded parts, using a house-sized die-casting machine. (Ch 20)
+**Gigacasting.** Casting a large section of car body as one huge aluminum piece, replacing dozens of stamped-and-welded parts, using a house-sized die-casting machine. (Ch 20)
 
 **Heat pump.** A device that *moves* heat rather than making it, delivering several units of warmth per unit of electricity by gathering heat from the outside air or the car's own waste. (Ch 7)
 
@@ -56,7 +56,7 @@ Plain definitions of the terms used in this book. Where a term has a home chapte
 
 **NACS (North American Charging Standard).** Tesla's charging connector, opened up and adopted across North America; called SAE J3400. (Ch 10, 11)
 
-**NMC / NCA.** Nickel-rich battery chemistries (nickel-manganese-cobalt / nickel-cobalt-aluminium): high energy density and good cold performance, but costlier, with cobalt, and shorter-lived. (Ch 2)
+**NMC / NCA.** Nickel-rich battery chemistries (nickel-manganese-cobalt / nickel-cobalt-aluminum): high energy density and good cold performance, but costlier, with cobalt, and shorter-lived. (Ch 2)
 
 **NVH (noise, vibration, harshness).** The engineering discipline of keeping a cabin quiet and smooth — far harder in an electric car, because the engine that used to mask road and wind noise is gone. (Ch 13)
 
@@ -80,18 +80,18 @@ Plain definitions of the terms used in this book. Where a term has a home chapte
 
 **Regenerative braking.** Slowing the car by running the motor backward as a generator, turning the energy of motion back into electricity for the battery. (Ch 6)
 
-**Rolling resistance.** The steady drag of tyres flexing as they roll; the largest force a car fights at low speeds. (Ch 13)
+**Rolling resistance.** The steady drag of tires flexing as they roll; the largest force a car fights at low speeds. (Ch 13)
 
 **Silicon carbide (SiC).** A tough semiconductor that switches faster and wastes less energy than plain silicon; Tesla was first to use it in a car's main inverter. (Ch 4)
 
 **Solid-state battery.** A future cell that replaces the flammable liquid electrolyte with a solid one — promising more energy and more safety, but hard to manufacture. (Ch 23)
 
-**State of charge / state of health.** How full the battery is now / how much of its original capacity remains after ageing — both estimated by the BMS. (Ch 3)
+**State of charge / state of health.** How full the battery is now / how much of its original capacity remains after aging — both estimated by the BMS. (Ch 3)
 
 **Structural pack.** A battery whose casing is also the car's floor and part of its crash structure — stiffer and lighter, but hard to repair. (Ch 3)
 
-**Thermal runaway.** The self-feeding chemical fire in which one overheating cell heats its neighbours in a cascade; the hazard the pack's design works to prevent and contain. (Ch 3, 19)
+**Thermal runaway.** The self-feeding chemical fire in which one overheating cell heats its neighbors in a cascade; the hazard the pack's design works to prevent and contain. (Ch 3, 19)
 
 **Torque vectoring.** Using independent motors to send different amounts of drive to different wheels, nudging the car through corners and keeping it stable. (Ch 6)
 
-**Zonal architecture.** Organising the car's electronics by *location* (front, left, right controllers) rather than by function, to shorten wiring dramatically. (Ch 9)
+**Zonal architecture.** Organizing the car's electronics by *location* (front, left, right controllers) rather than by function, to shorten wiring dramatically. (Ch 9)

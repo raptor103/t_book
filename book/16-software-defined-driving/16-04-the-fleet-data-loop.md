@@ -22,7 +22,7 @@ The loop that compounds:
    |                     |
    |                     v
    |    better neural networks are trained on that new
-   |    real-world data, in the data centre
+   |    real-world data, in the data center
    |                     |
    |                     v
    |    the improved software is validated, then pushed
@@ -37,7 +37,7 @@ What happens next is the training. Tesla gathers these clips from across the fle
 
 The reason this is so powerful is that it turns *scale* into a compounding advantage. The more cars on the road, the more real-world data collected; the more data, the better the software can be trained; the better the software, the more attractive the cars — which puts still more cars on the road, gathering still more data. It is a flywheel that, once spinning, is extraordinarily hard for a competitor to catch, because catching it would mean matching not just the technology but the millions of cars and the years of accumulated road experience. This is why Tesla's fleet is so often described as its true moat: not the motor, not the battery, but the loop.
 
-Now the honesty this book owes you, and it cuts two ways. First, privacy: the flywheel runs on data from real drivers, which means *your* driving, and what your car's cameras see, is potentially raw material for training the fleet's AI. Tesla applies controls and anonymisation, and much is aggregated, but the fundamental bargain is real — the car improves because cars watch the world, and you are part of the world they watch. Second, and this is crucial, the existence of a powerful data loop does *not* by itself prove that the destination — a car that fully drives itself, anywhere, unsupervised — has been or will be reached. The loop is a genuinely formidable engine for improvement, and it has produced real, steady gains. Whether that engine is enough to cross the vast gap between "impressive driver assistance" and "true autonomy" is one of the most contested questions in the whole industry, and it is precisely the question the next part of the book takes up — carefully and without the marketing gloss.
+Now the honesty this book owes you, and it cuts two ways. First, privacy: the flywheel runs on data from real drivers, which means *your* driving, and what your car's cameras see, is potentially raw material for training the fleet's AI. Tesla applies controls and anonymization, and much is aggregated, but the fundamental bargain is real — the car improves because cars watch the world, and you are part of the world they watch. Second, and this is crucial, the existence of a powerful data loop does *not* by itself prove that the destination — a car that fully drives itself, anywhere, unsupervised — has been or will be reached. The loop is a genuinely formidable engine for improvement, and it has produced real, steady gains. Whether that engine is enough to cross the vast gap between "impressive driver assistance" and "true autonomy" is one of the most contested questions in the whole industry, and it is precisely the question the next part of the book takes up — carefully and without the marketing gloss.
 
 For now, hold the loop in mind as the culmination of everything "software-defined" means. A car that can be updated, whose every control is a signal, that is permanently connected and covered in cameras, becomes a node in a planet-spanning system that learns from itself. That is a genuinely new kind of machine, and whatever its ultimate limits, it is why these cars improve in ways their owners never used to expect — and why the story of how a Tesla works cannot end at the edge of the car, but reaches out to the millions of others quietly teaching it, every day, how to be a little better.
 
@@ -46,5 +46,5 @@ For now, hold the loop in mind as the culmination of everything "software-define
 **Sources**
 
 - thecharlynazzal, Stratrix, thinkautonomous, Comet — Tesla "shadow mode": neural network runs continuously, predictions compared against human driver actions, divergences flagged as learning opportunities; fleet as distributed data collection.
-- Tesla AI Day (2021) via Towards Data Science and IEEE Spectrum — the fleet-clip training and auto-labelling pipeline: real-world clips gathered from across the fleet and used to retrain the driving networks.
-- The data-flywheel/moat analysis and the OTA-retraining loop synthesise these sources with Chapters 15–16; privacy and the autonomy-gap caveats are the author's, with the autonomy question deferred to Part IX.
+- Tesla AI Day (2021) via Towards Data Science and IEEE Spectrum — the fleet-clip training and auto-labeling pipeline: real-world clips gathered from across the fleet and used to retrain the driving networks.
+- The data-flywheel/moat analysis and the OTA-retraining loop synthesize these sources with Chapters 15–16; privacy and the autonomy-gap caveats are the author's, with the autonomy question deferred to Part IX.

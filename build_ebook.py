@@ -32,9 +32,18 @@ OUT_DIR = os.path.join(ROOT, "out")
 OUT_EPUB = os.path.join(OUT_DIR, "how-a-tesla-works.epub")
 
 TITLE = "How a Tesla Works"
-AUTHOR = ""
+AUTHOR = "Jiri Kosek"
 LANG = "en"
 UID = "urn:uuid:how-a-tesla-works-2026"
+
+# Image cover: shown as the first page and registered as the EPUB cover image,
+# so readers use it for the library thumbnail too.
+COVER = os.path.join(ROOT, "front_cover", "Book cover V1.png")
+COVER_FILE = "cover.png"
+
+# The per-subchapter "Sources" note is reference apparatus, not body text, so
+# it is wrapped and set a step smaller and greyer than the prose above it.
+SOURCES = re.compile(r"<p><strong>Sources</strong></p>\s*<ul>.*?</ul>", re.S)
 
 # ASCII diagrams must stay in monospace and must not re-wrap: a wrapped
 # diagram is a destroyed diagram. 76 columns is the repo-wide limit, so the
@@ -50,6 +59,13 @@ h3 { font-family: Helvetica, Arial, sans-serif; font-size: 1.05em; }
 p { margin: 0.6em 0; }
 hr { border: 0; border-top: 1px solid #bbb; margin: 1.4em 0; }
 ul { margin: 0.6em 0 0.6em 1.2em; }
+div.sources { font-size: 0.82em; color: #555; }
+div.coverpage { margin: 0; padding: 0; text-align: center; }
+div.coverpage img { max-width: 100%; max-height: 100vh; height: auto; }
+div.titlepage { text-align: center; margin-top: 25%; }
+div.titlepage h1 { font-size: 3em; margin: 0 0 0.5em; page-break-before: avoid; }
+div.titlepage h3 { font-size: 1.35em; font-weight: normal; margin: 0 0 1em; }
+div.titlepage p { font-size: 1.1em; font-style: italic; }
 code { font-family: "Courier New", monospace; }
 pre { font-family: "Courier New", monospace; font-size: 0.62em;
       line-height: 1.15; white-space: pre; overflow-x: auto;
@@ -107,6 +123,10 @@ def convert(files):
         md = markdown.Markdown(extensions=["fenced_code", "toc"],
                                output_format="xhtml")
         body = md.convert(text)
+        body = SOURCES.sub(lambda m: f'<div class="sources">{m.group(0)}</div>', body)
+        # The title file is its own section already; centre it as a cover page.
+        if os.path.basename(path) == "00-00-title.md":
+            body = f'<div class="titlepage">\n{body}\n</div>'
         docs.append((name, XHTML.format(lang=LANG, title=escape(TITLE), body=body)))
 
         toks = []
@@ -181,11 +201,20 @@ def toc_ncx(toc):
 """
 
 
+def cover_xhtml():
+    """Full-page cover: the artwork centred and scaled to the reader's screen."""
+    body = ('<div class="coverpage">'
+            f'<img src="{COVER_FILE}" alt="{escape(TITLE)}"/></div>')
+    return XHTML.format(lang=LANG, title=escape(TITLE), body=body)
+
+
 def content_opf(docs):
     items = ['<item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>',
              '<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>',
-             '<item id="css" href="style.css" media-type="text/css"/>']
-    spine = ['<itemref idref="nav"/>']
+             '<item id="css" href="style.css" media-type="text/css"/>',
+             '<item id="cover" href="cover.xhtml" media-type="application/xhtml+xml"/>',
+             f'<item id="cover-image" href="{COVER_FILE}" media-type="image/png" properties="cover-image"/>']
+    spine = ['<itemref idref="cover"/>', '<itemref idref="nav"/>']
     for i, (name, _) in enumerate(docs):
         items.append(f'<item id="t{i}" href="{name}" media-type="application/xhtml+xml"/>')
         spine.append(f'<itemref idref="t{i}"/>')
@@ -196,6 +225,7 @@ def content_opf(docs):
 <dc:title>{escape(TITLE)}</dc:title>
 <dc:language>{LANG}</dc:language>
 <dc:creator>{escape(AUTHOR)}</dc:creator>
+<meta name="cover" content="cover-image"/>
 <meta property="dcterms:modified">2026-01-01T00:00:00Z</meta>
 </metadata>
 <manifest>
@@ -224,6 +254,9 @@ def write_epub(docs, toc):
         z.writestr("OEBPS/content.opf", content_opf(docs), zipfile.ZIP_DEFLATED)
         z.writestr("OEBPS/nav.xhtml", nav_xhtml(toc), zipfile.ZIP_DEFLATED)
         z.writestr("OEBPS/toc.ncx", toc_ncx(toc), zipfile.ZIP_DEFLATED)
+        z.writestr("OEBPS/cover.xhtml", cover_xhtml(), zipfile.ZIP_DEFLATED)
+        with open(COVER, "rb") as fh:
+            z.writestr(f"OEBPS/{COVER_FILE}", fh.read(), zipfile.ZIP_DEFLATED)
         for name, body in docs:
             z.writestr(f"OEBPS/{name}", body, zipfile.ZIP_DEFLATED)
 
