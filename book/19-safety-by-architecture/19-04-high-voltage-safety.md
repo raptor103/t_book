@@ -6,34 +6,6 @@ The first and most important measure happens automatically, in the instant of th
 
 Backing this up is the constant *isolation monitoring* also introduced in Chapter 8 — the car's continuous check that no high voltage is leaking into the metal body or anywhere a person might touch. If a crash compromises the insulation, the car detects the fault and can shut the high-voltage system down, so that the wreck does not become electrified. The same watchfulness that keeps the voltage away from occupants in normal driving keeps it away from rescuers in a crash.
 
-Automatic protection, and signals for rescuers:
-
-```
-   IN THE CRASH -- automatic, within milliseconds
-
-     impact sensed
-          |
-          v
-     CONTACTORS OPEN -- the HV pack is disconnected and its
-     energy sealed inside its own armoured box
-          |
-          v
-     the LOW-voltage world survives, and keeps the hazard
-     lights, door releases and emergency call alive
-
-     running throughout: isolation monitoring, which shuts
-     the system down if any voltage leaks to the bodywork
-
-   FOR THE RESCUERS -- making the danger legible
-
-     ORANGE ............ the colour of every HV cable. Never cut.
-     first-responder ... a designated loop to cut, which
-     loop                guarantees the system is de-energised
-     rescue sheets ..... standardised diagrams: where to cut,
-                         and where absolutely not to
-     and a warning ..... a damaged pack can reignite hours later
-```
-
 But automatic isolation is not enough on its own, because a rescuer must be able to *trust* that the car is safe before cutting into it, and to make the danger visible. So electric cars are built to communicate their hazards to the people who deal with wrecks. High-voltage cabling is coloured a distinctive orange, an industry convention that tells any trained responder: never cut this. Cars are provided with a designated *first-responder loop* or cut point — a specific place a firefighter can sever to guarantee the high-voltage system is de-energised, a manual backstop to the automatic contactors. And manufacturers publish standardised rescue sheets showing exactly where the battery, the cables, and the safe cutting points are, so that a crew can cut a roof off to reach a trapped occupant without slicing into a live cable or the pack itself. Making the invisible danger legible — colour-coded, documented, with a clear "cut here to make safe" — is as much a part of the car's safety design as any armour.
 
 Honesty requires facing the hardest part squarely, because it is where the electric car is genuinely more difficult than a petrol one. A lithium battery fire is hard to fight. Once thermal runaway is truly under way, the pack can burn intensely, can take an enormous amount of water and a long time to cool, and — most treacherously — can *reignite* hours or even a day later, after everyone assumes it is out, because heat trapped deep in the pack can restart the cascade. Fire researchers have documented electric vehicles burning for well over an hour and demanding special tactics. This is a real hazard, and it would be dishonest to wave it away. What can be said in balance is that such fires are, by most evidence, no more *frequent* than petrol fires and possibly less so — but they are *different*, and the fire service has had to learn new methods to deal with them. The danger is not that electric cars burn more; it is that when they do, they burn in an unfamiliar way that the old training did not prepare anyone for.
