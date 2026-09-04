@@ -10,25 +10,6 @@ Think of it like coffee. "Espresso" and "a takeaway cup" both describe your morn
 
 And here is the point the whole section is built to make: **the two axes are independent.** A 4680 is a size, not a chemistry. You can build a 4680 cell with a nickel-rich chemistry or, in principle, with LFP; Tesla has used the 4680 format with a high-nickel NCM (a close cousin of NMC) cathode, while also making 4680-format cells for stationary storage with different recipes inside. Likewise LFP is a chemistry, not a shape: the LFP cells in many standard-range cars are large prismatic blocks bought from suppliers such as CATL and BYD, while nothing stops LFP being rolled into a cylinder. When a car is described as having "4680 batteries," you have been told the container and nothing about the coffee. When it is described as having "LFP batteries," you have been told the coffee and nothing about the container.
 
-A simple grid makes the independence obvious:
-
-```
-                          +---------------------------------------+
-                          |        CHEMISTRY (the coffee)         |
-   +----------------------+--------------------+------------------+
-   |  FORMAT (the cup)    |  NMC / NCA         |  LFP             |
-   +----------------------+--------------------+------------------+
-   |  cylindrical         |  2170, 4680        |  possible, but   |
-   |  (18650, 2170, 4680) |  -- most Teslas    |  rare in cars    |
-   +----------------------+--------------------+------------------+
-   |  prismatic or pouch  |  used by some      |  large blocks    |
-   |                      |  other makers      |  (CATL, BYD)     |
-   +----------------------+--------------------+------------------+
-
-   "4680" names the cup. "LFP" names the coffee.
-   Neither one, on its own, tells you the other.
-```
-
 Why labor the distinction? Because the two axes are chosen for different reasons and traded off against different things, and the rest of this chapter needs them kept separate. The next section, on trade-offs, is almost entirely a chemistry story — density, cost, cold, cobalt. The section after, on the 4680, is almost entirely a format story — how making the container bigger and smarter changes the economics of building millions of them. Confuse the two and neither story lands. Keep them apart and you have a mental filing system that will serve you through every battery announcement you ever read, including the ones that have not happened yet.
 
 So whenever someone tells you a car's battery in a single word, ask yourself the quiet follow-up: *is that the coffee, or the cup?* You will be surprised how often even the experts have only told you one of the two.
