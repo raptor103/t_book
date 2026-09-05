@@ -16,13 +16,13 @@ The structure, drawn as a ladder:
    Each BRICK = 46 cells side by side in PARALLEL  -> capacity
    96 BRICKS stacked in SERIES                     -> voltage
 
-        +---------------------------------------------+   ^
+        +----------------------------------------------+   ^
    96   | [o][o][o][o] .... 46 cells .... [o][o][o][o] |   |
    95   | [o][o][o][o] .... 46 cells .... [o][o][o][o] |   |
-    :   |                     :                       |   | 96 x 3.6 V
+    :   |                     :                        |   | 96 x 3.6 V
     2   | [o][o][o][o] .... 46 cells .... [o][o][o][o] |   | = ~350 V
     1   | [o][o][o][o] .... 46 cells .... [o][o][o][o] |   v
-        +---------------------------------------------+
+        +----------------------------------------------+
          <----------- width sets ENERGY ------------->
 
    96s46p = 96 x 46 = 4,416 cells   (long range)

@@ -6,22 +6,28 @@ Batteries age in two ways at once, and engineers give them two names. The first 
 
 Here is the crucial part, the part that turns theory into advice: both kinds of aging are made dramatically worse by two conditions — *heat* and *a high state of charge*. Heat speeds up most chemical reactions, including the destructive ones, which is one more reason the thermal system in Part IV matters so much. And a battery held at or near 100 percent full sits under a kind of chemical tension — the electrodes are at their most reactive, and the self-corroding SEI reaction runs faster. The research is stark: a nickel cell left resting at 100 percent charge can lose capacity several times faster than one kept nearer the middle, and warmth compounds it savagely. In one study a cell held full at 40 degrees degraded to worn-out in a fraction of the time it took at ordinary temperature.
 
-That single fact — that the top of the charge range is where the damage concentrates — is the whole reason behind the famous advice to charge a nickel-chemistry car to only about 80 percent for everyday use, and to fill it to 100 only when you genuinely need the range and preferably just before you set off. You are not "wasting" the top twenty percent. You are declining to store your battery in its most stressful state. The damage from 80 to 100 is out of all proportion to the extra range it buys.
+That single fact — that the top of the charge range is where the damage concentrates — is the whole reason behind the famous advice to charge a nickel-chemistry car to only about 80 percent for everyday use, and to fill it to 100 only when you genuinely need the range and preferably just before you set off. You are not "wasting" the top twenty percent. You are declining to store your battery in its most stressful state.
 
 And now the chemistry from Chapter 2 pays off, because this is exactly where LFP and nickel part company. The advice differs by chemistry because the *physics* differs by chemistry. LFP's cathode is built around an extraordinarily stable phosphate structure — the bond holding it together is so strong that sitting at 100 percent charge simply does not stress an LFP cell the way it stresses a nickel one. So LFP cars are not only permitted but positively encouraged to charge to 100 percent regularly — partly because it is harmless, and partly for a practical second reason: LFP's flat voltage makes it hard for the BMS to estimate state of charge accurately, and an occasional trip to a known, definite 100 percent lets the supervisor from the last section recalibrate its gauge.
 
 The two rules of thumb, and why:
 
 ```
-                       NICKEL (NMC / NCA)    LFP
-   ---------------------------------------------------------------
-    daily charge to     about 80%             100%, routinely
-    charge to 100%      before a long trip    any time you like
-    why                 the top 20% causes    the phosphate cathode
-                        most of the ageing    shrugs a full charge off
-    bonus               --                    a full charge recalibrates
-                                              the BMS gauge
-   ---------------------------------------------------------------
+
+                        NICKEL (NMC / NCA)       LFP
+   ----------------------------------------------------------------------
+
+    daily charge to     about 80%                100%, routinely
+
+    charge to 100%      before a long trip       any time you like
+
+    why                 the top 20% causes       the phosphate cathode
+                        most of the aging        shrugs a full charge off
+
+    bonus               --                       a full charge recalibrates
+                                                 the BMS gauge
+
+   ----------------------------------------------------------------------
 
    Both chemistries dislike the same two things:
    heat, and being left sitting at 100% for weeks.

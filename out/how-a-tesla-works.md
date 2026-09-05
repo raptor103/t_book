@@ -466,13 +466,13 @@ The structure, drawn as a ladder:
    Each BRICK = 46 cells side by side in PARALLEL  -> capacity
    96 BRICKS stacked in SERIES                     -> voltage
 
-        +---------------------------------------------+   ^
+        +----------------------------------------------+   ^
    96   | [o][o][o][o] .... 46 cells .... [o][o][o][o] |   |
    95   | [o][o][o][o] .... 46 cells .... [o][o][o][o] |   |
-    :   |                     :                       |   | 96 x 3.6 V
+    :   |                     :                        |   | 96 x 3.6 V
     2   | [o][o][o][o] .... 46 cells .... [o][o][o][o] |   | = ~350 V
     1   | [o][o][o][o] .... 46 cells .... [o][o][o][o] |   v
-        +---------------------------------------------+
+        +----------------------------------------------+
          <----------- width sets ENERGY ------------->
 
    96s46p = 96 x 46 = 4,416 cells   (long range)
@@ -562,21 +562,26 @@ That last trick is the clever heart of it. The cells are not merely stored in th
 The old way and the new, in section:
 
 ```
+   Same battery in both. The old way just wraps it in an extra
+   floor above -- a skin the structural pack throws away.
+
    CONVENTIONAL -- the battery is a passenger
 
-     ============================   car floor pan
-     ----------------------------   gap + mounting
-     ############################   battery: own case, lid, cells
-     ----------------------------   battery floor
-                                    TWO structures, metal doubled up
+     ========================   car floor pan
+     ------------------------   gap + mounting
+     ========================   battery lid
+     ########################   cells
+     ========================   battery floor
+     -> the car's floor pan sits on the battery's own lid: two skins
 
    STRUCTURAL -- the battery IS the floor
 
-     ============================   seats bolt straight onto this
-     ############################   4680 cells, glued in with
-     ############################   structural foam
-     ============================   pack base = the car's underside
-                                    ONE structure; the floor pan is gone
+     ========================   pack lid = the floor; seats bolt on
+     ########################   cells, foam-bonded into one slab
+     ========================   pack base = the car's underside
+     -> the lid becomes the floor; the floor pan (and gap) are deleted
+
+     ====  metal skin      ----  air gap      ####  cells
 ```
 
 But — and this book tries always to give you the *but* — nothing in engineering is free, and the structural pack pays for its virtues in a currency called repairability, in which it is close to bankrupt. The same teardown team that admired the rigidity was blunt about the cost: the pack has, in their words, essentially zero repairability. The top cover is bonded to the cells with a polyurethane adhesive so aggressive that getting into the pack without wrecking it ranges from extremely difficult to impossible. When the cells are foamed into a structure, you cannot easily lift out a bad module and slot in a good one, the way you could with the old bolt-together packs. A fault that once meant replacing a module can now mean replacing, or writing off, a component that is both the battery and part of the chassis.
@@ -603,22 +608,28 @@ Batteries age in two ways at once, and engineers give them two names. The first 
 
 Here is the crucial part, the part that turns theory into advice: both kinds of aging are made dramatically worse by two conditions — *heat* and *a high state of charge*. Heat speeds up most chemical reactions, including the destructive ones, which is one more reason the thermal system in Part IV matters so much. And a battery held at or near 100 percent full sits under a kind of chemical tension — the electrodes are at their most reactive, and the self-corroding SEI reaction runs faster. The research is stark: a nickel cell left resting at 100 percent charge can lose capacity several times faster than one kept nearer the middle, and warmth compounds it savagely. In one study a cell held full at 40 degrees degraded to worn-out in a fraction of the time it took at ordinary temperature.
 
-That single fact — that the top of the charge range is where the damage concentrates — is the whole reason behind the famous advice to charge a nickel-chemistry car to only about 80 percent for everyday use, and to fill it to 100 only when you genuinely need the range and preferably just before you set off. You are not "wasting" the top twenty percent. You are declining to store your battery in its most stressful state. The damage from 80 to 100 is out of all proportion to the extra range it buys.
+That single fact — that the top of the charge range is where the damage concentrates — is the whole reason behind the famous advice to charge a nickel-chemistry car to only about 80 percent for everyday use, and to fill it to 100 only when you genuinely need the range and preferably just before you set off. You are not "wasting" the top twenty percent. You are declining to store your battery in its most stressful state.
 
 And now the chemistry from Chapter 2 pays off, because this is exactly where LFP and nickel part company. The advice differs by chemistry because the *physics* differs by chemistry. LFP's cathode is built around an extraordinarily stable phosphate structure — the bond holding it together is so strong that sitting at 100 percent charge simply does not stress an LFP cell the way it stresses a nickel one. So LFP cars are not only permitted but positively encouraged to charge to 100 percent regularly — partly because it is harmless, and partly for a practical second reason: LFP's flat voltage makes it hard for the BMS to estimate state of charge accurately, and an occasional trip to a known, definite 100 percent lets the supervisor from the last section recalibrate its gauge.
 
 The two rules of thumb, and why:
 
 ```
-                       NICKEL (NMC / NCA)    LFP
-   ---------------------------------------------------------------
-    daily charge to     about 80%             100%, routinely
-    charge to 100%      before a long trip    any time you like
-    why                 the top 20% causes    the phosphate cathode
-                        most of the ageing    shrugs a full charge off
-    bonus               --                    a full charge recalibrates
-                                              the BMS gauge
-   ---------------------------------------------------------------
+
+                        NICKEL (NMC / NCA)       LFP
+   ----------------------------------------------------------------------
+
+    daily charge to     about 80%                100%, routinely
+
+    charge to 100%      before a long trip       any time you like
+
+    why                 the top 20% causes       the phosphate cathode
+                        most of the aging        shrugs a full charge off
+
+    bonus               --                       a full charge recalibrates
+                                                 the BMS gauge
+
+   ----------------------------------------------------------------------
 
    Both chemistries dislike the same two things:
    heat, and being left sitting at 100% for weeks.
