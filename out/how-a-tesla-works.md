@@ -89,7 +89,7 @@ Concise diagram of where a tankful of gasoline actually goes:
            actually wanted to buy)
 ```
 
-There is worse. The engine only works well within a narrow band of speeds — too slow and it stalls, too fast and it tears itself up — and that band does not match the range of speeds a car actually needs, from crawling in a parking lot to cruising at 130 km/h (80 mph). So you bolt on a gearbox: a heavy, precise, oil-filled box of cogs whose entire job is to keep translating between the engine's fussy comfort zone and the road's demands. Every gear change is a small confession that the power source cannot do what is asked of it directly. Add the clutch, the driveshafts, the differential, and you have a second complicated machine that exists purely to manage the failings of the first.
+There is worse. The engine only works well within a narrow band of speeds — too slow and it stalls, too fast and it tears itself up — and that band does not match the range of speeds a car actually needs, from crawling in a parking lot to cruising at 80 mph (130 km/h). So you bolt on a gearbox: a heavy, precise, oil-filled box of cogs whose entire job is to keep translating between the engine's fussy comfort zone and the road's demands. Every gear change is a small confession that the power source cannot do what is asked of it directly. Add the clutch, the driveshafts, the differential, and you have a second complicated machine that exists purely to manage the failings of the first.
 
 Now step back and look at the car as a whole. The engine is heavy, so it sits low and forward, and the chassis is built around it. It is hot, so the front of the car becomes a giant air scoop feeding the radiator. It vibrates, so the whole thing floats on rubber mounts. It breathes, so there is an intake, a filter, an exhaust, a catalytic converter, a silencer running the length of the underbody. It needs feeding, so there is a fuel tank, lines, a pump, injectors. A conventional car is not a passenger box with an engine added. It is an engine with a passenger box wrapped around it, and nearly every design decision — the long hood, the transmission tunnel running between the front seats, the grille — is a scar left by the thing under the hood.
 
@@ -195,7 +195,7 @@ The reason is the battery, and it is worth being blunt about it. The battery is 
 
 This is the single idea that explains almost every strange design choice in the rest of this book. Once you see it, you cannot unsee it.
 
-Why does a Tesla have those flush door handles that pop out to greet you? To smooth the airflow. Why the near-total absence of a front grille? Because a hole in the front of a car is a hole that air falls into, and air is the enemy. Why the smooth belly pan under the floor, the small aerodynamic wheel covers that owners either love or quietly replace, the obsessive sculpting of every mirror and pillar? All of it is a war on drag — and drag matters ferociously because, as we will see in Part VII, the power needed to push air aside rises with the *cube* of speed, so a small gain in slipperiness at 120 km/h (75 mph) pays off out of all proportion where it counts. The result is a body with a drag coefficient of around **0.23** — and, in the latest version, **0.219** — numbers that put a family sedan into territory once reserved for the odd hand-built streamliner. Tesla's own engineers have said that this single aerodynamic improvement was the largest factor in an eight percent efficiency gain on the updated car. Eight percent, from shaping the air.
+Why does a Tesla have those flush door handles that pop out to greet you? To smooth the airflow. Why the near-total absence of a front grille? Because a hole in the front of a car is a hole that air falls into, and air is the enemy. Why the smooth belly pan under the floor, the small aerodynamic wheel covers that owners either love or quietly replace, the obsessive sculpting of every mirror and pillar? All of it is a war on drag — and drag matters ferociously because, as we will see in Part VII, the power needed to push air aside rises with the *cube* of speed, so a small gain in slipperiness at 75 mph (120 km/h) pays off out of all proportion where it counts. The result is a body with a drag coefficient of around **0.23** — and, in the latest version, **0.219** — numbers that put a family sedan into territory once reserved for the odd hand-built streamliner. Tesla's own engineers have said that this single aerodynamic improvement was the largest factor in an eight percent efficiency gain on the updated car. Eight percent, from shaping the air.
 
 The obsession does not stop at the skin. It reaches into the tires, chosen and constructed to roll with less resistance. Into the heat pump, which we will meet later, whose entire reason for existing is to warm the cabin using a quarter of the electricity a simple heater would burn. Into the regenerative braking that scavenges back the energy of every slowing. Into the motor, tuned for efficiency across the speeds you actually drive, and into an oil pump for that motor that is itself electric, so it only runs when needed rather than being dragged along constantly. None of these is dramatic on its own. Each buys back a percent, or a fraction of a percent. Added together, across the whole car, they are the difference between a usable range and a disappointing one.
 
@@ -867,7 +867,7 @@ An electric motor can. And that single fact deletes the entire gearbox.
 
 Remember the two things a motor does effortlessly that an engine cannot. It makes its full torque from zero revolutions — maximum shove available the instant it starts to turn, without needing to build up speed first. And it keeps turning usefully across an enormous span of speeds: a Tesla motor spins happily from a standstill all the way to around **eighteen thousand revolutions a minute**, roughly three times the redline of a typical gasoline engine. One device, covering from nothing to eighteen thousand, with strong torque available throughout. There is simply no gap for a gearbox to bridge, because there is no range the motor cannot cover by itself.
 
-So instead of a gearbox, an electric car has a *reduction gear*: a single, fixed set of cogs with one unchanging job. The motor spins fast but with modest torque; the wheels need the opposite — slower rotation, far more torque. A fixed reduction of about **nine to one** makes the trade. The gears divide the motor's speed by nine and multiply its torque by nine — once, permanently, with nothing to decide. In a Model 3 the ratio is a shade over 9:1, set by two pairs of gears, and that is all it takes to turn the motor's eighteen thousand rpm (revolutions per minute) into a top speed north of 250 km/h (155 mph), with no shifting anywhere in between.
+So instead of a gearbox, an electric car has a *reduction gear*: a single, fixed set of cogs with one unchanging job. The motor spins fast but with modest torque; the wheels need the opposite — slower rotation, far more torque. A fixed reduction of about **nine to one** makes the trade. The gears divide the motor's speed by nine and multiply its torque by nine — once, permanently, with nothing to decide. In a Model 3 the ratio is a shade over 9:1, set by two pairs of gears, and that is all it takes to turn the motor's eighteen thousand rpm (revolutions per minute) into a top speed north of 155 mph (250 km/h), with no shifting anywhere in between.
 
 The whole "transmission," end to end:
 
@@ -896,7 +896,7 @@ The whole "transmission," end to end:
 
    Two pairs of cogs, a shade over nine to one, and that is
    the entire transmission: no clutch, no gear lever, and one
-   uninterrupted pull from standstill to beyond 250 km/h.
+   uninterrupted pull from standstill to beyond 155 mph (250 km/h).
 ```
 
 The consequences ripple outward. There is no clutch, so the drive is never interrupted — the motor stays connected to the wheels at all times, which is part of why regenerative braking (next chapter) is even possible. There is no gear-change, so there is no shift shock, no pause, no hunting for the right ratio on a hill; acceleration is one seamless surge from zero to top speed, uninterrupted, the way a single long note differs from a scale. There is no gear lever and, increasingly, no obvious "transmission" at all — just a compact housing bolting the motor to the wheels. And there are far fewer parts to build, lubricate and break: a handful of gears instead of a dozen synchronized ratios, a clutch, and their hydraulics.
@@ -913,7 +913,7 @@ One gear. No clutch. No shifting. A hundred and forty years of transmission engi
 
 **Sources**
 
-- Tesla Motors Club (Highland Model 3 deep dive) and Fellten/ampREVOLT drivetrain listings — Model 3 overall reduction ratio ≈9.036:1 (two gear pairs, 81/31 × 83/24), motor to ~18,000–18,447 rpm, ~262 km/h top speed.
+- Tesla Motors Club (Highland Model 3 deep dive) and Fellten/ampREVOLT drivetrain listings — Model 3 overall reduction ratio ≈9.036:1 (two gear pairs, 81/31 × 83/24), motor to ~18,000–18,447 rpm, ~163 mph (262 km/h) top speed.
 - InsideEVs, "Tesla Model 3/Model Y Modular Electric Drive Units" — single-speed reduction drive-unit design.
 - Motor speed range and instant-torque behavior from Chapters 1 and 4; two-speed EV gearbox exceptions are general industry context.
 
@@ -1053,7 +1053,7 @@ Begin with the pedal you *do* still have. When you press the brake pedal in an e
 
 The blending is genuinely hard to do well, which is why it is a point of pride. The friction brakes and the regenerating motor have completely different characters — different response times, different force curves, different behavior when cold or wet — and yet the handover between them must be imperceptible. If the driver could feel the moment the friction brakes cut in, the car would feel lumpy and untrustworthy. Getting it invisible, across every temperature and state of charge, is the sort of unglamorous refinement that separates a car that merely works from one that feels polished. There is even a safety dividend: because the friction brakes remain fully independent and mechanically capable, they can stop the car entirely on their own if the electronics ever fail, so the clever blending never compromises the fundamental ability to stop.
 
-Now the other pedal, and the real revolution. In an electric car, lifting off the accelerator does not just cut the power — it actively brakes, hard, through strong regeneration. Ease off, and the car slows noticeably, as if you had gently pressed a brake; lift off entirely, and it slows firmly enough to handle most everyday deceleration without the brake pedal ever being touched. With a little practice you learn to modulate the car's speed entirely through the accelerator: press for faster, lift for slower, and reserve the actual brake pedal for hard or unexpected stops. Hence one pedal. Some Teslas take it to the logical end with a "Hold" mode that brings the car to a complete standstill and keeps it there, blending in the friction brakes automatically at walking pace — below around **6.5 km/h (4 mph)**, where regeneration fades to nothing — so the car comes to a clean, held stop without any pedal at all.
+Now the other pedal, and the real revolution. In an electric car, lifting off the accelerator does not just cut the power — it actively brakes, hard, through strong regeneration. Ease off, and the car slows noticeably, as if you had gently pressed a brake; lift off entirely, and it slows firmly enough to handle most everyday deceleration without the brake pedal ever being touched. With a little practice you learn to modulate the car's speed entirely through the accelerator: press for faster, lift for slower, and reserve the actual brake pedal for hard or unexpected stops. Hence one pedal. Some Teslas take it to the logical end with a "Hold" mode that brings the car to a complete standstill and keeps it there, blending in the friction brakes automatically at walking pace — below around **4 mph (6.5 km/h)**, where regeneration fades to nothing — so the car comes to a clean, held stop without any pedal at all.
 
 The two pedals, reimagined:
 
@@ -1069,7 +1069,7 @@ The two pedals, reimagined:
    does most of the everyday     kept for hard stops and
    braking on its own            emergencies
 
-   Hold mode: below about 6.5 km/h regeneration fades away, so
+   Hold mode: below about 4 mph (6.5 km/h) regeneration fades away, so
    the friction brakes are blended in to bring the car to a
    clean, held standstill -- no pedal at all.
 ```
@@ -2185,13 +2185,13 @@ The cube law, made concrete:
    speed -- which is also why easing off buys back so much.
 ```
 
-Abstract numbers do not persuade, so here is what the cube law does to a real electric vehicle. Take a van cruising at 80 km/h (50 mph) with a certain range. Speed up to roughly 95 km/h (60 mph) and the range noticeably shrinks. Push on to 110 (70 mph), and it shrinks again. By the time you are traveling at around 130 km/h (80 mph) instead of 80, the range can have collapsed by something approaching *forty percent* — the same battery, the same road, the same weather, carrying you barely more than half as far, purely because you chose to hurry. That is not a gentle penalty for speed; it is a cliff, and every electric-car driver who has watched their predicted range evaporate on a fast highway has felt it directly.
+Abstract numbers do not persuade, so here is what the cube law does to a real electric vehicle. Take a van cruising at 50 mph (80 km/h) with a certain range. Speed up to roughly 60 mph (95 km/h) and the range noticeably shrinks. Push on to 70 mph (110 km/h), and it shrinks again. By the time you are traveling at around 80 mph (130 km/h) instead of 50, the range can have collapsed by something approaching *forty percent* — the same battery, the same road, the same weather, carrying you barely more than half as far, purely because you chose to hurry. That is not a gentle penalty for speed; it is a cliff, and every electric-car driver who has watched their predicted range evaporate on a fast highway has felt it directly.
 
 There is a threshold hidden in all this that explains why aerodynamics dominates the chapter. At low, around-town speeds, air resistance is minor — the car spends most of its energy on other things, chiefly the rolling resistance of the tires, which is the next chapter's subject. But because air resistance grows so explosively with speed while those other losses grow only gently, there comes a point — somewhere in the range of ordinary main-road speeds — where the air overtakes everything else and becomes the single largest force the car is fighting. Above that point, on a highway, well over half of all the energy the car uses can be going to push air aside. The faster you go, the more totally the air dominates, until at high speed almost nothing else matters.
 
 This is the physics that justifies the entire war described in the chapter opener. If range at highway speed is mostly a battle against air, and if the cost of that battle rises with the *cube* of speed, then shaving even a small amount off a car's aerodynamic drag pays off enormously at exactly the speeds where range is scarcest and most anxiously watched. A car that is ten percent slipperier is not ten percent better only at the margins; it is meaningfully better on every long, fast journey, which is precisely where electric cars have most needed to prove themselves. The cube law is why a family sedan is sculpted with the obsessive care once reserved for aircraft, and why the drag coefficient figures from Chapter 1 — the 0.23, the 0.219 — are quoted with such pride.
 
-It also hands the driver a piece of free advice that no software update can beat: if you want more range on a long trip, slow down a little. Because the penalty is cubic, easing off from 130 to 115 km/h (80 to 70 mph) buys back a surprisingly large slice of range for a very small cost in journey time. The same physics that punishes haste so severely rewards a gentle lift of the foot just as generously. The air is an unforgiving opponent, but it is an honest one — and it fights hardest exactly where, and when, the car can least afford it. The next question is *where*, physically, on the car this fight is happening, and the answer is not where most people would guess.
+It also hands the driver a piece of free advice that no software update can beat: if you want more range on a long trip, slow down a little. Because the penalty is cubic, easing off from 80 to 70 mph (130 to 115 km/h) buys back a surprisingly large slice of range for a very small cost in journey time. The same physics that punishes haste so severely rewards a gentle lift of the foot just as generously. The air is an unforgiving opponent, but it is an honest one — and it fights hardest exactly where, and when, the car can least afford it. The next question is *where*, physically, on the car this fight is happening, and the answer is not where most people would guess.
 
 ---
 
@@ -2323,12 +2323,12 @@ Two forces, two regimes:
         |           #######
         |###########
         +------------------------------------------------
-         0      40     80     120    160 km/h
+         0      25     50     75     100 mph
 
    #  aerodynamic drag -- tiny in town, EXPLODES on the highway
    =  rolling resistance -- roughly constant at any speed
 
-   They cross at around 80 km/h. Below it the tires are the
+   They cross at around 50 mph. Below it the tires are the
    main enemy; above it, the air. An electric car has to win
    both battles to have good range everywhere.
 ```
