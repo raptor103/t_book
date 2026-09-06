@@ -8,30 +8,11 @@ Tesla's drive unit instead uses an *electric* oil pump — a small independent p
 
 The oil's double life is itself a small elegance. The same fluid that keeps the gears from grinding is flung onto the spinning rotor to carry its heat away, then drips down into a sump, passes through a heat exchanger to hand its warmth to the main coolant, and returns to do it again. Tesla's own patents describe fussing over details most people would never imagine mattering — an elevated sump that lets gravity feed oil straight onto the specific bearings and gear teeth that need it, rather than the traditional method of letting the gears splash through a bath of oil and drag against it. Splashing wastes energy churning the oil; targeted feeding does not. It is a fraction of a percent, chased deliberately.
 
-Where the invisible wins hide:
-
-```
-   The drive unit's quiet efficiencies. Each is tiny.
-   Added up, they are worth real kilometers.
-
-   electric oil pump ..... runs only as needed, never always-on
-   one fluid, two jobs ... the same oil lubricates AND cools
-   targeted oil feed ..... gravity onto the bearings and teeth
-                           that need it, instead of letting the
-                           gears splash through a bath and drag
-   dragless idle ......... the induction motor switches fully off
-   low-friction seals .... less rubbing where the shafts come out
-   warm oil on purpose ... thinner oil is cheaper to pump, so a
-                           slightly hotter unit can be the
-                           efficient one -- held on a knife-edge
-                           by software, since too hot stops cooling
-```
-
 And there are more of the same kind, scattered through the car. The induction motor from two sections ago, able to switch fully off and freewheel with almost no drag when it is not needed, is one of these wins wearing a bigger coat. The bearings and shaft seals are chosen and shaped to rub as little as possible, because a seal that grips a spinning shaft too tightly costs energy every second of every journey. Even the temperature of the oil is played as an efficiency card: warm oil is thinner and easier to pump, so the car will sometimes tolerate a slightly hotter drive unit precisely because the thinner oil wastes less energy in pumping and churning — a balance held on a knife-edge by software, since oil that gets *too* hot stops cooling properly.
 
 None of this is the sort of thing that sells a car. You cannot feel the electric oil pump modulating its flow, or the sump feeding a bearing by gravity, or the seals rubbing a little less. That is precisely the point. These are the wins the driver never notices, which is why they are so easily overlooked and so genuinely important. A car is not made efficient by one miracle. It is made efficient by an engineering culture that treats every half-percent as worth chasing, everywhere, all the time — in the shape of a sump, the control of a pump, the tightness of a seal.
 
-Add them up across the drive unit and they are the difference between a car that goes far and one that goes a little further. Which is the whole game. We have now stored the energy, converted it, and delivered it to a single gear. What remains is to *manage* that motion — to slow the car, to split the drive between wheels, to turn the motor's talents into control — and that is the business of the next chapter.
+Add them up across the drive unit and they are the difference between a car that goes far and one that goes further. Which is the whole game. We have now stored the energy, converted it, and delivered it to a single gear. What remains is to *manage* that motion — to slow the car, to split the drive between wheels, to turn the motor's talents into control — and that is the business of the next chapter.
 
 ---
 

@@ -15,16 +15,22 @@ Now the punchline, for a dual-motor car with a motor on each axle:
 ```
                      FRONT axle             REAR axle
    ----------------------------------------------------------
+
     motor            induction              permanent-magnet
                      (asynchronous)         (synchronous)
+
     rotor            squirrel cage,         rare-earth magnets
                      no magnets             on the rotor
+
     efficiency       ~94%                   ~96%
+
     when idle        switches fully off,    magnets never stop;
                      almost no drag         drag to be cancelled
+
     its job          wakes for hard         does the everyday
                      acceleration and       driving, most of
                      high speed             the time
+
    ----------------------------------------------------------
 
    Each motor covers the other's weakness, and the car pays
