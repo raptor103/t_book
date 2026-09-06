@@ -23,12 +23,12 @@ Two forces, two regimes:
         |           #######
         |###########
         +------------------------------------------------
-         0      40     80     120    160 km/h
+         0      25     50     75     100 mph
 
    #  aerodynamic drag -- tiny in town, EXPLODES on the highway
    =  rolling resistance -- roughly constant at any speed
 
-   They cross at around 80 km/h. Below it the tires are the
+   They cross at around 50 mph. Below it the tires are the
    main enemy; above it, the air. An electric car has to win
    both battles to have good range everywhere.
 ```

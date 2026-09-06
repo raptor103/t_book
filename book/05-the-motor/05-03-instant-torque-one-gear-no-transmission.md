@@ -6,7 +6,7 @@ An electric motor can. And that single fact deletes the entire gearbox.
 
 Remember the two things a motor does effortlessly that an engine cannot. It makes its full torque from zero revolutions — maximum shove available the instant it starts to turn, without needing to build up speed first. And it keeps turning usefully across an enormous span of speeds: a Tesla motor spins happily from a standstill all the way to around **eighteen thousand revolutions a minute**, roughly three times the redline of a typical gasoline engine. One device, covering from nothing to eighteen thousand, with strong torque available throughout. There is simply no gap for a gearbox to bridge, because there is no range the motor cannot cover by itself.
 
-So instead of a gearbox, an electric car has a *reduction gear*: a single, fixed set of cogs with one unchanging job. The motor spins fast but with modest torque; the wheels need the opposite — slower rotation, far more torque. A fixed reduction of about **nine to one** makes the trade. The gears divide the motor's speed by nine and multiply its torque by nine — once, permanently, with nothing to decide. In a Model 3 the ratio is a shade over 9:1, set by two pairs of gears, and that is all it takes to turn the motor's eighteen thousand rpm (revolutions per minute) into a top speed north of 250 km/h (155 mph), with no shifting anywhere in between.
+So instead of a gearbox, an electric car has a *reduction gear*: a single, fixed set of cogs with one unchanging job. The motor spins fast but with modest torque; the wheels need the opposite — slower rotation, far more torque. A fixed reduction of about **nine to one** makes the trade. The gears divide the motor's speed by nine and multiply its torque by nine — once, permanently, with nothing to decide. In a Model 3 the ratio is a shade over 9:1, set by two pairs of gears, and that is all it takes to turn the motor's eighteen thousand rpm (revolutions per minute) into a top speed north of 155 mph (250 km/h), with no shifting anywhere in between.
 
 The whole "transmission," end to end:
 
@@ -35,7 +35,7 @@ The whole "transmission," end to end:
 
    Two pairs of cogs, a shade over nine to one, and that is
    the entire transmission: no clutch, no gear lever, and one
-   uninterrupted pull from standstill to beyond 250 km/h.
+   uninterrupted pull from standstill to beyond 155 mph (250 km/h).
 ```
 
 The consequences ripple outward. There is no clutch, so the drive is never interrupted — the motor stays connected to the wheels at all times, which is part of why regenerative braking (next chapter) is even possible. There is no gear-change, so there is no shift shock, no pause, no hunting for the right ratio on a hill; acceleration is one seamless surge from zero to top speed, uninterrupted, the way a single long note differs from a scale. There is no gear lever and, increasingly, no obvious "transmission" at all — just a compact housing bolting the motor to the wheels. And there are far fewer parts to build, lubricate and break: a handful of gears instead of a dozen synchronized ratios, a clutch, and their hydraulics.
@@ -50,6 +50,6 @@ One gear. No clutch. No shifting. A hundred and forty years of transmission engi
 
 **Sources**
 
-- Tesla Motors Club (Highland Model 3 deep dive) and Fellten/ampREVOLT drivetrain listings — Model 3 overall reduction ratio ≈9.036:1 (two gear pairs, 81/31 × 83/24), motor to ~18,000–18,447 rpm, ~262 km/h top speed.
+- Tesla Motors Club (Highland Model 3 deep dive) and Fellten/ampREVOLT drivetrain listings — Model 3 overall reduction ratio ≈9.036:1 (two gear pairs, 81/31 × 83/24), motor to ~18,000–18,447 rpm, ~163 mph (262 km/h) top speed.
 - InsideEVs, "Tesla Model 3/Model Y Modular Electric Drive Units" — single-speed reduction drive-unit design.
 - Motor speed range and instant-torque behavior from Chapters 1 and 4; two-speed EV gearbox exceptions are general industry context.

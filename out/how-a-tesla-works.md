@@ -672,11 +672,11 @@ Electricity comes in two temperaments. The kind in a battery is *direct current*
 
 So somewhere between the placid DC battery and the AC-hungry motor, something has to perform a conversion that sounds almost like alchemy: turn steady one-directional current into three smoothly surging, precisely staggered waves. That something is the inverter, and the delightful thing is that it does this with no cleverness of the analog kind at all. It does not gently shape the current. It has, in fact, only the crudest possible tool — a set of switches that can do nothing but slam fully on or fully off — and it makes a smooth wave out of them by brute speed and impeccable timing.
 
-Here is the idea, and it is genuinely counterintuitive. Imagine you want to fill a bath to exactly half-full-worth of *flow*, but your tap has no in-between setting: it is either fully open or fully shut. What do you do? You flick it on and off, fast, and you control the *average* by how much of the time it spends open. Open half the time, and on average you get half the flow. Open a lot of the time, and you get most of the flow; barely at all, and you get a trickle. If you flick fast enough, the person in the bath never notices the individual bursts — they feel only the smooth average. This is *pulse-width modulation*, universally shortened to PWM, and it is one of the most useful ideas in all of electronics.
+Here is the idea, and it is genuinely counterintuitive. Imagine you want water flowing at exactly half the tap's full rate, but your tap has no in-between setting: it is either fully open or fully shut. What do you do? You flick it on and off, fast, and you control the *average* by how much of the time it spends open. Open half the time, and on average you get half the flow. Open a lot of the time, and you get most of the flow; barely at all, and you get a trickle. If you flick fast enough, the person in the bath never notices the individual bursts — they feel only the smooth average. This is *pulse-width modulation*, universally shortened to PWM, and it is one of the most useful ideas in all of electronics.
 
 The inverter does exactly this with the battery's DC. Its switches chop the steady voltage into a rapid train of pulses, and by making the pulses wider when the wave should be high and narrower when it should be low, it sculpts the *average* into any shape it likes — including the gentle rise and fall of a sine wave. The motor never sees the smooth wave drawn on the engineer's whiteboard; it sees a blur of full-voltage pulses of varying width. But the motor's own coils, being electrically sluggish, smooth those pulses out, averaging the blur into precisely the surging current the whiteboard promised. The crudeness is hidden by speed.
 
-To make the three staggered phases the motor needs, the inverter simply runs three of these switch pairs at once — one per phase — and starts each one's wave a third of a cycle after the last. Six switches in all, arranged in three pairs, each pair feeding one of the motor's three connections. That is the whole hardware: six fast switches, some large capacitors to steady the supply, and a controller clever enough to choreograph the pulse widths in real time.
+The motor needs three staggered phases, so the inverter simply uses three switch pairs — one pair per phase, feeding one of the motor's three connections — and delays each pair's wave by a third of a cycle from the one before. That is six switches in all, and very nearly the entire inverter: six fast switches, a few large capacitors to steady the supply, and a controller clever enough to choreograph the pulse widths in real time.
 
 Everything else about the inverter — the speed of its switching, the material its switches are made from, the heat it must shed — is refinement of this single, slightly absurd, entirely successful idea: that the way to make a smooth wave, when all you have is an on/off switch, is to flick it faster than anyone can see and let physics do the smoothing. The next question is what happens when you change how fast, and how hard, you flick — because that, it turns out, is the same thing as changing the speed and the torque of the car.
 
@@ -821,16 +821,22 @@ Now the punchline, for a dual-motor car with a motor on each axle:
 ```
                      FRONT axle             REAR axle
    ----------------------------------------------------------
+
     motor            induction              permanent-magnet
                      (asynchronous)         (synchronous)
+
     rotor            squirrel cage,         rare-earth magnets
                      no magnets             on the rotor
+
     efficiency       ~94%                   ~96%
+
     when idle        switches fully off,    magnets never stop;
                      almost no drag         drag to be cancelled
+
     its job          wakes for hard         does the everyday
                      acceleration and       driving, most of
                      high speed             the time
+
    ----------------------------------------------------------
 
    Each motor covers the other's weakness, and the car pays
@@ -861,7 +867,7 @@ An electric motor can. And that single fact deletes the entire gearbox.
 
 Remember the two things a motor does effortlessly that an engine cannot. It makes its full torque from zero revolutions — maximum shove available the instant it starts to turn, without needing to build up speed first. And it keeps turning usefully across an enormous span of speeds: a Tesla motor spins happily from a standstill all the way to around **eighteen thousand revolutions a minute**, roughly three times the redline of a typical gasoline engine. One device, covering from nothing to eighteen thousand, with strong torque available throughout. There is simply no gap for a gearbox to bridge, because there is no range the motor cannot cover by itself.
 
-So instead of a gearbox, an electric car has a *reduction gear* — a single, fixed set of cogs that does one unchanging job. The motor spins fast and with modest torque; the wheels need to spin slower and with far more torque. A fixed reduction of about **nine to one** trades one for the other: it divides the motor's speed by nine and multiplies its torque by nine, once, permanently, with no choices to make. In a Model 3 the exact ratio is a shade over 9:1, achieved with two pairs of gears, and it lets the motor's eighteen thousand rpm become a top road speed north of 250 km/h (155 mph) with no shifting at any point in between.
+So instead of a gearbox, an electric car has a *reduction gear*: a single, fixed set of cogs with one unchanging job. The motor spins fast but with modest torque; the wheels need the opposite — slower rotation, far more torque. A fixed reduction of about **nine to one** makes the trade. The gears divide the motor's speed by nine and multiply its torque by nine — once, permanently, with nothing to decide. In a Model 3 the ratio is a shade over 9:1, set by two pairs of gears, and that is all it takes to turn the motor's eighteen thousand rpm (revolutions per minute) into a top speed north of 250 km/h (155 mph), with no shifting anywhere in between.
 
 The whole "transmission," end to end:
 
@@ -923,30 +929,11 @@ Tesla's drive unit instead uses an *electric* oil pump — a small independent p
 
 The oil's double life is itself a small elegance. The same fluid that keeps the gears from grinding is flung onto the spinning rotor to carry its heat away, then drips down into a sump, passes through a heat exchanger to hand its warmth to the main coolant, and returns to do it again. Tesla's own patents describe fussing over details most people would never imagine mattering — an elevated sump that lets gravity feed oil straight onto the specific bearings and gear teeth that need it, rather than the traditional method of letting the gears splash through a bath of oil and drag against it. Splashing wastes energy churning the oil; targeted feeding does not. It is a fraction of a percent, chased deliberately.
 
-Where the invisible wins hide:
-
-```
-   The drive unit's quiet efficiencies. Each is tiny.
-   Added up, they are worth real kilometers.
-
-   electric oil pump ..... runs only as needed, never always-on
-   one fluid, two jobs ... the same oil lubricates AND cools
-   targeted oil feed ..... gravity onto the bearings and teeth
-                           that need it, instead of letting the
-                           gears splash through a bath and drag
-   dragless idle ......... the induction motor switches fully off
-   low-friction seals .... less rubbing where the shafts come out
-   warm oil on purpose ... thinner oil is cheaper to pump, so a
-                           slightly hotter unit can be the
-                           efficient one -- held on a knife-edge
-                           by software, since too hot stops cooling
-```
-
 And there are more of the same kind, scattered through the car. The induction motor from two sections ago, able to switch fully off and freewheel with almost no drag when it is not needed, is one of these wins wearing a bigger coat. The bearings and shaft seals are chosen and shaped to rub as little as possible, because a seal that grips a spinning shaft too tightly costs energy every second of every journey. Even the temperature of the oil is played as an efficiency card: warm oil is thinner and easier to pump, so the car will sometimes tolerate a slightly hotter drive unit precisely because the thinner oil wastes less energy in pumping and churning — a balance held on a knife-edge by software, since oil that gets *too* hot stops cooling properly.
 
 None of this is the sort of thing that sells a car. You cannot feel the electric oil pump modulating its flow, or the sump feeding a bearing by gravity, or the seals rubbing a little less. That is precisely the point. These are the wins the driver never notices, which is why they are so easily overlooked and so genuinely important. A car is not made efficient by one miracle. It is made efficient by an engineering culture that treats every half-percent as worth chasing, everywhere, all the time — in the shape of a sump, the control of a pump, the tightness of a seal.
 
-Add them up across the drive unit and they are the difference between a car that goes far and one that goes a little further. Which is the whole game. We have now stored the energy, converted it, and delivered it to a single gear. What remains is to *manage* that motion — to slow the car, to split the drive between wheels, to turn the motor's talents into control — and that is the business of the next chapter.
+Add them up across the drive unit and they are the difference between a car that goes far and one that goes further. Which is the whole game. We have now stored the energy, converted it, and delivered it to a single gear. What remains is to *manage* that motion — to slow the car, to split the drive between wheels, to turn the motor's talents into control — and that is the business of the next chapter.
 
 ---
 

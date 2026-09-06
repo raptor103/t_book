@@ -6,7 +6,7 @@ Begin with the pedal you *do* still have. When you press the brake pedal in an e
 
 The blending is genuinely hard to do well, which is why it is a point of pride. The friction brakes and the regenerating motor have completely different characters — different response times, different force curves, different behavior when cold or wet — and yet the handover between them must be imperceptible. If the driver could feel the moment the friction brakes cut in, the car would feel lumpy and untrustworthy. Getting it invisible, across every temperature and state of charge, is the sort of unglamorous refinement that separates a car that merely works from one that feels polished. There is even a safety dividend: because the friction brakes remain fully independent and mechanically capable, they can stop the car entirely on their own if the electronics ever fail, so the clever blending never compromises the fundamental ability to stop.
 
-Now the other pedal, and the real revolution. In an electric car, lifting off the accelerator does not just cut the power — it actively brakes, hard, through strong regeneration. Ease off, and the car slows noticeably, as if you had gently pressed a brake; lift off entirely, and it slows firmly enough to handle most everyday deceleration without the brake pedal ever being touched. With a little practice you learn to modulate the car's speed entirely through the accelerator: press for faster, lift for slower, and reserve the actual brake pedal for hard or unexpected stops. Hence one pedal. Some Teslas take it to the logical end with a "Hold" mode that brings the car to a complete standstill and keeps it there, blending in the friction brakes automatically at walking pace — below around **6.5 km/h (4 mph)**, where regeneration fades to nothing — so the car comes to a clean, held stop without any pedal at all.
+Now the other pedal, and the real revolution. In an electric car, lifting off the accelerator does not just cut the power — it actively brakes, hard, through strong regeneration. Ease off, and the car slows noticeably, as if you had gently pressed a brake; lift off entirely, and it slows firmly enough to handle most everyday deceleration without the brake pedal ever being touched. With a little practice you learn to modulate the car's speed entirely through the accelerator: press for faster, lift for slower, and reserve the actual brake pedal for hard or unexpected stops. Hence one pedal. Some Teslas take it to the logical end with a "Hold" mode that brings the car to a complete standstill and keeps it there, blending in the friction brakes automatically at walking pace — below around **4 mph (6.5 km/h)**, where regeneration fades to nothing — so the car comes to a clean, held stop without any pedal at all.
 
 The two pedals, reimagined:
 
@@ -22,7 +22,7 @@ The two pedals, reimagined:
    does most of the everyday     kept for hard stops and
    braking on its own            emergencies
 
-   Hold mode: below about 6.5 km/h regeneration fades away, so
+   Hold mode: below about 4 mph (6.5 km/h) regeneration fades away, so
    the friction brakes are blended in to bring the car to a
    clean, held standstill -- no pedal at all.
 ```
